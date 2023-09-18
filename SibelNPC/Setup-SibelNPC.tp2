@@ -45,7 +45,9 @@ COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   PATCH_IF (FILE_EXISTS ~engine.lua~) BEGIN
     WRITE_ASCII 0x34 ~S!SIBELM~ #8 // small portrait
     WRITE_ASCII 0x3c ~S!SIBELL~ #8 // large portrait
-    //TODO: write EE flag here
+
+    READ_BYTE 0x12 "flags"
+    WRITE_BYTE 0x12 ("%flags%" BOR 0b01000000) // set EE: ignore nightmare mode flag
   END
   ELSE BEGIN
     WRITE_ASCII 0x34 ~S!SIBELS~ #8 // small portrait
