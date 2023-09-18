@@ -16,7 +16,7 @@ IF ~~ THEN BEGIN SibelFamily
 END
 
 IF ~~ THEN BEGIN TheCurse
-  SAY ~My father believed that a curse was cast on the family by the gods themselves. No one in the family had chosen to become a priest in all those centuries. They were mages, warriors and scholars aplenty. None took the path of priesthood.~
+  SAY ~My father believed that a curse was cast on the family by the gods themselves. They were mages, warriors and scholars aplenty. None took the path of priesthood. No temple was ever built in the village.~
   = ~And so the elm tree grew dry and lifeless, the quality of the famous family leather dropped and the family's fortune has withered.~
   ++ ~Go on.~ + TheCurse2
 END

@@ -16,11 +16,11 @@ IF ~Global("IaSibelJoined","LOCALS",0)~ THEN BEGIN ReJoin
 END
 
 IF ~~ THEN BEGIN WhereToGo
-  SAY "Very well, <CHARNAME>. Do you want me to wait for you here?"
+  SAY "Very well. Do you want me to wait for you here?"
   // TODO: area checks for this option?
   IF ~~ THEN REPLY ~Yes, we'll come back for you later.~ GOTO SibelStaysPut
   IF ~!AreaCheck("AR0702")~ THEN
-    REPLY ~No, you should go back to Ribald's store. I will look for you there if I need your help again.~
+    REPLY ~No, you should go back to Adventurer's Mart. I will look for you there if I need your help again.~
     GOTO SibelGoesBack
 END
 
