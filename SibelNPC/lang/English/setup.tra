@@ -1,0 +1,65 @@
+@0 = ~Sibel, an NPC for Improved Anvil~
+@1 = ~Requires Improved Anvil to be installed~
+
+@10 = ~Sibel Arcanis~
+@11 = ~When asked, Sibel says that she is a member of the old Arcanis family.~
+
+@500 = ~Arcanis Family Armor~
+@501 = ~Arcanis Family Armor
+
+Once made of high quality Arcanis leather, this armor still has a minute portion of the magic imbued within. An intricate combination of enchantments and masterful craftmanship enables Sibel to endure long bouts of strenuous exercise without succumbing to fatigue.
+
+STATISTICS
+
+Equipped Abillites:
+- +1 bonus to all Saving Throws
+- +10 bonus to max HP
+- immunity to fatigue
+
+Armor Class: 5
+Weight: 10
+Usable By:
+ Sibel~
+@502 = ~Queen of Clubs~
+@503 = ~Queen of Clubs
+
+This ancient club was crafted from the wood of the ancient Elm tree. The weapon still retains some of its ascendant's power.
+
+STATISTICS
+
+Enchanthment: +2
+THAC0: +2 bonus
+Damage: 2D6 + 2
+Damage type: crushing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Club
+
+Usable By:
+ Sibel~
+
+@1000 = ~Queen for a day, is it?~ [S!FEMA1B]
+@1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
+@1002 = ~[Irritated, Impatient]Are we going to stand here for the whole year?~ [S!FEMA1D]
+@1003 = ~[Low, sinister]You would do well to fear a woman's wrath.~ [S!FEMA1A]
+@1004 = ~Time to trim this one down to size...~ [S!FEMA18]
+@1005 = ~Death comes for you.~ [S!FEMA19]
+@1006 = ~[Hit in the stomach with a club]Enhh!~ [S!FEMA1L]
+@1007 = ~[Smashed across the head with a hammer]Unnh! Ennnn...~ [S!FEMA1M]
+@1008 = ~Can't last much longer...~ [S!FEMA1E]
+@1009 = ~I'm here.~ [S!FEMA1F]
+@1010 = ~Give the word.~ [S!FEMA1G]
+@1011 = ~What do you want?~ [S!FEMA1H]
+@1012 = ~Something wrong?~ [S!FEMA10]
+@1013 = ~Consider it done.~ [S!FEMA1I]
+@1014 = ~Watch this.~ [S!FEMA1J]
+@1015 = ~I'm off.~ [S!FEMA1K]
+@1016 = ~Poke me again, and you'll do it without fingers.~ [S!FEMA1X]
+@1017 = ~You're about one click away from a fight.~ [S!FEMA1Y]
+@1018 = ~This is gonna cost you an extra share of the treasure.~ [S!FEMA1_]
+@1019 = ~Knucklehead trout have nothing on you.~ [S!FEMA1#]
+@1020 = ~Rest easy... your killers won't.~ [S!FEMA1W]
+@1021 = ~Right.~ [S!FEMA1S]
+@1022 = ~On my way.~ [S!FEMA1T]
+@1023 = ~Make way.~ [S!FEMA1U]
+@1024 = ~Leave it to me.~ [S!FEMA1V]

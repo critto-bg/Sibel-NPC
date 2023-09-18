@@ -1,0 +1,134 @@
+BACKUP ~SibelNPC/backup~
+AUTHOR ~el.critto@gmail.com~
+VERSION ~v0.1~
+README ~SibelNPC/readme/index.html~
+
+LANGUAGE "English"
+  ~SibelNPC/lang/English/~
+  ~SibelNPC/lang/English/setup.tra~
+
+BEGIN @0
+REQUIRE_FILE ~override/AMDK.2da~ @1
+
+// NOTE: snippet to determine EE
+// ACTION_IF (FILE_EXISTS ~engine.lua~)
+
+/* tables */
+
+APPEND ~pdialog.2da~
+  ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!Sib25P S!Sib25J S!Sib25D S!Sibe25~
+  UNLESS ~S!SIBEL~
+
+APPEND ~interdia.2da~
+  ~S!SIBEL S!SibelB S!SibB25~
+  UNLESS ~S!SIBEL~
+
+/* items */
+
+// TODO: update the icon
+// TODO: adjust the colors
+// TODO: test how the fatigue prevention works
+COPY ~SibelNPC/resources/items/S!slea01.itm~ ~override/S!slea01.itm~
+  SAY NAME2 @500
+  SAY DESC @501
+
+// TODO: update the icon
+// TODO: adjust the colors
+COPY ~SibelNPC/resources/items/S!sblu01.itm~ ~override/S!sblu01.itm~
+  SAY NAME2 @502
+  SAY DESC @503
+
+/* creatures */
+
+// TODO: adjust the colors
+COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
+  SAY NAME1 @10
+  SAY NAME2 @10
+  SAY BIO @11
+
+  WRITE_ASCII 0x34 ~S!SIBELM~ #8 // small portrait
+  WRITE_ASCII 0x3c ~S!SIBELL~ #8 // large portrait
+  WRITE_ASCII 0x0248 ~S!SIBEL~ #8 // override script
+  WRITE_ASCII 0x0280 ~S!SIBEL~ #32 // death variable
+  WRITE_ASCII 0x02cc ~S!SIBEL~ #8 // dialog
+
+  SAY LEADER @1000
+  SAY TIRED @1001
+  SAY BORED @1002
+  SAY BATTLE_CRY1 @1003
+  SAY BATTLE_CRY2 @1004
+  SAY BATTLE_CRY3 @1005
+  SAY DAMAGE @1006
+  SAY DYING @1007
+  SAY HURT @1008
+  SAY SELECT_COMMON1 @1009
+  SAY SELECT_COMMON2 @1010
+  SAY SELECT_COMMON3 @1011
+  SAY SELECT_COMMON4 @1012
+  SAY SELECT_ACTION1 @1013
+  SAY SELECT_ACTION2 @1014
+  SAY SELECT_ACTION3 @1015
+  SAY SELECT_ACTION4 @1016
+  SAY SELECT_ACTION5 @1017
+  SAY SELECT_ACTION6 @1018
+  SAY SELECT_ACTION7 @1019
+  SAY REACT_TO_DIE_GENERAL @1020
+
+  SAY SELECT_RARE1 #-1
+  SAY SELECT_RARE2 #-1
+  SAY CRITICAL_HIT #-1
+  SAY CRITICAL_MISS #-1
+  SAY TARGET_IMMUNE #-1
+  SAY INVENTORY_FULL #-1
+  SAY PICKED_POCKET #-1
+  SAY HIDDEN_IN_SHADOWS #-1
+  SAY SPELL_DISRUPTED #-1
+  SAY SET_A_TRAP #-1
+
+  ADD_CRE_ITEM ~S!slea01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
+  ADD_CRE_ITEM ~S!sblu01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+
+/* dialogues */
+
+COMPILE ~SibelNPC/resources/dialogues/sibel.d~
+COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
+
+/* scripts */
+
+COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
+
+EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
+
+/* graphics */
+
+COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
+COPY ~SibelNPC/resources/portraits/SibeLM.BMP~ ~override/S!SIBELM.BMP~
+COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
+
+/* audio */
+
+COPY ~SibelNPC/resources/audio/FEMALE1#.WAV~ ~override/S!FEMA1#.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE10.WAV~ ~override/S!FEMA10.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE18.WAV~ ~override/S!FEMA18.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE19.WAV~ ~override/S!FEMA19.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1A.WAV~ ~override/S!FEMA1A.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1B.WAV~ ~override/S!FEMA1B.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1C.WAV~ ~override/S!FEMA1C.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1D.WAV~ ~override/S!FEMA1E.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1E.WAV~ ~override/S!FEMA1F.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1F.WAV~ ~override/S!FEMA1G.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1G.WAV~ ~override/S!FEMA1H.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1H.WAV~ ~override/S!FEMA1I.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1I.WAV~ ~override/S!FEMA1J.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1J.WAV~ ~override/S!FEMA1K.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1K.WAV~ ~override/S!FEMA1L.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1L.WAV~ ~override/S!FEMA1M.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1M.WAV~ ~override/S!FEMA1S.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1S.WAV~ ~override/S!FEMA1T.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1T.WAV~ ~override/S!FEMA1U.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1U.WAV~ ~override/S!FEMA1V.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1V.WAV~ ~override/S!FEMA1W.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1W.WAV~ ~override/S!FEMA1X.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1X.WAV~ ~override/S!FEMA1Y.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1Y.WAV~ ~override/S!FEMA1_.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1_.WAV~ ~override/S!FEMA1#.WAV~

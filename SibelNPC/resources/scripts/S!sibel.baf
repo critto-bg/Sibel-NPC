@@ -1,0 +1,8 @@
+IF
+  InParty(Myself)
+  Global("IaDream","LOCALS",0)
+  XPGT(Myself,835000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaDream","LOCALS",1)
+END

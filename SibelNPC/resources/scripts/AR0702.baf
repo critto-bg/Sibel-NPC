@@ -1,0 +1,7 @@
+IF
+  Global("IaSpawnSibel","AR0702",0)
+THEN
+  RESPONSE #100
+    CreateCreature("S!SIBEL",[755.335],3)
+    SetGlobal("IaSpawnSibel","AR0702",1)
+END

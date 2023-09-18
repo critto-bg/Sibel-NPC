@@ -1,0 +1,29 @@
+general:
+- readme
+- traify all dialogues
+- consider a different soundset, because the current one (HoW Female 1 from IWD:EE) does not have all of the required sounds
+- XP adjustment script
+
+NPC content:
+- banters between Sibel and the protagonist
+    - her banters during the game will also differ depending on her second class.
+- interparty banters and reactions to in-game events
+- dream sequence (study implementation)
+- reputation reactivity
+    - does Sibel complain about low reputation and leave the party?
+- tree of life reactivity
+- ToB stuff
+    - summoning
+    - ToB versions of joining, P, B and J scripts
+    - research the role of the ToB override script
+
+items:
+- upgrades for Sibel's personal items:
+    - Arcanis Family Legacy
+    - King of Clubs
+
+quest stuff:
+- journal entries
+
+misc:
+- patch description for GR
