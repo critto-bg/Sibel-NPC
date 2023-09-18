@@ -1,7 +1,5 @@
 BACKUP ~SibelNPC/backup~
 AUTHOR ~el.critto@gmail.com~
-VERSION ~v0.1~
-README ~SibelNPC/readme/index.html~
 
 LANGUAGE "English"
   ~SibelNPC/lang/English/~
@@ -33,21 +31,27 @@ COPY ~SibelNPC/resources/items/S!slea01.itm~ ~override/S!slea01.itm~
   SAY DESC @501
 
 // TODO: update the icon
-// TODO: adjust the colors
 COPY ~SibelNPC/resources/items/S!sblu01.itm~ ~override/S!sblu01.itm~
   SAY NAME2 @502
   SAY DESC @503
 
 /* creatures */
 
-// TODO: adjust the colors
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   SAY NAME1 @10
   SAY NAME2 @10
   SAY BIO @11
 
-  WRITE_ASCII 0x34 ~S!SIBELM~ #8 // small portrait
-  WRITE_ASCII 0x3c ~S!SIBELL~ #8 // large portrait
+  PATCH_IF (FILE_EXISTS ~engine.lua~) BEGIN
+    WRITE_ASCII 0x34 ~S!SIBELM~ #8 // small portrait
+    WRITE_ASCII 0x3c ~S!SIBELL~ #8 // large portrait
+    //TODO: write EE flag here
+  END
+  ELSE BEGIN
+    WRITE_ASCII 0x34 ~S!SIBELS~ #8 // small portrait
+    WRITE_ASCII 0x3c ~S!SIBELM~ #8 // large portrait
+  END
+
   WRITE_ASCII 0x0248 ~S!SIBEL~ #8 // override script
   WRITE_ASCII 0x0280 ~S!SIBEL~ #32 // death variable
   WRITE_ASCII 0x02cc ~S!SIBEL~ #8 // dialog
