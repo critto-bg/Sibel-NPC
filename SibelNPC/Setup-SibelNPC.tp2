@@ -89,7 +89,11 @@ COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   SAY SET_A_TRAP #-1
 
   ADD_CRE_ITEM ~S!slea01~ #0 #0 #0 ~IDENTIFIED~ ~ARMOR~
-  ADD_CRE_ITEM ~S!sblu01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~ EQUIP
+  ADD_CRE_ITEM ~S!sblu01~ #0 #0 #0 ~IDENTIFIED~ ~WEAPON1~
+
+  // set equipped weapon slot
+  READ_LONG 0x02b8 "item_slots_offset"
+  WRITE_SHORT ("%item_slots_offset%" + 0x4C) 0
 
 /* dialogues */
 
