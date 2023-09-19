@@ -20,17 +20,18 @@ APPEND ~interdia.2da~
 
 /* items */
 
-// TODO: update the icon
-// TODO: adjust the colors
 // TODO: test how the fatigue prevention works
 COPY ~SibelNPC/resources/items/S!slea01.itm~ ~override/S!slea01.itm~
   SAY NAME2 @500
   SAY DESC @501
 
-// TODO: update the icon
+  WRITE_ASCII 0x3a ~S!sleain~ #8 // inventory icon
+
 COPY ~SibelNPC/resources/items/S!sblu01.itm~ ~override/S!sblu01.itm~
   SAY NAME2 @502
   SAY DESC @503
+
+  WRITE_ASCII 0x3a ~S!scluin~ #8 // inventory icon
 
 /* creatures */
 
@@ -111,6 +112,9 @@ EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
 COPY ~SibelNPC/resources/portraits/SibeLM.BMP~ ~override/S!SIBELM.BMP~
 COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
+
+COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
+COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 
 /* audio */
 
