@@ -96,6 +96,11 @@ COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   READ_LONG 0x02b8 "item_slots_offset"
   WRITE_SHORT ("%item_slots_offset%" + 0x4C) 0
 
+/* spells */
+
+COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
+  SAY UNIDENTIFIED_DESC @700
+
 /* dialogues */
 
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
