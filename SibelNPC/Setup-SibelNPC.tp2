@@ -8,9 +8,6 @@ LANGUAGE "English"
 BEGIN @0
 REQUIRE_FILE ~override/AMDK.2da~ @1
 
-// NOTE: snippet to determine EE
-// ACTION_IF (FILE_EXISTS ~engine.lua~)
-
 /* tables */
 
 APPEND ~pdialog.2da~
@@ -120,21 +117,21 @@ COPY ~SibelNPC/resources/audio/FEMALE19.WAV~ ~override/S!FEMA19.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1A.WAV~ ~override/S!FEMA1A.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1B.WAV~ ~override/S!FEMA1B.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1C.WAV~ ~override/S!FEMA1C.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1D.WAV~ ~override/S!FEMA1E.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1E.WAV~ ~override/S!FEMA1F.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1F.WAV~ ~override/S!FEMA1G.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1G.WAV~ ~override/S!FEMA1H.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1H.WAV~ ~override/S!FEMA1I.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1I.WAV~ ~override/S!FEMA1J.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1J.WAV~ ~override/S!FEMA1K.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1K.WAV~ ~override/S!FEMA1L.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1L.WAV~ ~override/S!FEMA1M.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1M.WAV~ ~override/S!FEMA1S.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1S.WAV~ ~override/S!FEMA1T.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1T.WAV~ ~override/S!FEMA1U.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1U.WAV~ ~override/S!FEMA1V.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1V.WAV~ ~override/S!FEMA1W.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1W.WAV~ ~override/S!FEMA1X.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1X.WAV~ ~override/S!FEMA1Y.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1Y.WAV~ ~override/S!FEMA1_.WAV~
-COPY ~SibelNPC/resources/audio/FEMALE1_.WAV~ ~override/S!FEMA1#.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1D.WAV~ ~override/S!FEMA1D.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1E.WAV~ ~override/S!FEMA1E.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1F.WAV~ ~override/S!FEMA1F.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1G.WAV~ ~override/S!FEMA1G.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1H.WAV~ ~override/S!FEMA1H.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1I.WAV~ ~override/S!FEMA1I.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1J.WAV~ ~override/S!FEMA1J.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1K.WAV~ ~override/S!FEMA1K.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1L.WAV~ ~override/S!FEMA1L.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1M.WAV~ ~override/S!FEMA1M.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1S.WAV~ ~override/S!FEMA1S.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1T.WAV~ ~override/S!FEMA1T.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1U.WAV~ ~override/S!FEMA1U.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1V.WAV~ ~override/S!FEMA1V.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1W.WAV~ ~override/S!FEMA1W.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1X.WAV~ ~override/S!FEMA1X.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1Y.WAV~ ~override/S!FEMA1Y.WAV~
+COPY ~SibelNPC/resources/audio/FEMALE1_.WAV~ ~override/S!FEMA1_.WAV~
