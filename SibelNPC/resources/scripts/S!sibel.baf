@@ -1,3 +1,5 @@
+/* personal quest */
+
 IF
   InParty(Myself)
   Global("IaDream","LOCALS",0)
@@ -5,4 +7,29 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaDream","LOCALS",1)
+END
+
+/* banters */
+
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",0)
+  XPGT(Myself,560000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",1)
+    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",ONE_HOUR)
+END
+
+IF
+  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  Global("IaSibelTalks","GLOBAL",1)
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",2)
+    Interact(Player1)
 END

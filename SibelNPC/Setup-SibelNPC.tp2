@@ -105,6 +105,7 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
+COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
 
 /* scripts */
 
