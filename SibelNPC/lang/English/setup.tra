@@ -1,5 +1,7 @@
 @0 = ~Sibel, an NPC for Improved Anvil~
 @1 = ~Requires Improved Anvil to be installed~
+@2 = ~Sibel NPC, Enhanced Edition (required install on EE!)~
+@3 = ~Requires Sibel NPC to be installed~
 
 @10 = ~Sibel Arcanis~
 @11 = ~When asked, Sibel says that she is a member of the old Arcanis family.~
@@ -76,3 +78,19 @@ When this spell is cast, the life energy level of the recipient is raised. This 
 @1022 = ~On my way.~ [S!FEMA1T]
 @1023 = ~Make way.~ [S!FEMA1U]
 @1024 = ~Leave it to me.~ [S!FEMA1V]
+
+@1100 = ~Arcanis Family Curse
+
+Sibel has dreamed of her father last night. She claims he urged her to seek out an ancient prison. In its vicinity stands a portal stone that will take us to the Arcanis village at a time when the curse had just befallen it.
+
+The mystery of Sibel's curse continues to produce more questions than answers. Perhaps, we should seek out the monument Sibel speaks of and try to make some sense of the situation.~
+
+@1101 = ~Arcanis Family Curse
+
+Sibel has dreamed of her father last night. She claims he urged her to seek out an ancient prison. In its vicinity stands a portal stone that will take us to the Arcanis village at a time when the curse had just befallen it.
+
+The mystery of Sibel's curse continues to produce more questions than answers. The ancient prison might refer to the old stronghold called Watcher's Keep. Perhaps, we should seek out the monument Sibel speaks of and try to make some sense of the situation.~
+
+@1102 = ~Arcanis Family Curse
+
+We have traveled to Watcher's Keep and found the monument Sibel's Father spoke of. However, I chose to decline Sibel's offer to travel back in time and witness the unfolding of events at the Arcanis family village. Sibel understood my hesitation and resumed her quest alone. Perhaps, we will meet again.~

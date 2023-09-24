@@ -16,11 +16,21 @@ NPC content:
     - summoning
     - ToB versions of joining, P, B and J scripts
     - research the role of the ToB override script
+- kick-out stuff
+    - logic for when Sibel is kicked out while party is in the Arcanis village
+- crazy silvan poem about Sibel
+
+areas:
+- ship audio files and tis compressed, convert during installation
 
 items:
 - upgrades for Sibel's personal items:
     - Arcanis Family Legacy
     - King of Clubs
+- further update the restrictions on Sibel's items
+    - http://forums.blackwyrmlair.net/index.php?s=&showtopic=5531&view=findpost&p=60634
+- bug report on fatigue behavior
+    - http://forums.blackwyrmlair.net/index.php?s=&showtopic=5533&view=findpost&p=60626
 
 quest stuff:
 - journal entries

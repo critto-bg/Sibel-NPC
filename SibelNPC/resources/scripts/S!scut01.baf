@@ -1,0 +1,62 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    JumpToPoint([1830.2735])
+    Face(7)
+    MoveViewPoint([1830.2735],INSTANT)
+
+    ActionOverride(Player2,JumpToPoint([1875.2735]))
+    ActionOverride(Player2,Face(7))
+    ActionOverride(Player3,JumpToPoint([1830.2765]))
+    ActionOverride(Player3,Face(7))
+    ActionOverride(Player4,JumpToPoint([1875.2765]))
+    ActionOverride(Player4,Face(7))
+    ActionOverride(Player5,JumpToPoint([1830.2790]))
+    ActionOverride(Player5,Face(7))
+    ActionOverride(Player6,JumpToPoint([1875.2790]))
+    ActionOverride(Player6,Face(7))
+
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    MoveViewPoint([2020.2370],VERY_FAST)
+    Wait(3)
+
+    MoveToPoint([1880.2475])
+    ActionOverride(Player2,MoveToPoint([1945.2500]))
+    ActionOverride(Player3,MoveToPoint([1770.2515]))
+    ActionOverride(Player4,MoveToPoint([1900.2560]))
+    ActionOverride(Player5,MoveToPoint([1750.2570]))
+    ActionOverride(Player6,MoveToPoint([1875.2600]))
+    Wait(4)
+
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    ActionOverride(Player2,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player3,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player4,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player5,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player6,ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(1)
+
+    FadeToColor([20.0],0)
+    Wait(2)
+
+    LeaveAreaLUAPanic("ARia28","",[700.1890],12)
+    LeaveAreaLUA("ARia28","",[700.1890],12)
+    ActionOverride(Player2,LeaveAreaLUA("ARia28","",[700.1950],12))
+    ActionOverride(Player3,LeaveAreaLUA("ARia28","",[630.1890],12))
+    ActionOverride(Player4,LeaveAreaLUA("ARia28","",[630.1950],12))
+    ActionOverride(Player5,LeaveAreaLUA("ARia28","",[570.1890],12))
+    ActionOverride(Player6,LeaveAreaLUA("ARia28","",[570.1950],12))
+    FadeFromColor([20.0],0)
+
+    MultiPlayerSync()
+    EndCutSceneMode()
+END

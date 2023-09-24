@@ -2,11 +2,44 @@
 
 IF
   InParty(Myself)
-  Global("IaDream","LOCALS",0)
+  Global("IaSibelDream","GLOBAL",0)
   XPGT(Myself,835000)
 THEN
   RESPONSE #100
-    SetGlobal("IaDream","LOCALS",1)
+    SetGlobal("IaSibelDream","GLOBAL",1)
+END
+
+IF
+  Global("IaSibelDream","GLOBAL",1)
+  PartyRested()
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !AreaCheck("AR3000")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelDream","GLOBAL",2)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("IaSibelDream","GLOBAL",3)
+  Global("EnteredArea","AR3000",1)
+  AreaCheck("AR3000")
+  InParty(Myself)
+  See(Player1)
+  Range(Player1,10)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelDream","GLOBAL",4)
+    // the wait here if the party enters WK for the first time
+    // the game will show the text screen with the intro in that case
+    SetInterrupt(FALSE)
+    Wait(3)
+    StartDialogueNoSet(Player1)
+    SetInterrupt(TRUE)
 END
 
 /* banters */
@@ -18,7 +51,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",1)
-    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",ONE_HOUR)
+    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
 END
 
 IF

@@ -6,21 +6,24 @@ LANGUAGE "English"
   ~SibelNPC/lang/English/setup.tra~
 
 BEGIN @0
+DESIGNATED 0
 REQUIRE_FILE ~override/AMDK.2da~ @1
 
 /* tables */
-
-APPEND ~pdialog.2da~
-  ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!Sib25P S!Sib25J S!Sib25D S!Sibe25~
-  UNLESS ~S!SIBEL~
 
 APPEND ~interdia.2da~
   ~S!SIBEL S!SibelB S!SibB25~
   UNLESS ~S!SIBEL~
 
+APPEND ~mastarea.2da~ ~ARia28     value~
+  UNLESS ~ARia28~
+
+APPEND ~pdialog.2da~
+  ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!Sib25P S!Sib25J S!Sib25D S!Sibe25~
+  UNLESS ~S!SIBEL~
+
 /* items */
 
-// TODO: test how the fatigue prevention works
 COPY ~SibelNPC/resources/items/S!slea01.itm~ ~override/S!slea01.itm~
   SAY NAME2 @500
   SAY DESC @501
@@ -104,14 +107,19 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 /* dialogues */
 
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
-COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
+COMPILE ~SibelNPC/resources/dialogues/sibelj.d~
+COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
 
 /* scripts */
 
+COMPILE ~SibelNPC/resources/scripts/aria28.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
 
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
+EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
 
 /* graphics */
 
@@ -121,6 +129,41 @@ COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
 
 COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
+
+/* areas */
+
+COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
+  WRITE_ASCII 0x94 ~aria28~ #8 // area script
+
+COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
+COPY ~SibelNPC/resources/areas/aria28HT.bmp~ ~override/aria28HT.bmp~
+COPY ~SibelNPC/resources/areas/aria28LM.bmp~ ~override/aria28LM.bmp~
+COPY ~SibelNPC/resources/areas/aria28SR.bmp~ ~override/aria28SR.bmp~
+
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/areas/aria28_ee.mos~ ~override/aria28.mos~
+  COPY ~SibelNPC/resources/areas/aria28_ee.tis~ ~override/aria28.tis~
+  COPY ~SibelNPC/resources/areas/AIA2800.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2801.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2802.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2803.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2804.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2805.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2806.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2807.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2808.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2809.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2810.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2811.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2812.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2813.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2814.PVRZ~ ~override~
+  COPY ~SibelNPC/resources/areas/AIA2815.PVRZ~ ~override~
+END
+ELSE BEGIN
+  COPY ~SibelNPC/resources/areas/aria28.mos~ ~override/aria28.mos~
+  COPY ~SibelNPC/resources/areas/aria28.tis~ ~override/aria28.tis~
+END
 
 /* audio */
 
@@ -149,3 +192,34 @@ COPY ~SibelNPC/resources/audio/FEMALE1W.WAV~ ~override/S!FEMA1W.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1X.WAV~ ~override/S!FEMA1X.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1Y.WAV~ ~override/S!FEMA1Y.WAV~
 COPY ~SibelNPC/resources/audio/FEMALE1_.WAV~ ~override/S!FEMA1_.WAV~
+
+COPY ~SibelNPC/resources/audio/AM_2000A.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100A.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100B.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100C.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100D.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100E.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100M.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2100T.wav~ ~override~
+
+COPY ~SibelNPC/resources/audio/SS_2100A.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100B.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100C.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100D.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100E.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100F.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100G.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100H.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100I.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100J.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100K.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100M.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100O.wav~ ~override~
+COPY ~SibelNPC/resources/audio/SS_2100P.wav~ ~override~
+
+/* EE extras as a separate component */
+
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  AT_EXIT ~SibelNPC/Setup-SibelNPCEE.tp2~
+END

@@ -1,0 +1,38 @@
+IF
+  InMyArea(Player1)
+  Global("IaSibelInWK","GLOBAL",0)
+  GlobalLT("IaSibelDream","GLOBAL",2)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelInWK","GLOBAL",1)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaRunOnce","AR3000",0)
+  GlobalGT("IaSibelDream","GLOBAL",2)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaRunOnce","AR3000",1)
+    Explore()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaSibelLeaves","AR3000",1)
+  Global("IaSibelDream","GLOBAL",5)
+  !InMyArea("S!Sibel")
+  !InParty("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelLeaves","AR3000",2)
+    EraseJournalEntry(@1100)
+    EraseJournalEntry(@1101)
+    AddJournalEntry(@1102,QUEST_DONE)
+END

@@ -1,0 +1,44 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    JumpToPoint([1830.2735])
+    Face(7)
+    MoveViewPoint([1830.2735],INSTANT)
+
+    ActionOverride(Player2,JumpToPoint([1875.2735]))
+    ActionOverride(Player2,Face(7))
+    ActionOverride(Player3,JumpToPoint([1830.2765]))
+    ActionOverride(Player3,Face(7))
+    ActionOverride(Player4,JumpToPoint([1875.2765]))
+    ActionOverride(Player4,Face(7))
+    ActionOverride(Player5,JumpToPoint([1830.2790]))
+    ActionOverride(Player5,Face(7))
+    ActionOverride(Player6,JumpToPoint([1875.2790]))
+    ActionOverride(Player6,Face(7))
+
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    MoveViewPoint([2020.2370],VERY_FAST)
+    Wait(3)
+
+    ActionOverride("S!Sibel",MoveToPoint([1940.2475]))
+    Wait(4)
+    ActionOverride("S!Sibel",LeaveParty())
+    ActionOverride("S!Sibel",ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(2)
+    ActionOverride("S!Sibel",DestroySelf())
+
+    Wait(2)
+
+    SetGlobal("IaSibelLeaves","AR3000",1)
+    MultiPlayerSync()
+    EndCutSceneMode()
+END

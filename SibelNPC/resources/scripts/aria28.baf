@@ -1,0 +1,9 @@
+IF
+  InMyArea(Player1)
+  OnCreation()
+  Global("IaRunOnce","ARIA28",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaRunOnce","ARIA28",1)
+    Explore()
+END
