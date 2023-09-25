@@ -382,3 +382,234 @@ THEN
     Wait(2)
     GiveItemCreate("S!sblu02",Player1,1,1,1)
 END
+
+// Howard's Gift (version 1) //
+
+IF
+  HasItemEquiped("S!sglo01",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo01",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo01",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo01",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo01",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo01",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo01")
+    DestroyItem("S!sglo01")
+    Wait(2)
+    GiveItemCreate("S!sglo01",Player1,1,1,1)
+END
+
+// Howard's Gift (version 2) //
+
+IF
+  HasItemEquiped("S!sglo02",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo02",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo02",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo02",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo02",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo02",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo02")
+    DestroyItem("S!sglo02")
+    Wait(2)
+    GiveItemCreate("S!sglo02",Player1,1,1,1)
+END
+
+// Howard's Gift (version 3) //
+
+IF
+  HasItemEquiped("S!sglo03",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo03",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo03",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo03",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo03",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sglo03",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sglo03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sglo03")
+    DestroyItem("S!sglo03")
+    Wait(2)
+    GiveItemCreate("S!sglo03",Player1,1,1,1)
+END

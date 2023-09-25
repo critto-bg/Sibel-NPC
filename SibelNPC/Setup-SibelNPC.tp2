@@ -49,10 +49,22 @@ COPY ~SibelNPC/resources/items/S!slea02.itm~ ~override/S!slea02.itm~
   WRITE_ASCII 0x3a ~S!sleain~ #8 // inventory icon
 
 COPY ~SibelNPC/resources/items/S!slea03.itm~ ~override/S!slea03.itm~
-  SAY NAME2 @508
-  SAY DESC @509
+  SAY NAME2 @506
+  SAY DESC @508
 
   WRITE_ASCII 0x3a ~S!sleain~ #8 // inventory icon
+
+COPY ~SibelNPC/resources/items/S!sglo01.itm~ ~override/S!sglo01.itm~
+  SAY NAME2 @509
+  SAY DESC @510
+
+COPY ~SibelNPC/resources/items/S!sglo02.itm~ ~override/S!sglo02.itm~
+  SAY NAME2 @509
+  SAY DESC @511
+
+COPY ~SibelNPC/resources/items/S!sglo03.itm~ ~override/S!sglo03.itm~
+  SAY NAME2 @509
+  SAY DESC @512
 
 /* creatures */
 

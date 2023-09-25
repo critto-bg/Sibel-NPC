@@ -65,7 +65,7 @@ Usable By:
 
 Once made of high quality Arcanis leather, this armor still has a minute portion of the magic imbued within. An intricate combination of enchantments and masterful craftmanship enables Sibel to endure long bouts of strenuous exercise without succumbing to fatigue.
 
-The armor has been improved by Howard Arcanis, master craftsman and leather worker of the Arcanis family.
+The armor has been improved by Howard Arcanis, master craftsman and leatherworker of the Arcanis family.
 
 STATISTICS
 
@@ -80,12 +80,11 @@ Armor Class: 1
 Weight: 10
 Usable By:
  Sibel~
-@508 = ~Arcanis Family Legacy~
-@509 = ~Arcanis Family Legacy
+@508 = ~Arcanis Family Legacy
 
 Once made of high quality Arcanis leather, this armor still has a minute portion of the magic imbued within. An intricate combination of enchantments and masterful craftmanship enables Sibel to endure long bouts of strenuous exercise without succumbing to fatigue.
 
-The armor has been improved by Howard Arcanis, master craftsman and leather worker of the Arcanis family.
+The armor has been improved by Howard Arcanis, master craftsman and leatherworker of the Arcanis family.
 
 STATISTICS
 
@@ -98,6 +97,43 @@ Equipped Abillites:
 
 Armor Class: 1
 Weight: 10
+Usable By:
+ Sibel~
+@509 = ~Howard's Gift~
+@510 = ~Howard's Gift
+
+When Sibel had traveled back in time to her home village, she discovered an ancient tome dedicated to the craft of leatherworking inside the family library. When presented with such a precious gift, Howard Arcanis, master leatherworker, has taken upon himself to produce a gift of his own in return. Knowing that the project might consume months or even years of his life, Howard had promised to hide the final craft piece in a safe place, in the hope that Sibel would eventually discover the treasure. In the end, Howard's plan had proven to be successful, for Sibel has found these gloves safely hidden upon her return back to Athkatla.
+
+STATISTICS
+
+Equipped Abillites:
+- +3 bonus to THAC0
+
+Usable By:
+ Sibel~
+@511 = ~Howard's Gift
+
+When Sibel had traveled back in time to her home village, she discovered an ancient tome dedicated to the craft of leatherworking inside the family library. When presented with such a precious gift, Howard Arcanis, master leatherworker, has taken upon himself to produce a gift of his own in return. Knowing that the project might consume months or even years of his life, Howard had promised to hide the final craft piece in a safe place, in the hope that Sibel would eventually discover the treasure. In the end, Howard's plan had proven to be successful, for Sibel has found these gloves safely hidden upon her return back to Athkatla.
+
+STATISTICS
+
+Equipped Abillites:
+- +4 bonus to THAC0
+- +10% bonus resistance to physical damage
+
+Usable By:
+ Sibel~
+@512 = ~Howard's Gift
+
+When Sibel had traveled back in time to her home village, she discovered an ancient tome dedicated to the craft of leatherworking inside the family library. When presented with such a precious gift, Howard Arcanis, master leatherworker, has taken upon himself to produce a gift of his own in return. Knowing that the project might consume months or even years of his life, Howard had promised to hide the final craft piece in a safe place, in the hope that Sibel would eventually discover the treasure. In the end, Howard's plan had proven to be successful, for Sibel has found these gloves safely hidden upon her return back to Athkatla.
+
+STATISTICS
+
+Equipped Abillites:
+- +5 bonus to THAC0
+- +10% bonus resistance to physical damage
+- +1 extra attack per round
+
 Usable By:
  Sibel~
 
