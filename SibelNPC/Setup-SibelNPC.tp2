@@ -70,6 +70,8 @@ COPY ~SibelNPC/resources/items/S!sboo01.itm~ ~override/S!sboo01.itm~
   SAY NAME2 @513
   SAY DESC @514
 
+  WRITE_ASCII 0x3a ~S!sboin~ #8 // inventory icon
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -163,6 +165,7 @@ COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
 COPY ~SibelNPC/resources/portraits/SibeLM.BMP~ ~override/S!SIBELM.BMP~
 COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
 
+COPY ~SibelNPC/resources/bam/S!sboin.bam~ ~override/S!sboin.bam~
 COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 
