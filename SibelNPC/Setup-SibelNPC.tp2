@@ -183,7 +183,7 @@ COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
     READ_SHORT (map_notes_offset        + (0x34 * index)) x_coord
     READ_SHORT (map_notes_offset + 0x02 + (0x34 * index)) y_coord
 
-    // Lord Ardanis' Home
+    // Lord Arcanis' Home
     PATCH_IF (x_coord = 1430 AND y_coord = 1970) BEGIN
       SAY (map_notes_offset + 0x04 + (0x34 * index)) @12
     END
@@ -229,10 +229,18 @@ COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
     END
   END
 
+COPY ~SibelNPC/resources/areas/aria29.are~ ~override/aria29.are~
+  WRITE_ASCII 0x94 ~aria29~ #8 // area script
+
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
 COPY ~SibelNPC/resources/areas/aria28HT.bmp~ ~override/aria28HT.bmp~
 COPY ~SibelNPC/resources/areas/aria28LM.bmp~ ~override/aria28LM.bmp~
 COPY ~SibelNPC/resources/areas/aria28SR.bmp~ ~override/aria28SR.bmp~
+
+COPY ~SibelNPC/resources/areas/aria29.wed~ ~override/aria29.wed~
+COPY ~SibelNPC/resources/areas/aria29HT.bmp~ ~override/aria29HT.bmp~
+COPY ~SibelNPC/resources/areas/aria29LM.bmp~ ~override/aria29LM.bmp~
+COPY ~SibelNPC/resources/areas/aria29SR.bmp~ ~override/aria29SR.bmp~
 
 ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/aria28_ee.mos~ ~override/aria28.mos~
@@ -253,10 +261,17 @@ ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/AIA2813.PVRZ~ ~override~
   COPY ~SibelNPC/resources/areas/AIA2814.PVRZ~ ~override~
   COPY ~SibelNPC/resources/areas/AIA2815.PVRZ~ ~override~
+
+  COPY ~SibelNPC/resources/areas/aria29_ee.mos~ ~override/aria29.mos~
+  COPY ~SibelNPC/resources/areas/aria29_ee.tis~ ~override/aria29.tis~
+  COPY ~SibelNPC/resources/areas/AIA2900.PVRZ~ ~override~
 END
 ELSE BEGIN
   COPY ~SibelNPC/resources/areas/aria28.mos~ ~override/aria28.mos~
   COPY ~SibelNPC/resources/areas/aria28.tis~ ~override/aria28.tis~
+
+  COPY ~SibelNPC/resources/areas/aria29.mos~ ~override/aria29.mos~
+  COPY ~SibelNPC/resources/areas/aria29.tis~ ~override/aria29.tis~
 END
 
 /* audio */
@@ -296,6 +311,7 @@ COPY ~SibelNPC/resources/audio/AM_2100D.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2100E.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2100M.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2100T.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2112.wav~ ~override~
 
 COPY ~SibelNPC/resources/audio/SS_2100A.wav~ ~override~
 COPY ~SibelNPC/resources/audio/SS_2100B.wav~ ~override~
