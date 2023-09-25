@@ -39,6 +39,67 @@ Proficiency Type: Club
 
 Usable By:
  Sibel~
+@504 = ~King of Clubs~
+@505 = ~King of Clubs
+
+This ancient club was crafted from the wood of the ancient Elm tree. The weapon grew more powerful after Sibel had performed an act of restoration on the Elm tree.
+
+STATISTICS
+
+Special Abilities:
+- 10% chance per successful hit to cast Iron Skins spell on the wielder
+- 10% chance per successful hit to cast Mass Cure Spell on the wielder
+
+Enchanthment: +5
+THAC0: +5 bonus
+Damage: 5D6 + 5
+Damage type: crushing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Club
+
+Usable By:
+ Sibel~
+@506 = ~Arcanis Family Legacy~
+@507 = ~Arcanis Family Legacy
+
+Once made of high quality Arcanis leather, this armor still has a minute portion of the magic imbued within. An intricate combination of enchantments and masterful craftmanship enables Sibel to endure long bouts of strenuous exercise without succumbing to fatigue.
+
+The armor has been improved by Howard Arcanis, master craftsman and leather worker of the Arcanis family.
+
+STATISTICS
+
+Equipped Abillites:
+- +3 bonus to all Saving Throws
+- +30 bonus to max HP
+- immunity to fatigue
+- +1 bonus to Casting Speed
+- two additional spells per day at 5th, 6th and 7th spell level
+
+Armor Class: 1
+Weight: 10
+Usable By:
+ Sibel~
+@508 = ~Arcanis Family Legacy~
+@509 = ~Arcanis Family Legacy
+
+Once made of high quality Arcanis leather, this armor still has a minute portion of the magic imbued within. An intricate combination of enchantments and masterful craftmanship enables Sibel to endure long bouts of strenuous exercise without succumbing to fatigue.
+
+The armor has been improved by Howard Arcanis, master craftsman and leather worker of the Arcanis family.
+
+STATISTICS
+
+Equipped Abillites:
+- +3 bonus to all Saving Throws
+- +30 bonus to max HP
+- immunity to fatigue
+- +3 bonus to Dexterity
+- +3 bonus to Strength
+
+Armor Class: 1
+Weight: 10
+Usable By:
+ Sibel~
 
 @700 = ~Greater Restoration
 (Necromancy)

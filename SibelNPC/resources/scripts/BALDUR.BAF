@@ -75,6 +75,160 @@ THEN
     GiveItemCreate("S!slea01",Player1,1,1,1)
 END
 
+// Arcanis Family Legacy (clerical) //
+
+IF
+  HasItemEquiped("S!slea02",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea02",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea02",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea02",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea02",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea02",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea02")
+    DestroyItem("S!slea02")
+    Wait(2)
+    GiveItemCreate("S!slea02",Player1,1,1,1)
+END
+
+// Arcanis Family Legacy (melee) //
+
+IF
+  HasItemEquiped("S!slea03",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea03",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea03",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea03",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea03",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!slea03",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!slea03","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!slea03")
+    DestroyItem("S!slea03")
+    Wait(2)
+    GiveItemCreate("S!slea03",Player1,1,1,1)
+END
+
 // Queen of Clubs //
 
 IF
@@ -150,4 +304,81 @@ THEN
     DestroyItem("S!sblu01")
     Wait(2)
     GiveItemCreate("S!sblu01",Player1,1,1,1)
+END
+
+// King of Clubs //
+
+IF
+  HasItemEquiped("S!sblu02",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu02",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu02",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu02",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu02",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu02",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu02","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu02")
+    DestroyItem("S!sblu02")
+    Wait(2)
+    GiveItemCreate("S!sblu02",Player1,1,1,1)
 END

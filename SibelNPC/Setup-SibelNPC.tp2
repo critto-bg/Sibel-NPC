@@ -36,6 +36,24 @@ COPY ~SibelNPC/resources/items/S!sblu01.itm~ ~override/S!sblu01.itm~
 
   WRITE_ASCII 0x3a ~S!scluin~ #8 // inventory icon
 
+COPY ~SibelNPC/resources/items/S!sblu02.itm~ ~override/S!sblu02.itm~
+  SAY NAME2 @504
+  SAY DESC @505
+
+  WRITE_ASCII 0x3a ~S!scluin~ #8 // inventory icon
+
+COPY ~SibelNPC/resources/items/S!slea02.itm~ ~override/S!slea02.itm~
+  SAY NAME2 @506
+  SAY DESC @507
+
+  WRITE_ASCII 0x3a ~S!sleain~ #8 // inventory icon
+
+COPY ~SibelNPC/resources/items/S!slea03.itm~ ~override/S!slea03.itm~
+  SAY NAME2 @508
+  SAY DESC @509
+
+  WRITE_ASCII 0x3a ~S!sleain~ #8 // inventory icon
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
