@@ -171,6 +171,61 @@ COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
   WRITE_ASCII 0x94 ~aria28~ #8 // area script
 
+  // update labels for automap notes //
+
+  READ_LONG 0xc4 map_notes_offset
+  READ_LONG 0xc8 map_notes_amount
+
+  FOR (index = 0; index < map_notes_amount; index = index + 1) BEGIN
+    READ_SHORT (map_notes_offset        + (0x34 * index)) x_coord
+    READ_SHORT (map_notes_offset + 0x02 + (0x34 * index)) y_coord
+
+    // Lord Ardanis' Home
+    PATCH_IF (x_coord = 1430 AND y_coord = 1970) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @12
+    END
+
+    // Hardware Store
+    PATCH_IF (x_coord = 1160 AND y_coord = 1800) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @13
+    END
+
+    // Alchemy Tower
+    PATCH_IF (x_coord = 390 AND y_coord = 655) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @14
+    END
+
+    // Village Inn
+    PATCH_IF (x_coord = 1210 AND y_coord = 380) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @15
+    END
+
+    // Howard's Workshop
+    PATCH_IF (x_coord = 1520 AND y_coord = 250) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @16
+    END
+
+    // Amberville Home
+    PATCH_IF (x_coord = 2770 AND y_coord = 1147) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @17
+    END
+
+    // Root Cellar
+    PATCH_IF (x_coord = 2085 AND y_coord = 780) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @18
+    END
+
+    // Library
+    PATCH_IF (x_coord = 2880 AND y_coord = 630) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @19
+    END
+
+    // Empty House
+    PATCH_IF (x_coord = 2008 AND y_coord = 1550) BEGIN
+      SAY (map_notes_offset + 0x04 + (0x34 * index)) @20
+    END
+  END
+
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
 COPY ~SibelNPC/resources/areas/aria28HT.bmp~ ~override/aria28HT.bmp~
 COPY ~SibelNPC/resources/areas/aria28LM.bmp~ ~override/aria28LM.bmp~
