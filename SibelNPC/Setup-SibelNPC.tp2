@@ -66,6 +66,10 @@ COPY ~SibelNPC/resources/items/S!sglo03.itm~ ~override/S!sglo03.itm~
   SAY NAME2 @509
   SAY DESC @512
 
+COPY ~SibelNPC/resources/items/S!sboo01.itm~ ~override/S!sboo01.itm~
+  SAY NAME2 @513
+  SAY DESC @514
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~

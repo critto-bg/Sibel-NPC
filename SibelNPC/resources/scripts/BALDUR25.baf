@@ -613,3 +613,80 @@ THEN
     Wait(2)
     GiveItemCreate("S!sglo03",Player1,1,1,1)
 END
+
+// Howard's Boots //
+
+IF
+  HasItemEquiped("S!sboo01",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sboo01",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sboo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sboo01",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sboo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sboo01",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sboo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sboo01",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sboo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sboo01",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sboo01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sboo01")
+    DestroyItem("S!sboo01")
+    Wait(2)
+    GiveItemCreate("S!sboo01",Player1,1,1,1)
+END
