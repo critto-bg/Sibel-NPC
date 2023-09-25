@@ -120,6 +120,8 @@ COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
 
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
+EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
+EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
 
 /* graphics */
 
