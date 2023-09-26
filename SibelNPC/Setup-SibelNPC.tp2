@@ -160,6 +160,7 @@ COMPILE ~SibelNPC/resources/scripts/S!cauldr.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
+COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
@@ -300,6 +301,24 @@ COPY ~SibelNPC/resources/areas/aria33.are~ ~override/aria33.are~
 // Amberville Home
 COPY ~SibelNPC/resources/areas/aria34.are~ ~override/aria34.are~
   WRITE_ASCII 0x94 ~aria34~ #8 // area script
+
+// Root Cellar
+COPY ~SibelNPC/resources/areas/aria35.are~ ~override/aria35.are~
+  WRITE_ASCII 0x94 ~aria35~ #8 // area script
+
+  // update triggers //
+
+  READ_SHORT 0x5a triggers_amount
+  READ_LONG 0x5c triggers_offset
+
+  FOR (index = 0; index < triggers_amount; index = index + 1) BEGIN
+    READ_ASCII (triggers_offset + (0xc4 * index)) trigger_name (32)
+
+    // Tree Root
+    PATCH_IF ("%trigger_name%" STRING_MATCHES_REGEXP "Tree Root" = 0) BEGIN
+      WRITE_ASCII (triggers_offset + 0x7c + (0xc4 * index)) ~S!stree~ #8 // region script
+    END
+  END
 
 /* area resources */
 
