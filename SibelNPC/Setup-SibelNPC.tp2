@@ -271,9 +271,6 @@ COPY ~SibelNPC/resources/areas/aria30.are~ ~override/aria30.are~
 COPY ~SibelNPC/resources/areas/aria31.are~ ~override/aria31.are~
   WRITE_ASCII 0x94 ~aria31~ #8 // area script
 
-COPY ~SibelNPC/resources/areas/aria32.are~ ~override/aria32.are~
-  WRITE_ASCII 0x94 ~aria32~ #8 // area script
-
   // update triggers //
 
   READ_SHORT 0x5a triggers_amount
@@ -287,6 +284,12 @@ COPY ~SibelNPC/resources/areas/aria32.are~ ~override/aria32.are~
       WRITE_ASCII (triggers_offset + 0x7c + (0xc4 * index)) ~S!cauldr~ #8 // region script
     END
   END
+
+COPY ~SibelNPC/resources/areas/aria32.are~ ~override/aria32.are~
+  WRITE_ASCII 0x94 ~aria32~ #8 // area script
+
+COPY ~SibelNPC/resources/areas/aria33.are~ ~override/aria33.are~
+  WRITE_ASCII 0x94 ~aria33~ #8 // area script
 
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
 COPY ~SibelNPC/resources/areas/aria28HT.bmp~ ~override/aria28HT.bmp~
@@ -307,6 +310,11 @@ COPY ~SibelNPC/resources/areas/aria31.wed~ ~override/aria31.wed~
 COPY ~SibelNPC/resources/areas/aria31HT.bmp~ ~override/aria31HT.bmp~
 COPY ~SibelNPC/resources/areas/aria31LM.bmp~ ~override/aria31LM.bmp~
 COPY ~SibelNPC/resources/areas/aria31SR.bmp~ ~override/aria31SR.bmp~
+
+COPY ~SibelNPC/resources/areas/aria33.wed~ ~override/aria33.wed~
+COPY ~SibelNPC/resources/areas/aria33HT.bmp~ ~override/aria33HT.bmp~
+COPY ~SibelNPC/resources/areas/aria33LM.bmp~ ~override/aria33LM.bmp~
+COPY ~SibelNPC/resources/areas/aria33SR.bmp~ ~override/aria33SR.bmp~
 
 ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/aria28_ee.mos~ ~override/aria28.mos~
@@ -339,6 +347,10 @@ ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/aria31_ee.mos~ ~override/aria31.mos~
   COPY ~SibelNPC/resources/areas/aria31_ee.tis~ ~override/aria31.tis~
   COPY ~SibelNPC/resources/areas/AIA3100.PVRZ~ ~override~
+
+  COPY ~SibelNPC/resources/areas/aria33_ee.mos~ ~override/aria33.mos~
+  COPY ~SibelNPC/resources/areas/aria33_ee.tis~ ~override/aria33.tis~
+  COPY ~SibelNPC/resources/areas/AIA3300.PVRZ~ ~override~
 END
 ELSE BEGIN
   COPY ~SibelNPC/resources/areas/aria28.mos~ ~override/aria28.mos~
@@ -352,6 +364,9 @@ ELSE BEGIN
 
   COPY ~SibelNPC/resources/areas/aria31.mos~ ~override/aria31.mos~
   COPY ~SibelNPC/resources/areas/aria31.tis~ ~override/aria31.tis~
+
+  COPY ~SibelNPC/resources/areas/aria33.mos~ ~override/aria33.mos~
+  COPY ~SibelNPC/resources/areas/aria33.tis~ ~override/aria33.tis~
 END
 
 /* audio */
@@ -393,6 +408,7 @@ COPY ~SibelNPC/resources/audio/AM_2100E.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2100M.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2100T.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2102.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_2103.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2112.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2113.wav~ ~override~
 
