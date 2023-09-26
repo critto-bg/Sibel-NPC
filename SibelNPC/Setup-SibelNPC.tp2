@@ -180,6 +180,7 @@ COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 
 /* areas */
 
+// outside area
 COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
   WRITE_ASCII 0x94 ~aria28~ #8 // area script
 
@@ -262,12 +263,15 @@ COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
     END
   END
 
+// Lord Arcanis' Home
 COPY ~SibelNPC/resources/areas/aria29.are~ ~override/aria29.are~
   WRITE_ASCII 0x94 ~aria29~ #8 // area script
 
+// General Store
 COPY ~SibelNPC/resources/areas/aria30.are~ ~override/aria30.are~
   WRITE_ASCII 0x94 ~aria30~ #8 // area script
 
+// Alchemy Tower
 COPY ~SibelNPC/resources/areas/aria31.are~ ~override/aria31.are~
   WRITE_ASCII 0x94 ~aria31~ #8 // area script
 
@@ -285,11 +289,19 @@ COPY ~SibelNPC/resources/areas/aria31.are~ ~override/aria31.are~
     END
   END
 
+// Village Inn
 COPY ~SibelNPC/resources/areas/aria32.are~ ~override/aria32.are~
   WRITE_ASCII 0x94 ~aria32~ #8 // area script
 
+// Howard's Workshop
 COPY ~SibelNPC/resources/areas/aria33.are~ ~override/aria33.are~
   WRITE_ASCII 0x94 ~aria33~ #8 // area script
+
+// Amberville Home
+COPY ~SibelNPC/resources/areas/aria34.are~ ~override/aria34.are~
+  WRITE_ASCII 0x94 ~aria34~ #8 // area script
+
+/* area resources */
 
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
 COPY ~SibelNPC/resources/areas/aria28HT.bmp~ ~override/aria28HT.bmp~
