@@ -189,6 +189,16 @@ COPY ~SibelNPC/resources/areas/aria28.are~ ~override/aria28.are~
     PATCH_IF ("%trigger_name%" STRING_MATCHES_REGEXP "General Store" = 0) BEGIN
       SAY (triggers_offset + 0x64 + (0xc4 * index)) @13
     END
+
+    // Inn Sign
+    PATCH_IF ("%trigger_name%" STRING_MATCHES_REGEXP "Inn Sign" = 0) BEGIN
+      SAY (triggers_offset + 0x64 + (0xc4 * index)) @15
+    END
+
+    // Tavern Sign
+    PATCH_IF ("%trigger_name%" STRING_MATCHES_REGEXP "Tavern Sign" = 0) BEGIN
+      SAY (triggers_offset + 0x64 + (0xc4 * index)) @18
+    END
   END
 
   // update labels for automap notes //
