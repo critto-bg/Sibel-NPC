@@ -135,6 +135,11 @@ COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   READ_LONG 0x02b8 "item_slots_offset"
   WRITE_SHORT ("%item_slots_offset%" + 0x4C) 0
 
+COPY ~SibelNPC/resources/creatures/S!sinnk.cre~ ~override/S!sinnk.cre~
+  SAY NAME1 #12330
+  SAY NAME2 #12330
+  WRITE_ASCII 0x02cc ~S!SINNK~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
@@ -142,6 +147,7 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 
 /* dialogues */
 
+COMPILE ~SibelNPC/resources/dialogues/innkeep.d~
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelj.d~
@@ -264,6 +270,9 @@ COPY ~SibelNPC/resources/areas/aria30.are~ ~override/aria30.are~
 
 COPY ~SibelNPC/resources/areas/aria31.are~ ~override/aria31.are~
   WRITE_ASCII 0x94 ~aria31~ #8 // area script
+
+COPY ~SibelNPC/resources/areas/aria32.are~ ~override/aria32.are~
+  WRITE_ASCII 0x94 ~aria32~ #8 // area script
 
   // update triggers //
 
