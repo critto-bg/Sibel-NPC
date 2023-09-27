@@ -161,6 +161,38 @@ Equipped Abillites:
 
 Usable By:
  Sibel~
+@515 = ~Gear~
+@516 = ~Gear
+
+A small circular gear. Used in abundance in various mechanical contraptions such as doors and traps.~
+@517 = ~Wrench~
+@518 = ~Wrench
+
+A short, solid piece of metal. A common tool of the trade for an artisan employed in construction of mechanical apparatie. ~
+@519 = ~Saw~
+@520= ~Saw
+
+A small metallic saw, light-weight and well suited for single-handed use.~
+@521 = ~Arcanis Coin~
+@522 = ~Arcanis Coin
+
+A single Arcanis coin. The smallest denomination of the currency employed by the Arcanis family.~
+@523 = ~Powder Ingredient A~
+@524 = ~Powder Ingredient A
+
+A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+@525 = ~Powder Ingredient B~
+@526 = ~Powder Ingredient B
+
+A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+@527 = ~Powder Ingredient C~
+@528 = ~Powder Ingredient C
+
+A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+@529 = ~Antidote~
+@530 = ~Antidote
+
+A portion of antidote that is supposed to cure the disease that plagues the ancient Elm tree.~
 
 @700 = ~Greater Restoration
 (Necromancy)

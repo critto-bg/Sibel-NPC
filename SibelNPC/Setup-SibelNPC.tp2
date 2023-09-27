@@ -72,6 +72,38 @@ COPY ~SibelNPC/resources/items/S!sboo01.itm~ ~override/S!sboo01.itm~
 
   WRITE_ASCII 0x3a ~S!sboin~ #8 // inventory icon
 
+COPY ~SibelNPC/resources/items/S!sgear.itm~ ~override/S!sgear.itm~
+  SAY NAME2 @515
+  SAY DESC @516
+
+COPY ~SibelNPC/resources/items/S!swren.itm~ ~override/S!swren.itm~
+  SAY NAME2 @517
+  SAY DESC @518
+
+COPY ~SibelNPC/resources/items/S!ssaw.itm~ ~override/S!ssaw.itm~
+  SAY NAME2 @519
+  SAY DESC @520
+
+COPY ~SibelNPC/resources/items/S!scoin.itm~ ~override/S!scoin.itm~
+  SAY NAME2 @521
+  SAY DESC @522
+
+COPY ~SibelNPC/resources/items/S!spowda.itm~ ~override/S!spowda.itm~
+  SAY NAME2 @523
+  SAY DESC @524
+
+COPY ~SibelNPC/resources/items/S!spowdb.itm~ ~override/S!spowdb.itm~
+  SAY NAME2 @525
+  SAY DESC @526
+
+COPY ~SibelNPC/resources/items/S!spowdc.itm~ ~override/S!spowdc.itm~
+  SAY NAME2 @527
+  SAY DESC @528
+
+COPY ~SibelNPC/resources/items/S!santi.itm~ ~override/S!santi.itm~
+  SAY NAME2 @529
+  SAY DESC @530
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -175,9 +207,15 @@ COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
 COPY ~SibelNPC/resources/bam/2102FP2.BAM~ ~override/2102FP2.BAM~
+COPY ~SibelNPC/resources/bam/S!powdb.bam~ ~override/S!powdb.bam~
+COPY ~SibelNPC/resources/bam/S!powdc.bam~ ~override/S!powdc.bam~
+COPY ~SibelNPC/resources/bam/S!santi.bam~ ~override/S!santi.bam~
 COPY ~SibelNPC/resources/bam/S!sboin.bam~ ~override/S!sboin.bam~
 COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
+COPY ~SibelNPC/resources/bam/S!scoin.bam~ ~override/S!scoin.bam~
+COPY ~SibelNPC/resources/bam/S!sgear.bam~ ~override/S!sgear.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
+COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
 
 /* areas */
 
