@@ -320,6 +320,10 @@ COPY ~SibelNPC/resources/areas/aria35.are~ ~override/aria35.are~
     END
   END
 
+// Library
+COPY ~SibelNPC/resources/areas/aria36.are~ ~override/aria36.are~
+  WRITE_ASCII 0x94 ~aria36~ #8 // area script
+
 /* area resources */
 
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
@@ -346,6 +350,11 @@ COPY ~SibelNPC/resources/areas/aria33.wed~ ~override/aria33.wed~
 COPY ~SibelNPC/resources/areas/aria33HT.bmp~ ~override/aria33HT.bmp~
 COPY ~SibelNPC/resources/areas/aria33LM.bmp~ ~override/aria33LM.bmp~
 COPY ~SibelNPC/resources/areas/aria33SR.bmp~ ~override/aria33SR.bmp~
+
+COPY ~SibelNPC/resources/areas/aria36.wed~ ~override/aria36.wed~
+COPY ~SibelNPC/resources/areas/aria36HT.bmp~ ~override/aria36HT.bmp~
+COPY ~SibelNPC/resources/areas/aria36LM.bmp~ ~override/aria36LM.bmp~
+COPY ~SibelNPC/resources/areas/aria36SR.bmp~ ~override/aria36SR.bmp~
 
 ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/aria28_ee.mos~ ~override/aria28.mos~
@@ -382,6 +391,10 @@ ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/areas/aria33_ee.mos~ ~override/aria33.mos~
   COPY ~SibelNPC/resources/areas/aria33_ee.tis~ ~override/aria33.tis~
   COPY ~SibelNPC/resources/areas/AIA3300.PVRZ~ ~override~
+
+  COPY ~SibelNPC/resources/areas/aria36_ee.mos~ ~override/aria36.mos~
+  COPY ~SibelNPC/resources/areas/aria36_ee.tis~ ~override/aria36.tis~
+  COPY ~SibelNPC/resources/areas/AIA3600.PVRZ~ ~override~
 END
 ELSE BEGIN
   COPY ~SibelNPC/resources/areas/aria28.mos~ ~override/aria28.mos~
@@ -398,6 +411,9 @@ ELSE BEGIN
 
   COPY ~SibelNPC/resources/areas/aria33.mos~ ~override/aria33.mos~
   COPY ~SibelNPC/resources/areas/aria33.tis~ ~override/aria33.tis~
+
+  COPY ~SibelNPC/resources/areas/aria36.mos~ ~override/aria36.mos~
+  COPY ~SibelNPC/resources/areas/aria36.tis~ ~override/aria36.tis~
 END
 
 /* audio */
@@ -442,6 +458,9 @@ COPY ~SibelNPC/resources/audio/AM_2102.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2103.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2112.wav~ ~override~
 COPY ~SibelNPC/resources/audio/AM_2113.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_5102A.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_RAT01.wav~ ~override~
+COPY ~SibelNPC/resources/audio/AM_RAT04.wav~ ~override~
 
 COPY ~SibelNPC/resources/audio/SS_2100A.wav~ ~override~
 COPY ~SibelNPC/resources/audio/SS_2100B.wav~ ~override~
