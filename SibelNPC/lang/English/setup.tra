@@ -193,6 +193,18 @@ A sample of a powder purchased from a trader name Lena in the Arcanis family vil
 @530 = ~Antidote
 
 A portion of antidote that is supposed to cure the disease that plagues the ancient Elm tree.~
+@531 = ~Mediocre Arcanis Leather~
+@532 = ~Mediocre Arcanis Leather
+
+A sheet of mediocre quality Arcanis leather.~
+@533 = ~High Quality Arcanis Leather~
+@534 = ~High Quality Arcanis Leather
+
+A sheet of high quality Arcanis leather.~
+@535 = ~Piece of Elm Tree Root~
+@536 = ~Piece of Elm Tree Root
+
+This is a piece taken from the root of the ancient Elm tree.~
 
 @700 = ~Greater Restoration
 (Necromancy)

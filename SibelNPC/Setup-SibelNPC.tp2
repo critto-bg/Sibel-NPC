@@ -104,6 +104,18 @@ COPY ~SibelNPC/resources/items/S!santi.itm~ ~override/S!santi.itm~
   SAY NAME2 @529
   SAY DESC @530
 
+COPY ~SibelNPC/resources/items/S!slthr1.itm~ ~override/S!slthr1.itm~
+  SAY NAME2 @531
+  SAY DESC @532
+
+COPY ~SibelNPC/resources/items/S!slthr2.itm~ ~override/S!slthr2.itm~
+  SAY NAME2 @533
+  SAY DESC @534
+
+COPY ~SibelNPC/resources/items/S!sroot.itm~ ~override/S!sroot.itm~
+  SAY NAME2 @535
+  SAY DESC @536
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -215,6 +227,9 @@ COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
 COPY ~SibelNPC/resources/bam/S!scoin.bam~ ~override/S!scoin.bam~
 COPY ~SibelNPC/resources/bam/S!sgear.bam~ ~override/S!sgear.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
+COPY ~SibelNPC/resources/bam/S!slthr1.bam~ ~override/S!slthr1.bam~
+COPY ~SibelNPC/resources/bam/S!slthr2.bam~ ~override/S!slthr2.bam~
+COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
 
 /* areas */
