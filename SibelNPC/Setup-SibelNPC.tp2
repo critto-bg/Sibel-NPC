@@ -116,6 +116,18 @@ COPY ~SibelNPC/resources/items/S!sroot.itm~ ~override/S!sroot.itm~
   SAY NAME2 @535
   SAY DESC @536
 
+COPY ~SibelNPC/resources/items/S!sjour.itm~ ~override/S!sjour.itm~
+  SAY NAME1 @537
+  SAY NAME2 @537
+  SAY UNIDENTIFIED_DESC @538
+  SAY DESC @538
+
+COPY ~SibelNPC/resources/items/S!sakey.itm~ ~override/S!sakey.itm~
+  SAY NAME1 @539
+  SAY NAME2 @539
+  SAY UNIDENTIFIED_DESC @540
+  SAY DESC @540
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
