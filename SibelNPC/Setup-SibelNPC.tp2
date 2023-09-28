@@ -196,6 +196,21 @@ COPY ~SibelNPC/resources/creatures/S!sinnk.cre~ ~override/S!sinnk.cre~
   SAY NAME2 #12330
   WRITE_ASCII 0x02cc ~S!SINNK~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!scomm1.cre~ ~override/S!scomm1.cre~
+     ~SibelNPC/resources/creatures/S!scomm2.cre~ ~override/S!scomm2.cre~
+     ~SibelNPC/resources/creatures/S!scomm3.cre~ ~override/S!scomm3.cre~
+     ~SibelNPC/resources/creatures/S!scomm4.cre~ ~override/S!scomm4.cre~
+     ~SibelNPC/resources/creatures/S!scomm5.cre~ ~override/S!scomm5.cre~
+     ~SibelNPC/resources/creatures/S!scomm6.cre~ ~override/S!scomm6.cre~
+
+  WRITE_ASCII 0x0248 ~SHOUT~ #8 // override script
+  WRITE_ASCII 0x0250 ~~ #8 // class script
+  WRITE_ASCII 0x0258 ~RUNENEMY~ #8 // race script
+  WRITE_ASCII 0x0260 ~~ #8 // general script
+  WRITE_ASCII 0x0268 ~WDRUNSGT~ #8 // default script
+  WRITE_ASCII 0x0280 ~None~ #32 // death variable
+  WRITE_ASCII 0x02cc ~S!SCOMM~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
@@ -203,6 +218,7 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 
 /* dialogues */
 
+COMPILE ~SibelNPC/resources/dialogues/commoner.d~
 COMPILE ~SibelNPC/resources/dialogues/innkeep.d~
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
