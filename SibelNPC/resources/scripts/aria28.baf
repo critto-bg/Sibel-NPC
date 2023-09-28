@@ -2,8 +2,33 @@ IF
   InMyArea(Player1)
   OnCreation()
   Global("IaRunOnce","ARIA28",0)
+  Global("IaTreePlot","GLOBAL",0)
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","ARIA28",1)
     Explore()
+    TriggerActivation("To2102",FALSE)
+    TriggerActivation("To2103",FALSE)
+    TriggerActivation("To2107",FALSE)
+    TriggerActivation("To2109",FALSE)
+    TriggerActivation("To2111",FALSE)
+    TriggerActivation("To2113",FALSE)
+    TriggerActivation("To2114",FALSE)
+
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaRunOnce","ARIA28",1)
+  Global("IaTreePlot","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaRunOnce","ARIA28",2)
+    TriggerActivation("To2102",TRUE)
+    TriggerActivation("To2103",TRUE)
+    TriggerActivation("To2107",TRUE)
+    TriggerActivation("To2109",TRUE)
+    TriggerActivation("To2111",TRUE)
+    TriggerActivation("To2113",TRUE)
+    TriggerActivation("To2114",TRUE)
 END

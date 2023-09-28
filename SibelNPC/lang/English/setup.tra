@@ -14,6 +14,7 @@
 @18 = ~Root Cellar~
 @19 = ~Library~
 @20 = ~Empty House~
+@21 = ~Lord Tristan Arcanis~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -270,3 +271,7 @@ The mystery of Sibel's curse continues to produce more questions than answers. T
 @1102 = ~Arcanis Family Curse
 
 We have traveled to Watcher's Keep and found the monument Sibel's Father spoke of. However, I chose to decline Sibel's offer to travel back in time and witness the unfolding of events at the Arcanis family village. Sibel understood my hesitation and resumed her quest alone. Perhaps, we will meet again.~
+
+@1103 = ~Arcanis Family Curse
+
+We have arrived at Arcanis family village and met with Sibel's father. Lord Tristan told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~
