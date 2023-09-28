@@ -14,7 +14,6 @@ THEN
     TriggerActivation("To2111",FALSE)
     TriggerActivation("To2113",FALSE)
     TriggerActivation("To2114",FALSE)
-
 END
 
 IF

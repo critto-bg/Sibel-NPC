@@ -185,15 +185,15 @@ A single Arcanis coin. The smallest denomination of the currency employed by the
 @523 = ~Powder Ingredient A~
 @524 = ~Powder Ingredient A
 
-A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+A sample of a powder purchased from a trader named Lena in Arcanis family village.~
 @525 = ~Powder Ingredient B~
 @526 = ~Powder Ingredient B
 
-A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+A sample of a powder purchased from a trader named Lena in Arcanis family village.~
 @527 = ~Powder Ingredient C~
 @528 = ~Powder Ingredient C
 
-A sample of a powder purchased from a trader name Lena in the Arcanis family village.~
+A sample of a powder purchased from a trader named Lena in Arcanis family village.~
 @529 = ~Antidote~
 @530 = ~Antidote
 
@@ -220,6 +220,10 @@ I finally managed to poison the tree and spread the rumor that it is a curse fro
 @540 = ~Amberville Mansion Key
 
 This key unlocks the door to Amberville Mansion.~
+@541 = ~Cat Food~
+@542 = ~Cat Food
+
+A small pot of cooked cat food. It smells tasty.~
 
 @700 = ~Greater Restoration
 (Necromancy)
@@ -278,4 +282,4 @@ We have traveled to Watcher's Keep and found the monument Sibel's Father spoke o
 
 @1103 = ~Arcanis Family Curse
 
-We have arrived at Arcanis family village and met with Sibel's father. Lord Tristan told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~
+We have arrived to Arcanis family village and met with Sibel's father. Lord Tristan told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~

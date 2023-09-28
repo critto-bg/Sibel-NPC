@@ -1,0 +1,9 @@
+IF
+  Global("IaRunOnce","LOCALS",0)
+  Global("IaGotFood","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaRunOnce","LOCALS",1)
+    SetInterrupt(FALSE)
+    EscapeArea()
+END
