@@ -218,6 +218,30 @@ COPY ~SibelNPC/resources/creatures/S!strist.cre~ ~override/S!strist.cre~
   WRITE_ASCII 0x0248 ~~ #8 // override script
   WRITE_ASCII 0x02cc ~S!STRIST~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!slena.cre~ ~override/S!slena.cre~
+  SAY NAME1 @22
+  SAY NAME2 @22
+
+  WRITE_ASCII 0x02cc ~S!SLENA~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sflava.cre~ ~override/S!sflava.cre~
+  SAY NAME1 @23
+  SAY NAME2 @23
+
+  WRITE_ASCII 0x02cc ~S!SFLAVA~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sagent.cre~ ~override/S!sagent.cre~
+  SAY NAME1 @24
+  SAY NAME2 @24
+
+  WRITE_ASCII 0x02cc ~S!SAGENT~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!scat.cre~ ~override/S!scat.cre~
+  SAY NAME1 @25
+  SAY NAME2 @25
+
+  WRITE_ASCII 0x02cc ~S!SCAT~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~

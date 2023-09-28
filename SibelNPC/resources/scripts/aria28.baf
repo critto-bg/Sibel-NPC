@@ -24,6 +24,10 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","ARIA28",2)
+    CreateCreature("s!slena",[2627.1888],6)
+    CreateCreature("s!sflava",[2583.1685],0)
+    CreateCreature("s!sagent",[3330.1660],0)
+    CreateCreature("s!scat",[3564.1133],0)
     TriggerActivation("To2102",TRUE)
     TriggerActivation("To2103",TRUE)
     TriggerActivation("To2107",TRUE)
