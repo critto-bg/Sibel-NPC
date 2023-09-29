@@ -299,9 +299,9 @@ COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 /* scripts */
 
 COMPILE ~SibelNPC/resources/scripts/aria28.baf~
-COMPILE ~SibelNPC/resources/scripts/S!cauldr.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sagent.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scat.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scauld.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
@@ -444,7 +444,7 @@ COPY ~SibelNPC/resources/areas/aria31.are~ ~override/aria31.are~
 
     // Cauldron
     PATCH_IF ("%trigger_name%" STRING_MATCHES_REGEXP "Cauldron" = 0) BEGIN
-      WRITE_ASCII (triggers_offset + 0x7c + (0xc4 * index)) ~S!cauldr~ #8 // region script
+      WRITE_ASCII (triggers_offset + 0x7c + (0xc4 * index)) ~S!scauld~ #8 // region script
     END
   END
 
