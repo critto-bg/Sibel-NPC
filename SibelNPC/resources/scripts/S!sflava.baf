@@ -1,6 +1,6 @@
 IF
   Global("IaRunOnce","LOCALS",0)
-  Global("IaSoldFood","LOCALS",1)
+  GlobalGT("IaCatFood","ARIA28",1)
   Global("IaFlavaBoughtLeather","GLOBAL",1)
 THEN
   RESPONSE #100

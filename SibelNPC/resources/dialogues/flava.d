@@ -3,21 +3,21 @@ BEGIN ~S!SFLAVA~
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN FirstMeeting
   SAY ~Well met, traveler. Call me Flava, the most reliable leather merchant around these parts! Are you looking to sell some leather?~
   ++ ~Nice to meet you, Flava. I have some Arcanis leather to sell.~ + SellStuff
-  + ~Global("IaSoldFood","LOCALS",0)~ + ~Greetings. Do you have any items to sell?~ + BuyStuff
+  + ~Global("IaCatFood","ARIA28",1)~ + ~Greetings. Do you have anything to sell?~ + BuyStuff
   ++ ~Maybe later. Goodbye.~ + Leave
 END
 
 IF ~NumTimesTalkedToGT(0)~ THEN BEGIN SubsequentMeeting
   SAY ~You came back! Want to sell some leather?~
   + ~Global("IaFlavaBoughtLeather","GLOBAL",0)~ + ~Yes, Flava, let us trade.~ + SellStuff
-  + ~Global("IaSoldFood","LOCALS",0)~ + ~Greetings. Do you have any items to sell?~ + BuyStuff
+  + ~Global("IaCatFood","ARIA28",1)~ + ~Greetings. Do you have anything to sell?~ + BuyStuff
   ++ ~Maybe later. Goodbye.~ + Leave
 END
 
 IF ~~ THEN BEGIN MainMenu
   SAY ~Most certainly!~
   + ~Global("IaFlavaBoughtLeather","GLOBAL",0)~ + ~I want to sell some leather.~ + SellStuff
-  + ~Global("IaSoldFood","LOCALS",0)~ + ~Show me your goods.~ + BuyStuff
+  + ~Global("IaCatFood","ARIA28",1)~ + ~Do you have anything to sell?~ + BuyStuff
   ++ ~Farewell, Flava.~ + Leave
 END
 
@@ -31,7 +31,7 @@ IF ~~ THEN BEGIN BuyStuff
 
   IF ~NumItemsPartyGT("S!scoin",0)~ THEN
     REPLY ~I will buy it!~
-    DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!sfood",Player1,1,0,0) SetGlobal("IaSoldFood","LOCALS",1)~
+    DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!sfood",Player1,1,0,0) SetGlobal("IaCatFood","ARIA28",2)~
     GOTO SoldFood
 
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu

@@ -1,6 +1,6 @@
 IF
   Global("IaRunOnce","LOCALS",0)
-  Global("IaGotFood","LOCALS",1)
+  Global("IaCatFood","ARIA28",3)
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","LOCALS",1)
