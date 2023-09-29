@@ -319,7 +319,7 @@ IF ~~ THEN BEGIN SellMediocre
 
   IF  ~NumItemsPartyGT("S!slthr1",17) NumItemsPartyLT("S!slthr1",19)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",18) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
