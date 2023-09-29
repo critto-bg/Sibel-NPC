@@ -71,182 +71,182 @@ IF ~~ THEN BEGIN SellMediocre
 
   IF  ~NumItemsPartyGT("S!slthr1",1) NumItemsPartyLT("S!slthr1",3)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",2) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,4,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",2) NumItemsPartyLT("S!slthr1",4)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",3) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,6,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",3) NumItemsPartyLT("S!slthr1",5)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",4) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,8,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",4) NumItemsPartyLT("S!slthr1",6)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",5) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,10,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",5) NumItemsPartyLT("S!slthr1",7)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",6) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,12,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",6) NumItemsPartyLT("S!slthr1",8)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",7) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,14,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",7) NumItemsPartyLT("S!slthr1",9)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",8) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,16,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",8) NumItemsPartyLT("S!slthr1",10)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",9) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,18,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",9) NumItemsPartyLT("S!slthr1",11)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",10) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,20,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",10) NumItemsPartyLT("S!slthr1",12)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",11) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,22,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",11) NumItemsPartyLT("S!slthr1",13)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",12) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,24,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",12) NumItemsPartyLT("S!slthr1",14)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",13) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,26,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",13) NumItemsPartyLT("S!slthr1",15)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
-        TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
+    DO ~TakePartyItemNum("S!slthr1",14) DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
+        DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,28,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
@@ -266,92 +266,92 @@ IF ~~ THEN BEGIN SellHQ
 
   IF  ~NumItemsPartyGT("S!slthr2",1) NumItemsPartyLT("S!slthr2",3)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",2) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,6,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",2) NumItemsPartyLT("S!slthr2",4)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",3) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,9,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",3) NumItemsPartyLT("S!slthr2",5)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",4) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,12,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",4) NumItemsPartyLT("S!slthr2",6)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",5) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,15,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",5) NumItemsPartyLT("S!slthr2",7)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",6) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,18,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",6) NumItemsPartyLT("S!slthr2",8)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",7) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,21,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",7) NumItemsPartyLT("S!slthr2",9)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",8) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,24,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",8) NumItemsPartyLT("S!slthr2",10)~ THEN
     REPLY ~I do, let's trade.~
-    DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
-        TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
+    DO ~TakePartyItemNum("S!slthr2",9) DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
+        DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,27,0,0)
         SetGlobal("IaBoughtLeather","LOCALS",1)~
     GOTO SoldLeather

@@ -1,10 +1,10 @@
 IF
   Global("IaRunOnce","LOCALS",0)
-  Global("IaGotPaid","LOCALS",1)
+  GlobalGT("IaZoeSoldBoots","GLOBAL",0)
+  Global("IaBoughtLeather","LOCALS",1)
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","LOCALS",1)
-    CreateCreature("S!szoe",[2286.1832],0)
     SetInterrupt(FALSE)
     EscapeArea()
 END
