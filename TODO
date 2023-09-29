@@ -1,12 +1,10 @@
 general:
 - readme
 - traify all dialogues
-- consider a different soundset, because the current one (HoW Female 1 from IWD:EE) does not have all of the required sounds
-- XP adjustment script
 
-NPC content:
+Sibel:
 - banters between Sibel and the protagonist
-    - her banters during the game will also differ depending on her second class.
+    - her banters during the game will also differ depending on her second class
 - interparty banters and reactions to in-game events
 - dream sequence (study implementation)
 - reputation reactivity
@@ -14,21 +12,27 @@ NPC content:
 - tree of life reactivity
 - ToB stuff
     - summoning
+        - swash->cleric
     - ToB versions of joining, P, B and J scripts
     - research the role of the ToB override script
+    - consider new positions for Howard's rewards?
 - kick-out stuff
     - logic for when Sibel is kicked out while party is in the Arcanis village
+    - she might also remove all of her personal items from the player's inventory
+- refine Sibel's dialogue regarding the time travel
+
+NPC:
+- script Zoe's arrival to the market square in a nice way instead flat out spawning her at point
+- update innkeeper's dialog
 - crazy silvan poem about Sibel
+- reactivity to player hostility
 
 areas:
 - ship audio files and tis compressed, convert during installation
+- main area - prohibit resting via rest interrupt in classic ToB
 
 items:
-- upgrades for Sibel's personal items:
-    - Arcanis Family Legacy
-    - King of Clubs
-- further update the restrictions on Sibel's items
-    - http://forums.blackwyrmlair.net/index.php?s=&showtopic=5531&view=findpost&p=60634
+- give powder ingredients A, B and C actual names for better dialogue coherency
 - bug report on fatigue behavior
     - http://forums.blackwyrmlair.net/index.php?s=&showtopic=5533&view=findpost&p=60626
 
