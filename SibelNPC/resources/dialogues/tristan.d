@@ -37,7 +37,7 @@ IF ~~ THEN BEGIN Help
   IF ~~ THEN DO ~GiveItemCreate("S!scoin",Player1,6,0,0) SetGlobal("IaTreePlot","GLOBAL",1)~ UNSOLVED_JOURNAL @1103 EXIT
 END
 
-IF ~Global("IaTreePlot","GLOBAL",1)~ THEN BEGIN QuestInProgress
+IF ~GlobalGT("IaTreePlot","GLOBAL",0)~ THEN BEGIN QuestInProgress
   SAY ~Hello, <CHARNAME>. Do you bring any news?~
   ++ ~Not yet, Lord Arcanis. We will return later.~ EXIT
 END

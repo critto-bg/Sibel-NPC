@@ -1,0 +1,18 @@
+IF
+  InMyArea(Player1)
+  Global("IaTreeResearch","ARIA35",4)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreeResearch","ARIA35",5)
+    SetGlobal("IaTreePlot","GLOBAL",4)
+    TriggerActivation("Tree Root",FALSE)
+    AddXPObject(Player1,45000)
+    AddXPObject(Player2,45000)
+    AddXPObject(Player3,45000)
+    AddXPObject(Player4,45000)
+    AddXPObject(Player5,45000)
+    AddXPObject(Player6,45000)
+    TakePartyItem("S!sblu01")
+    DestroyItem("S!sblu01")
+    GiveItemCreate("S!sblu02","S!Sibel",0,0,0)
+END

@@ -42,6 +42,23 @@ THEN
     SetInterrupt(TRUE)
 END
 
+// piece of the root tree research banter
+IF
+  Global("IaLabFixed","ARIA31",4)
+  Global("IaTreePlot","GLOBAL",1)
+  AreaCheck("ARIA31")
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreePlot","GLOBAL",2)
+    SetInterrupt(FALSE)
+    Wait(1)
+    StartDialogueNoSet(Player1)
+    SetInterrupt(TRUE)
+END
+
 /* banters */
 
 IF

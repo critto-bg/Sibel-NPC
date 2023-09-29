@@ -1,7 +1,74 @@
 IF
   Clicked([ANYONE])
-  !Range(LastTrigger,10)
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",0)
 THEN
   RESPONSE #100
-	  DisplayString(Myself,14702)  // You are too far away to use that.
+    SetGlobal("IaTreeResearch","ARIA35",1)
+    DisplayString(Myself,@1204)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreeResearch","ARIA35",2)
+    DisplayString(Myself,@1205)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",2)
+  !PartyHasItem("S!ssaw")
+THEN
+  RESPONSE #100
+    DisplayString(Myself,@1206)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",2)
+  PartyHasItem("S!ssaw")
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreeResearch","ARIA35",3)
+    TakePartyItemNum("S!ssaw",1)
+    DestroyItem("S!ssaw")
+    GiveItemCreate("S!sroot",Player1,1,0,0)
+    DisplayString(Myself,@1207)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",3)
+  !PartyHasItem("S!santi")
+THEN
+  RESPONSE #100
+    DisplayString(Myself,@1204)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,20)
+  Global("IaTreeResearch","ARIA35",3)
+  PartyHasItem("S!santi")
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreeResearch","ARIA35",4)
+    TakePartyItemNum("S!santi",1)
+    DestroyItem("S!santi")
+    DisplayString(Myself,@1211)
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,20)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,14702)  // You are too far away to use that.
 END

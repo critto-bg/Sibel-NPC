@@ -287,7 +287,19 @@ We have traveled to Watcher's Keep and found the monument Sibel's Father spoke o
 
 We have arrived to Arcanis family village and met with Sibel's father. Lord Tristan told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~
 
+@1104 = ~Arcanis Family Curse
+
+We have discovered what ails the great Elm tree. A strange apparatus found in the alchemy tower has revealed the culprit - a poison of some kind. We have no clue who may have done the vile deed. Our primary goal is to produce and administer a cure, before it is too late.~
+
 @1200 = ~The engine appears to be broken, it's missing a gear.~
 @1201 = ~You need an instrument to fit the gear in its place.~
 @1202 = ~You have attached the gear, the engine is working now.~
 @1203 = ~The engine is humming along nicely.~
+@1204 = ~The roots of the tree appear withered and famished.~
+@1205 = ~Maybe you could grab a piece of the root to study it further.~
+@1206 = ~You need an instrument to saw off a piece of the root.~
+@1207 = ~You have sewn off a piece and put it in your pack.~
+@1208 = ~The engine reveals strong traces of poison inside the piece of the root.~
+@1209 = ~You haven't gathered the necessary ingredients to make the antidote.~
+@1210 = ~The machine buzzes for a moment and produces a vial of liquid.~
+@1211 = ~You successfully apply the antidote to the exposed part of the root.~

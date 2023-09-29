@@ -1,76 +1,128 @@
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   Global("IaLabFixed","ARIA31",0)
 THEN
-	RESPONSE #100
+  RESPONSE #100
     SetGlobal("IaLabFixed","ARIA31",1)
-		DisplayString(Myself,@1200)
+    DisplayString(Myself,@1200)
 END
 
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   OR(2)
     Global("IaLabFixed","ARIA31",1)
     Global("IaLabFixed","ARIA31",2)
   !PartyHasItem("S!sgear")
 THEN
-	RESPONSE #100
-		DisplayString(Myself,@1200)
+  RESPONSE #100
+    DisplayString(Myself,@1200)
 END
 
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   Global("IaLabFixed","ARIA31",1)
   PartyHasItem("S!sgear")
 THEN
-	RESPONSE #100
+  RESPONSE #100
     SetGlobal("IaLabFixed","ARIA31",2)
-		DisplayString(Myself,@1201)
+    DisplayString(Myself,@1201)
 END
 
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   Global("IaLabFixed","ARIA31",2)
   PartyHasItem("S!sgear")
   !PartyHasItem("S!swren")
 THEN
-	RESPONSE #100
-		DisplayString(Myself,@1201)
+  RESPONSE #100
+    DisplayString(Myself,@1201)
 END
 
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   Global("IaLabFixed","ARIA31",2)
   PartyHasItem("S!sgear")
   PartyHasItem("S!swren")
 THEN
-	RESPONSE #100
+  RESPONSE #100
     SetGlobal("IaLabFixed","ARIA31",3)
     TakePartyItemNum("S!sgear",1)
     DestroyItem("S!sgear")
     TakePartyItemNum("S!swren",1)
     DestroyItem("S!swren")
-		DisplayString(Myself,@1202)
+    DisplayString(Myself,@1202)
 END
 
 IF
-	Clicked([ANYONE])
-	Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
   Global("IaLabFixed","ARIA31",3)
+  !PartyHasItem("S!sroot")
 THEN
-	RESPONSE #100
-		DisplayString(Myself,@1203)
+  RESPONSE #100
+    DisplayString(Myself,@1203)
 END
 
 IF
-	Clicked([ANYONE])
-	!Range(LastTrigger,10)
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
+  Global("IaLabFixed","ARIA31",3)
+  PartyHasItem("S!sroot")
 THEN
-	RESPONSE #100
-		DisplayString(Myself,14702)  // You are too far away to use that.
+  RESPONSE #100
+    SetGlobal("IaLabFixed","ARIA31",4)
+    TakePartyItemNum("S!sroot",1)
+    DestroyItem("S!sroot")
+    DisplayString(Myself,@1208)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
+  Global("IaLabFixed","ARIA31",4)
+  OR(2)
+    !PartyHasItem("S!spowdb")
+    !PartyHasItem("S!spowdc")
+THEN
+  RESPONSE #100
+    DisplayString(Myself,@1209)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
+  Global("IaLabFixed","ARIA31",4)
+  PartyHasItem("S!spowdb")
+  PartyHasItem("S!spowdc")
+THEN
+  RESPONSE #100
+    SetGlobal("IaLabFixed","ARIA31",5)
+    TakePartyItemNum("S!spowdb",1)
+    DestroyItem("S!spowdb")
+    TakePartyItemNum("S!spowdc",1)
+    DestroyItem("S!spowdc")
+    GiveItemCreate("S!santi",Player1,1,0,0)
+    DisplayString(Myself,@1210)
+END
+
+IF
+  Clicked([ANYONE])
+  Range(LastTrigger,10)
+  Global("IaLabFixed","ARIA31",5)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,@1203)
+END
+
+IF
+  Clicked([ANYONE])
+  !Range(LastTrigger,10)
+THEN
+  RESPONSE #100
+    DisplayString(Myself,14702)  // You are too far away to use that.
 END

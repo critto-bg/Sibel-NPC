@@ -35,3 +35,24 @@ IF ~~ THEN BEGIN SibelLeavesAlone
     DO ~SetGlobal("IaSibelDream","GLOBAL",5) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut02")~
     EXIT
 END
+
+IF ~Global("IaTreePlot","GLOBAL",2)~ THEN BEGIN PoisonedTree
+  SAY "Look, <CHARNAME>! This machinery has divined what ails the great Elm tree. It claims there are traces of poison hidden inside."
+  = ~We need to find out what sort of poison is to blame.~
+  ++ ~Indeed. Perhaps, the strange machine possesses further clues on the matter.~ + Clues
+END
+
+IF ~~ THEN BEGIN Clues
+  SAY ~You are correct. I can see a small reservoir attached at the bottom. A dim glow from the aperture projects small shapes just above it.~
+  ++ ~Do they look like anything specific?~ + Letters
+END
+
+IF ~~ THEN BEGIN Letters
+  SAY ~The shapes appear to be letters, B and C. Whatever could they mean?~
+  ++ ~Perhaps, the machine could produce an antidote, if the ingredients are put inside?~ + Onwards
+END
+
+IF ~~ THEN BEGIN Onwards
+  SAY ~An excellent suggestion. This is an alchemical apparatus, after all. Let us see if the merchants at the square sell anything useful.~
+  IF ~~ THEN DO ~SetGlobal("IaTreePlot","GLOBAL",3)~ UNSOLVED_JOURNAL @1104 EXIT
+END
