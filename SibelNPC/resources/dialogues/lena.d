@@ -10,14 +10,14 @@ END
 IF ~NumTimesTalkedToGT(0)~ THEN BEGIN SubsequentMeeting
   SAY ~Hello again. Do you wish to take a look at my stock?~
   ++ ~Greetings. Yes, show me what you have.~ + BuyStuff
-  + ~Global("IaBoughtLeather","LOCALS",0)~ + ~Hello, Lena. Are interested in buying some Arcanis leather?~ + SellStuff
+  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Hello, Lena. Are interested in buying some Arcanis leather?~ + SellStuff
   ++ ~Maybe later, thank you.~ + Leave
 END
 
 IF ~~ THEN BEGIN MainMenu
   SAY ~Very well. Do you wish do buy or sell something?~
   ++ ~Show me your goods.~ + BuyStuff
-  + ~Global("IaBoughtLeather","LOCALS",0)~ + ~Are interested in buying some Arcanis leather?~ + SellStuff
+  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Are interested in buying some Arcanis leather?~ + SellStuff
   ++ ~Maybe later, thank you.~ + Leave
 END
 
@@ -71,7 +71,7 @@ IF ~~ THEN BEGIN SellMediocre
     REPLY ~I do, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,2,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",1) NumItemsPartyLT("S!slthr1",3)~ THEN
@@ -79,7 +79,7 @@ IF ~~ THEN BEGIN SellMediocre
     DO ~TakePartyItemNum("S!slthr1",2) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,4,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",2) NumItemsPartyLT("S!slthr1",4)~ THEN
@@ -88,7 +88,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,6,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",3) NumItemsPartyLT("S!slthr1",5)~ THEN
@@ -98,7 +98,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,8,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",4) NumItemsPartyLT("S!slthr1",6)~ THEN
@@ -109,7 +109,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,10,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",5) NumItemsPartyLT("S!slthr1",7)~ THEN
@@ -121,7 +121,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,12,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",6) NumItemsPartyLT("S!slthr1",8)~ THEN
@@ -134,7 +134,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,14,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",7) NumItemsPartyLT("S!slthr1",9)~ THEN
@@ -148,7 +148,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,16,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",8) NumItemsPartyLT("S!slthr1",10)~ THEN
@@ -163,7 +163,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,18,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",9) NumItemsPartyLT("S!slthr1",11)~ THEN
@@ -179,7 +179,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,20,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",10) NumItemsPartyLT("S!slthr1",12)~ THEN
@@ -196,7 +196,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,22,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",11) NumItemsPartyLT("S!slthr1",13)~ THEN
@@ -214,7 +214,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,24,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",12) NumItemsPartyLT("S!slthr1",14)~ THEN
@@ -233,7 +233,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,26,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",13) NumItemsPartyLT("S!slthr1",15)~ THEN
@@ -253,7 +253,7 @@ IF ~~ THEN BEGIN SellMediocre
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,28,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu
@@ -266,7 +266,7 @@ IF ~~ THEN BEGIN SellHQ
     REPLY ~I do, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,3,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",1) NumItemsPartyLT("S!slthr2",3)~ THEN
@@ -274,7 +274,7 @@ IF ~~ THEN BEGIN SellHQ
     DO ~TakePartyItemNum("S!slthr2",2) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,6,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",2) NumItemsPartyLT("S!slthr2",4)~ THEN
@@ -283,7 +283,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,9,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",3) NumItemsPartyLT("S!slthr2",5)~ THEN
@@ -293,7 +293,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,12,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",4) NumItemsPartyLT("S!slthr2",6)~ THEN
@@ -304,7 +304,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,15,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",5) NumItemsPartyLT("S!slthr2",7)~ THEN
@@ -316,7 +316,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,18,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",6) NumItemsPartyLT("S!slthr2",8)~ THEN
@@ -329,7 +329,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,21,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",7) NumItemsPartyLT("S!slthr2",9)~ THEN
@@ -343,7 +343,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,24,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",8) NumItemsPartyLT("S!slthr2",10)~ THEN
@@ -358,7 +358,7 @@ IF ~~ THEN BEGIN SellHQ
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,27,0,0)
-        SetGlobal("IaBoughtLeather","LOCALS",1)~
+        SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu

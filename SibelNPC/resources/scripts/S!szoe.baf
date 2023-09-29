@@ -1,7 +1,7 @@
 IF
   Global("IaRunOnce","LOCALS",0)
   GlobalGT("IaZoeSoldBoots","GLOBAL",0)
-  Global("IaBoughtLeather","LOCALS",1)
+  Global("IaZoeBoughtLeather","GLOBAL",2)
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","LOCALS",1)

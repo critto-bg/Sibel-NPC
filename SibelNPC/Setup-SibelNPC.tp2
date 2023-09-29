@@ -268,6 +268,12 @@ COPY ~SibelNPC/resources/creatures/S!smarce.cre~ ~override/S!smarce.cre~
 
   WRITE_ASCII 0x02cc ~S!SMARCE~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!showa.cre~ ~override/S!showa.cre~
+  SAY NAME1 @28
+  SAY NAME2 @28
+
+  WRITE_ASCII 0x02cc ~S!SHOWA~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
@@ -286,6 +292,7 @@ COMPILE ~SibelNPC/resources/dialogues/sibel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelj.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
+COMPILE ~SibelNPC/resources/dialogues/howard.d~
 COMPILE ~SibelNPC/resources/dialogues/tristan.d~
 COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 

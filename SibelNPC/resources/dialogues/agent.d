@@ -1,6 +1,6 @@
 BEGIN ~S!SAGENT~
 
-IF ~Global("IaGotPaid","LOCALS",0)~ THEN BEGIN Meeting
+IF ~Global("IaZoeBoughtLeather","GLOBAL",0)~ THEN BEGIN Meeting
   SAY ~Hey, friend. Are you looking to sell some leather?~
   ++ ~Hello. Why do you ask? Are you willing to buy?~ + WantToBye
   ++ ~Not at the moment, no. I'll be going.~ + Leave
@@ -27,7 +27,7 @@ END
 
 IF ~~ THEN BEGIN GotPaid
   SAY ~You've made a good choice. I will tell her to meet you in the main square. Don't be late. Nice doing business with you, friend.~
-  IF ~~ THEN DO ~SetGlobal("IaGotPaid","LOCALS",1)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaZoeBoughtLeather","GLOBAL",1)~ EXIT
 END
 
 IF ~~ THEN BEGIN Leave
