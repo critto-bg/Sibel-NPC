@@ -32,17 +32,17 @@ IF ~~ THEN BEGIN BuyStuff
   IF ~NumItemsPartyGT("S!scoin",0)~ THEN
     REPLY ~I will buy ingredient A.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!spowda",Player1,1,0,0)~
-    GOTO MainMenu
+    GOTO SoldPowder
 
   IF ~NumItemsPartyGT("S!scoin",0)~ THEN
     REPLY ~I will buy ingredient B.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!spowdb",Player1,1,0,0) SetGlobal("IaSoldB","LOCALS",1)~
-    GOTO MainMenu
+    GOTO SoldPowder
 
   IF ~NumItemsPartyGT("S!scoin",0)~ THEN
     REPLY ~I will buy ingredient C.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!spowdc",Player1,1,0,0) SetGlobal("IaSoldC","LOCALS",1)~
-    GOTO MainMenu
+    GOTO SoldPowder
 
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu
 END
@@ -52,6 +52,11 @@ IF ~~ THEN BEGIN SellStuff
   + ~NumItemsPartyGT("S!slthr1",0)~ + ~Agreed. I want to sell mediocre Arcanis leather.~ + SellMediocre
   + ~NumItemsPartyGT("S!slthr2",0)~ + ~Agreed. I want to sell high quality Arcanis leather.~ + SellHQ
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu
+END
+
+IF ~~ THEN BEGIN SoldPowder
+  SAY ~Handle it with great care.~
+  IF ~~ THEN REPLY ~Thank you, Lena, we will.~ EXIT
 END
 
 IF ~~ THEN BEGIN SoldLeather
