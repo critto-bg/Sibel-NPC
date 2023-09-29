@@ -262,6 +262,12 @@ COPY ~SibelNPC/resources/creatures/S!szoe.cre~ ~override/S!szoe.cre~
   WRITE_ASCII 0x0248 ~S!SZOE~ #8 // override script
   WRITE_ASCII 0x02cc ~S!SZOE~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!smarce.cre~ ~override/S!smarce.cre~
+  SAY NAME1 @27
+  SAY NAME2 @27
+
+  WRITE_ASCII 0x02cc ~S!SMARCE~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
@@ -275,6 +281,7 @@ COMPILE ~SibelNPC/resources/dialogues/commoner.d~
 COMPILE ~SibelNPC/resources/dialogues/flava.d~
 COMPILE ~SibelNPC/resources/dialogues/innkeep.d~
 COMPILE ~SibelNPC/resources/dialogues/lena.d~
+COMPILE ~SibelNPC/resources/dialogues/marcel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibel.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelb.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelj.d~
