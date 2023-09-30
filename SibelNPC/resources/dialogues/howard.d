@@ -43,6 +43,12 @@ END
 IF ~~ THEN BEGIN MainMenu
   SAY ~Would you like me to craft some leather? For Sibel, I will sell it to you with a family discount.~
 
+  IF ~GlobalGT("IaTreePlot","GLOBAL",3)
+      Global("IaCraftedArmor","LOCALS",0)
+      PartyHasItem("S!slea01")~
+    REPLY ~Could you make an upgrade for Sibel's armor?~
+    GOTO CraftArmor
+
   IF ~NumItemsPartyGT("S!scoin",0)
       GlobalLT("IaTreePlot","GLOBAL",4)
       OR(3)
@@ -72,6 +78,30 @@ END
 IF ~~ THEN BEGIN BoughtLeather
   SAY ~Here you go.~
   IF ~~ THEN REPLY ~Take care, Howard.~ EXIT
+END
+
+IF ~~ THEN BEGIN CraftedArmor
+  SAY ~Here you go. Take good care of it.~
+  IF ~~ THEN REPLY ~Thank you, Howard.~ DO ~SetGlobal("IaCraftedArmor","LOCALS",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN CraftArmor
+  SAY ~Of course. I will make it free of charge, as a token of gratitude for your help with the tree. Shall I proceed?~
+  IF ~Class("S!Sibel",CLERIC_ALL)~ THEN
+    REPLY ~Yes, please, make the armor.~
+    DO ~TakePartyItem("S!slea01")
+        DestroyItem("S!slea01")
+        GiveItemCreate("S!slea02","S!Sibel",0,0,0)~
+    GOTO CraftedArmor
+
+  IF ~!Class("S!Sibel",CLERIC_ALL)~ THEN
+    REPLY ~Yes, please, make the armor.~
+    DO ~TakePartyItem("S!slea01")
+        DestroyItem("S!slea01")
+        GiveItemCreate("S!slea03","S!Sibel",0,0,0)~
+    GOTO CraftedArmor
+
+  ++ ~Maybe later. Let's discuss something else.~ + MainMenu
 END
 
 IF ~~ THEN BEGIN BuyMediocre
