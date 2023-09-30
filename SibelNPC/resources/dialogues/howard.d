@@ -4,6 +4,11 @@ APPEND ~S!SibelJ~
     IF ~GlobalLT("IaTreePlot","GLOBAL",4)~ THEN EXTERN ~S!SHOWA~ GreetsSibel
     IF ~GlobalGT("IaTreePlot","GLOBAL",3)~ THEN EXTERN ~S!SHOWA~ GreetsSibelTreeFixed
   END
+
+  IF ~~ THEN BEGIN GiftNoTime
+    SAY ~Years! Cousin, we may not have this kind of time. <CHARNAME> needs my help to return and continue <HISHER> journey. I afraid we may not even have the chance to meet again.~
+    IF ~~ THEN EXTERN ~S!SHOWA~ HideGift
+  END
 END
 
 BEGIN ~S!SHOWA~
@@ -55,6 +60,18 @@ IF ~~ THEN BEGIN MainMenu
     REPLY ~Could you improve these Boots of Speed for Sibel?~
     GOTO CraftBoots
 
+  IF ~GlobalGT("IaTreePlot","GLOBAL",3)
+      Global("IaChosenGift","ARIA33",0)
+      PartyHasItem("S!sleaj")~
+    REPLY ~I have purchased this tome, perhaps you may find it useful?~
+    GOTO BookExcitement
+
+  IF ~GlobalGT("IaTreePlot","GLOBAL",3)
+      Global("IaChosenGift","ARIA33",1)
+      PartyHasItem("S!sleaj")~
+    REPLY ~I am ready to discuss the preparation of the craft piece.~
+    GOTO ChooseGiftPrice
+
   IF ~NumItemsPartyGT("S!scoin",0)
       GlobalLT("IaTreePlot","GLOBAL",4)
       OR(3)
@@ -96,6 +113,103 @@ END
 IF ~~ THEN BEGIN CraftedBoots
   SAY ~Here you go.~
   IF ~~ THEN REPLY ~Thank you, Howard.~ DO ~SetGlobal("IaZoeSoldBoots","GLOBAL",2)~ EXIT
+END
+
+/* howard's gift */
+
+IF ~~ THEN BEGIN BookExcitement
+  SAY ~Oh, my. This a rare treasure that you possess, my friend. I could only imagine the depth of knowledge it may uncover.~
+  ++ ~Could this book guide you to craft something unique for Sibel?~ + Timeline
+END
+
+IF ~~ THEN BEGIN Timeline
+  SAY ~I believe it may be possible. But the project would take months or even years to accomplish.~
+  IF ~~ THEN EXTERN ~S!SibelJ~ GiftNoTime
+END
+
+IF ~~ THEN BEGIN HideGift
+  SAY ~Tis' true, dear Sibel. I am not a young man, and your travels pull you away in a direction I cannot follow. So I fear you may be right.~
+  = ~A solution comes to mind, but it carries great risk. When the craft piece is finished, I will find a way to hide it close to whence you came from.~
+  = ~I cannot give you precise location, only hope that you may find it safely stored upon your return.~
+
+  IF ~~ THEN
+    REPLY ~We have no choice but to try it. Let us proceed.~
+    DO ~SetGlobal("IaChosenGift","ARIA33",1)~
+    GOTO ChooseGiftPrice
+
+  IF ~~ THEN
+    REPLY ~I have to think carefully and consider my options. I will return later.~
+    DO ~SetGlobal("IaChosenGift","ARIA33",1)~
+    GOTO Leave
+END
+
+IF ~~ THEN BEGIN ChooseGiftPrice
+  SAY ~Very well. First, I would ask you to choose an amount of coin you are willing to spend on the project. It will cover any unforeseen expenses I might encounter in the future.~
+
+  IF ~NumItemsPartyGT("S!scoin",9)~ THEN
+    REPLY ~We are willing to spend ten coins on the project.~
+    DO ~TakePartyItemNum("S!scoin",10)
+        DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin")
+        SetGlobal("IaSGiftStrength","GLOBAL",1)~
+    GOTO ChooseGiftLocation
+
+  IF ~NumItemsPartyGT("S!scoin",19)~ THEN
+    REPLY ~We are willing to spend twenty coins on the project.~
+    DO ~TakePartyItemNum("S!scoin",20)
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        SetGlobal("IaSGiftStrength","GLOBAL",2)~
+    GOTO ChooseGiftLocation
+
+  IF ~NumItemsPartyGT("S!scoin",39)~ THEN
+    REPLY ~We are willing to spend fourty coins on the project.~
+    DO ~TakePartyItemNum("S!scoin",40)
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
+        SetGlobal("IaSGiftStrength","GLOBAL",3)~
+    GOTO ChooseGiftLocation
+
+  IF ~~ THEN
+    REPLY ~We will think and return later, Howard!~
+    GOTO Leave
+END
+
+IF ~~ THEN BEGIN ChooseGiftLocation
+  SAY ~Excellent. Now, I need to know a general location for your gift. Do you have something in mind?~
+
+  IF ~~ THEN
+    REPLY ~Hide it somewhere in a dungeon.~
+    DO ~SetGlobal("IaChoseDungeon","ARIA33",1)~
+    GOTO FinaliseGift
+
+  IF ~~ THEN
+    REPLY ~Hide it somewhere in a city.~
+    DO ~SetGlobal("IaChoseCity","ARIA33",1)~
+    GOTO FinaliseGift
+END
+
+IF ~~ THEN BEGIN FinaliseGift
+  SAY ~Very well. I will take the tome now and begin my studies immediately.~
+
+  IF ~~ THEN
+    REPLY ~Thank you, Howard.~
+    DO ~TakePartyItem("S!sleaj") DestroyItem("S!sleaj") TriggerActivation("To2100",FALSE) SetGlobal("IaChosenGift","ARIA33",2)~
+    EXIT
 END
 
 /* main menu options */

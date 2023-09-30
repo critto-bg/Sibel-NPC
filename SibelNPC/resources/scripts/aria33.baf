@@ -1,0 +1,109 @@
+/*
+
+GLOBAL IaSGiftPlace - placement of the gift, values meaning:
+0) unset
+1) Deeper than the Underdark, aria11
+2) 4th level of WK, AR3017
+3) Bodhi's Coffin, AR0809
+4) Suldanesselar, AR2808
+5) Amkethran, AR5503
+6) item has been created and placed by the specific area's script
+
+GLOBAL IaSGiftinWK - force placement of the gift, if a dungeon location is chosen:
+0) unset
+1) force placement to WK, AR3017
+
+GLOBAL IaSGiftinTOB - force placement of the gift, if a city location is chosen:
+0) unset
+1) force placement to Suldanesselar, AR2808
+2) force placement to Amkethran, AR5503
+
+*/
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftinWK","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",2)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftinWK","GLOBAL",0)
+  RandomNumLT(10,6)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",1)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftinWK","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",2)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseCity","ARIA33",1)
+  Global("IaSGiftinTOB","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",4)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseCity","ARIA33",1)
+  Global("IaSGiftinTOB","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",5)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseCity","ARIA33",1)
+  Global("IaSGiftinTOB","GLOBAL",0)
+  RandomNumLT(10,6)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",3)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IaChoseCity","ARIA33",1)
+  Global("IaSGiftinTOB","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",4)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",3)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",4)
+    TriggerActivation("To2100",TRUE)
+END

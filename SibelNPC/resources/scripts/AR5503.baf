@@ -1,0 +1,32 @@
+IF
+  Global("IaSibelGift","AR5503",0)
+  Global("IaSGiftPlace","GLOBAL",5)
+  Global("IaSGiftStrength","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR5503",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Container 2",CreateItem("S!sglo01",0,0,0))
+END
+
+IF
+  Global("IaSibelGift","AR5503",0)
+  Global("IaSGiftPlace","GLOBAL",5)
+  Global("IaSGiftStrength","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR5503",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Container 2",CreateItem("S!sglo02",0,0,0))
+END
+
+IF
+  Global("IaSibelGift","AR5503",0)
+  Global("IaSGiftPlace","GLOBAL",5)
+  Global("IaSGiftStrength","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR5503",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Container 2",CreateItem("S!sglo03",0,0,0))
+END

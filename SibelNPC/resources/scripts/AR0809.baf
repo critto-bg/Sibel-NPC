@@ -1,0 +1,44 @@
+IF
+  Global("IaSibelGift","AR0809",0)
+  OR(3)
+    GlobalLT("IaTreePlot","GLOBAL",4)
+    Global("IaSGiftPlace","GLOBAL",0)
+    Global("IaSGiftStrength","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR0809",1)
+    IncrementGlobal("IaSGiftinTOB","GLOBAL",1)
+END
+
+IF
+  Global("IaSibelGift","AR0809",0)
+  Global("IaSGiftPlace","GLOBAL",3)
+  Global("IaSGiftStrength","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR0809",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Altar 1",CreateItem("S!sglo01",0,0,0))
+END
+
+IF
+  Global("IaSibelGift","AR0809",0)
+  Global("IaSGiftPlace","GLOBAL",3)
+  Global("IaSGiftStrength","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR0809",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Altar 1",CreateItem("S!sglo02",0,0,0))
+END
+
+IF
+  Global("IaSibelGift","AR0809",0)
+  Global("IaSGiftPlace","GLOBAL",3)
+  Global("IaSGiftStrength","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR0809",1)
+    SetGlobal("IaSGiftPlace","GLOBAL",6)
+    ActionOverride("Altar 1",CreateItem("S!sglo03",0,0,0))
+END

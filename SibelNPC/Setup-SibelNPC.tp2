@@ -312,6 +312,7 @@ COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 /* scripts */
 
 COMPILE ~SibelNPC/resources/scripts/aria28.baf~
+COMPILE ~SibelNPC/resources/scripts/aria33.baf~
 COMPILE ~SibelNPC/resources/scripts/aria35.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sagent.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scat.baf~
@@ -324,8 +325,13 @@ COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
+EXTEND_BOTTOM ~ARIA11.BCS~ ~SibelNPC/resources/scripts/aria11.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
+EXTEND_BOTTOM ~AR0809.BCS~ ~SibelNPC/resources/scripts/AR0809.baf~
+EXTEND_BOTTOM ~AR2808.BCS~ ~SibelNPC/resources/scripts/AR2808.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
+EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
+EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
 EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
 
@@ -495,6 +501,10 @@ COPY ~SibelNPC/resources/areas/aria35.are~ ~override/aria35.are~
 // Library
 COPY ~SibelNPC/resources/areas/aria36.are~ ~override/aria36.are~
   WRITE_ASCII 0x94 ~aria36~ #8 // area script
+
+// Amkethran, Chyil's House
+COPY_EXISTING ~AR5503.are~ ~override/AR5503.are~
+  WRITE_ASCII 0x94 ~AR5503~ #8 // area script
 
 /* area resources */
 
