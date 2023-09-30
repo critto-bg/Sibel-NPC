@@ -15,7 +15,12 @@ IF ~Global("IaTreePlot","GLOBAL",0) RandomNum(3,3)~ THEN BEGIN ThirdPhrase
   IF ~~ THEN EXIT
 END
 
-IF ~GlobalGT("IaTreePlot","GLOBAL",0) RandomNum(3,3)~ THEN BEGIN FourthPhrase
+IF ~GlobalGT("IaTreePlot","GLOBAL",0) GlobalLT("IaTreePlot","GLOBAL",4) RandomNum(3,3)~ THEN BEGIN FourthPhrase
   SAY ~We are glad you're here to help the village.~
+  IF ~~ THEN EXIT
+END
+
+IF ~GlobalGT("IaTreePlot","GLOBAL",3) RandomNum(3,3)~ THEN BEGIN FifthPhrase
+  SAY ~Now that the tree is cured, our lives are bound to be improved. Thank you, stranger.~
   IF ~~ THEN EXIT
 END
