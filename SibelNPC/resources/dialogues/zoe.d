@@ -31,11 +31,11 @@ IF ~~ THEN BEGIN BuyStuff
 
   IF ~NumItemsPartyGT("S!scoin",4)~ THEN
     REPLY ~I will take them.~
-    DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin")
-        TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin")
-        TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin")
-        TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin")
-        TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin")
+    DO ~TakePartyItemNum("S!scoin",5) DestroyItem("S!scoin")
+        DestroyItem("S!scoin")
+        DestroyItem("S!scoin")
+        DestroyItem("S!scoin")
+        DestroyItem("S!scoin")
         GiveItemCreate("boot01",Player1,1,0,0) SetGlobal("IaZoeSoldBoots","GLOBAL",1)~
     GOTO SoldBoots
 
