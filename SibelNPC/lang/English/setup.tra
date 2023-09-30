@@ -34,7 +34,7 @@ STATISTICS
 Equipped Abillites:
 - +1 bonus to all Saving Throws
 - +10 bonus to max HP
-- immunity to fatigue
+- regeneration (1 HP every 3 seconds)
 
 Armor Class: 5
 Weight: 10
@@ -90,7 +90,7 @@ STATISTICS
 Equipped Abillites:
 - +3 bonus to all Saving Throws
 - +30 bonus to max HP
-- immunity to fatigue
+- regeneration (1 HP every second)
 - +1 bonus to Casting Speed
 - two additional spells per day at 5th, 6th and 7th spell level
 
@@ -109,7 +109,7 @@ STATISTICS
 Equipped Abillites:
 - +3 bonus to all Saving Throws
 - +30 bonus to max HP
-- immunity to fatigue
+- regeneration (1 HP every second)
 - +3 bonus to Dexterity
 - +3 bonus to Strength
 
