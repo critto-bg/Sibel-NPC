@@ -49,6 +49,12 @@ IF ~~ THEN BEGIN MainMenu
     REPLY ~Could you make an upgrade for Sibel's armor?~
     GOTO CraftArmor
 
+  IF ~GlobalGT("IaTreePlot","GLOBAL",3)
+      Global("IaZoeSoldBoots","GLOBAL",1)
+      PartyHasItem("boot01")~
+    REPLY ~Could you improve these Boots of Speed for Sibel?~
+    GOTO CraftBoots
+
   IF ~NumItemsPartyGT("S!scoin",0)
       GlobalLT("IaTreePlot","GLOBAL",4)
       OR(3)
@@ -70,6 +76,8 @@ IF ~~ THEN BEGIN MainMenu
   ++ ~Not at the moment. I will come back later.~ + Leave
 END
 
+/* dialog termination states */
+
 IF ~~ THEN BEGIN Leave
   SAY ~Goodbye.~
   IF ~~ THEN EXIT
@@ -84,6 +92,13 @@ IF ~~ THEN BEGIN CraftedArmor
   SAY ~Here you go. Take good care of it.~
   IF ~~ THEN REPLY ~Thank you, Howard.~ DO ~SetGlobal("IaCraftedArmor","LOCALS",1)~ EXIT
 END
+
+IF ~~ THEN BEGIN CraftedBoots
+  SAY ~Here you go.~
+  IF ~~ THEN REPLY ~Thank you, Howard.~ DO ~SetGlobal("IaZoeSoldBoots","GLOBAL",2)~ EXIT
+END
+
+/* main menu options */
 
 IF ~~ THEN BEGIN CraftArmor
   SAY ~Of course. I will make it free of charge, as a token of gratitude for your help with the tree. Shall I proceed?~
@@ -100,6 +115,20 @@ IF ~~ THEN BEGIN CraftArmor
         DestroyItem("S!slea01")
         GiveItemCreate("S!slea03","S!Sibel",0,0,0)~
     GOTO CraftedArmor
+
+  ++ ~Maybe later. Let's discuss something else.~ + MainMenu
+END
+
+IF ~~ THEN BEGIN CraftBoots
+  SAY ~I believe I know a way. But I will need to spend some of my hiqh quality leather, so I will charge you a single Arcanis coin. Shall I proceed?~
+  IF ~NumItemsPartyGT("S!scoin",0)~ THEN
+    REPLY ~Yes, please, make the boots.~
+    DO ~TakePartyItemNum("S!scoin",1)
+        DestroyItem("S!scoin")
+        TakePartyItem("boot01")
+        DestroyItem("boot01")
+        GiveItemCreate("S!sboo01","S!Sibel",0,0,0)~
+    GOTO CraftedBoots
 
   ++ ~Maybe later. Let's discuss something else.~ + MainMenu
 END
