@@ -22,6 +22,7 @@
 @26 = ~Zoe~
 @27 = ~Marcel Arcanis~
 @28 = ~Howard Arcanis~
+@29 = ~Willard Arcanis~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -227,6 +228,10 @@ This key unlocks the door to Amberville Mansion.~
 @542 = ~Cat Food
 
 A small pot of cooked cat food. It smells tasty.~
+@543 = ~Ancient Secrets of Leather Crafting~
+@544 = ~Ancient Secrets of Leather Crafting
+
+According to Willard Arcanis, this dusty tome is filled with ancient lore on the art of leather making. The script is unintelligible, so you cannot verify his claim.~
 
 @700 = ~Greater Restoration
 (Necromancy)

@@ -134,6 +134,11 @@ COPY ~SibelNPC/resources/items/S!sfood.itm~ ~override/S!sfood.itm~
   SAY UNIDENTIFIED_DESC @542
   SAY DESC @542
 
+COPY ~SibelNPC/resources/items/S!sleaj.itm~ ~override/S!sleaj.itm~
+  SAY NAME1 @543
+  SAY NAME2 @543
+  SAY UNIDENTIFIED_DESC @544
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -274,6 +279,13 @@ COPY ~SibelNPC/resources/creatures/S!showa.cre~ ~override/S!showa.cre~
 
   WRITE_ASCII 0x02cc ~S!SHOWA~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!swill.cre~ ~override/S!swill.cre~
+  SAY NAME1 @29
+  SAY NAME2 @29
+
+  WRITE_ASCII 0x0250 ~RUNENEMY~ #8 // class script
+  WRITE_ASCII 0x02cc ~S!SWILL~ #8 // dialog
+
 /* spells */
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
@@ -294,6 +306,7 @@ COMPILE ~SibelNPC/resources/dialogues/sibelj.d~
 COMPILE ~SibelNPC/resources/dialogues/sibelp.d~
 COMPILE ~SibelNPC/resources/dialogues/howard.d~
 COMPILE ~SibelNPC/resources/dialogues/tristan.d~
+COMPILE ~SibelNPC/resources/dialogues/willard.d~
 COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 
 /* scripts */
