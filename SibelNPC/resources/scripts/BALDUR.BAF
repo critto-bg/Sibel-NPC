@@ -690,3 +690,17 @@ THEN
     Wait(2)
     GiveItemCreate("S!sboo01",Player1,1,1,1)
 END
+
+// remove queen of clubs if King of Clubs has been given //
+
+IF
+  Global("IaSRemoveQoC","GLOBAL",0)
+  GlobalGT("IaTreePlot","GLOBAL",3)
+  PartyHasItem("S!sblu02")
+  PartyHasItem("S!sblu01")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSRemoveQoC","GLOBAL",1)
+    TakePartyItem("S!sblu01")
+    DestroyItem("S!sblu01")
+END
