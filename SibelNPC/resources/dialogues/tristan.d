@@ -10,6 +10,11 @@ APPEND ~S!SibelJ~
     IF ~~ THEN EXTERN ~S!STRIST~ TristanPleased
   END
 
+  IF ~~ THEN BEGIN SibelThanksFather
+    SAY ~Thank you, Father. It warms my heart to hear the words of praise from you.~
+    IF ~~ THEN EXTERN ~S!STRIST~ LeaveAfterJournal
+  END
+
   IF ~~ THEN BEGIN SibelSaysFarewell
     SAY ~I most certainly will. Farewell, Father!~
     IF ~~ THEN EXTERN ~S!STRIST~ PartyLeaves
@@ -70,9 +75,30 @@ IF ~~ THEN BEGIN TristanPleased
 END
 
 IF ~Global("IaTreePlot","GLOBAL",5)~ THEN MainMenu
-  SAY ~Thank you again for you help, <CHARNAME>. I will be happy to assist you in going back to whence your journey began, if you are ready to leave.~
-  ++ ~We are ready to go back, Lord Arcanis.~+ GoBack
+  SAY ~Thank you again for you help, <CHARNAME>. I will be happy to assist you in going back to whence your journey began.~
+
+  + ~GlobalLT("IaAmbervillePlot","GLOBAL",4)~ + ~We are ready to go back, Lord Arcanis.~ + GoBack
+
+  IF ~PartyHasItem("S!sjour") Global("IaAmbervillePlot","GLOBAL",3)~ THEN
+    REPLY ~I believe we may have discovered the identity of the poisoner, Lord Arcanis.~
+    DO ~TakePartyItem("S!sjour") DestroyItem("S!sjour")~
+    GOTO ShowJournal
+
   ++ ~We would like to stay awhile, Lord Tristan.~ + Leave
+END
+
+IF ~~ THEN ShowJournal
+  SAY ~Truly. Please, allow me to see. Fascinating...~
+  = ~This turn of events brings both happiness and sadness to my heart. I have always remained sure of banality of the evil hidden behind this crime, and I am glad to be proven right.~
+  = ~But I fear we have yet to discover what further schemes are brewing inside the twisted mind of lord Amberville. Nonetheless, we may finally lay this issue to rest and move forward.~
+  = ~I commend you, my daughter. Your decision to enlist <CHARNAME>'s help in your investigation was a wise move. You have made your old father proud.~
+
+  IF ~~ THEN EXTERN "S!SibelJ" SibelThanksFather
+END
+
+IF ~~ THEN LeaveAfterJournal
+  SAY ~It is my pleasure, Sibel.~
+  IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",4) ReallyForceSpellRES("S!SWIZ","S!Sibel")~ EXIT
 END
 
 IF ~~ THEN GoBack

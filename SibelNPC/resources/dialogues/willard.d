@@ -16,25 +16,67 @@ END
 /* the tree has been fixed */
 
 IF ~NumTimesTalkedTo(0) GlobalGT("IaTreePlot","GLOBAL",3)~ THEN BEGIN FirstMeetingTreeFixed
-  SAY ~Greetings, friend. I am called Willard Arcanis, the resident librarian. You have done an admirable job on treating the dear old Elm tree. I have a mind to call upon your services again if you're interested.~
-  //++ ~Of course, Willard. Tell me of your troubles.~ GOTO WillardQuest
+  SAY ~Greetings, friend. I am called Willard Arcanis, the resident librarian. You have done an admirable job on treating the dear old Elm tree. How may I be of service?~
+  + ~Global("IaAmbervillePlot","GLOBAL",0)~ + ~You seem troubled, Willard. Tell me of it.~ GOTO WillardQuest
   + ~Global("IaSoldBook","LOCALS",0)~ + ~Do you sell any useful books here?~ + BuyBook
-  ++ ~I will consider it. Goodbye, Willard.~ EXIT
+  ++ ~Goodbye, Willard.~ EXIT
 END
 
 IF ~NumTimesTalkedToGT(0) GlobalGT("IaTreePlot","GLOBAL",3)~ THEN BEGIN SubsequentMeetingTreeFixed
-  SAY ~Hello again, my friend. We are grateful for your help. I would dare to ask for your aid once more, if you have the time to spare.~
-  //++ ~Of course, Willard. Tell me of your troubles.~ GOTO WillardQuest
+  SAY ~Hello again, my friend. We are grateful for your help. How may I be of service?~
+  + ~Global("IaAmbervillePlot","GLOBAL",0)~ + ~You seem troubled, Willard. Tell me of it.~ GOTO WillardQuest
+  + ~Global("IaAmbervillePlot","GLOBAL",2) PartyHasItem("S!sjour")~ + ~We have searched the Amberville Mansion, Willard.~ GOTO WillardQuestPt2
   + ~Global("IaSoldBook","LOCALS",0)~ + ~Do you sell any useful books here?~ + BuyBook
-  ++ ~Very well. Goodbye, Willard.~ EXIT
+  ++ ~Goodbye, Willard.~ EXIT
 END
 
 IF ~~ THEN BEGIN MainMenu
-  SAY ~Of course. Would you spare time to listen to my request?~
-  //++ ~Of course, Willard. Tell me of your troubles.~ GOTO WillardQuest
+  SAY ~Of course. How may I be of service?~
+  + ~Global("IaAmbervillePlot","GLOBAL",0)~ + ~You seem troubled, Willard. Tell me of it.~ GOTO WillardQuest
+  + ~Global("IaAmbervillePlot","GLOBAL",2) PartyHasItem("S!sjour")~ + ~We have searched the Amberville Mansion, Willard.~ GOTO WillardQuestPt2
   + ~Global("IaSoldBook","LOCALS",0)~ + ~Do you sell any useful books here?~ + BuyBook
-  ++ ~Very well. Goodbye, Willard.~ EXIT
+  ++ ~Goodbye, Willard.~ EXIT
 END
+
+/* amberville plot */
+
+IF ~~ THEN BEGIN WillardQuest
+  SAY ~Ahh, it such a silly little thing. Probably isn't worth your time. You see, my dear fellow, I am also a researcher. I have been performing studies that require a certain quantity of amber.~
+  = ~Unfortunately, I have none. I believe there's a way to procure some, however. Just south of my library lies a house that belonged to the old Lord Amberville. He comes from an old clan of amber barons.~
+  = ~Now, he was a spiteful, jealous little man, and I am happy to say his family has been gone from the village for some time now. But the amber they've had might lay there still. Would you help me recover it?~
+
+  IF ~~ THEN
+    REPLY ~I would be happy to oblige, Willard.~
+    DO ~GiveItemCreate("S!sakey",Player1,0,0,0) SetGlobal("IaAmbervillePlot","GLOBAL",1)~
+    GOTO QuestAccepted
+
+  ++ ~I will think about it. Let's discuss something else.~ + MainMenu
+END
+
+IF ~~ THEN BEGIN QuestAccepted
+  SAY ~Oh, wonderful! Here, take the key to the old family mansion. It's just a short walk south from here.~
+  IF ~~ THEN EXIT
+END
+
+IF ~~ THEN BEGIN WillardQuestPt2
+  SAY ~Ahh, indeed. Please, do tell of your discovery. Did you manage to find the amber?~
+  ++ ~Unfortunately, no. But we did find lord Amberville's journal hidden in one of the drawers.~ + JournalRead
+END
+
+IF ~~ THEN BEGIN JournalRead
+  SAY ~Hmm, let me see... This is most curious, indeed.~
+  = ~I say, this journal is quite enlightening. I always knew Lawrence was a vile creature. You should show this journal to old Tristan.~
+  = ~I wish I'd be there with you to witness his glee. Lord Arcanis had always scolded folk of the village for spreading those silly rumours.~
+
+  ++ ~Thank you, Willard. We will bring this journal to Lord Arcanis.~ + LeaveWithJournal
+END
+
+IF ~~ THEN BEGIN LeaveWithJournal
+  SAY ~Send him my regards.~
+  IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",3)~ EXIT
+END
+
+/* book purchase */
 
 IF ~~ THEN BEGIN BuyBook
   SAY ~Ahh, well, this is not truly a book shop, dear <CHARNAME>. But I did find a curious tome a short while ago. I believe it to be an ancient treatise on the subject of leather making.~

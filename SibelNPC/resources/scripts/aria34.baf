@@ -1,0 +1,8 @@
+IF
+  InMyArea(Player1)
+  Global("IaAmbervillePlot","GLOBAL",1)
+  PartyHasItem("S!sjour")
+THEN
+  RESPONSE #100
+    SetGlobal("IaAmbervillePlot","GLOBAL",2)
+END

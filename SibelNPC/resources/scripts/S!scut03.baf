@@ -25,6 +25,8 @@ THEN
     ActionOverride(Player5,LeaveAreaLUA("AR3000","",[1830.2790],7))
     ActionOverride(Player6,LeaveAreaLUA("AR3000","",[1875.2790],7))
 
+    MoveViewObject(Myself,INSTANT)
+
     FadeFromColor([20.0],0)
 
     MultiPlayerSync()

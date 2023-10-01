@@ -288,6 +288,10 @@ COPY ~SibelNPC/resources/creatures/S!swill.cre~ ~override/S!swill.cre~
 
 /* spells */
 
+COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
+  SAY NAME1 @701
+  SAY NAME2 @701
+
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
 
@@ -313,6 +317,7 @@ COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 
 COMPILE ~SibelNPC/resources/scripts/aria28.baf~
 COMPILE ~SibelNPC/resources/scripts/aria33.baf~
+COMPILE ~SibelNPC/resources/scripts/aria34.baf~
 COMPILE ~SibelNPC/resources/scripts/aria35.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sagent.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scat.baf~
