@@ -36,3 +36,16 @@ THEN
     EraseJournalEntry(@1101)
     AddJournalEntry(@1102,QUEST_DONE)
 END
+
+IF
+  InMyArea(Player1)
+  Global("IaTreePlot","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreePlot","GLOBAL",6)
+    EraseJournalEntry(@1100)
+    EraseJournalEntry(@1101)
+    EraseJournalEntry(@1103)
+    EraseJournalEntry(@1104)
+    AddJournalEntry(@1105,QUEST_DONE)
+END

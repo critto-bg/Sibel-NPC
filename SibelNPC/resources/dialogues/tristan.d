@@ -3,6 +3,17 @@ APPEND ~S!SibelJ~
     SAY ~Hello, Father. I am so happy to see you again.~
     IF ~~ THEN EXTERN ~S!STRIST~ GreetsSibel
   END
+
+  IF ~~ THEN BEGIN SibelTalksOfPoison
+    SAY ~There's an old alchemy tower that lies to the north-west of your house, Father. We used the equipment stored inside to study a small piece of the Elm tree root.~
+    = ~The alchemical apparatus discovered traces of poison within the root. Then it guided our efforts in preparation and application of the antidote.~
+    IF ~~ THEN EXTERN ~S!STRIST~ TristanPleased
+  END
+
+  IF ~~ THEN BEGIN SibelSaysFarewell
+    SAY ~I most certainly will. Farewell, Father!~
+    IF ~~ THEN EXTERN ~S!STRIST~ PartyLeaves
+  END
 END
 
 BEGIN ~S!STRIST~
@@ -37,7 +48,44 @@ IF ~~ THEN BEGIN Help
   IF ~~ THEN DO ~GiveItemCreate("S!scoin",Player1,6,0,0) SetGlobal("IaTreePlot","GLOBAL",1)~ UNSOLVED_JOURNAL @1103 EXIT
 END
 
-IF ~GlobalGT("IaTreePlot","GLOBAL",0)~ THEN BEGIN QuestInProgress
+IF ~GlobalGT("IaTreePlot","GLOBAL",0) GlobalLT("IaTreePlot","GLOBAL",4)~ THEN BEGIN QuestInProgress
   SAY ~Hello, <CHARNAME>. Do you bring any news?~
   ++ ~Not yet, Lord Arcanis. We will return later.~ EXIT
+END
+
+IF ~Global("IaTreePlot","GLOBAL",4)~ THEN BEGIN TreeCured
+  SAY ~Hello, <CHARNAME>. Do you bring any news?~
+  ++ ~We do, Lord Arcanis. We have managed to set the tree on the path to restoration.~ + WhatHappened
+END
+
+IF ~~ THEN BEGIN WhatHappened
+  SAY ~Ah, these news warm my heart. How did it happen?~
+  IF ~~ THEN EXTERN ~S!SibelJ~ SibelTalksOfPoison
+END
+
+IF ~~ THEN BEGIN TristanPleased
+  SAY ~Poison, you say? I am glad we may now try and dispel those silly rumours of gods' wrath the village folk insist on.~
+  = ~But who was the culprit behind the evil plan? The mystery troubles me. We shall remain vigilant in the future.~
+  IF ~~ THEN DO ~SetGlobal("IaTreePlot","GLOBAL",5)~ GOTO MainMenu
+END
+
+IF ~Global("IaTreePlot","GLOBAL",5)~ THEN MainMenu
+  SAY ~Thank you again for you help, <CHARNAME>. I will be happy to assist you in going back to whence your journey began, if you are ready to leave.~
+  ++ ~We are ready to go back, Lord Arcanis.~+ GoBack
+  ++ ~We would like to stay awhile, Lord Tristan.~ + Leave
+END
+
+IF ~~ THEN GoBack
+  SAY ~Very well, so shall it be. We are in your debt, my friend. Sibel, my dear daughter, I am glad you took the words of the old father to heart. Come and visit me again if you've the chance.~
+  IF ~~ THEN EXTERN ~S!SibelJ~ SibelSaysFarewell
+END
+
+IF ~~ THEN PartyLeaves
+  SAY ~Goodbye, my dear fellows.~
+  IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("S!scut03")~ EXIT
+END
+
+IF ~~ THEN Leave
+  SAY ~You are welcome to stay with us, my friend.~
+  IF ~~ THEN EXIT
 END
