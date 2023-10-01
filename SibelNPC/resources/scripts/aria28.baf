@@ -35,3 +35,19 @@ THEN
     TriggerActivation("To2113",TRUE)
     TriggerActivation("To2114",TRUE)
 END
+
+IF
+  InMyArea(Player1)
+  Global("IaCoinCheck","ARIA28",0)
+  NumItemsParty("S!scoin",51)
+THEN
+  RESPONSE #100
+    SetGlobal("IaCoinCheck","ARIA28",1)
+    AddXPObject(Player1,45000)
+    AddXPObject(Player2,45000)
+    AddXPObject(Player3,45000)
+    AddXPObject(Player4,45000)
+    AddXPObject(Player5,45000)
+    AddXPObject(Player6,45000)
+    DisplayStringNoName(Player1,@1212)
+END
