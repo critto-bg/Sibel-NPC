@@ -15,7 +15,7 @@ Sibel:
         - swash->cleric
     - ToB versions of joining, P, B and J scripts
     - research the role of the ToB override script
-    - consider new positions for Howard's rewards?
+    - set flags to force position of Howard's gift
 - kick-out stuff
     - logic for when Sibel is kicked out while party is in the Arcanis village
     - she might also remove all of her personal items from the player's inventory
@@ -23,18 +23,13 @@ Sibel:
 
 NPC:
 - script Zoe's arrival to the market square in a nice way instead flat out spawning her at point
-- update innkeeper's dialog
 - crazy silvan poem about Sibel
 - reactivity to player hostility
 
 areas:
-- ship audio files and tis compressed, convert during installation
+- ship audio files and area tiles compressed, convert during installation
 - main area - prohibit resting via rest interrupt in classic ToB
 
 items:
+- test whether a Spell Trigger can be placed on an item and used to store clerical spells
 - give powder ingredients A, B and C actual names for better dialogue coherency
-- bug report on fatigue behavior
-    - http://forums.blackwyrmlair.net/index.php?s=&showtopic=5533&view=findpost&p=60626
-
-quest stuff:
-- journal entries
