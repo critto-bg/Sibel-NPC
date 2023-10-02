@@ -25,6 +25,9 @@
 @29 = ~Willard Arcanis~
 @30 = ~Amber Golem~
 @31 = ~Smilodon~
+@32 = ~Reginald~
+@33 = ~Squirrel~
+@34 = ~Snake~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -238,6 +241,10 @@ According to Willard Arcanis, this dusty tome is filled with ancient lore on the
 @547 = ~Chunk of Amber
 
 This is a chunk of amber collected from the remainders of a destroyed Amber Golem.~
+@548 = ~Samara Fruit~
+@549 = ~Samara Fruit
+
+This is a fruit taken from the great Elm tree.~
 
 @700 = ~Greater Restoration
 (Necromancy)

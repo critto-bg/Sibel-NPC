@@ -143,6 +143,10 @@ COPY ~SibelNPC/resources/items/S!schunk.itm~ ~override/S!schunk.itm~
   SAY NAME2 @546
   SAY DESC @547
 
+COPY ~SibelNPC/resources/items/S!ssama.itm~ ~override/S!ssama.itm~
+  SAY NAME2 @548
+  SAY DESC @549
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -300,6 +304,26 @@ COPY ~SibelNPC/resources/creatures/S!ssmil.cre~ ~override/S!ssmil.cre~
 
   WRITE_ASCII 0x0248 ~S!SSMIL~ #8 // override script
 
+COPY ~SibelNPC/resources/creatures/S!sregi.cre~ ~override/S!sregi.cre~
+  SAY NAME1 @32
+  SAY NAME2 @32
+
+  WRITE_ASCII 0x0248 ~S!sregi~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!sregi~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!ssqui.cre~ ~override/S!ssqui.cre~
+  SAY NAME1 @33
+  SAY NAME2 @33
+
+  WRITE_ASCII 0x0248 ~S!ssqui~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!ssqui~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!ssnake.cre~ ~override/S!ssnake.cre~
+  SAY NAME1 @34
+  SAY NAME2 @34
+
+  WRITE_ASCII 0x0248 ~S!ssnake~ #8 // override script
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
@@ -327,10 +351,13 @@ COMPILE ~SibelNPC/resources/dialogues/tristan.d~
 COMPILE ~SibelNPC/resources/dialogues/willard.d~
 COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 COMPILE ~SibelNPC/resources/dialogues/celvan.d~
+COMPILE ~SibelNPC/resources/dialogues/reginald.d~
+COMPILE ~SibelNPC/resources/dialogues/squirrel.d~
 
 /* scripts */
 
 COMPILE ~SibelNPC/resources/scripts/aria28.baf~
+COMPILE ~SibelNPC/resources/scripts/aria32.baf~
 COMPILE ~SibelNPC/resources/scripts/aria33.baf~
 COMPILE ~SibelNPC/resources/scripts/aria34.baf~
 COMPILE ~SibelNPC/resources/scripts/aria35.baf~
@@ -345,6 +372,8 @@ COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
+COMPILE ~SibelNPC/resources/scripts/S!ssnake.baf~
+COMPILE ~SibelNPC/resources/scripts/S!ssqui.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
@@ -378,6 +407,7 @@ COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 COPY ~SibelNPC/resources/bam/S!slthr1.bam~ ~override/S!slthr1.bam~
 COPY ~SibelNPC/resources/bam/S!slthr2.bam~ ~override/S!slthr2.bam~
 COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
+COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
 
 /* areas */

@@ -88,3 +88,63 @@ THEN
     TriggerActivation("To2113",TRUE)
     TriggerActivation("To2114",TRUE)
 END
+
+/* Samara fruit plot */
+
+IF
+  InMyArea(Player1)
+  Global("IaSquirrel","ARIA28",0)
+  Global("IaSamaraPlot","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSquirrel","ARIA28",1)
+    CreateCreature("s!ssqui",[2970.470],0)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaSamaraPlot","GLOBAL",5)
+  GlobalTimerExpired("IaSquirrelTimer","ARIA28")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSamaraPlot","GLOBAL",6)
+    CreateCreature("s!ssqui",[260.870],0)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaExit2","ARIA28",0)
+  Global("IaSamaraPlot","GLOBAL",7)
+THEN
+  RESPONSE #100
+    SetGlobal("IaExit2","ARIA28",1)
+    CreateCreatureObject("S!ssnake","S!ssqui",0,0,0)
+    TriggerActivation("To2102",FALSE)
+    TriggerActivation("To2103",FALSE)
+    TriggerActivation("To2107",FALSE)
+    TriggerActivation("To2109",FALSE)
+    TriggerActivation("To2111",FALSE)
+    TriggerActivation("To2112",FALSE)
+    TriggerActivation("To2113",FALSE)
+    TriggerActivation("To2114",FALSE)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaExit2","ARIA28",1)
+  Global("IaSamaraPlot","GLOBAL",7)
+  Dead("S!ssnake")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaExit2","ARIA28",2)
+    SetGlobal("IaSamaraPlot","GLOBAL",8)
+    TriggerActivation("To2102",TRUE)
+    TriggerActivation("To2103",TRUE)
+    TriggerActivation("To2107",TRUE)
+    TriggerActivation("To2109",TRUE)
+    TriggerActivation("To2111",TRUE)
+    TriggerActivation("To2112",TRUE)
+    TriggerActivation("To2113",TRUE)
+    TriggerActivation("To2114",TRUE)
+END

@@ -1,0 +1,42 @@
+IF
+  Global("IaSamaraPlot","GLOBAL",2)
+	HPPercentGT(Myself,92)
+  See(Player1)
+  CombatCounter(0)
+THEN
+	RESPONSE #100
+    SetGlobal("IaSamaraPlot","GLOBAL",3)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("IaSamaraPlot","GLOBAL",4)
+THEN
+	RESPONSE #100
+    SetGlobal("IaSamaraPlot","GLOBAL",5)
+    SetGlobalTimer("IaSquirrelTimer","ARIA28",60)
+    EscapeArea()
+END
+
+IF
+  Global("IaOnce","LOCALS",0)
+  Global("IaSamaraPlot","GLOBAL",6)
+  See(Player1)
+  CombatCounter(0)
+THEN
+	RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    StartDialogueNoSet(Player1)
+END
+
+IF
+  Global("IaOnce","LOCALS",1)
+  Global("IaSamaraPlot","GLOBAL",8)
+  See(Player1)
+  Dead("S!ssnake")
+  CombatCounter(0)
+THEN
+	RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",2)
+    StartDialogueNoSet(Player1)
+END

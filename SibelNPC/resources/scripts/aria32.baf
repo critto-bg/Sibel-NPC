@@ -1,0 +1,8 @@
+IF
+  Global("IaSpawn","ARIA32",0)
+  GlobalGT("IaTreePlot","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSpawn","ARIA32",1)
+    CreateCreature("s!sregi",[555.215],0)
+END
