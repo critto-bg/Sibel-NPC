@@ -6,7 +6,8 @@ APPEND ~S!SibelJ~
 END
 
 APPEND ~CELVAN~
-  IF ~See("S!Sibel")
+  IF WEIGHT #-1
+     ~See("S!Sibel")
       InParty("S!Sibel")
       IfValidForPartyDialogue("S!Sibel")
       RandomNum(2,2)
@@ -17,7 +18,6 @@ He told of a curse to her and no other;
 If she and friends stay together
 She will then craft the finest leather,
 Though her enemies are yet to bother.~
-    IF ~~ THEN EXTERN ~S!SibelJ~ SibelRespondsCelvan
+    IF ~~ THEN DO ~SetGlobal("IaCelvanSibel","AR0300",1)~ EXTERN ~S!SibelJ~ SibelRespondsCelvan
   END
 END
-
