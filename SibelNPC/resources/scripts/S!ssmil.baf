@@ -1,0 +1,13 @@
+IF
+  Global("IaAmbervillePlot","GLOBAL",6)
+  Global("IaEscape","LOCALS",0)
+  !Allegiance(Myself,ENEMY)
+  Dead("S!samber")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaEscape","LOCALS",1)
+    SetInterrupt(FALSE)
+    MoveToPoint([3260.1660])
+    EscapeArea()
+END

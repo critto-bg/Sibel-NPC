@@ -51,3 +51,40 @@ THEN
     AddXPObject(Player6,45000)
     DisplayStringNoName(Player1,@1212)
 END
+
+IF
+  InMyArea(Player1)
+  Global("IaExit","ARIA28",0)
+  Global("IaAmbervillePlot","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaExit","ARIA28",1)
+    TriggerActivation("To2102",FALSE)
+    TriggerActivation("To2103",FALSE)
+    TriggerActivation("To2107",FALSE)
+    TriggerActivation("To2109",FALSE)
+    TriggerActivation("To2111",FALSE)
+    TriggerActivation("To2112",FALSE)
+    TriggerActivation("To2113",FALSE)
+    TriggerActivation("To2114",FALSE)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaExit","ARIA28",1)
+  Global("IaAmbervillePlot","GLOBAL",5)
+  Dead("S!samber")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaExit","ARIA28",2)
+    SetGlobal("IaAmbervillePlot","GLOBAL",6)
+    TriggerActivation("To2102",TRUE)
+    TriggerActivation("To2103",TRUE)
+    TriggerActivation("To2107",TRUE)
+    TriggerActivation("To2109",TRUE)
+    TriggerActivation("To2111",TRUE)
+    TriggerActivation("To2112",TRUE)
+    TriggerActivation("To2113",TRUE)
+    TriggerActivation("To2114",TRUE)
+END

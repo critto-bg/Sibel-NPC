@@ -23,6 +23,8 @@
 @27 = ~Marcel Arcanis~
 @28 = ~Howard Arcanis~
 @29 = ~Willard Arcanis~
+@30 = ~Amber Golem~
+@31 = ~Smilodon~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -232,6 +234,10 @@ A small pot of cooked cat food. It smells tasty.~
 @544 = ~Ancient Secrets of Leather Crafting
 
 According to Willard Arcanis, this dusty tome is filled with ancient lore on the art of leather making. The script is unintelligible, so you cannot verify his claim.~
+@546 = ~Chunk of Amber~
+@547 = ~Chunk of Amber
+
+This is a chunk of amber collected from the remainders of a destroyed Amber Golem.~
 
 @700 = ~Greater Restoration
 (Necromancy)
@@ -300,6 +306,10 @@ We have discovered what ails the great Elm tree. A strange apparatus found in th
 @1105 = ~Arcanis Family Curse
 
 We have made our journey back to Watcher's Keep from Arcanis family village. Our trip borne fruit. Together, Sibel and I have discovered and treated the disease that had caused the suffering of the great Elm tree. The village now may set upon the road to recovery. The mystery of who had poisoned the great tree remains unanswered.~
+
+@1106 = ~Arcanis Family Curse
+
+We have made our journey back to Watcher's Keep from Arcanis family village. Our trip borne fruit. Together, Sibel and I have discovered and treated the disease that had caused the suffering of the great Elm tree. The village now may set upon the road to recovery. The villain behind the scheme turned out to be lord Lawrence Amberville, and old rival of the Arcanis family. We have managed to thwart his attack on the village.~
 
 @1200 = ~The engine appears to be broken, it's missing a gear.~
 @1201 = ~You need an instrument to fit the gear in its place.~

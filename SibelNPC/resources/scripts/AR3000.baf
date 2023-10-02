@@ -40,6 +40,7 @@ END
 IF
   InMyArea(Player1)
   Global("IaTreePlot","GLOBAL",5)
+  GlobalLT("IaAmbervillePlot","GLOBAL",4)
 THEN
   RESPONSE #100
     SetGlobal("IaTreePlot","GLOBAL",6)
@@ -48,4 +49,18 @@ THEN
     EraseJournalEntry(@1103)
     EraseJournalEntry(@1104)
     AddJournalEntry(@1105,QUEST_DONE)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaTreePlot","GLOBAL",5)
+  Global("IaAmbervillePlot","GLOBAL",7)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTreePlot","GLOBAL",6)
+    EraseJournalEntry(@1100)
+    EraseJournalEntry(@1101)
+    EraseJournalEntry(@1103)
+    EraseJournalEntry(@1104)
+    AddJournalEntry(@1106,QUEST_DONE)
 END

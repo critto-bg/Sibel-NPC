@@ -74,10 +74,13 @@ IF ~~ THEN BEGIN TristanPleased
   IF ~~ THEN DO ~SetGlobal("IaTreePlot","GLOBAL",5)~ GOTO MainMenu
 END
 
-IF ~Global("IaTreePlot","GLOBAL",5)~ THEN MainMenu
+/* after the tree is cured */
+
+IF ~Global("IaTreePlot","GLOBAL",5) OR(2) GlobalLT("IaAmbervillePlot","GLOBAL",5) GlobalGT("IaAmbervillePlot","GLOBAL",6)~ THEN MainMenu
   SAY ~Thank you again for you help, <CHARNAME>. I will be happy to assist you in going back to whence your journey began.~
 
-  + ~GlobalLT("IaAmbervillePlot","GLOBAL",4)~ + ~We are ready to go back, Lord Arcanis.~ + GoBack
+  + ~OR(2) GlobalLT("IaAmbervillePlot","GLOBAL",4) GlobalGT("IaAmbervillePlot","GLOBAL",6)~ + ~We are ready to go back, Lord Arcanis.~ + GoBack
+  + ~Global("IaAmbervillePlot","GLOBAL",4)~ + ~We are ready to go back, Lord Arcanis.~ + TheFight
 
   IF ~PartyHasItem("S!sjour") Global("IaAmbervillePlot","GLOBAL",3)~ THEN
     REPLY ~I believe we may have discovered the identity of the poisoner, Lord Arcanis.~
@@ -85,6 +88,11 @@ IF ~Global("IaTreePlot","GLOBAL",5)~ THEN MainMenu
     GOTO ShowJournal
 
   ++ ~We would like to stay awhile, Lord Tristan.~ + Leave
+END
+
+IF ~Global("IaAmbervillePlot","GLOBAL",6)~ THEN PartyReturns
+  SAY ~You came back! What news do you bear?~
+  ++ ~The fighting is over, Lord Tristan. The enemy has been defeated.~ + FightOver
 END
 
 IF ~~ THEN ShowJournal
@@ -99,6 +107,18 @@ END
 IF ~~ THEN LeaveAfterJournal
   SAY ~It is my pleasure, Sibel.~
   IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",4) ReallyForceSpellRES("S!SWIZ","S!Sibel")~ EXIT
+END
+
+IF ~~ THEN TheFight
+  SAY ~Very well, so shall... Wait! Can you hear the commotion? What is this disturbance? I fear lord Lawrence has decided to make good on his threat much earlier than I had expected.~
+  = ~Quick, <CHARNAME>, I would beg of your help to come to aid. Go the main square. I will call upon the forces of nature to bring a powerful prehistoric ally on your side. Make haste!~
+  IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut04")~ EXIT
+END
+
+IF ~~ THEN FightOver
+  SAY ~This is wonderful news! You have saved us once again, <CHARNAME>. Lord Amberville proved to be more cunning and daring opponent than I'd given him credit for.~
+  = ~I beg your forgiveness, but I must take the time to ponder on the events that have transpired in the village. Come back when you decide to leave and resume your travels.~
+  IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",7)~ EXIT
 END
 
 IF ~~ THEN GoBack

@@ -26,6 +26,7 @@ IF ~NumTimesTalkedToGT(0) GlobalGT("IaTreePlot","GLOBAL",3)~ THEN BEGIN Subseque
   SAY ~Hello again, my friend. We are grateful for your help. How may I be of service?~
   + ~Global("IaAmbervillePlot","GLOBAL",0)~ + ~You seem troubled, Willard. Tell me of it.~ GOTO WillardQuest
   + ~Global("IaAmbervillePlot","GLOBAL",2) PartyHasItem("S!sjour")~ + ~We have searched the Amberville Mansion, Willard.~ GOTO WillardQuestPt2
+  + ~GlobalGT("IaAmbervillePlot","GLOBAL",5) PartyHasItem("S!schunk")~ + ~Good news, Willard! We have secured some amber for you.~ GOTO Amber
   + ~Global("IaSoldBook","LOCALS",0)~ + ~Do you sell any useful books here?~ + BuyBook
   ++ ~Goodbye, Willard.~ EXIT
 END
@@ -34,6 +35,7 @@ IF ~~ THEN BEGIN MainMenu
   SAY ~Of course. How may I be of service?~
   + ~Global("IaAmbervillePlot","GLOBAL",0)~ + ~You seem troubled, Willard. Tell me of it.~ GOTO WillardQuest
   + ~Global("IaAmbervillePlot","GLOBAL",2) PartyHasItem("S!sjour")~ + ~We have searched the Amberville Mansion, Willard.~ GOTO WillardQuestPt2
+  + ~GlobalGT("IaAmbervillePlot","GLOBAL",5) PartyHasItem("S!schunk")~ + ~Good news, Willard! We have secured some amber for you.~ GOTO Amber
   + ~Global("IaSoldBook","LOCALS",0)~ + ~Do you sell any useful books here?~ + BuyBook
   ++ ~Goodbye, Willard.~ EXIT
 END
@@ -74,6 +76,25 @@ END
 IF ~~ THEN BEGIN LeaveWithJournal
   SAY ~Send him my regards.~
   IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",3)~ EXIT
+END
+
+IF ~~ THEN BEGIN Amber
+  SAY ~Ahh, this is wonderful news indeed! This comes from that dreadful attack on our village, I presume? What a terrible commotion! Please, give the amber to me.~
+  IF ~~ THEN REPLY ~Here you go, Willard.~ DO ~TakePartyItem("S!schunk") DestroyItem("S!schunk")~ GOTO GaveAmber
+END
+
+IF ~~ THEN BEGIN GaveAmber
+  SAY ~Thank you, <CHARNAME>. Your help was timely and indispensable. Please, accept this book as a token of my gratitude. I believe it will be of great help to an individual with your occupation.~
+  IF ~~ THEN
+    REPLY ~Thank you, Willard.~
+    DO ~GiveItemCreate("BOOK04",Player1,0,0,0)
+        AddXPObject(Player1,15000)
+        AddXPObject(Player2,15000)
+        AddXPObject(Player3,15000)
+        AddXPObject(Player4,15000)
+        AddXPObject(Player5,15000)
+        AddXPObject(Player6,15000)~
+    EXIT
 END
 
 /* book purchase */
