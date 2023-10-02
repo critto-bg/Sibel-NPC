@@ -1,7 +1,14 @@
 BEGIN ~S!SibelJ~
 
-IF ~Global("IaSibelDream","GLOBAL",2)~ THEN BEGIN SibelDream
-  SAY "I saw my father in a dream. He said I should seek a monument near an ancient prison. The monument is actually a time travel portal which can take us to Arcanis village when the problems had just begun."
+IF ~Global("IaSibelDream","GLOBAL",2)~ THEN BEGIN DoYouRemember
+  SAY ~Do you remember what I told you about my family history?~
+  ++ ~Yes, I do.~ + SibelDream
+END
+
+
+IF ~~ THEN BEGIN SibelDream
+  SAY ~I didn't sleep well last night. I saw my father in a dream. He said that I should seek a monument near an ancient prison.~
+  = ~The monument is actually a time travel portal which can take us to Arcanis village when the problems had just begun.~
   + ~Global("IaSibelInWK","GLOBAL",0)~ + ~Do you have any clue where this monument may be?~ + SeekMonument
   + ~Global("IaSibelInWK","GLOBAL",1)~ + ~The ancient prison your father spoke of might refer to Watcher's Keep.~ + BeenInWK
 END
