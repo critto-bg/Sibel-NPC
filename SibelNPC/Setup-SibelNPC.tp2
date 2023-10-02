@@ -326,6 +326,7 @@ COMPILE ~SibelNPC/resources/dialogues/howard.d~
 COMPILE ~SibelNPC/resources/dialogues/tristan.d~
 COMPILE ~SibelNPC/resources/dialogues/willard.d~
 COMPILE ~SibelNPC/resources/dialogues/zoe.d~
+COMPILE ~SibelNPC/resources/dialogues/celvan.d~
 
 /* scripts */
 
