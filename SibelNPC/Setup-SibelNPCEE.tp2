@@ -9,6 +9,12 @@ BEGIN @2
 DESIGNATED 1
 REQUIRE_COMPONENT ~Setup-SibelNPC.tp2~ ~0~ @3
 
+/* creatures */
+
+COPY_EXISTING ~S!ssnake.cre~ ~override/S!ssnake.cre~
+
+  REPLACE_CRE_ITEM ~s!drgrng~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~RRING~
+
 /* journal entries */
 
 ADD_JOURNAL @1100 @1101 @1102 @1103 @1104 @1105 @1106
