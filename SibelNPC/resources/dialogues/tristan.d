@@ -10,6 +10,11 @@ APPEND ~S!SibelJ~
     IF ~~ THEN EXTERN ~S!STRIST~ TristanPleased
   END
 
+  IF ~~ THEN BEGIN SibelTalksOfLawrence
+    SAY ~We found a journal written by lord Lawrence Amberville. In these pages, he boasts about his plan to poison the tree and blame it on the gods.~
+    IF ~~ THEN EXTERN ~S!STRIST~ TristanReactsToAmberville
+  END
+
   IF ~~ THEN BEGIN SibelThanksTristan
     SAY ~Thank you, Lord Tristan. It warms my heart to hear the words of praise from you.~
     IF ~~ THEN EXTERN ~S!STRIST~ LeaveAfterJournal
@@ -96,8 +101,13 @@ IF ~Global("IaAmbervillePlot","GLOBAL",6)~ THEN PartyReturns
 END
 
 IF ~~ THEN ShowJournal
-  SAY ~Truly. Please, allow me to see. Fascinating...~
-  = ~This turn of events brings both happiness and sadness to my heart. I have always remained sure of banality of the evil hidden behind this crime, and I am glad to be proven right.~
+  SAY ~Truly? Please, tell me more.~
+  IF ~~ THEN EXTERN ~S!SibelJ~ SibelTalksOfLawrence
+END
+
+IF ~~ THEN TristanReactsToAmberville
+  SAY ~Lord Amberville, you say? Fascinating... This turn of events brings both happiness and sadness to my heart.~
+  = ~I have always remained sure of banality of the evil hidden behind this crime, and I am glad to be proven right.~
   = ~But I fear we have yet to discover what further schemes are brewing inside the twisted mind of lord Amberville. Nonetheless, we may finally lay this issue to rest and move forward.~
   = ~I commend you, child. Your decision to enlist <CHARNAME>'s help in your investigation was a wise move. You have made old Tristan proud.~
 
