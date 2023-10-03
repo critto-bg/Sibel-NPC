@@ -128,9 +128,9 @@ IF ~~ THEN BEGIN Timeline
 END
 
 IF ~~ THEN BEGIN HideGift
-  SAY ~Tis' true, dear Sibel. I am not a young man, and your travels pull you away in a direction I cannot follow. So I fear you may be right.~
-  = ~A solution comes to mind, but it carries great risk. When the craft piece is finished, I will find a way to hide it close to whence you came from.~
-  = ~I cannot give you precise location, only hope that you may find it safely stored upon your return.~
+  SAY ~Tis' true, dear Sibel. I am not a young man, and your travels pull you back into the future, a feat I cannot dare to repeat. So I fear you may be right.~
+  = ~A solution comes to mind, but it carries great risk. When the craft piece is finished, I will hide it somewhere close to whence you came from.~
+  = ~Even if it takes me years to accomplish, you would be able to locate the hiding spot. I cannot give you precise location, only hope that you may find it safely stored upon your return.~
 
   IF ~~ THEN
     REPLY ~We have no choice but to try it. Let us proceed.~
