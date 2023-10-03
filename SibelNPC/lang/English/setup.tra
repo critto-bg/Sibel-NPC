@@ -258,7 +258,7 @@ Area of Effect: Caster's Party
 Saving Throw: None
 
 When this spell is cast, the life energy level of the recipient is raised. This reverses any previous life energy level drain of the creature by a force or monster. A Greater Restoration spell will also restore the Intelligence score of a creature affected by the Feeblemind spell and negate any form of insanity, such as confusion or berserk. It fully heals the target and cures any diseases or poisons. The casting of this spell is very draining on the priest, and <PRO_HESHE> will likely require rest immediately afterward.~
-@701 = ~Father's Blessing~
+@701 = ~Tristan's Blessing~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
@@ -300,11 +300,11 @@ The mystery of Sibel's curse continues to produce more questions than answers. T
 
 @1102 = ~Arcanis Family Curse
 
-We have traveled to Watcher's Keep and found the monument Sibel's Father spoke of. However, I chose to decline Sibel's offer to travel back in time and witness the unfolding of events at the Arcanis family village. Sibel understood my hesitation and resumed her quest alone. Perhaps, we will meet again.~
+We have traveled to Watcher's Keep and found the monument Sibel's father spoke of. However, I chose to decline Sibel's offer to travel back in time and witness the unfolding of events at the Arcanis family village. Sibel understood my hesitation and resumed her quest alone. Perhaps, we will meet again.~
 
 @1103 = ~Arcanis Family Curse
 
-We have arrived to Arcanis family village and met with Sibel's father. Lord Tristan told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~
+We have arrived to Arcanis family village and met with Sibel's great ancestor, Lord Tristan Arcanis. He told us of recent trouble. The great Elm tree grew sick and the quality of leather has dropped. Folk claim it is the gods who have cursed the village, but Lord Arcanis places little trust in these rumours. He asked us to investigate the mystery.~
 
 @1104 = ~Arcanis Family Curse
 

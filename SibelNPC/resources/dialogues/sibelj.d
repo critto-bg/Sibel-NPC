@@ -24,7 +24,7 @@ IF ~~ THEN BEGIN BeenInWK
 END
 
 IF ~Global("IaSibelDream","GLOBAL",4)~ THEN BEGIN FoundMonument
-  SAY "Here we are! Look, that is the monument Father told me about. Will you come with me through the portal to travel in time and space to my family's village?"
+  SAY "Here we are! Look, that is the monument father told me about. Will you come with me through the portal to travel in time and space to my family's village?"
   ++ ~Yes, I am ready to embark on this journey. It is time to discover what troubles have befallen your people.~ + TravelTogether
   ++ ~Regretfully, I must decline. What if we fail to return to Athkatla? That is a risk I am not willing to take, Sibel.~ + SibelLeavesAlone
 END

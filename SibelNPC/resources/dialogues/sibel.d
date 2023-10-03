@@ -22,12 +22,12 @@ IF ~~ THEN BEGIN TheCurse
 END
 
 IF ~~ THEN BEGIN TheCurse2
-  SAY ~Before his death, Father urged me to find a way to undo the family curse. He had tried himself but failed.~
+  SAY ~Before his death, father urged me to find a way to undo the family curse. He had tried himself but failed.~
   ++ ~Fascinating. Do you feel any effects of the curse upon you?~ + OfferJoin
 END
 
 IF ~~ THEN BEGIN OfferJoin
-  SAY ~Not really, no. But Father had told me that when the curse is lifted I would feel the difference. You seem like a capable <MANWOMAN>. Perhaps, we may join together and find a way to break the curse?~
+  SAY ~Not really, no. But father had told me that when the curse is lifted I would feel the difference. You seem like a capable <MANWOMAN>. Perhaps, we may join together and find a way to break the curse?~
   ++ ~You are welcome to join me, Sibel. Together we shall see what could be done about this curse of yours.~ + SibelJoins
   ++ ~I am afraid I have to decline your plea, Sibel. I wish you best of luck with your endeavour.~ + SayGoodbye
 END

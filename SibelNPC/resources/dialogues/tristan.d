@@ -1,22 +1,22 @@
 APPEND ~S!SibelJ~
-  IF ~~ THEN BEGIN SibelGreetsFather
-    SAY ~Hello, Father. I am so happy to see you again.~
+  IF ~~ THEN BEGIN SibelGreetsTristan
+    SAY ~Hello, dear ancestor. I am so happy to see you again.~
     IF ~~ THEN EXTERN ~S!STRIST~ GreetsSibel
   END
 
   IF ~~ THEN BEGIN SibelTalksOfPoison
-    SAY ~There's an old alchemy tower that lies to the north-west of your house, Father. We used the equipment stored inside to study a small piece of the Elm tree root.~
+    SAY ~There's an old alchemy tower that lies to the north-west of your house. We used the equipment stored inside to study a small piece of the Elm tree root.~
     = ~The alchemical apparatus discovered traces of poison within the root. Then it guided our efforts in preparation and application of the antidote.~
     IF ~~ THEN EXTERN ~S!STRIST~ TristanPleased
   END
 
-  IF ~~ THEN BEGIN SibelThanksFather
-    SAY ~Thank you, Father. It warms my heart to hear the words of praise from you.~
+  IF ~~ THEN BEGIN SibelThanksTristan
+    SAY ~Thank you, Lord Tristan. It warms my heart to hear the words of praise from you.~
     IF ~~ THEN EXTERN ~S!STRIST~ LeaveAfterJournal
   END
 
   IF ~~ THEN BEGIN SibelSaysFarewell
-    SAY ~I most certainly will. Farewell, Father!~
+    SAY ~I most certainly will. Farewell!~
     IF ~~ THEN EXTERN ~S!STRIST~ PartyLeaves
   END
 END
@@ -25,7 +25,7 @@ BEGIN ~S!STRIST~
 
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN FirstMeeting
   SAY ~Hello, stranger. My name is Lord Tristan Arcanis. Who are you?~
-  ++ ~My name is <CHARNAME>. Sibel Arcanis is with me. We have traveled from a different time and place, hoping to discover what had transpired in this era.~ EXTERN ~S!SibelJ~ SibelGreetsFather
+  ++ ~My name is <CHARNAME>. Sibel Arcanis is with me. We have traveled from a different time and place, hoping to discover what had transpired in this era.~ EXTERN ~S!SibelJ~ SibelGreetsTristan
 END
 
 IF ~~ THEN BEGIN GreetsSibel
@@ -99,9 +99,9 @@ IF ~~ THEN ShowJournal
   SAY ~Truly. Please, allow me to see. Fascinating...~
   = ~This turn of events brings both happiness and sadness to my heart. I have always remained sure of banality of the evil hidden behind this crime, and I am glad to be proven right.~
   = ~But I fear we have yet to discover what further schemes are brewing inside the twisted mind of lord Amberville. Nonetheless, we may finally lay this issue to rest and move forward.~
-  = ~I commend you, my daughter. Your decision to enlist <CHARNAME>'s help in your investigation was a wise move. You have made your old father proud.~
+  = ~I commend you, child. Your decision to enlist <CHARNAME>'s help in your investigation was a wise move. You have made old Tristan proud.~
 
-  IF ~~ THEN EXTERN "S!SibelJ" SibelThanksFather
+  IF ~~ THEN EXTERN "S!SibelJ" SibelThanksTristan
 END
 
 IF ~~ THEN LeaveAfterJournal
@@ -122,7 +122,7 @@ IF ~~ THEN FightOver
 END
 
 IF ~~ THEN GoBack
-  SAY ~Very well, so shall it be. We are in your debt, my friend. Sibel, my dear daughter, I am glad you took the words of the old father to heart. Come and visit me again if you've the chance.~
+  SAY ~Very well, so shall it be. We are in your debt, my friend. Sibel, dear child, I am glad you took the words of the old man to heart. Come and visit me again if you've the chance.~
   IF ~~ THEN EXTERN ~S!SibelJ~ SibelSaysFarewell
 END
 
