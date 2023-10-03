@@ -1,12 +1,12 @@
 APPEND ~S!SibelJ~
   IF ~~ THEN BEGIN SibelGreetsHoward
-    SAY ~Hello, cousin. I am Sibel Arcanis. I came here from another time and place, hoping to give aid to my own family. What is happening?~
+    SAY ~Hello, Howard. I am Sibel Arcanis. I came here from another time and place, hoping to give aid to my own family. What is happening?~
     IF ~GlobalLT("IaTreePlot","GLOBAL",4)~ THEN EXTERN ~S!SHOWA~ GreetsSibel
     IF ~GlobalGT("IaTreePlot","GLOBAL",3)~ THEN EXTERN ~S!SHOWA~ GreetsSibelTreeFixed
   END
 
   IF ~~ THEN BEGIN GiftNoTime
-    SAY ~Years! Cousin, we may not have this kind of time. <CHARNAME> needs my help to return and continue <HISHER> journey. I afraid we may not even have the chance to meet again.~
+    SAY ~Years! Howard, we may not have this kind of time. <CHARNAME> needs my help to return and continue <HISHER> journey. I afraid we may not even have the chance to meet again.~
     IF ~~ THEN EXTERN ~S!SHOWA~ HideGift
   END
 END
@@ -24,7 +24,7 @@ IF ~NumTimesTalkedToGT(0)~ THEN BEGIN SubsequentMeeting
 END
 
 IF ~~ THEN BEGIN GreetsSibel
-  SAY ~Well met, cousin Sibel. We are at loss. The great Elm tree is in the worst shape it has ever been, and the quality of our leather suffers for it. Villagefolk insist on a rumor of a curse bestowed by the gods.~
+  SAY ~Well met, Sibel. We are at loss. The great Elm tree is in the worst shape it has ever been, and the quality of our leather suffers for it. Villagefolk insist on a rumor of a curse bestowed by the gods.~
   ++ ~According to Lord Arcanis, your leathermaking process does not involve slaughter of innocent animals. How is this possible?~ + NoSlaughter
 END
 
@@ -35,7 +35,7 @@ IF ~~ THEN BEGIN NoSlaughter
 END
 
 IF ~~ THEN BEGIN GreetsSibelTreeFixed
-  SAY ~Well met, cousin Sibel. The great Elm tree was in the worst shape it has ever been. But now, thanks to your help, the tree is cured and we are intent on restoring the family's fortune.~
+  SAY ~Well met, Sibel. The great Elm tree was in the worst shape it has ever been. But now, thanks to your help, the tree is cured and we are intent on restoring the family's fortune.~
   ++ ~According to Lord Arcanis, your leathermaking process does not involve slaughter of innocent animals. How is this possible?~ + NoSlaughterTreeFixed
 END
 
