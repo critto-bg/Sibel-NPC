@@ -6,3 +6,11 @@ THEN
     SetGlobal("IaSpawn","ARIA32",1)
     CreateCreature("s!sregi",[555.215],0)
 END
+
+IF
+  Global("IaSamaraPlot","GLOBAL",10)
+  GlobalTimerExpired("IaRegiTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSamaraPlot","GLOBAL",11)
+END
