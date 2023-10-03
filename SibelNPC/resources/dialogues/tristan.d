@@ -121,7 +121,7 @@ END
 
 IF ~~ THEN TheFight
   SAY ~Very well, so shall... Wait! Can you hear the commotion? What is this disturbance? I fear lord Lawrence has decided to make good on his threat much earlier than I had expected.~
-  = ~Quick, <CHARNAME>, I would beg of your help to come to aid. Go the main square. I will call upon the forces of nature to bring a powerful prehistoric ally on your side. Make haste!~
+  = ~Quick, <CHARNAME>, I would beg of your help to come to aid. Go to the main square. I will call upon the forces of nature to bring a powerful prehistoric ally on your side. Make haste!~
   IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut04")~ EXIT
 END
 
