@@ -1,6 +1,6 @@
 APPEND ~S!SibelJ~
   IF ~~ THEN BEGIN SibelGreetsTristan
-    SAY ~Hello, dear ancestor. I am so happy to see you again.~
+    SAY ~Hello, dear ancestor. I am so happy to see you.~
     IF ~~ THEN EXTERN ~S!STRIST~ GreetsSibel
   END
 
