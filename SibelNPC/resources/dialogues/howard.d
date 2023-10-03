@@ -148,40 +148,17 @@ IF ~~ THEN BEGIN ChooseGiftPrice
 
   IF ~NumItemsPartyGT("S!scoin",9)~ THEN
     REPLY ~We are willing to spend ten coins on the project.~
-    DO ~TakePartyItemNum("S!scoin",10)
-        DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin")
-        SetGlobal("IaSGiftStrength","GLOBAL",1)~
+    DO ~TriggerActivation("To2100",FALSE) TakePartyItemNum("S!scoin",10) SetGlobal("IaSGiftStrength","GLOBAL",1)~
     GOTO ChooseGiftLocation
 
   IF ~NumItemsPartyGT("S!scoin",19)~ THEN
     REPLY ~We are willing to spend twenty coins on the project.~
-    DO ~TakePartyItemNum("S!scoin",20)
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        SetGlobal("IaSGiftStrength","GLOBAL",2)~
+    DO ~TriggerActivation("To2100",FALSE) TakePartyItemNum("S!scoin",20) SetGlobal("IaSGiftStrength","GLOBAL",2)~
     GOTO ChooseGiftLocation
 
   IF ~NumItemsPartyGT("S!scoin",39)~ THEN
     REPLY ~We are willing to spend fourty coins on the project.~
-    DO ~TakePartyItemNum("S!scoin",40)
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin") DestroyItem("S!scoin")
-        SetGlobal("IaSGiftStrength","GLOBAL",3)~
+    DO ~TriggerActivation("To2100",FALSE) TakePartyItemNum("S!scoin",40) SetGlobal("IaSGiftStrength","GLOBAL",3)~
     GOTO ChooseGiftLocation
 
   IF ~~ THEN
@@ -194,12 +171,12 @@ IF ~~ THEN BEGIN ChooseGiftLocation
 
   IF ~~ THEN
     REPLY ~Hide it somewhere in a dungeon.~
-    DO ~SetGlobal("IaChoseDungeon","ARIA33",1)~
+    DO ~SetGlobal("IaChoseDungeon","ARIA33",1) TakePartyItem("S!sleaj") DestroyItem("S!sleaj")~
     GOTO FinaliseGift
 
   IF ~~ THEN
     REPLY ~Hide it somewhere in a city.~
-    DO ~SetGlobal("IaChoseCity","ARIA33",1)~
+    DO ~SetGlobal("IaChoseCity","ARIA33",1) TakePartyItem("S!sleaj") DestroyItem("S!sleaj")~
     GOTO FinaliseGift
 END
 
@@ -208,7 +185,7 @@ IF ~~ THEN BEGIN FinaliseGift
 
   IF ~~ THEN
     REPLY ~Thank you, Howard.~
-    DO ~TakePartyItem("S!sleaj") DestroyItem("S!sleaj") TriggerActivation("To2100",FALSE) SetGlobal("IaChosenGift","ARIA33",2)~
+    DO ~SetGlobal("IaChosenGift","ARIA33",2)~
     EXIT
 END
 

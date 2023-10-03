@@ -285,6 +285,7 @@ COPY ~SibelNPC/resources/creatures/S!showa.cre~ ~override/S!showa.cre~
   SAY NAME1 @28
   SAY NAME2 @28
 
+  WRITE_ASCII 0x0248 ~S!SHOWA~ #8 // override script
   WRITE_ASCII 0x02cc ~S!SHOWA~ #8 // dialog
 
 COPY ~SibelNPC/resources/creatures/S!swill.cre~ ~override/S!swill.cre~
@@ -369,6 +370,7 @@ COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut03.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut04.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
+COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
