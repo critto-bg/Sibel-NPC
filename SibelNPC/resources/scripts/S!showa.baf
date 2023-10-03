@@ -44,5 +44,4 @@ THEN
     DestroyItem("S!scoin")
     DestroyItem("S!scoin")
     DestroyItem("S!scoin")
-    DisplayString(Myself,@1200)
 END
