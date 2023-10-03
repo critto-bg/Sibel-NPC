@@ -17,20 +17,20 @@ IF ~~ THEN BEGIN ToughTimes
 END
 
 IF ~~ THEN BEGIN BuyStuff
-  SAY ~I have a saw, a gear and a wrench here. It ain't much, but all of good quality. A single Arcanis coin for each.~
+  SAY ~I have some work tools here: saws, gears, wrenches... It ain't much, but all of good quality. A single Arcanis coin for each.~
 
   IF ~Global("IaSoldSaw","LOCALS",0) NumItemsPartyGT("S!scoin",0)~ THEN
-    REPLY ~I will take the saw.~
+    REPLY ~I will take a saw.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!ssaw",Player1,1,0,0) SetGlobal("IaSoldSaw","LOCALS",1)~
     GOTO SoldStuff
 
   IF ~Global("IaSoldGear","LOCALS",0) NumItemsPartyGT("S!scoin",0)~ THEN
-    REPLY ~I will take the gear.~
+    REPLY ~I will take a gear.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!sgear",Player1,1,0,0) SetGlobal("IaSoldGear","LOCALS",1)~
     GOTO SoldStuff
 
   IF ~Global("IaSoldWrench","LOCALS",0) NumItemsPartyGT("S!scoin",0)~ THEN
-    REPLY ~I will take the wrench.~
+    REPLY ~I will take a wrench.~
     DO ~TakePartyItemNum("S!scoin",1) DestroyItem("S!scoin") GiveItemCreate("S!swren",Player1,1,0,0) SetGlobal("IaSoldWrench","LOCALS",1)~
     GOTO SoldStuff
 
