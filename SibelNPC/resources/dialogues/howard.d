@@ -6,7 +6,7 @@ APPEND ~S!SibelJ~
   END
 
   IF ~~ THEN BEGIN GiftNoTime
-    SAY ~Years! Howard, we may not have this kind of time. <CHARNAME> needs my help to return and continue <HISHER> journey. I afraid we may not even have the chance to meet again.~
+    SAY ~Years! Howard, we may not have this kind of time. <CHARNAME> needs my help to return and continue <HISHER> journey. I'm afraid we may not even have the chance to meet again.~
     IF ~~ THEN EXTERN ~S!SHOWA~ HideGift
   END
 END
