@@ -59,7 +59,6 @@ END
 
 IF
    InMyArea(Player1)
-   CombatCounter(0)
    Dead("S!Sibel")
    Global("IaKillP1","ARIA28",0)
 THEN
