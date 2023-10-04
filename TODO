@@ -14,11 +14,9 @@ Sibel:
     - summoning
         - swash->cleric
     - ToB versions of joining, P, B and J scripts
+        - how to transfer her P and J states related to the quest in a good way?
     - research the role of the ToB override script
     - set flags to force position of Howard's gift
-- kick-out stuff
-    - logic for when Sibel is kicked out while party is in the Arcanis village
-    - she might also remove all of her personal items from the player's inventory
 - refine Sibel's dialogue regarding the time travel
 
 NPC:

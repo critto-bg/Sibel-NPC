@@ -27,6 +27,7 @@ IF
   InMyArea(Player1)
   Global("IaSibelLeaves","AR3000",1)
   Global("IaSibelDream","GLOBAL",5)
+  Global("IaTreePlot","GLOBAL",0)
   !InMyArea("S!Sibel")
   !InParty("S!Sibel")
 THEN
@@ -39,8 +40,27 @@ END
 
 IF
   InMyArea(Player1)
+  Global("IaSibelLeaves","AR3000",1)
+  Global("IaSibelDream","GLOBAL",5)
+  GlobalGT("IaTreePlot","GLOBAL",0)
+  !InMyArea("S!Sibel")
+  !InParty("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelLeaves","AR3000",2)
+    EraseJournalEntry(@1100)
+    EraseJournalEntry(@1101)
+    EraseJournalEntry(@1103)
+    EraseJournalEntry(@1104)
+    EraseJournalEntry(@1107)
+    AddJournalEntry(@1108,QUEST_DONE)
+END
+
+IF
+  InMyArea(Player1)
   Global("IaTreePlot","GLOBAL",5)
   GlobalLT("IaAmbervillePlot","GLOBAL",4)
+  Global("IaSibelLeaves","AR3000",0)
 THEN
   RESPONSE #100
     SetGlobal("IaTreePlot","GLOBAL",6)
@@ -56,6 +76,7 @@ IF
   InMyArea(Player1)
   Global("IaTreePlot","GLOBAL",5)
   Global("IaAmbervillePlot","GLOBAL",7)
+  Global("IaSibelLeaves","AR3000",0)
 THEN
   RESPONSE #100
     SetGlobal("IaTreePlot","GLOBAL",6)

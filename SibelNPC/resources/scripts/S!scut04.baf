@@ -1,0 +1,37 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+
+    ActionOverride("S!Sibel",TakeItemListParty("S!sitems"))
+
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    ActionOverride(Player2,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player3,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player4,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player5,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player6,ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(1)
+
+    FadeToColor([20.0],0)
+    Wait(2)
+
+    LeaveAreaLUAPanic("AR3000","",[1830.2735],7)
+    LeaveAreaLUA("AR3000","",[1830.2735],7)
+    ActionOverride(Player2,LeaveAreaLUA("AR3000","",[1875.2735],7))
+    ActionOverride(Player3,LeaveAreaLUA("AR3000","",[1830.2765],7))
+    ActionOverride(Player4,LeaveAreaLUA("AR3000","",[1875.2765],7))
+    ActionOverride(Player5,LeaveAreaLUA("AR3000","",[1830.2790],7))
+    ActionOverride(Player6,LeaveAreaLUA("AR3000","",[1875.2790],7))
+
+    MoveViewObject(Player1,INSTANT)
+    FadeFromColor([20.0],0)
+
+    SetGlobal("IaSibelLeaves","AR3000",1)
+
+    MultiPlayerSync()
+    EndCutSceneMode()
+END

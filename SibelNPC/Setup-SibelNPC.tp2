@@ -22,6 +22,8 @@ APPEND ~pdialog.2da~
   ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!Sib25P S!Sib25J S!Sib25D S!Sibe25~
   UNLESS ~S!SIBEL~
 
+COPY ~SibelNPC/resources/2da/S!sitems.2da~ ~override/S!sitems.2da~
+
 /* items */
 
 COPY ~SibelNPC/resources/items/S!slea01.itm~ ~override/S!slea01.itm~
@@ -368,6 +370,7 @@ COMPILE ~SibelNPC/resources/scripts/S!scauld.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut03.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut04.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
