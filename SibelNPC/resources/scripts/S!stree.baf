@@ -62,6 +62,7 @@ THEN
     SetGlobal("IaTreeResearch","ARIA35",4)
     TakePartyItemNum("S!santi",1)
     DestroyItem("S!santi")
+    AddJournalEntry(@1107,QUEST)
     DisplayString(Myself,@1211)
 END
 
