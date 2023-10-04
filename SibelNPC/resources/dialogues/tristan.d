@@ -127,35 +127,35 @@ IF ~~ THEN TheFight
     DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
         ClearAllActions()
         StartCutSceneMode()
-        StartCutScene("S!scuta4")~
+        StartCutScene("S!scutf1")~
     EXIT
 
   IF ~XPGT(Player1,1274999) XPLT(Player1,1700000)~ THEN
     DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
         ClearAllActions()
         StartCutSceneMode()
-        StartCutScene("S!scutb4")~
+        StartCutScene("S!scutf2")~
     EXIT
 
   IF ~XPGT(Player1,1699999) XPLT(Player1,2125000)~ THEN
     DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
         ClearAllActions()
         StartCutSceneMode()
-        StartCutScene("S!scutc4")~
+        StartCutScene("S!scutf3")~
     EXIT
 
   IF ~XPGT(Player1,2124999) XPLT(Player1,2550000)~ THEN
     DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
         ClearAllActions()
         StartCutSceneMode()
-        StartCutScene("S!scutd4")~
+        StartCutScene("S!scutf4")~
     EXIT
 
   IF ~XPGT(Player1,2549999)~ THEN
     DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
         ClearAllActions()
         StartCutSceneMode()
-        StartCutScene("S!scute4")~
+        StartCutScene("S!scutf5")~
     EXIT
 END
 
