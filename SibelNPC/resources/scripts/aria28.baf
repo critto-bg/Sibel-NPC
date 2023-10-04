@@ -14,6 +14,7 @@ THEN
     TriggerActivation("To2111",FALSE)
     TriggerActivation("To2113",FALSE)
     TriggerActivation("To2114",FALSE)
+    DisplayStringHead("S!Sibel",@1213)
 END
 
 IF
@@ -36,6 +37,8 @@ THEN
     TriggerActivation("To2114",TRUE)
 END
 
+/* coin amount check */
+
 IF
   InMyArea(Player1)
   Global("IaCoinCheck","ARIA28",0)
@@ -51,6 +54,28 @@ THEN
     AddXPObject(Player6,45000)
     DisplayStringNoName(Player1,@1212)
 END
+
+/* safeguard against Sibel's death */
+
+IF
+   InMyArea(Player1)
+   CombatCounter(0)
+   Dead("S!Sibel")
+   Global("IaKillP1","ARIA28",0)
+THEN
+   RESPONSE #100
+    SetGlobal("IaKillP1","ARIA28",1)
+    ClearAllActions()
+    StartCutSceneMode()
+    Wait(2)
+    MoveViewObject(Player1,-1)
+    DisplayStringHead(Player1,@1214)
+    Wait(4)
+    EndCutSceneMode()
+    Kill(Player1)
+END
+
+/* ambervill plot */
 
 IF
   InMyArea(Player1)
