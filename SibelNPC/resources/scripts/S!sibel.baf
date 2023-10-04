@@ -72,14 +72,29 @@ THEN
 END
 
 IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",3)
+  Global("IaTreePlot","GLOBAL",6)
+  Global("IaAmbervillePlot","GLOBAL",7)
+  Dead("S!samber")
+  XPGT(Myself,1385000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",4)
+    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
+END
+
+IF
   RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
-  Global("IaSibelTalks","GLOBAL",1)
+  OR(2)
+    Global("IaSibelTalks","GLOBAL",1)
+    Global("IaSibelTalks","GLOBAL",4)
   InParty(Myself)
   See(Player1)
   CombatCounter(0)
   !AreaType(DUNGEON)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelTalks","GLOBAL",2)
+    IncrementGlobal("IaSibelTalks","GLOBAL",1)
     Interact(Player1)
 END
