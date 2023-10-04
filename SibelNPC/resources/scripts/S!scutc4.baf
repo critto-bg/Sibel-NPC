@@ -1,0 +1,41 @@
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    ActionOverride(Player2,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player3,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player4,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player5,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player6,ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(1)
+
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    LeaveAreaLUAPanic("ARIA28","",[2325.1590],7)
+    LeaveAreaLUA("ARIA28","",[2325.1590],7)
+    ActionOverride(Player2,LeaveAreaLUA("ARIA28","",[2390.1565],7))
+    ActionOverride(Player3,LeaveAreaLUA("ARIA28","",[2360.1625],7))
+    ActionOverride(Player4,LeaveAreaLUA("ARIA28","",[2410.1615],7))
+    ActionOverride(Player5,LeaveAreaLUA("ARIA28","",[2380.1600],7))
+    ActionOverride(Player6,LeaveAreaLUA("ARIA28","",[2420.1650],7))
+
+    CreateCreature("S!ssmil",[2510.1580],7)
+    CreateCreature("S!samber",[2260.1435],0)
+    CreateCreature("S!gem",[2165.1720],10)
+    CreateCreature("GOLSTO01",[2235.1845],10)
+    CreateCreature("S!gem",[2635.1565],4)
+    CreateCreature("GOLSTO01",[2650.1700],4)
+
+    MoveViewObject(Myself,INSTANT)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    MultiPlayerSync()
+    EndCutSceneMode()
+END

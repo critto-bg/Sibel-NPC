@@ -122,7 +122,41 @@ END
 IF ~~ THEN TheFight
   SAY ~Very well, so shall... Wait! Can you hear the commotion? What is this disturbance? I fear lord Lawrence has decided to make good on his threat much earlier than I had expected.~
   = ~Quick, <CHARNAME>, I would beg of your help to come to aid. Go to the main square. I will call upon the forces of nature to bring a powerful prehistoric ally on your side. Make haste!~
-  IF ~~ THEN DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut04")~ EXIT
+
+  IF ~XPLT(Player1,1275000)~ THEN
+    DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("S!scuta4")~
+    EXIT
+
+  IF ~XPGT(Player1,1274999) XPLT(Player1,1700000)~ THEN
+    DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("S!scutb4")~
+    EXIT
+
+  IF ~XPGT(Player1,1699999) XPLT(Player1,2125000)~ THEN
+    DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("S!scutc4")~
+    EXIT
+
+  IF ~XPGT(Player1,2124999) XPLT(Player1,2550000)~ THEN
+    DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("S!scutd4")~
+    EXIT
+
+  IF ~XPGT(Player1,2549999)~ THEN
+    DO ~SetGlobal("IaAmbervillePlot","GLOBAL",5)
+        ClearAllActions()
+        StartCutSceneMode()
+        StartCutScene("S!scute4")~
+    EXIT
 END
 
 IF ~~ THEN FightOver

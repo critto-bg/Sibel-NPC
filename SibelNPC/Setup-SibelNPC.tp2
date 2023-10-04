@@ -368,7 +368,11 @@ COMPILE ~SibelNPC/resources/scripts/S!scauld.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut03.baf~
-COMPILE ~SibelNPC/resources/scripts/S!scut04.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scuta4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scutb4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scutc4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scutd4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scute4.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
 COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
