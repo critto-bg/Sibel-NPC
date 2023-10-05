@@ -25,6 +25,10 @@ THEN
     ActionOverride(Player5,LeaveAreaLUA("ARIA28","",[2380.1600],7))
     ActionOverride(Player6,LeaveAreaLUA("ARIA28","",[2420.1650],7))
 
+    ActionOverride("S!slena",DestroySelf())
+    ActionOverride("S!sflava",DestroySelf())
+    ActionOverride("S!szoe",DestroySelf())
+
     CreateCreature("S!ssmil",[2510.1580],7)
     CreateCreature("S!samber",[2260.1435],0)
     CreateCreature("GOLSTO01",[2165.1720],10)
