@@ -1,0 +1,10 @@
+IF
+  InMyArea(Player1)
+  Global("IaSibelasks","AR0516",0)
+  HPLT(Player1,2350000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelasks","AR0516",1)
+    SetGlobal("Ianoorb","AR0516",2)
+    SetGlobal("Iapartyrest","AR0516",1)
+END

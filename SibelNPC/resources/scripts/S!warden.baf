@@ -1,0 +1,15 @@
+IF
+  InMyArea(Player1)
+  XPLT(Player1,2350000)
+  Global("Iasibelsays","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelsays","LOCALS",1)
+    SetGlobal("Iarefreshsi","LOCALS",1)
+    SetGlobal("Iawarden06","LOCALS",2)
+    SetGlobal("Iawarden10","LOCALS",3)
+    SetGlobal("Iawarden05","LOCALS",2)
+    SetGlobal("Iawarden03","LOCALS",1)
+    SetGlobal("Iawarden04","LOCALS",1)
+    SetGlobal("Iawarden14","LOCALS",4)
+END
