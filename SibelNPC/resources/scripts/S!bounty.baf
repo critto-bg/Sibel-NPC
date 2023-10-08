@@ -1,0 +1,9 @@
+IF
+  Allegiance(Myself,ENEMY)
+  XPLT(Player1,2350000)
+  Global("Iasibelsays","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelsays","LOCALS",1)
+    SetGlobal("Iahard","LOCALS",5)
+END
