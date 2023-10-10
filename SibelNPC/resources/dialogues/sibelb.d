@@ -37,7 +37,7 @@ IF ~Global("IaSibelTalks","GLOBAL",5)~ THEN BEGIN B2SibelQuestion
 END
 
 IF ~~ THEN BEGIN B2WhoIsVirtus
-  SAY ~He was a son to a grandson of Lord Tristan, whom we've met in the ancient Arcanis village.~
+  SAY ~He was a son of a grandson of Lord Tristan's, whom we've met in the ancient Arcanis village.~
   ++ ~He was three generations younger than Lord Arcanis?~ + B2Still
   ++ ~Was he also one of your ancestors?~ + B2Lineage
 END
