@@ -80,3 +80,55 @@ IF ~~ THEN BEGIN B2End
   = ~According to father, a day will come when our enemies will strike with all their might, seeking retribution for perceived wrongs. On that day, Virtus Arcanis will return and aid us.~
   IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",6)~ EXIT
 END
+
+/* third banter */
+
+IF ~Global("IaSibelClericTalk","GLOBAL",2)~ THEN BEGIN B3OnYourMind
+  SAY ~You seem preoccupied, <CHARNAME>? Is there something on your mind?~
+  ++ ~Yes, actually. I've had a question to ask of you for a time now.~ + B3Question
+END
+
+IF ~~ THEN BEGIN B3Question
+  SAY ~Go ahead.~
+  ++ ~As a priest, which god do you worship?~ + B3WhichGod
+END
+
+IF ~~ THEN BEGIN B3WhichGod
+  SAY ~None! I don't worship any god.~
+  IF ~~ THEN REPLY ~What is the source of your magic, then?~ DO ~SetGlobal("IaB3Wisdom","LOCALS",1)~ GOTO B3Wisdom
+  IF ~~ THEN REPLY ~What do you think of the gods, Sibel?~ DO ~SetGlobal("IaB3Kids","LOCALS",1)~ GOTO B3Kids
+END
+
+IF ~~ THEN BEGIN B3Wisdom
+  SAY ~My magic flows from my wisdom, not from any god.~
+  ++ ~Is it the same for other clerics?~ + B3Clerics
+END
+
+IF ~~ THEN BEGIN B3Clerics
+  SAY ~Perhaps, for the most of them, even if they are not aware of it. They pray to their gods to fuel their magic, and the gods are pleased with the notion.~
+  IF ~Global("IaB3Kids","LOCALS",0)~ THEN REPLY ~What do you think of the gods, Sibel?~ DO ~SetGlobal("IaB3Kids","LOCALS",1)~ GOTO B3Kids
+  ++ ~Lord Tristan was right to call you wise.~ + B3Wise
+END
+
+IF ~~ THEN BEGIN B3Kids
+  SAY ~Gods are just big kids who never grew up. They love to play and they want to be pleased.~
+  ++ ~If you mean "powerful" when you say "big", then I couldn't agree more.~ + B3Power
+END
+
+IF ~~ THEN BEGIN B3Power
+  SAY ~They are powerful, but have we ever knelt down in front of power?~
+  ++ ~No, we haven't. Mere power is not a reason enough to be respected, let alone worshipped.~ + B3Exactly
+  IF ~Global("IaB3Wisdom","LOCALS",0)~ THEN REPLY ~Where does you magic come from, then?~ DO ~SetGlobal("IaB3Wisdom","LOCALS",1)~ GOTO B3Wisdom
+END
+
+IF ~~ THEN BEGIN B3Exactly
+  SAY ~'Tis true!~
+  IF ~Global("IaB3Wisdom","LOCALS",0)~ THEN REPLY ~What is the source of your magic, then?~ DO ~SetGlobal("IaB3Wisdom","LOCALS",1)~ GOTO B3Wisdom
+  ++ ~Lord Tristan was right to call you wise.~ + B3Wise
+END
+
+IF ~~ THEN BEGIN B3Wise
+  SAY ~Thank you, <CHARNAME>! I am glad we are of the same mind.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelClericTalk","GLOBAL",3)~ EXIT
+END

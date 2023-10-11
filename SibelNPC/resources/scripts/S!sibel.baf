@@ -111,3 +111,31 @@ THEN
     SetGlobal("IaSibelTalks","GLOBAL",5)
     Interact(Player1)
 END
+
+// third banter
+// happens separately from the first two
+IF
+  InParty(Myself)
+  Global("IaSibelClericTalk","GLOBAL",0)
+  Global("IaTreePlot","GLOBAL",6)
+  Global("IaAmbervillePlot","GLOBAL",7)
+  Dead("S!samber")
+  XPGT(Myself,1935000)
+  Class(Myself,CLERIC_ALL)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelClericTalk","GLOBAL",1)
+    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
+END
+
+IF
+  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  Global("IaSibelClericTalk","GLOBAL",1)
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelClericTalk","GLOBAL",2)
+    Interact(Player1)
+END
