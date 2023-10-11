@@ -61,6 +61,7 @@ END
 
 /* banters */
 
+// first banter
 IF
   InParty(Myself)
   Global("IaSibelTalks","GLOBAL",0)
@@ -71,6 +72,21 @@ THEN
     RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
 END
 
+IF
+  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  Global("IaSibelTalks","GLOBAL",1)
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",2)
+    Interact(Player1)
+END
+
+// second banter
+// happens if the first one has occurred
 IF
   InParty(Myself)
   Global("IaSibelTalks","GLOBAL",3)
@@ -86,15 +102,12 @@ END
 
 IF
   RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
-  OR(2)
-    Global("IaSibelTalks","GLOBAL",1)
-    Global("IaSibelTalks","GLOBAL",4)
+  Global("IaSibelTalks","GLOBAL",4)
   InParty(Myself)
   See(Player1)
   CombatCounter(0)
-  !AreaType(DUNGEON)
 THEN
   RESPONSE #100
-    IncrementGlobal("IaSibelTalks","GLOBAL",1)
+    SetGlobal("IaSibelTalks","GLOBAL",5)
     Interact(Player1)
 END
