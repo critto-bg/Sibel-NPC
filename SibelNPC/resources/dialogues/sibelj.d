@@ -1,10 +1,11 @@
 BEGIN ~S!SibelJ~
 
+/* post-dream talk */
+
 IF ~Global("IaSibelDream","GLOBAL",2)~ THEN BEGIN DoYouRemember
   SAY ~Do you remember what I told you about my family history?~
   ++ ~Yes, I do.~ + SibelDream
 END
-
 
 IF ~~ THEN BEGIN SibelDream
   SAY ~I didn't sleep well last night. I saw my father in a dream. He said that I should seek a monument near an ancient prison.~
@@ -42,6 +43,8 @@ IF ~~ THEN BEGIN SibelLeavesAlone
     DO ~SetGlobal("IaSibelDream","GLOBAL",5) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut02")~
     EXIT
 END
+
+/* alchemy tower talk */
 
 IF ~Global("IaTreePlot","GLOBAL",2)~ THEN BEGIN PoisonedTree
   SAY "Look, <CHARNAME>! This machinery has divined what ails the great Elm tree. It claims there are traces of poison hidden inside."

@@ -149,6 +149,15 @@ COPY ~SibelNPC/resources/items/S!ssama.itm~ ~override/S!ssama.itm~
   SAY NAME2 @548
   SAY DESC @549
 
+COPY ~SibelNPC/resources/items/S!samul.itm~ ~override/S!samul.itm~
+  SAY NAME2 @550
+  SAY DESC @551
+
+COPY ~SibelNPC/resources/items/S!slet01.itm~ ~override/S!slet01.itm~
+  SAY NAME1 @552
+  SAY NAME2 @552
+  SAY DESC @553
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -327,6 +336,12 @@ COPY ~SibelNPC/resources/creatures/S!ssnake.cre~ ~override/S!ssnake.cre~
 
   WRITE_ASCII 0x0248 ~S!ssnake~ #8 // override script
 
+COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
+  SAY NAME1 @35
+  SAY NAME2 @35
+
+  WRITE_ASCII 0x02cc ~S!sboy01~ #8 // dialog
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
@@ -356,6 +371,7 @@ COMPILE ~SibelNPC/resources/dialogues/zoe.d~
 COMPILE ~SibelNPC/resources/dialogues/celvan.d~
 COMPILE ~SibelNPC/resources/dialogues/reginald.d~
 COMPILE ~SibelNPC/resources/dialogues/squirrel.d~
+COMPILE ~SibelNPC/resources/dialogues/boy.d~
 
 /* scripts */
 
@@ -410,6 +426,7 @@ COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
 COPY ~SibelNPC/resources/bam/2102FP2.BAM~ ~override/2102FP2.BAM~
 COPY ~SibelNPC/resources/bam/S!powdb.bam~ ~override/S!powdb.bam~
 COPY ~SibelNPC/resources/bam/S!powdc.bam~ ~override/S!powdc.bam~
+COPY ~SibelNPC/resources/bam/S!samul.bam~ ~override/S!samul.bam~
 COPY ~SibelNPC/resources/bam/S!santi.bam~ ~override/S!santi.bam~
 COPY ~SibelNPC/resources/bam/S!sboin.bam~ ~override/S!sboin.bam~
 COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~

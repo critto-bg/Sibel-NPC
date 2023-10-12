@@ -132,3 +132,86 @@ IF ~~ THEN BEGIN B3Wise
 
   IF ~~ THEN DO ~SetGlobal("IaSibelClericTalk","GLOBAL",3)~ EXIT
 END
+
+/* fourth banter */
+
+IF ~Global("IaSibelTalks","GLOBAL",8)~ THEN BEGIN B4Letter
+  SAY ~The letter the boy gave me is signed by Lawrence Amberville.~
+
+  ++ ~That is odd. Lord Lawrence still lives?~ + B4Signature
+  ++ ~What does it say?~ + B4Says
+END
+
+IF ~~ THEN BEGIN B4Signature
+  SAY ~I wondered the same once I saw the signature.~
+
+  ++ ~What does it say?~ + B4Says
+END
+
+IF ~~ THEN BEGIN B4Says
+  SAY ~He states that I am of Amberville heritage, through my mother's line. The amulet should serve as proof, for only a member of Amberville family may wear it, or so he claims.~
+
+  IF ~Global("IaB4Judge","LOCALS",0)~ THEN
+    REPLY ~Does this mean your father hid the truth from you?~
+    DO ~SetGlobal("IaB4Judge","LOCALS",1)~
+    GOTO B4Judge
+
+  IF ~Global("IaB4Amulet","LOCALS",0)~ THEN
+    REPLY ~The whole story could be a fabrication.~
+    DO ~SetGlobal("IaB4Amulet","LOCALS",1)~
+    GOTO B4Amulet
+
+  IF ~Global("IaB4Mother","LOCALS",0)~ THEN
+    REPLY ~How much do you know about your mother?~
+    DO ~SetGlobal("IaB4Mother","LOCALS",1)~
+    GOTO B4Mother
+END
+
+IF ~~ THEN BEGIN B4Judge
+  SAY ~Who am I to judge what my father chose to tell me or not? Children are in no position to make such judgement, for they lack complete knowledge of all that transpired between their parents.~
+
+  IF ~Global("IaB4Amulet","LOCALS",0)~ THEN
+    REPLY ~The whole story could be a fabrication.~
+    DO ~SetGlobal("IaB4Amulet","LOCALS",1)~
+    GOTO B4Amulet
+
+  ++ ~What if this claim proves to be truth? What will you do?~ + B4Time
+
+  IF ~Global("IaB4Mother","LOCALS",0)~ THEN
+    REPLY ~How much do you know about your mother?~
+    DO ~SetGlobal("IaB4Mother","LOCALS",1)~
+    GOTO B4Mother
+END
+
+IF ~~ THEN BEGIN B4Amulet
+  SAY ~I have no choice but to try the amulet.~
+
+  ++ ~The amulet alone is not evidence enough to discern the truth.~ + B4Time
+
+  IF ~Global("IaB4Judge","LOCALS",0)~ THEN
+    REPLY ~Does this mean your father hid the truth from you?~
+    DO ~SetGlobal("IaB4Judge","LOCALS",1)~
+    GOTO B4Judge
+
+  IF ~Global("IaB4Mother","LOCALS",0)~ THEN
+    REPLY ~How much do you know about your mother?~
+    DO ~SetGlobal("IaB4Mother","LOCALS",1)~
+    GOTO B4Mother
+END
+
+IF ~~ THEN BEGIN B4Mother
+  SAY ~Precious little. She passed away when I was an infant. Father told little of her, but when he did, he always spoke of good things.~
+
+  IF ~Global("IaB4Amulet","LOCALS",0)~ THEN
+    REPLY ~The whole story could be a fabrication.~
+    DO ~SetGlobal("IaB4Amulet","LOCALS",1)~
+    GOTO B4Amulet
+
+  ++ ~What if this claim proves to be truth? What will you do?~ + B4Time
+END
+
+IF ~~ THEN BEGIN B4Time
+  SAY ~I am unsure. I need time to weigh this story in my mind.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",9)~ UNSOLVED_JOURNAL @1109 EXIT
+END

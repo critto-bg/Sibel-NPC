@@ -139,3 +139,33 @@ THEN
     SetGlobal("IaSibelClericTalk","GLOBAL",2)
     Interact(Player1)
 END
+
+// fourth banter/event
+// triggers only if the second banter has occurred
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",6)
+  Global("IaTreePlot","GLOBAL",6)
+  Global("IaAmbervillePlot","GLOBAL",7)
+  Dead("S!samber")
+  XPGT(Myself,2210000)
+  CombatCounter(0)
+  PartyRested()
+  !AreaType(DUNGEON)
+  !Global("Chapter","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",7)
+    SetGlobalTimer("IaSibelMessTimer","GLOBAL",6)
+END
+
+IF
+  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  Global("IaSibelTalks","GLOBAL",8)
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    Interact(Player1)
+END
