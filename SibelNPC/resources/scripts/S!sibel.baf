@@ -169,3 +169,29 @@ THEN
   RESPONSE #100
     Interact(Player1)
 END
+
+// fifth banter
+// happens only if the previous event has occured
+
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",9)
+  XPGT(Myself,2760000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",10)
+    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
+END
+
+IF
+  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  Global("IaSibelTalks","GLOBAL",10)
+  InParty(Myself)
+  See(Player1)
+  CombatCounter(0)
+  PartyRested()
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",11)
+    Interact(Player1)
+END

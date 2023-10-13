@@ -215,3 +215,119 @@ IF ~~ THEN BEGIN B4Time
 
   IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",9)~ UNSOLVED_JOURNAL @1109 EXIT
 END
+
+/* fifth banter */
+
+IF ~Global("IaSibelTalks","GLOBAL",11)~ THEN BEGIN B5Advice
+  SAY ~I am in need of your advice, <CHARNAME>!~
+
+  ++ ~I am listening. What troubles you?~ + B5Suggest
+END
+
+IF ~~ THEN BEGIN B5Suggest
+  SAY ~I still ponder the dilemma of my heritage. What course of action would you choose, were you in my stead?~
+
+  ++ ~Your father has concealed the full truth. You should explore what your mother's kin may offer.~ + B5Hid
+  ++ ~There's naught more important than family. You still remain Sibel Arcanis. You should stand by your folk.~ + B5Lineage
+
+  IF ~GlobalGT("IaSGiftPlace","GLOBAL",0) Global("IaAmbervillePlot","GLOBAL",7)~ THEN
+    REPLY ~You have a family that cares for you. Lord Tristan put trust in your wisdom. Howard chose to make a gift, even unsure if it would ever reach you.~
+    GOTO B5Good
+
+  IF ~OR(2) Global("IaSGiftPlace","GLOBAL",0) GlobalLT("IaAmbervillePlot","GLOBAL",7)~ THEN
+    REPLY ~Those of Arcanis blood have treated us with kindness. The Amberville family unleashed only violence, and promises of yet more to come.~
+    GOTO B5Good
+
+  ++ ~Blood of both families courses through your veins. The choice is yours to make, and I will stand by you.~ + B5Neutral
+  ++ ~What of the amulet? Does it confirm what Lord Amberville claims?~ + B5Examined
+END
+
+IF ~~ THEN BEGIN B5Hid
+  SAY ~There may be a strong reason for my father's reticence.~
+
+  ++ ~You seek words that would absolve your father of his weakness. It only steers you toward the same path he's trodden.~ + B5Evil
+  ++ ~Blood of both families courses through your veins. The choice is yours to make, and I will stand by you.~ + B5Neutral
+END
+
+IF ~~ THEN BEGIN B5Lineage
+  SAY ~Wiser words have not been spoken. Yet I am both an Amberville and an Arcanis. There's a choice to be made who are my true folk. Until I do, there won't be a resolution.~
+  ++ ~What of the amulet? Does it confirm what Lord Amberville claims?~ + B5Examined
+END
+
+IF ~~ THEN BEGIN B5Examined
+  SAY ~I have studied the binding magic stored within, and it rings true. The necklace does not reject me. So there's honesty in lord Amberville's claim.~
+
+  ++ ~Take caution. The Ambervilles may still harbour hate toward your mother. And now they call forth her name, seeking to win your allegiance. To what end?~ + B5Agree
+  ++ ~Your father has concealed the full truth. You should explore what your mother's kin may offer.~ + B5Evil
+  ++ ~Blood of both families courses through your veins. The choice is yours to make, and I will stand by you.~ + B5Neutral
+END
+
+IF ~~ THEN BEGIN B5Agree
+  SAY ~I take your words close to heart. There's little proof yet to abandon those I hold dear.~
+
+  IF ~GlobalGT("IaSGiftPlace","GLOBAL",0) Global("IaAmbervillePlot","GLOBAL",7)~ THEN
+    REPLY ~You have a family that cares for you. Lord Tristan put trust in your wisdom. Howard chose to make a gift, even unsure if it would ever reach you.~
+    GOTO B5Good
+
+  IF ~OR(2) Global("IaSGiftPlace","GLOBAL",0) GlobalLT("IaAmbervillePlot","GLOBAL",7)~ THEN
+    REPLY ~Those of Arcanis blood have treated us with kindness. The Amberville family unleashed only violence, and promises of yet more to come.~
+    GOTO B5Good
+END
+
+IF ~~ THEN BEGIN B5Good
+  SAY ~You words strengthen my resolve, <CHARNAME>. The Arcanis folk are the only true family I have ever known. I will stand by them, whatever may come.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",1)
+        SetGlobal("IaSibelTalks","GLOBAL",12)
+        AddXPObject(Player1,45000)
+        AddXPObject(Player2,45000)
+        AddXPObject(Player3,45000)
+        AddXPObject(Player4,45000)
+        AddXPObject(Player5,45000)
+        AddXPObject(Player6,45000)~
+    UNSOLVED_JOURNAL @1110
+    EXIT
+END
+
+IF ~~ THEN BEGIN B5Neutral
+  SAY ~Thank you, <CHARNAME>. I treasure your loyalty. When the time comes to make the final decision, I might call upon your wisdom once more.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",2)
+        SetGlobal("IaSibelTalks","GLOBAL",12)~
+    UNSOLVED_JOURNAL @1111
+    EXIT
+END
+
+IF ~~ THEN BEGIN B5Evil
+  SAY ~What would you propose, then?~
+
+  ++ ~If Virtus Arcanis still lives and comes to you, refuse his offer.~ + B5StopQuest
+  ++ ~Cast off the shackles of your past. If Virtus Arcanis reveals himself, you should dispose of him and be done with Arcanis family.~ + B5Leave
+END
+
+IF ~~ THEN BEGIN B5StopQuest
+  SAY ~I doubt that he will. A mage of his power has learnt not to engulf himself in petty schemes of insignificant men. Come, let us continue our journey, <CHARNAME>.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",3)
+        SetGlobal("IaSibelTalks","GLOBAL",12)
+        EraseJournalEntry(@1109)~
+    SOLVED_JOURNAL @1112
+    EXIT
+END
+
+IF ~~ THEN BEGIN B5Leave
+  SAY ~Murder one of my own? Why would you propose such a depravity! How could a <MANWOMAN> harbour such evil in one's heart, <CHARNAME>? I shan't remain in your group any longer.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",4)
+        SetGlobal("IaSibelTalks","GLOBAL",12)
+        EraseJournalEntry(@1109)
+        LeaveParty()
+        TakeItemListParty("S!sitems")
+        EscapeArea()~
+    SOLVED_JOURNAL @1113
+    EXIT
+END
