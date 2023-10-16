@@ -158,6 +158,10 @@ COPY ~SibelNPC/resources/items/S!slet01.itm~ ~override/S!slet01.itm~
   SAY NAME2 @552
   SAY DESC @553
 
+COPY ~SibelNPC/resources/items/S!smisc.itm~ ~override/S!smisc.itm~
+  SAY NAME1 @554
+  SAY NAME2 @554
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -403,6 +407,7 @@ COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
 EXTEND_BOTTOM ~ARIA11.BCS~ ~SibelNPC/resources/scripts/aria11.baf~
+EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR0809.BCS~ ~SibelNPC/resources/scripts/AR0809.baf~

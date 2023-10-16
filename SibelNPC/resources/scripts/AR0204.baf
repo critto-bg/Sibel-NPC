@@ -1,0 +1,10 @@
+IF
+  Global("Ianostatue","AR0204",1)
+  Global("spawnNum","AR0204",4)
+  Global("IaSibelasks","AR0204",0)
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelasks","AR0204",1)
+    GiveItemCreate("S!smisc",Player1,0,0,0)
+END
