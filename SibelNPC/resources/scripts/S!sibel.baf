@@ -150,7 +150,6 @@ IF
   Dead("S!samber")
   XPGT(Myself,1810000)
   CombatCounter(0)
-  PartyRested()
   !AreaType(DUNGEON)
   !Global("Chapter","GLOBAL",5)
 THEN
