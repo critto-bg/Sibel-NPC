@@ -170,7 +170,7 @@ THEN
 END
 
 // fifth banter
-// happens only if the previous event has occured
+// happens only if the previous event has occurred
 
 IF
   InParty(Myself)
@@ -192,5 +192,58 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",11)
+    Interact(Player1)
+END
+
+// sixth banther/event
+// happens only if the previous event has occurred, non-evil path is chosen
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",12)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  OR(2)
+    AreaCheck("AR1600")
+    AreaCheck("AR2100")
+  GlobalGT("AsylumPlot","GLOBAL",49)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelTalks","GLOBAL",13)
+    Wait(3)
+    Interact(Player1)
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",14)
+  Global("IaSibelAmberAmbush","GLOBAL",0)
+  GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",1)
+    Wait(1)
+    CreateCreatureObject("S!samb01",Player1,0,0,0)
+    CreateCreatureObject("S!samb02","S!sibel",0,0,0)
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",14)
+  Global("IaSibelAmberAmbush","GLOBAL",1)
+  CombatCounter(0)
+  Dead("S!samb01")
+  Dead("S!samb02")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",2)
+    SetGlobal("IaSibelTalks","GLOBAL",15)
     Interact(Player1)
 END

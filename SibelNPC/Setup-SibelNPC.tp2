@@ -311,6 +311,8 @@ COPY ~SibelNPC/resources/creatures/S!swill.cre~ ~override/S!swill.cre~
   WRITE_ASCII 0x02cc ~S!SWILL~ #8 // dialog
 
 COPY ~SibelNPC/resources/creatures/S!samber.cre~ ~override/S!samber.cre~
+     ~SibelNPC/resources/creatures/S!samb01.cre~ ~override/S!samb01.cre~
+     ~SibelNPC/resources/creatures/S!samb02.cre~ ~override/S!samb02.cre~
   SAY NAME1 @30
   SAY NAME2 @30
 

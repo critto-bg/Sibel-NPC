@@ -331,3 +331,29 @@ IF ~~ THEN BEGIN B5Leave
     SOLVED_JOURNAL @1113
     EXIT
 END
+
+/* sixth banter */
+
+IF ~Global("IaSibelTalks","GLOBAL",13)~ THEN BEGIN B6Ambush
+  SAY ~<CHARNAME>, we are about to be ambushed! Prepare yourself, fast!~
+
+  ++ ~An ambush? How would you know?~ + B6How
+END
+
+IF ~~ THEN BEGIN B6How
+  SAY ~I am not sure. I could feel them getting close! Hurry!~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",14) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~ EXIT
+END
+
+IF ~Global("IaSibelTalks","GLOBAL",15)~ THEN BEGIN B6Aftermath
+  SAY ~Thank you, <CHARNAME>! The ancient rivalry brings more trouble still upon our heads.~
+
+  ++ ~You are welcome. You've had your own share of fights caused by the choices I have made.~ + B6Amber
+END
+
+IF ~~ THEN BEGIN B6Amber
+  SAY ~Let us keep some of the amber the golems were made of. I feel it might become useful in the future.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",16)~ EXIT
+END
