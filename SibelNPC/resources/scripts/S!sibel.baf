@@ -120,7 +120,7 @@ IF
   Global("IaTreePlot","GLOBAL",6)
   Global("IaAmbervillePlot","GLOBAL",7)
   Dead("S!samber")
-  XPGT(Myself,1935000)
+  XPGT(Myself,1660000)
   Class(Myself,CLERIC_ALL)
 THEN
   RESPONSE #100
@@ -148,7 +148,7 @@ IF
   Global("IaTreePlot","GLOBAL",6)
   Global("IaAmbervillePlot","GLOBAL",7)
   Dead("S!samber")
-  XPGT(Myself,2210000)
+  XPGT(Myself,1810000)
   CombatCounter(0)
   PartyRested()
   !AreaType(DUNGEON)
@@ -176,7 +176,7 @@ END
 IF
   InParty(Myself)
   Global("IaSibelTalks","GLOBAL",9)
-  XPGT(Myself,2760000)
+  XPGT(Myself,2220000)
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",10)
