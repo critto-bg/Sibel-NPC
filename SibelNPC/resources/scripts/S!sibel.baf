@@ -176,7 +176,7 @@ END
 IF
   InParty(Myself)
   Global("IaSibelTalks","GLOBAL",9)
-  XPGT(Myself,2220000)
+  XPGT(Myself,2210000)
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",10)
