@@ -1,0 +1,12 @@
+IF
+  InMyArea(Player1)
+  NumInPartyGT(4)
+  Global("Iaitem2","AR2209",0)
+  Global("IaSibelAsks","AR2209",0)
+  Global("Iaexit","AR2209",2)
+  InPartyAllowDead("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAsks","AR2209",1)
+    ActionOverride("Shelf 1",CreateItem("S!MISC02",0,0,0))
+END
