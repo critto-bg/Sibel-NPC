@@ -356,6 +356,9 @@ COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
 
   WRITE_ASCII 0x02cc ~S!sboy01~ #8 // dialog
 
+COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
+  ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
