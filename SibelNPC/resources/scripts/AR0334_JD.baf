@@ -1,0 +1,8 @@
+IF
+  Global("Iajdcancelled","GLOBAL",1)
+  PartyHasItem("S!MISC08")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!MISC08")
+    DestroyItem("S!MISC08")
+END

@@ -162,6 +162,14 @@ COPY ~SibelNPC/resources/items/S!smisc.itm~ ~override/S!smisc.itm~
   SAY NAME1 @554
   SAY NAME2 @554
 
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/items/S!sw04.itm~ ~override/S!sw04.itm~
+    SAY NAME1 @555
+    SAY NAME2 @555
+    SAY DESC @556
+END
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -423,6 +431,16 @@ EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
 
 EXTEND_TOP ~S!BOUNTY.BCS~ ~SibelNPC/resources/scripts/S!bounty.baf~
 EXTEND_TOP ~S!WARDEN.BCS~ ~SibelNPC/resources/scripts/S!warden.baf~
+
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334_JD.baf~
+  EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~
+  EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000_JD.baf~
+  EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500_JD.baf~
+  EXTEND_BOTTOM ~S!fsdrag.BCS~ ~SibelNPC/resources/scripts/S!fsdrag.baf~
+  EXTEND_BOTTOM ~S!torgal.BCS~ ~SibelNPC/resources/scripts/S!torgal.baf~
+END
 
 /* graphics */
 

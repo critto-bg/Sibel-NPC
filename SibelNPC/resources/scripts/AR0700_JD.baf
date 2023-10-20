@@ -1,0 +1,13 @@
+IF
+  InMyArea(Player1)
+  Global("IaSibelAsks","AR0700",0)
+  OR(3)
+    !Class(Player1,FIGHTER_ALL)
+    CheckStat(Player1,5,SCRIPTINGSTATE1)
+    Class(Player1,MONK)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAsks","AR0700",1)
+    SetGlobal("Iajdcancelled","GLOBAL",1)
+    SetGlobal("Ianojudgement","GLOBAL",1)
+END

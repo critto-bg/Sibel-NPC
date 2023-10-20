@@ -1,0 +1,20 @@
+IF
+  InMyArea(Player1)
+  Global("Iajdcancelled","GLOBAL",1)
+  Global("Iatreasure4","LOCALS",1)
+  Global("Iasibelsays","LOCALS",0)
+  HasItem("S!misc08",Myself)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelsays","LOCALS",1)
+    DestroyItem("S!misc08")
+END
+
+IF
+  InMyArea(Player1)
+  Global("Iajdcancelled","GLOBAL",1)
+  Global("Iatreasure4","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iatreasure4","LOCALS",1)
+END
