@@ -364,6 +364,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
   COPY_EXISTING ~S!dracol.cre~ ~override/S!dracol.cre~
     WRITE_LONG 0x001c 25000 // gold
+    ADD_CRE_ITEM ~shld22~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Sentinel +4
 END
 
 /* spells */
@@ -374,6 +375,44 @@ COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
+
+/* stores */
+
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY_EXISTING ~uddrow23.sto~ ~override/uddrow23.sto~
+    READ_LONG 0x38 "itemscount"
+
+    PATCH_IF ("%itemscount%" > 0) BEGIN
+      READ_LONG 0x2C "purchasedoffset"
+      READ_LONG 0x34 "itemsoffset"
+      READ_LONG 0x4C "drinksoffset"
+      READ_LONG 0x70 "curesoffset"
+
+      SET "removeditems" = 0
+      SET "cnt" = "%itemscount%" - 1
+
+      WHILE ("%cnt%" >= 0) BEGIN
+        READ_ASCII ("%itemsoffset%" + "%cnt%"*28) "itemname"
+        PATCH_IF ("%itemname%" STRING_COMPARE_CASE "shld22" = 0)
+        BEGIN
+          DELETE_BYTES ("%itemsoffset%" + ("%cnt%"*28)) 28
+          SET "removeditems" = "%removeditems%" + 1
+        END
+
+        SET "cnt" = "%cnt%" - 1
+      END
+
+      WRITE_LONG 0x38 ("%itemscount%" - "%removeditems%")
+
+      PATCH_IF ("%purchasedoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x2C ("%purchasedoffset%" - ("%removeditems%" * 28)) END
+      PATCH_IF ("%drinksoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x4C ("%drinksoffset%" - ("%removeditems%" * 28)) END
+      PATCH_IF ("%curesoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x70 ("%curesoffset%" - ("%removeditems%" * 28)) END
+    END
+END
+
+//Remove shld22 from the store (uddrow23.sto) and add it to an empty inventory slot of Dracolich at installation (via tp2).
+
 
 /* dialogues */
 
