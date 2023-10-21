@@ -158,12 +158,12 @@ COPY ~SibelNPC/resources/items/S!slet01.itm~ ~override/S!slet01.itm~
   SAY NAME2 @552
   SAY DESC @553
 
-COPY ~SibelNPC/resources/items/S!smisc.itm~ ~override/S!smisc.itm~
-  SAY NAME1 @554
-  SAY NAME2 @554
-
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/items/S!smisc.itm~ ~override/S!smisc.itm~
+    SAY NAME1 @554
+    SAY NAME2 @554
+
   COPY ~SibelNPC/resources/items/S!sw04.itm~ ~override/S!sw04.itm~
     SAY NAME1 @555
     SAY NAME2 @555
@@ -356,15 +356,16 @@ COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
 
   WRITE_ASCII 0x02cc ~S!sboy01~ #8 // dialog
 
-COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
-  ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
-
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
   COPY_EXISTING ~S!dracol.cre~ ~override/S!dracol.cre~
     WRITE_LONG 0x001c 25000 // gold
     ADD_CRE_ITEM ~shld22~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Sentinel +4
+
+  // Vadek
+  COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
 END
 
 /* spells */
@@ -466,7 +467,6 @@ COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
 EXTEND_BOTTOM ~ARIA11.BCS~ ~SibelNPC/resources/scripts/aria11.baf~
-EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR0809.BCS~ ~SibelNPC/resources/scripts/AR0809.baf~
@@ -484,6 +484,8 @@ EXTEND_TOP ~S!WARDEN.BCS~ ~SibelNPC/resources/scripts/S!warden.baf~
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334_JD.baf~
+
+  EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~
   EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000_JD.baf~
   EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500_JD.baf~
