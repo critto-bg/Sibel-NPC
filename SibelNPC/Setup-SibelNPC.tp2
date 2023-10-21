@@ -359,6 +359,13 @@ COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
 COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
   ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  // Dracolich
+  COPY_EXISTING ~S!dracol.cre~ ~override/S!dracol.cre~
+    WRITE_LONG 0x001c 25000 // gold
+END
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
