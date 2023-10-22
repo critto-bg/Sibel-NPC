@@ -1,0 +1,22 @@
+IF
+  InMyArea(Player1)
+  InPartyAllowDead("S!Sibel")
+  Global("IaElowenCromwell","GLOBAL",0)
+  GlobalGT("IaSibelTalks","GLOBAL",15)
+  !GlobalGT("IaSibelFamilyPath","GLOBAL",2)
+  GlobalGT("Chapter","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaElowenCromwell","GLOBAL",1)
+    CreateCreature("S!selow",[629.223],0)
+END
+
+IF
+  InMyArea(Player1)
+  !InPartyAllowDead("S!Sibel")
+  Global("IaElowenCromwell","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaElowenCromwell","GLOBAL",2)
+    ActionOverride("S!selow",DestroySelf())
+END

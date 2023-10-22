@@ -363,6 +363,16 @@ COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
 
   WRITE_ASCII 0x02cc ~S!sboy01~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!sgamb.cre~ ~override/S!sgamb.cre~
+  SAY NAME1 @36
+  SAY NAME2 @36
+
+COPY ~SibelNPC/resources/creatures/S!selow.cre~ ~override/S!selow.cre~
+  SAY NAME1 @37
+  SAY NAME2 @37
+
+  WRITE_ASCII 0x02cc ~S!selow~ #8 // dialog
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
@@ -374,10 +384,6 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
 END
-
-COPY ~SibelNPC/resources/creatures/S!sgamb.cre~ ~override/S!sgamb.cre~
-  SAY NAME1 @36
-  SAY NAME2 @36
 
 /* spells */
 
@@ -447,6 +453,7 @@ COMPILE ~SibelNPC/resources/dialogues/celvan.d~
 COMPILE ~SibelNPC/resources/dialogues/reginald.d~
 COMPILE ~SibelNPC/resources/dialogues/squirrel.d~
 COMPILE ~SibelNPC/resources/dialogues/boy.d~
+COMPILE ~SibelNPC/resources/dialogues/elowen.d~
 
 /* scripts */
 
@@ -489,6 +496,7 @@ EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
 EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
 
+EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334.baf~
 EXTEND_TOP ~S!BOUNTY.BCS~ ~SibelNPC/resources/scripts/S!bounty.baf~
 EXTEND_TOP ~S!WARDEN.BCS~ ~SibelNPC/resources/scripts/S!warden.baf~
 
@@ -509,6 +517,7 @@ END
 COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
 COPY ~SibelNPC/resources/portraits/SibeLM.BMP~ ~override/S!SIBELM.BMP~
 COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
+COPY ~SibelNPC/resources/portraits/ElowenS.BMP~ ~override/ElowenS.bmp~
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
 COPY ~SibelNPC/resources/bam/2102FP2.BAM~ ~override/2102FP2.BAM~
