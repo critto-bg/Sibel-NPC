@@ -29,6 +29,7 @@
 @33 = ~Squirrel~
 @34 = ~Snake~
 @35 = ~Boy~
+@36 = ~Greater Amber Golem~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -308,6 +309,10 @@ Type: 1-handed
 Requires: 17 Strength
 Usable By:
  Good aligned single-class fighters and paladins~
+@557 = ~Chunk of Reinforced Amber~
+@558 = ~Chunk of Reinforced Amber
+
+This is chunk of amber, collected from the remainders of a destroyed Amber Golem, was reinforced by the artificer Lady Elowen.~
 
 @700 = ~Greater Restoration
 (Necromancy)

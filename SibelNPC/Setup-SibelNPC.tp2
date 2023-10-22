@@ -170,6 +170,13 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY DESC @556
 END
 
+COPY ~SibelNPC/resources/items/S!sramb.itm~ ~override/S!sramb.itm~
+  SAY NAME1 @557
+  SAY NAME2 @557
+  SAY DESC @558
+
+COPY ~SibelNPC/resources/items/S!sgamb.itm~ ~override/S!sgamb.itm~
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -368,6 +375,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
 END
 
+COPY ~SibelNPC/resources/creatures/S!sgamb.cre~ ~override/S!sgamb.cre~
+  SAY NAME1 @36
+  SAY NAME2 @36
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
@@ -513,6 +524,7 @@ COPY ~SibelNPC/resources/bam/S!sgear.bam~ ~override/S!sgear.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 COPY ~SibelNPC/resources/bam/S!slthr1.bam~ ~override/S!slthr1.bam~
 COPY ~SibelNPC/resources/bam/S!slthr2.bam~ ~override/S!slthr2.bam~
+COPY ~SibelNPC/resources/bam/S!sramb.bam~ ~override/S!sramb.bam~
 COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
 COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
