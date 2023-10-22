@@ -517,7 +517,13 @@ END
 COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
 COPY ~SibelNPC/resources/portraits/SibeLM.BMP~ ~override/S!SIBELM.BMP~
 COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
-COPY ~SibelNPC/resources/portraits/ElowenS.BMP~ ~override/ElowenS.bmp~
+
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/portraits/ElowenL.BMP~ ~override/ElowenS.bmp~
+END
+ELSE BEGIN
+  COPY ~SibelNPC/resources/portraits/ElowenS.BMP~ ~override/ElowenS.bmp~
+END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
 COPY ~SibelNPC/resources/bam/2102FP2.BAM~ ~override/2102FP2.BAM~
