@@ -182,6 +182,11 @@ COPY ~SibelNPC/resources/items/S!sioun1.itm~ ~override/S!sioun1.itm~
   SAY NAME2 @559
   SAY DESC @560
 
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
+    WRITE_SHORT 0x38 99 // max in stack amount
+END
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -433,9 +438,6 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
       PATCH_IF ("%curesoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x70 ("%curesoffset%" - ("%removeditems%" * 28)) END
     END
 END
-
-//Remove shld22 from the store (uddrow23.sto) and add it to an empty inventory slot of Dracolich at installation (via tp2).
-
 
 /* dialogues */
 
