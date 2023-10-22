@@ -314,6 +314,23 @@ Usable By:
 @558 = ~Chunk of Reinforced Amber
 
 This chunk of amber, collected from the remainders of a destroyed Amber Golem, was reinforced by the artificer Lady Elowen.~
+@559 = ~Amber Ioun Stone~
+@560 = ~Amber Ioun Stone
+
+This headwear is made of pure amber.
+
+STATISTICS:
+
+Equipped abilities:
+- +10% Resistance to Electricity
+- +10 Max HP
+- Mental Agility: +1 bonus to casting speed
+
+Special: Protects against critical hits
+
+Usable By:
+ Cleric
+ Druid~
 
 @700 = ~Greater Restoration
 (Necromancy)

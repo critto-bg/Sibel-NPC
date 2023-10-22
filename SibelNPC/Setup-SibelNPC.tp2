@@ -177,6 +177,11 @@ COPY ~SibelNPC/resources/items/S!sramb.itm~ ~override/S!sramb.itm~
 
 COPY ~SibelNPC/resources/items/S!sgamb.itm~ ~override/S!sgamb.itm~
 
+COPY ~SibelNPC/resources/items/S!sioun1.itm~ ~override/S!sioun1.itm~
+  SAY NAME1 @559
+  SAY NAME2 @559
+  SAY DESC @560
+
 /* creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -536,6 +541,7 @@ COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
 COPY ~SibelNPC/resources/bam/S!scoin.bam~ ~override/S!scoin.bam~
 COPY ~SibelNPC/resources/bam/S!sfooin.bam~ ~override/S!sfooin.bam~
 COPY ~SibelNPC/resources/bam/S!sgear.bam~ ~override/S!sgear.bam~
+COPY ~SibelNPC/resources/bam/S!siouin.bam~ ~override/S!siouin.bam~
 COPY ~SibelNPC/resources/bam/S!sleain.bam~ ~override/S!sleain.bam~
 COPY ~SibelNPC/resources/bam/S!slthr1.bam~ ~override/S!slthr1.bam~
 COPY ~SibelNPC/resources/bam/S!slthr2.bam~ ~override/S!slthr2.bam~
