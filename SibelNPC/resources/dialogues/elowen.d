@@ -47,6 +47,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve this amber amulet?~
     GOTO AmberAmulet
 
+  // barbarian's dream
+  IF ~PartyHasItem("S!chan01")~ THEN
+    REPLY ~Could you improve this powerful chain mail further?~
+    GOTO BarbDream
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -59,8 +64,8 @@ IF ~~ THEN BEGIN Chunk
   THEN
     REPLY ~Yes please, go ahead.~
     DO ~TakePartyGold(5000) DestroyGold(5000)
-        TakePartyItemNum("S!misc27",1) DestroyItem("S!misc27")
-        TakePartyItemNum("S!misc27",1) DestroyItem("S!misc27")
+        TakePartyItemNum("S!misc27",2) DestroyItem("S!misc27")
+                                       DestroyItem("S!misc27")
         GiveItemCreate("S!sramb",Player1,0,0,0)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
@@ -81,6 +86,24 @@ IF ~~ THEN BEGIN AmberAmulet
         TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         GiveItemCreate("S!sgamul",Player1,0,0,0)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN BarbDream
+  SAY ~I can improve your Supreme Chain Mail with amber. Bring me a single Reinforced Chunk, a bottle of Barbarian Essence and a Permanency scroll. The job will cost 60000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!chan01") PartyHasItem("S!sramb") PartyHasItem("POTN33") PartyHasItem("S!misc02") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("S!chan01",1) DestroyItem("S!chan01")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        TakePartyItemNum("POTN33",1) DestroyItem("POTN33")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!schan1",Player1,0,0,0)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

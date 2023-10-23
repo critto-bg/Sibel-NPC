@@ -352,6 +352,21 @@ Equipped abilities:
 
 Usable By:
  Sibel~
+@565 = ~Barbarian's Dream~
+@566 = ~Barbarian's Dream
+
+This outstanding chain mail is the final result of combining four powerful chain armors. It was further reinforced with amber by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- Fire Resistance: +20%
+- Resitance to Electricity: +40%
+- Resistance to damage from all weapon types: +20%
+
+Armor Class: -2 (-4 vs. slashing, 0 vs. crushing)
+Weight: 7
+Requires: 8 Strength~
 
 @700 = ~Greater Restoration
 (Necromancy)
