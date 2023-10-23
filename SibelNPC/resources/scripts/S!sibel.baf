@@ -195,7 +195,7 @@ THEN
     Interact(Player1)
 END
 
-// sixth banther/event
+// sixth banter/event
 // happens only if the previous event has occurred, non-evil path is chosen
 
 IF
@@ -245,5 +245,76 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelAmberAmbush","GLOBAL",2)
     SetGlobal("IaSibelTalks","GLOBAL",15)
+    Interact(Player1)
+END
+
+// seventh banter/event
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",16)
+  Global("IaSibelAmberAmbush","GLOBAL",2)
+  Global("IASJoinedToB","GLOBAL",0)
+  Global("IaSGiftPlace","GLOBAL",6)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  OR(3)
+    PartyHasItem("S!sglo01")
+    PartyHasItem("S!sglo02")
+    PartyHasItem("S!sglo03")
+  OR(5)
+    AreaCheck("ARIA11")
+    AreaCheck("AR3017")
+    AreaCheck("AR0809")
+    AreaCheck("AR2808")
+    AreaCheck("AR5500")
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelTalks","GLOBAL",17)
+    Wait(3)
+    Interact(Player1)
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",18)
+  Global("IaSibelAmberAmbush","GLOBAL",2)
+  GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",3)
+    Wait(1)
+    CreateCreatureObject("S!samb03",Player1,0,0,0)
+    CreateCreatureObject("S!samb04",Player1,0,0,0)
+    CreateCreatureObject("S!samb05","S!sibel",0,0,0)
+    CreateCreatureObject("S!samb06","S!sibel",0,0,0)
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",18)
+  Global("IaSibelAmberAmbush","GLOBAL",3)
+  OR(5)
+    AreaCheck("ARIA11")
+    AreaCheck("AR3017")
+    AreaCheck("AR0809")
+    AreaCheck("AR2808")
+    AreaCheck("AR5500")
+  CombatCounter(0)
+  Dead("S!samb03")
+  Dead("S!samb04")
+  Dead("S!samb05")
+  Dead("S!samb06")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",4)
+    SetGlobal("IaSibelTalks","GLOBAL",19)
     Interact(Player1)
 END

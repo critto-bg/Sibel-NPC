@@ -362,6 +362,10 @@ COPY ~SibelNPC/resources/creatures/S!swill.cre~ ~override/S!swill.cre~
 COPY ~SibelNPC/resources/creatures/S!samber.cre~ ~override/S!samber.cre~
      ~SibelNPC/resources/creatures/S!samb01.cre~ ~override/S!samb01.cre~
      ~SibelNPC/resources/creatures/S!samb02.cre~ ~override/S!samb02.cre~
+     ~SibelNPC/resources/creatures/S!samb03.cre~ ~override/S!samb03.cre~
+     ~SibelNPC/resources/creatures/S!samb04.cre~ ~override/S!samb04.cre~
+     ~SibelNPC/resources/creatures/S!samb05.cre~ ~override/S!samb05.cre~
+     ~SibelNPC/resources/creatures/S!samb06.cre~ ~override/S!samb06.cre~
   SAY NAME1 @30
   SAY NAME2 @30
 

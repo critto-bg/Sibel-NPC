@@ -357,3 +357,36 @@ IF ~~ THEN BEGIN B6Amber
 
   IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",16)~ EXIT
 END
+
+/* seventh banter */
+
+IF ~Global("IaSibelTalks","GLOBAL",17)~ THEN BEGIN B7Ambush
+  SAY ~<CHARNAME>, they are coming for us again! Steel yourself for another attack!~
+
+  IF ~~ THEN
+    REPLY ~We are ready. Let them come!~
+    DO ~SetGlobal("IaSibelTalks","GLOBAL",18) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~
+    EXIT
+END
+
+IF ~Global("IaSibelTalks","GLOBAL",19)~ THEN BEGIN B7Aftermath
+  SAY ~Their attacks grow in boldness and precision! The Ambverville family ventures to employ powerful scrying to stalk my movements.~
+
+  IF ~Global("IaSibelFamilyPath","GLOBAL",2)~ THEN
+    REPLY ~What if this is a trick played on us by Virtus Arcanis?~
+    GOTO B7Neutral
+
+  ++ ~The Ambervilles haven't divined your lack of desire to join their effort. Or else they would've brought a bigger army upon our heads.~ + B7Howard
+END
+
+IF ~~ THEN BEGIN B7Neutral
+  SAY ~As I have said once, when the time comes to make the final decision, I will call upon your wisdom to guide me.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",20)~ EXIT
+END
+
+IF ~~ THEN BEGIN B7Howard
+  SAY ~Howard kept true to his word, and it means a lot to me. When the time comes, I will stand by my family.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",20)~ EXIT
+END
