@@ -361,7 +361,7 @@ STATISTICS:
 
 Equipped abilities:
 - Fire Resistance: +20%
-- Resitance to Electricity: +40%
+- Resistance to Electricity: +40%
 - Resistance to damage from all weapon types: +20%
 
 Armor Class: -2 (-4 vs. slashing, 0 vs. crushing)
@@ -386,6 +386,21 @@ Requires: 15 Strength~
 @570 = ~Forty Eight sided Garnet
 
 Garnet is a general class of crystals ranging from deep red to violet in colour. A typical cut for this rare isometric gem is 12 to 24 sides, with the very rare 36 sides being known from time to time. You had heard rumors of a 48-sided Garnet, but would have never imagined that the rumors might be true. This is that fabulous and probably unique gem you had heard about.~
+@571 = ~Ultimate Plate Armor~
+@572 = ~Ultimate Plate Armor
+
+The mighty Reinforced Full Plate +5 was merged with Great Wyrm Armor +5 to produce the ultimate set of full plate mail.
+
+STATISTICS:
+
+Equipped abilities:
+- Resistance to Acid, Cold, Fire and Magic Damage: +30%
+- Resistance to Electricity: +80%
+- Regeneration: 3HP per second
+
+Armor Class: -5
+Weight: 40
+Requires: 15 Strength~
 
 @700 = ~Greater Restoration
 (Necromancy)
