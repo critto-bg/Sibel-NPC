@@ -1,0 +1,16 @@
+IF
+  !Allegiance(Myself,ENEMY)
+  OR(4)
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    AttackedBy([PC],DEFAULT)
+    SpellCastOnMe([GOODCUTOFF],0)
+    TookDamage()
+THEN
+  RESPONSE #100
+    SetGlobal("IaElowenCromwell","GLOBAL",2)
+    ReputationInc(-4)
+    SetInterrupt(FALSE)
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    Wait(1)
+    DestroySelf()
+END

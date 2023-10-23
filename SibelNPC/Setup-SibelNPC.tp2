@@ -381,6 +381,7 @@ COPY ~SibelNPC/resources/creatures/S!selow.cre~ ~override/S!selow.cre~
   SAY NAME1 @37
   SAY NAME2 @37
 
+  WRITE_ASCII 0x0248 ~S!selow~ #8 // override script
   WRITE_ASCII 0x02cc ~S!selow~ #8 // dialog
 
 // classic ToB only
@@ -481,6 +482,7 @@ COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf4.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf5.baf~
+COMPILE ~SibelNPC/resources/scripts/S!selow.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
 COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
