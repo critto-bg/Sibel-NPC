@@ -182,6 +182,14 @@ COPY ~SibelNPC/resources/items/S!sioun1.itm~ ~override/S!sioun1.itm~
   SAY NAME2 @559
   SAY DESC @560
 
+COPY ~SibelNPC/resources/items/S!sesse.itm~ ~override/S!sesse.itm~
+  SAY NAME2 @561
+  SAY DESC @562
+
+COPY ~SibelNPC/resources/items/S!sgamul.itm~ ~override/S!sgamul.itm~
+  SAY NAME2 @563
+  SAY DESC @564
+
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount

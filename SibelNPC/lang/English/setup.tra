@@ -331,6 +331,27 @@ Special: Protects against critical hits
 Usable By:
  Cleric
  Druid~
+@561 = ~Glimmering Essence of Amber~
+@562 = ~Glimmering Essence of Amber
+
+This exquisite bottle contains a strange, glimmering amber-coloured liquid.~
+@563 = ~Glimmering Amber Amulet~
+@564 = ~Glimmering Amber Amulet
+
+This amulet was made of pure amber and further strengthened with a mysterious substance called Glimmering Essence of Amber.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class: +4
+- Saving Throws: +2
+- Resistance to Electricity: +20%
+- Regeneration: 1HP per second
+- Casting Speed bonus: +2
+- Sibel can memorize one additional 7th level spell per day
+
+Usable By:
+ Sibel~
 
 @700 = ~Greater Restoration
 (Necromancy)

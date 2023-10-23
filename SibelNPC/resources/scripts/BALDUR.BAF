@@ -710,6 +710,83 @@ THEN
     GiveItemCreate("S!sboo01",Player1,1,1,1)
 END
 
+// Glimmering Amber Amulet //
+
+IF
+  HasItemEquiped("S!sgamul",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sgamul",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sgamul","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sgamul",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sgamul","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sgamul",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sgamul","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sgamul",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sgamul","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sgamul",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sgamul","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sgamul")
+    DestroyItem("S!sgamul")
+    Wait(2)
+    GiveItemCreate("S!sgamul",Player1,1,1,1)
+END
+
 // remove queen of clubs if King of Clubs has been given //
 
 IF

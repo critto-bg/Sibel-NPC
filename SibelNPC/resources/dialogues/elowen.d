@@ -37,9 +37,15 @@ END
 IF ~~ THEN BEGIN ItemList
   SAY ~I have neither the time nor the patience to sift through your gear. Tell me what you want and I will see what can be done.~
 
+  // reinforced amber
   IF ~PartyHasItem("S!misc27")~ THEN
     REPLY ~Is there anything you can do with this chunk of amber?~
     GOTO Chunk
+
+  // glimmering amber amulet
+  IF ~PartyHasItem("S!samul") Class("S!Sibel",CLERIC_ALL)~ THEN
+    REPLY ~Could you improve this amber amulet?~
+    GOTO AmberAmulet
 
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
@@ -56,6 +62,25 @@ IF ~~ THEN BEGIN Chunk
         TakePartyItemNum("S!misc27",1) DestroyItem("S!misc27")
         TakePartyItemNum("S!misc27",1) DestroyItem("S!misc27")
         GiveItemCreate("S!sramb",Player1,0,0,0)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN AmberAmulet
+  SAY ~I could if you bring me the Glimmering Essence of Amber, a Ring of Regeneration, a Scroll of Memory Boosting and a Manual of Elaboration. The job will cost 75000 gold. Agreed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!samul") PartyHasItem("S!sesse") PartyHasItem("RING31") PartyHasItem("S!misc01") PartyHasItem("S!misc06") PartyGoldGT(74999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(75000) DestroyGold(75000)
+        TakePartyItemNum("S!samul",1) DestroyItem("S!samul")
+        TakePartyItemNum("S!sesse",1) DestroyItem("S!sesse")
+        TakePartyItemNum("RING31",1) DestroyItem("RING31")
+        TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
+        TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
+        GiveItemCreate("S!sgamul",Player1,0,0,0)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
