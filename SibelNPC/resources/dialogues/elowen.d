@@ -52,6 +52,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve this powerful chain mail further?~
     GOTO BarbDream
 
+  // Reinforced Full Plate +5
+  IF ~PartyHasItem("plat19")~ THEN
+    REPLY ~Could you improve this Full Plate?~
+    GOTO FullPlate
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -104,6 +109,24 @@ IF ~~ THEN BEGIN BarbDream
         TakePartyItemNum("POTN33",1) DestroyItem("POTN33")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!schan1",Player1,0,0,0)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN FullPlate
+  SAY ~I can merge your Full Plate +2 with Improved Ankheg Plate Mail. Bring me the both plates, a single Reinforced Chunk of Amber, a single Oil of Resurgence and a Permanency scroll. The cost is 125000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("plat19") PartyHasItem("S!plat03") PartyHasItem("POTN37") PartyHasItem("S!misc02") PartyGoldGT(124999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(125000) DestroyGold(125000)
+        TakePartyItemNum("plat19",1) DestroyItem("plat19")
+        TakePartyItemNum("S!plat03",1) DestroyItem("S!plat03")
+        TakePartyItemNum("POTN37",1) DestroyItem("POTN37")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!splat1",Player1,0,0,0)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

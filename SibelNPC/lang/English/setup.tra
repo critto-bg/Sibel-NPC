@@ -367,6 +367,21 @@ Equipped abilities:
 Armor Class: -2 (-4 vs. slashing, 0 vs. crushing)
 Weight: 7
 Requires: 8 Strength~
+@567 = ~Reinforced Full Plate +5~
+@568 = ~Reinforced Full Plate +5
+
+Full plate armor is the best armor a warrior can buy, both in appearance and protection. The Full Plate +2 was merged with the Improved Ankheg Plate Mail, and further reinforced with amber by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- Resistance to Acid, Cold and Fire: +25%
+- Resitance to Electricity: +65%
+- Regeneration: 3HP per second
+
+Armor Class: -4
+Weight: 40
+Requires: 15 Strength~
 
 @700 = ~Greater Restoration
 (Necromancy)
