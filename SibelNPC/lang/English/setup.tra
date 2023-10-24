@@ -31,6 +31,7 @@
 @35 = ~Boy~
 @36 = ~Greater Amber Golem~
 @37 = ~Lady Elowen~
+@38 = ~Elite Berserker Warrior~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -401,6 +402,13 @@ Equipped abilities:
 Armor Class: -5
 Weight: 40
 Requires: 15 Strength~
+@573 = ~Amber Horn of Valhalla~
+@574 = ~Amber Horn of Valhalla
+
+In the halls of Valhalla rest the most valiant of warriors. Their service to war during their lives has rewarded them with honored positions in Valhalla. As part of their service these warriors must offer their service to any who blow a horn of Valhalla. This horn will summon an improved hasted fifteenth level berserker warrior for 10 rounds. The warrior has 50% resistance to all damage types and 90% resistance to electricity. The horn may be used once per day.
+
+Not Usable By:
+ Wizard Slayer~
 
 @700 = ~Greater Restoration
 (Necromancy)

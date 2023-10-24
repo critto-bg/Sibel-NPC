@@ -62,6 +62,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you strengthen Reinforced Full Plate even further?~
     GOTO Ultimate
 
+  // amber horn
+  IF ~PartyHasItem("S!misc10")~ THEN
+    REPLY ~Could you improve Adamantite Horn of Valhalla?~
+    GOTO Horn
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -150,6 +155,22 @@ IF ~~ THEN BEGIN Ultimate
         TakePartyItemNum("S!plat06",1) DestroyItem("S!plat06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!splat2",Player1,0,0,0)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Horn
+  SAY ~Yes, the horn's magic may be improved upon with a single Reinforced Chunk of Amber. The process will cost 50000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!misc10") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!misc10",1) DestroyItem("S!misc10")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!shorn",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
