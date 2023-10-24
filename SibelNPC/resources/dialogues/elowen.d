@@ -67,6 +67,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve Adamantite Horn of Valhalla?~
     GOTO Horn
 
+  // balduran
+  IF ~PartyHasItem("helm07")~ THEN
+    REPLY ~What can you do with Balduran Helm?~
+    GOTO Balduran
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -171,6 +176,42 @@ IF ~~ THEN BEGIN Horn
         TakePartyItemNum("S!misc10",1) DestroyItem("S!misc10")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shorn",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Balduran
+  SAY ~I can combine it with Helmet of Defense. I will need a single Reinforced Chunk of Amber as well. The price for the job is 40000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!helm02")~ THEN REPLY ~Would you accept Improved Dragon Helm instead?~ GOTO Balduran2
+
+  IF ~PartyHasItem("helm07") PartyHasItem("helm04") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("helm07",1) DestroyItem("helm07")
+        TakePartyItemNum("helm04",1) DestroyItem("helm04")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!shelm1",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Balduran2
+  SAY ~Yes, it would work as well. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("helm07") PartyHasItem("S!helm02") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("helm07",1) DestroyItem("helm07")
+        TakePartyItemNum("S!helm02",1) DestroyItem("S!helm02")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!shelm1",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

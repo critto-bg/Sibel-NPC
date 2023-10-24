@@ -409,6 +409,25 @@ In the halls of Valhalla rest the most valiant of warriors. Their service to war
 
 Not Usable By:
  Wizard Slayer~
+@575 = ~Reinforced Helm of Balduran~
+@576 = ~Reinforced Helm of Balduran
+
+The fabled helm of Balduran, legendary founder of Baldur's Gate, has long been rumored to wield powerful protective magic. The exact nature of this magic, however, has not yet been determined.
+
+The helm was further improved by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- THAC0: +2
+- Armor Class: +2
+- Saving Throws: +2
+- Hit Points: +10
+- Resistance to Cold and Fire: +20%
+- Resistance to Electricity: +40%
+- Protects against critical hits
+
+Weight: 1~
 
 @700 = ~Greater Restoration
 (Necromancy)
