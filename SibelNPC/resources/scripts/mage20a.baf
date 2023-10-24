@@ -1,0 +1,8 @@
+IF
+  InMyArea(Player1)
+  AreaCheck("AR1513")
+  Global("Iacomet","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iacomet","LOCALS",1)
+END

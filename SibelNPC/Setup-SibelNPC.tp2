@@ -552,6 +552,7 @@ EXTEND_TOP ~S!WARDEN.BCS~ ~SibelNPC/resources/scripts/S!warden.baf~
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334_JD.baf~
+  EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~
