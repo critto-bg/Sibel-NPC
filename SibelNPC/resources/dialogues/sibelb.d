@@ -334,7 +334,7 @@ END
 
 /* sixth banter */
 
-IF ~Global("IaSibelTalks","GLOBAL",13)~ THEN BEGIN B6Ambush
+IF ~Global("IaSibelAmberAmbush","GLOBAL",1)~ THEN BEGIN B6Ambush
   SAY ~<CHARNAME>, we are about to be ambushed! Prepare yourself, fast!~
 
   ++ ~An ambush? How would you know?~ + B6How
@@ -343,10 +343,10 @@ END
 IF ~~ THEN BEGIN B6How
   SAY ~I am not sure. I could feel them getting close! Hurry!~
 
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",14) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",2) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~ EXIT
 END
 
-IF ~Global("IaSibelTalks","GLOBAL",15)~ THEN BEGIN B6Aftermath
+IF ~Global("IaSibelAmberAmbush","GLOBAL",4)~ THEN BEGIN B6Aftermath
   SAY ~Thank you, <CHARNAME>! The ancient rivalry brings more trouble still upon our heads.~
 
   ++ ~You are welcome. You've had your own share of fights caused by the choices I have made.~ + B6Amber
@@ -355,21 +355,21 @@ END
 IF ~~ THEN BEGIN B6Amber
   SAY ~Let us keep some of the amber the golems were made of. I feel it might become useful in the future.~
 
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",16)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",5)~ EXIT
 END
 
 /* seventh banter */
 
-IF ~Global("IaSibelTalks","GLOBAL",17)~ THEN BEGIN B7Ambush
+IF ~Global("IaSibelAmberAmbush","GLOBAL",6)~ THEN BEGIN B7Ambush
   SAY ~<CHARNAME>, they are coming for us again! Steel yourself for another attack!~
 
   IF ~~ THEN
     REPLY ~We are ready. Let them come!~
-    DO ~SetGlobal("IaSibelTalks","GLOBAL",18) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~
+    DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",7) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~
     EXIT
 END
 
-IF ~Global("IaSibelTalks","GLOBAL",19)~ THEN BEGIN B7Aftermath
+IF ~Global("IaSibelAmberAmbush","GLOBAL",9)~ THEN BEGIN B7Aftermath
   SAY ~Their attacks grow in boldness and precision! The Ambverville family ventures to employ powerful scrying to stalk my movements.~
 
   IF ~Global("IaSibelFamilyPath","GLOBAL",2)~ THEN
@@ -382,11 +382,11 @@ END
 IF ~~ THEN BEGIN B7Neutral
   SAY ~As I have said once, when the time comes to make the final decision, I will call upon your wisdom to guide me.~
 
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",20)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",10)~ EXIT
 END
 
 IF ~~ THEN BEGIN B7Howard
   SAY ~Howard kept true to his word, and it means a lot to me. When the time comes, I will stand by my family.~
 
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",20)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",10)~ EXIT
 END

@@ -125,11 +125,11 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelClericTalk","GLOBAL",1)
-    RealSetGlobalTimer("IaSibelDialogue","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
+    RealSetGlobalTimer("IaSibelClericTimer","GLOBAL",300) // ONE_HOUR in game time, 5 min in real time
 END
 
 IF
-  RealGlobalTimerExpired("IaSibelDialogue","GLOBAL")
+  RealGlobalTimerExpired("IaSibelClericTimer","GLOBAL")
   Global("IaSibelClericTalk","GLOBAL",1)
   InParty(Myself)
   See(Player1)
@@ -202,6 +202,7 @@ IF
   InParty(Myself)
   See(Player1)
   Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",0)
   OR(2)
     Global("IaSibelFamilyPath","GLOBAL",1)
     Global("IaSibelFamilyPath","GLOBAL",2)
@@ -212,7 +213,7 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobal("IaSibelTalks","GLOBAL",13)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",1)
     Wait(3)
     Interact(Player1)
     SetInterrupt(TRUE)
@@ -220,13 +221,13 @@ END
 
 IF
   InParty(Myself)
-  Global("IaSibelTalks","GLOBAL",14)
-  Global("IaSibelAmberAmbush","GLOBAL",0)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",2)
   GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobal("IaSibelAmberAmbush","GLOBAL",1)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",3)
     Wait(1)
     CreateCreatureObject("S!samb01",Player1,0,0,0)
     CreateCreatureObject("S!samb02","S!sibel",0,0,0)
@@ -236,15 +237,14 @@ END
 IF
   InParty(Myself)
   See(Player1)
-  Global("IaSibelTalks","GLOBAL",14)
-  Global("IaSibelAmberAmbush","GLOBAL",1)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",3)
   CombatCounter(0)
   Dead("S!samb01")
   Dead("S!samb02")
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelAmberAmbush","GLOBAL",2)
-    SetGlobal("IaSibelTalks","GLOBAL",15)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",4)
     Interact(Player1)
 END
 
@@ -253,8 +253,8 @@ END
 IF
   InParty(Myself)
   See(Player1)
-  Global("IaSibelTalks","GLOBAL",16)
-  Global("IaSibelAmberAmbush","GLOBAL",2)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",5)
   Global("IASJoinedToB","GLOBAL",0)
   Global("IaSGiftPlace","GLOBAL",6)
   OR(2)
@@ -273,7 +273,7 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobal("IaSibelTalks","GLOBAL",17)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",6)
     Wait(3)
     Interact(Player1)
     SetInterrupt(TRUE)
@@ -281,13 +281,13 @@ END
 
 IF
   InParty(Myself)
-  Global("IaSibelTalks","GLOBAL",18)
-  Global("IaSibelAmberAmbush","GLOBAL",2)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",7)
   GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobal("IaSibelAmberAmbush","GLOBAL",3)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",8)
     Wait(1)
     CreateCreatureObject("S!samb03",Player1,0,0,0)
     CreateCreatureObject("S!samb04",Player1,0,0,0)
@@ -299,8 +299,8 @@ END
 IF
   InParty(Myself)
   See(Player1)
-  Global("IaSibelTalks","GLOBAL",18)
-  Global("IaSibelAmberAmbush","GLOBAL",3)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",8)
   OR(5)
     AreaCheck("ARIA11")
     AreaCheck("AR3017")
@@ -314,7 +314,6 @@ IF
   Dead("S!samb06")
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelAmberAmbush","GLOBAL",4)
-    SetGlobal("IaSibelTalks","GLOBAL",19)
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",9)
     Interact(Player1)
 END
