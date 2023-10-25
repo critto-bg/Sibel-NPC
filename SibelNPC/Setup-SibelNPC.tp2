@@ -424,6 +424,13 @@ COPY ~SibelNPC/resources/creatures/S!sbers.cre~ ~override/S!sbers.cre~
   SAY NAME1 @38
   SAY NAME2 @38
 
+COPY ~SibelNPC/resources/creatures/S!sleat1.cre~ ~override/S!sleat1.cre~
+  SAY NAME1 @39
+  SAY NAME2 @39
+
+  WRITE_ASCII 0x0248 ~S!sleat1~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!sleat1~ #8 // dialog
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
@@ -506,6 +513,7 @@ COMPILE ~SibelNPC/resources/dialogues/reginald.d~
 COMPILE ~SibelNPC/resources/dialogues/squirrel.d~
 COMPILE ~SibelNPC/resources/dialogues/boy.d~
 COMPILE ~SibelNPC/resources/dialogues/elowen.d~
+COMPILE ~SibelNPC/resources/dialogues/leat1.d~
 
 /* scripts */
 
@@ -530,6 +538,7 @@ COMPILE ~SibelNPC/resources/scripts/S!selow.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
 COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sleat1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssnake.baf~

@@ -32,6 +32,7 @@
 @36 = ~Greater Amber Golem~
 @37 = ~Lady Elowen~
 @38 = ~Elite Berserker Warrior~
+@39 = ~Leather Golem~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -528,6 +529,14 @@ Sibel has sought my advice. We took counsel together, and she chose to refuse wh
 @1113 = ~Sibel's Family Dilemma
 
 Sibel has sought my advice. We took counsel together, and she took grave offense to my suggestion that she murders Virtus Arcanis and chose to leave the group instead. I doubt that I will see her again.~
+
+@1114 = ~Sibel's Family Dilemma
+
+A golem messenger has arrived and instructed Sibel to come and meet his master, the fabled mage Virtus Arcanis. Sibel urges to proceed with haste, for this could be her only chance to shed more light on the mystery of her heritage.~
+
+@1115 = ~Sibel's Family Dilemma
+
+A golem messenger has arrived and instructed Sibel to come and meet his master, the fabled mage Virtus Arcanis. I couldn't agree to depart immediately, so Sibel chose to move on alone, eager to shed light on the mystery of her heritage.~
 
 @1200 = ~The engine appears to be broken, it's missing a gear.~
 @1201 = ~You need an instrument to fit the gear in its place.~

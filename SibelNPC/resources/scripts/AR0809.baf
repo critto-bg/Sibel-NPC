@@ -42,3 +42,12 @@ THEN
     SetGlobal("IaSGiftPlace","GLOBAL",6)
     ActionOverride("Altar 1",CreateItem("S!sglo03",0,0,0))
 END
+
+IF
+  Global("IaSibelGift","AR0809",1)
+  Global("IaSGiftPlace","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR0809",2)
+    SetGlobalTimer("IaSGiftTimer","GLOBAL",7200)
+END

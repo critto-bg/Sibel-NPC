@@ -280,6 +280,7 @@ IF ~~ THEN BEGIN B5Good
   IF ~~ THEN
     DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",1)
         SetGlobal("IaSibelTalks","GLOBAL",12)
+        SetGlobalTimer("IaSResolutionTimer","GLOBAL",7200)
         AddXPObject(Player1,45000)
         AddXPObject(Player2,45000)
         AddXPObject(Player3,45000)
@@ -295,7 +296,8 @@ IF ~~ THEN BEGIN B5Neutral
 
   IF ~~ THEN
     DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",2)
-        SetGlobal("IaSibelTalks","GLOBAL",12)~
+        SetGlobal("IaSibelTalks","GLOBAL",12)
+        SetGlobalTimer("IaSResolutionTimer","GLOBAL",7200)~
     UNSOLVED_JOURNAL @1111
     EXIT
 END
@@ -334,7 +336,7 @@ END
 
 /* sixth banter */
 
-IF ~Global("IaSibelAmberAmbush","GLOBAL",1)~ THEN BEGIN B6Ambush
+IF ~Global("IaSibelTalks","GLOBAL",12) Global("IaSibelAmberAmbush","GLOBAL",1)~ THEN BEGIN B6Ambush
   SAY ~<CHARNAME>, we are about to be ambushed! Prepare yourself, fast!~
 
   ++ ~An ambush? How would you know?~ + B6How
@@ -346,7 +348,7 @@ IF ~~ THEN BEGIN B6How
   IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",2) SetGlobalTimer("IaSibelAmberTimer","GLOBAL",12)~ EXIT
 END
 
-IF ~Global("IaSibelAmberAmbush","GLOBAL",4)~ THEN BEGIN B6Aftermath
+IF ~Global("IaSibelTalks","GLOBAL",12) Global("IaSibelAmberAmbush","GLOBAL",4)~ THEN BEGIN B6Aftermath
   SAY ~Thank you, <CHARNAME>! The ancient rivalry brings more trouble still upon our heads.~
 
   ++ ~You are welcome. You've had your own share of fights caused by the choices I have made.~ + B6Amber
@@ -360,7 +362,7 @@ END
 
 /* seventh banter */
 
-IF ~Global("IaSibelAmberAmbush","GLOBAL",6)~ THEN BEGIN B7Ambush
+IF ~Global("IaSibelTalks","GLOBAL",12) Global("IaSibelAmberAmbush","GLOBAL",6)~ THEN BEGIN B7Ambush
   SAY ~<CHARNAME>, they are coming for us again! Steel yourself for another attack!~
 
   IF ~~ THEN
@@ -369,7 +371,7 @@ IF ~Global("IaSibelAmberAmbush","GLOBAL",6)~ THEN BEGIN B7Ambush
     EXIT
 END
 
-IF ~Global("IaSibelAmberAmbush","GLOBAL",9)~ THEN BEGIN B7Aftermath
+IF ~Global("IaSibelTalks","GLOBAL",12) Global("IaSibelAmberAmbush","GLOBAL",9)~ THEN BEGIN B7Aftermath
   SAY ~Their attacks grow in boldness and precision! The Ambverville family ventures to employ powerful scrying to stalk my movements.~
 
   IF ~Global("IaSibelFamilyPath","GLOBAL",2)~ THEN
@@ -389,4 +391,73 @@ IF ~~ THEN BEGIN B7Howard
   SAY ~Howard kept true to his word, and it means a lot to me. When the time comes, I will stand by my family.~
 
   IF ~~ THEN DO ~SetGlobal("IaSibelAmberAmbush","GLOBAL",10)~ EXIT
+END
+
+/* eighth banter */
+
+IF ~Global("IaSibelTalks","GLOBAL",16)~ THEN BEGIN B8Virtus
+  SAY ~The time has finally come, <CHARNAME>! The mysterious Virtus Arcanis expects us. I would appreciate if we depart to meet him at once.~
+
+  ++ ~Of course, Sibel. We will leave shortly.~ + B8ThankYou
+  ++ ~We can't drop everything and rush away immediately, Sibel!~ + B8Leave
+END
+
+IF ~~ THEN BEGIN B8ThankYou
+  SAY ~Thank you, <CHARNAME>!~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelTalks","GLOBAL",17)
+        SetGlobalTimer("IaSLeatherTimer","LOCALS",28800)~
+    UNSOLVED_JOURNAL @1114
+    EXIT
+END
+
+IF ~Global("IaSibelTalks","GLOBAL",18)~ THEN BEGIN B8UrgeToGo
+  SAY ~Why aren't we on our way to meet Virtus, <CHARNAME>? He will not wait forever.~
+
+  ++ ~I'm sorry, Sibel. We will leave immediately.~ + B8ThankYouAgain
+  ++ ~We'll depart when the time is appropriate, Sibel.~ + B8Leave
+END
+
+IF ~~ THEN BEGIN B8ThankYouAgain
+  SAY ~I hope that we do.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelTalks","GLOBAL",19)
+        SetGlobalTimer("IaSLeatherTimer","LOCALS",14400)~
+    EXIT
+END
+
+IF ~~ THEN BEGIN B8Leave
+  SAY ~I appreciate the importance of your quest, but I must do this. I wouldn't burden you any longer, for you have troubles of your own. I will travel alone. Goodbye, <CHARNAME>.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelTalks","GLOBAL",21)
+        SetGlobal("IaSVirtusArrives","GLOBAL",2)
+        EraseJournalEntry(@1109)
+        EraseJournalEntry(@1110)
+        EraseJournalEntry(@1111)
+        EraseJournalEntry(@1114)
+        LeaveParty()
+        TakeItemListParty("S!sitems")
+        EscapeArea()~
+    SOLVED_JOURNAL @1115
+    EXIT
+END
+
+IF ~Global("IaSibelTalks","GLOBAL",20)~ THEN BEGIN B8LeaveForGood
+  SAY ~<CHARNAME>, I dare not wait any longer. I will travel to meet Virtus alone. Goodbye and good luck in your travels.~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSibelTalks","GLOBAL",21)
+        SetGlobal("IaSVirtusArrives","GLOBAL",2)
+        EraseJournalEntry(@1109)
+        EraseJournalEntry(@1110)
+        EraseJournalEntry(@1111)
+        EraseJournalEntry(@1114)
+        LeaveParty()
+        TakeItemListParty("S!sitems")
+        EscapeArea()~
+    SOLVED_JOURNAL @1115
+    EXIT
 END

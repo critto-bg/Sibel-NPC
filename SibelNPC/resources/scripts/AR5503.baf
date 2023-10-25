@@ -30,3 +30,12 @@ THEN
     SetGlobal("IaSGiftPlace","GLOBAL",6)
     ActionOverride("Container 2",CreateItem("S!sglo03",0,0,0))
 END
+
+IF
+  Global("IaSibelGift","AR5503",1)
+  Global("IaSGiftPlace","GLOBAL",6)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR5503",2)
+    SetGlobalTimer("IaSGiftTimer","GLOBAL",7200)
+END

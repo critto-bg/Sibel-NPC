@@ -317,3 +317,114 @@ THEN
     SetGlobal("IaSibelAmberAmbush","GLOBAL",9)
     Interact(Player1)
 END
+
+/* eighth banter/event */
+
+// gift requested and found, one day has passed, party in SoA
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",12)
+  GlobalGT("Chapter","GLOBAL",5)
+  Global("IASJoinedToB","GLOBAL",0)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  Global("IaSGiftPlace","GLOBAL",6)
+  GlobalTimerExpired("IaSGiftTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",13)
+    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+END
+
+// gift not requested, party enters Suldanesselar
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("Chapter","GLOBAL",7)
+  Global("IASJoinedToB","GLOBAL",0)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  Global("IaSGiftPlace","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",13)
+    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+END
+
+// gift not requested, party in ToB, one day passed since banter #5
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",12)
+  GlobalGT("Chapter","GLOBAL",5)
+  Global("IASJoinedToB","GLOBAL",1)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  Global("IaSGiftPlace","GLOBAL",0)
+  GlobalTimerExpired("IaSResolutionTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",13)
+    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+END
+
+// golem messenger arrives
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",13)
+  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",14)
+    SetInterrupt(FALSE)
+    CreateCreatureObjectDoor("S!sleat1",Myself,0,0,0)
+    Wait(5)
+    ActionOverride("S!sleat1",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END
+
+// talk after the golem messenger has left
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",15)
+  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",16)
+    Interact(Player1)
+END
+
+// first timer to meet Virtus has expired
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",17)
+  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",18)
+    Interact(Player1)
+END
+
+// second timer to meet Virtus has expired
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",19)
+  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",20)
+    Interact(Player1)
+END
