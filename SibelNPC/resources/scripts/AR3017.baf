@@ -1,5 +1,17 @@
 IF
   Global("IaSibelGift","AR3017",0)
+  OR(3)
+    GlobalLT("IaTreePlot","GLOBAL",4)
+    Global("IaSGiftPlace","GLOBAL",0)
+    Global("IaSGiftStrength","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelGift","AR3017",1)
+    SetGlobal("IaSGiftNotInAR3017","GLOBAL",1)
+END
+
+IF
+  Global("IaSibelGift","AR3017",0)
   Global("IaSGiftPlace","GLOBAL",2)
   Global("IaSGiftStrength","GLOBAL",1)
 THEN

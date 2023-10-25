@@ -7,7 +7,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelGift","AR0711",1)
-    SetGlobal("IaSGiftinWK","GLOBAL",1)
+    SetGlobal("IaSGiftNotInAR0711","GLOBAL",1)
 END
 
 IF

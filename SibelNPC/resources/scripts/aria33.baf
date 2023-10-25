@@ -9,22 +9,43 @@ GLOBAL IaSGiftPlace - placement of the gift, values meaning:
 5) Amkethran, AR5503
 6) item has been created and placed by the specific area's script
 
-GLOBAL IaSGiftinWK - force placement of the gift, if a dungeon location is chosen:
+GLOBAL IaSGiftNotInAR0711 - the gift could be placed into Illithid Hideout:
 0) unset
-1) force placement to WK, AR3017
+1) location visited, unvailable as a gift location
+
+GLOBAL IaSGiftNotInAR3017 - the gift could be placed into WK:
+0) unset
+1) location visited, unvailable as a gift location
 
 GLOBAL IaSGiftinTOB - force placement of the gift, if a city location is chosen:
 0) unset
-1) force placement to Suldanesselar, AR2808
-2) force placement to Amkethran, AR5503
+1) AR0809 visited, force placement to Suldanesselar, AR2808
+2) AR2808 visited, force placement to Amkethran, AR5503
 
 */
+
+/* SoA, dungeon variations */
 
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseDungeon","ARIA33",1)
-  Global("IaSGiftinWK","GLOBAL",1)
+  Global("IaSGiftNotInAR0711","GLOBAL",0)
+  Global("IaSGiftNotInAR3017","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",1)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftNotInAR0711","GLOBAL",1)
+  Global("IaSGiftNotInAR3017","GLOBAL",0)
 THEN
   RESPONSE #100
     SetGlobal("IaChosenGift","ARIA33",3)
@@ -34,8 +55,38 @@ END
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseDungeon","ARIA33",1)
-  Global("IaSGiftinWK","GLOBAL",0)
+  Global("IaSGiftNotInAR0711","GLOBAL",1)
+  Global("IaSGiftNotInAR3017","GLOBAL",1)
+  GlobalLT("IaSGiftinTOB","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",4)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftNotInAR0711","GLOBAL",1)
+  Global("IaSGiftNotInAR3017","GLOBAL",1)
+  Global("IaSGiftinTOB","GLOBAL",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",5)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftNotInAR0711","GLOBAL",0)
+  Global("IaSGiftNotInAR3017","GLOBAL",0)
   RandomNumLT(10,6)
 THEN
   RESPONSE #100
@@ -46,17 +97,22 @@ END
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseDungeon","ARIA33",1)
-  Global("IaSGiftinWK","GLOBAL",0)
+  Global("IaSGiftNotInAR0711","GLOBAL",0)
+  Global("IaSGiftNotInAR3017","GLOBAL",0)
 THEN
   RESPONSE #100
     SetGlobal("IaChosenGift","ARIA33",3)
     SetGlobal("IaSGiftPlace","GLOBAL",2)
 END
 
+/* SoA, city variations */
+
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseCity","ARIA33",1)
   Global("IaSGiftinTOB","GLOBAL",1)
 THEN
@@ -68,6 +124,7 @@ END
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseCity","ARIA33",1)
   Global("IaSGiftinTOB","GLOBAL",2)
 THEN
@@ -79,6 +136,7 @@ END
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseCity","ARIA33",1)
   Global("IaSGiftinTOB","GLOBAL",0)
   RandomNumLT(10,6)
@@ -91,6 +149,7 @@ END
 IF
   InMyArea(Player1)
   Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",0)
   Global("IaChoseCity","ARIA33",1)
   Global("IaSGiftinTOB","GLOBAL",0)
 THEN
@@ -98,6 +157,47 @@ THEN
     SetGlobal("IaChosenGift","ARIA33",3)
     SetGlobal("IaSGiftPlace","GLOBAL",4)
 END
+
+/* ToB dungeon variations */
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",1)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftNotInAR3017","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",5)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",1)
+  Global("IaChoseDungeon","ARIA33",1)
+  Global("IaSGiftNotInAR3017","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",2)
+END
+
+/* ToB, city variations */
+
+IF
+  InMyArea(Player1)
+  Global("IaChosenGift","ARIA33",2)
+  Global("IASJoinedToB","GLOBAL",1)
+  Global("IaChoseCity","ARIA33",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaChosenGift","ARIA33",3)
+    SetGlobal("IaSGiftPlace","GLOBAL",5)
+END
+
+/* re-enable exit */
 
 IF
   InMyArea(Player1)
