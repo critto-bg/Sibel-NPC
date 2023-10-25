@@ -3,21 +3,27 @@ general:
 - traify all dialogues
 
 Sibel:
-- banters between Sibel and the protagonist
-    - her banters during the game will also differ depending on her second class
-- interparty banters and reactions to in-game events
-- dream sequence (study implementation)
+- 9th event
 - reputation reactivity
     - does Sibel complain about low reputation and leave the party?
 - tree of life reactivity
 - ToB stuff
     - summoning
         - swash->cleric
+        - set IASJoinedToB
     - ToB versions of joining, P, B and J scripts
-        - how to transfer her P and J states related to the quest in a good way?
-    - research the role of the ToB override script
+        - test if the same scripts could be used in tob
+        - research the role of the ToB override script
     - set flags to force position of Howard's gift
-- refine Sibel's dialogue regarding the time travel
+    - add the 4th banter messenger to baldur25
+    - lady elowen moves to saradush and later amkethran
+    - re-check and re-test conditions for banters and quest events
+
+creatures:
+- play around with colors to produce a new coloring for the amber dragon
+
+items:
+- upgrades for lady elowen's forge
 
 NPC:
 - script Zoe's arrival to the market square in a nice way instead flat out spawning her at point
@@ -26,7 +32,3 @@ NPC:
 areas:
 - ship audio files and area tiles compressed, convert during installation
 - main area - prohibit resting via rest interrupt in classic ToB
-
-items:
-- test whether a Spell Trigger can be placed on an item and used to store clerical spells
-- give powder ingredients A, B and C actual names for better dialogue coherency
