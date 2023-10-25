@@ -1,53 +1,53 @@
 IF
-  Global("IaSibelGift","ARIA11",0)
+  Global("IaSibelGift","AR0711",0)
   OR(3)
     GlobalLT("IaTreePlot","GLOBAL",4)
     Global("IaSGiftPlace","GLOBAL",0)
     Global("IaSGiftStrength","GLOBAL",0)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelGift","ARIA11",1)
+    SetGlobal("IaSibelGift","AR0711",1)
     SetGlobal("IaSGiftinWK","GLOBAL",1)
 END
 
 IF
-  Global("IaSibelGift","ARIA11",0)
+  Global("IaSibelGift","AR0711",0)
   Global("IaSGiftPlace","GLOBAL",1)
   Global("IaSGiftStrength","GLOBAL",1)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelGift","ARIA11",1)
+    SetGlobal("IaSibelGift","AR0711",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Pool 1",CreateItem("S!sglo01",0,0,0))
+    ActionOverride("Container 1",CreateItem("S!sglo01",0,0,0))
 END
 
 IF
-  Global("IaSibelGift","ARIA11",0)
+  Global("IaSibelGift","AR0711",0)
   Global("IaSGiftPlace","GLOBAL",1)
   Global("IaSGiftStrength","GLOBAL",2)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelGift","ARIA11",1)
+    SetGlobal("IaSibelGift","AR0711",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Pool 1",CreateItem("S!sglo02",0,0,0))
+    ActionOverride("Container 1",CreateItem("S!sglo02",0,0,0))
 END
 
 IF
-  Global("IaSibelGift","ARIA11",0)
+  Global("IaSibelGift","AR0711",0)
   Global("IaSGiftPlace","GLOBAL",1)
   Global("IaSGiftStrength","GLOBAL",3)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelGift","ARIA11",1)
+    SetGlobal("IaSibelGift","AR0711",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Pool 1",CreateItem("S!sglo03",0,0,0))
+    ActionOverride("Container 1",CreateItem("S!sglo03",0,0,0))
 END
 
 IF
-  Global("IaSibelGift","ARIA11",1)
+  Global("IaSibelGift","AR0711",1)
   Global("IaSGiftPlace","GLOBAL",6)
 THEN
   RESPONSE #100
-    SetGlobal("IaSibelGift","ARIA11",2)
+    SetGlobal("IaSibelGift","AR0711",2)
     SetGlobalTimer("IaSGiftTimer","GLOBAL",7200)
 END

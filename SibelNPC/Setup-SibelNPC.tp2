@@ -552,9 +552,9 @@ COMPILE ~SibelNPC/resources/scripts/S!ssqui.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
-EXTEND_BOTTOM ~ARIA11.BCS~ ~SibelNPC/resources/scripts/aria11.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
+EXTEND_BOTTOM ~AR0711.BCS~ ~SibelNPC/resources/scripts/AR0711.baf~
 EXTEND_BOTTOM ~AR0809.BCS~ ~SibelNPC/resources/scripts/AR0809.baf~
 EXTEND_BOTTOM ~AR2209.BCS~ ~SibelNPC/resources/scripts/AR2209.baf~
 EXTEND_BOTTOM ~AR2808.BCS~ ~SibelNPC/resources/scripts/AR2808.baf~
