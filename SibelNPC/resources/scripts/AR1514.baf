@@ -1,0 +1,9 @@
+IF
+  InMyArea(Player1)
+  Global("Iasibelasks","AR1514",0)
+  Global("Item3","AR1514",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelasks","AR1514",1)
+    SetGlobal("Item3","AR1514",0)
+END
