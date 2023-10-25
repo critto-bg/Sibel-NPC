@@ -441,6 +441,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Vadek
   COPY_EXISTING ~pirmur07.cre~ ~override/pirmur07.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
+
+  COPY_EXISTING ~ppguard1.cre~ ~override/ppguard1.cre~
+    WRITE_ASCII 0x260 ~WTASIGHT~ #8 // general script
+
+  COPY_EXISTING ~ppguard3.cre~ ~override/ppguard3.cre~
+    WRITE_ASCII 0x260 ~WTASIGHT~ #8 // general script
 END
 
 /* spells */
