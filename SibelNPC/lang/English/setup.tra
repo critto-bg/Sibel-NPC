@@ -439,6 +439,43 @@ Charge abilities:
   Duration: 1 turn
 
 Weight: 0~
+@578 = ~Damascus Steel Blade~
+@579 = ~Damascus Steel Blade
+
+The mighty Warlord's Blade has been upgraded one more time using the essence of the eastern scimitar and a chunk of reinforced amber. The immunities from Lilarcor had to be sacrificed to achieve a greater result.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +3
+- Resistance to damage from all weapon types: +10%
+- Regeneration: 1HP every two seconds
+- Strength: +2
+- Dexterity: +2
+- One extra attack per round
+- Resistance to Electricity: +20%
+
+Special Abilities:
+- 10% chance per successful hit to inflict 5D12 additional crushing damage
+- 10% chance per successful hit to inflict 5D12 additional electrical damage
+
+THAC0: +5 bonus
+Damage: 1D12 + 5
+Damage type: slashing
+Weight: 11
+Speed Factor: 5
+Proficiency Type: Two handed sword
+Type: 2-handed
+Requires: 14 Strength
+
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Monk
+ Beast Master
+ Kensai~
 
 @700 = ~Greater Restoration
 (Necromancy)

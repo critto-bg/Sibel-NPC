@@ -72,6 +72,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What can you do with Balduran Helm?~
     GOTO Balduran
 
+  // damascus
+  IF ~OR(6) PartyHasItem("s!sw07") PartyHasItem("s!sw08") PartyHasItem("s!sw09") PartyHasItem("s!sw10") PartyHasItem("s!sw11") PartyHasItem("s!sw12")~ THEN
+    REPLY ~What can you do with Warlord's Blade?~
+    GOTO Damascus
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -212,6 +217,37 @@ IF ~~ THEN BEGIN Balduran2
         TakePartyItemNum("S!helm02",1) DestroyItem("S!helm02")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shelm1",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Damascus
+  SAY ~I can improve it, but the charm and confusion immunities on the sword would need to be sacrificed. The essence of Lilarcor won't let me work on it. Do you want to proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+  ++ ~Very well.~ + Damascus2
+END
+
+IF ~~ THEN BEGIN Damascus2
+  SAY ~Bring me a scimitar called Belm, a chunk of Reinforced Amber and a copy of Manual of Elaboration. And 75000 gold. Then I will begin.~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~OR(6) PartyHasItem("s!sw07") PartyHasItem("s!sw08") PartyHasItem("s!sw09") PartyHasItem("s!sw10") PartyHasItem("s!sw11") PartyHasItem("s!sw12")
+      PartyHasItem("SW1H30") PartyHasItem("S!misc06") PartyHasItem("S!sramb") PartyGoldGT(74999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(75000) DestroyGold(75000)
+        TakePartyItemNum("S!sw07",1) DestroyItem("S!sw07")
+        TakePartyItemNum("S!sw08",1) DestroyItem("S!sw08")
+        TakePartyItemNum("S!sw09",1) DestroyItem("S!sw09")
+        TakePartyItemNum("S!sw10",1) DestroyItem("S!sw10")
+        TakePartyItemNum("S!sw11",1) DestroyItem("S!sw11")
+        TakePartyItemNum("S!sw12",1) DestroyItem("S!sw12")
+        TakePartyItemNum("SW1H30",1) DestroyItem("SW1H30")
+        TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!ssw01",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

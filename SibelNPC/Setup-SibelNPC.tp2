@@ -168,9 +168,6 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY NAME1 @555
     SAY NAME2 @555
     SAY DESC @556
-
-  COPY_EXISTING ~RING26.itm~ ~override/RING26.itm~
-    SAY DESC @577
 END
 
 COPY ~SibelNPC/resources/items/S!sramb.itm~ ~override/S!sramb.itm~
@@ -213,6 +210,10 @@ COPY ~SibelNPC/resources/items/S!shelm1.itm~ ~override/S!shelm1.itm~
   SAY NAME2 @575
   SAY DESC @576
 
+COPY ~SibelNPC/resources/items/S!ssw01.itm~ ~override/S!ssw01.itm~
+  SAY NAME2 @578
+  SAY DESC @579
+
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount
@@ -220,6 +221,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~S!misc21.itm~ ~override/S!misc21.itm~
     SAY NAME2 @569
     SAY DESC @570
+
+  COPY_EXISTING ~RING26.itm~ ~override/RING26.itm~
+    SAY DESC @577
 END
 
 /* creatures */
