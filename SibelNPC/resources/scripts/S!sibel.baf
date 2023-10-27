@@ -188,7 +188,6 @@ IF
   InParty(Myself)
   See(Player1)
   CombatCounter(0)
-  PartyRested()
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",11)
