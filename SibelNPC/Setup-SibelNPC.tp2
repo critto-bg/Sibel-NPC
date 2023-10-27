@@ -168,6 +168,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY NAME1 @555
     SAY NAME2 @555
     SAY DESC @556
+
+  COPY_EXISTING ~RING26.itm~ ~override/RING26.itm~
+    SAY DESC @577
 END
 
 COPY ~SibelNPC/resources/items/S!sramb.itm~ ~override/S!sramb.itm~
