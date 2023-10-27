@@ -502,6 +502,26 @@ Type: 2-handed
 Not Usable By:
  Thief
  Monk~
+@582 = ~Rimed Club +5~
+@583 = ~Rimed Club +5
+
+The surface of this powerful club is covered with permanent frosty rimes. While in combat, the club seems to be alive and breathing. The weapon was further improved and combined with the powers of Ice Star +4 by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- Resistance to Cold: +50%
+- Resistance to Fire and Electricity: +20%
+
+Special abilities:
+- 10% chance per successful hit to inflict 10D6 additional cold damage
+- 10% chance per successful hit to inflict 5D6 additional electrical damage
+
+THAC0: +5
+Damage: 3D6 +5
+
+Not Usable By:
+ Mage~
 
 @700 = ~Greater Restoration
 (Necromancy)

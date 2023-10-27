@@ -82,6 +82,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve Adamantite Staff of Strength further?~
     GOTO StrStaff
 
+  // rimed club
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!blun02")~ THEN
+    REPLY ~Could Rimed Club be made more powerful?~
+    GOTO Rimed
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -270,6 +275,23 @@ IF ~~ THEN BEGIN StrStaff
         TakePartyItemNum("SHLD22",1) DestroyItem("SHLD22")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sstaf1",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Rimed
+  SAY ~Yes, I can meld its powers with those of Ice Star +4. I will need a chunk of Reinforced Amber to do the job. The price is 50000 gp. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!blun02") PartyHasItem("BLUN35") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!blun02",1) DestroyItem("S!blun02")
+        TakePartyItemNum("BLUN35",1) DestroyItem("BLUN35")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sblu03",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
