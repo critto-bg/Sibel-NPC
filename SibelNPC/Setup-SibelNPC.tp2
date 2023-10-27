@@ -450,6 +450,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~sumdjinn.cre~ ~override/sumdjinn.cre~
     WRITE_LONG 0x14 0 // xp
+
+  COPY_EXISTING ~S!mitgol.cre~ ~override/S!mitgol.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
 END
 
 /* spells */
