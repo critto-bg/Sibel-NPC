@@ -476,6 +476,32 @@ Not Usable By:
  Monk
  Beast Master
  Kensai~
+@580 = ~Reinforced Staff of Strength +5~
+@581 = ~Reinforced Staff of Strength +5
+
+The artificer Lady Elowen reinforced this powerful staff one last time with the special metal alloy that was derived from the Sentinel shield and a chunk of reinforced amber.
+
+STATISTICS:
+
+Equipped abilities:
+- Strength: +3
+- Armor Class bonus: +5
+- Resistance to Electricity: +25%
+
+Special abilities:
+- 10% chance per successful hit to inflict 8D10 additional crushing damage
+- 10% chance per successful hit to inflict 5D10 additional electrical damage
+
+THAC0: +5
+Damage: 2D6 + 5
+Damage Type: Crushing
+Speed Factor: 3
+Proficiency Type: Quarterstaff
+Type: 2-handed
+
+Not Usable By:
+ Thief
+ Monk~
 
 @700 = ~Greater Restoration
 (Necromancy)

@@ -77,6 +77,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What can you do with Warlord's Blade?~
     GOTO Damascus
 
+  // reinforced staff
+  IF ~Global("Iastaf07forged","GLOBAL",1) PartyHasItem("S!staf07")~ THEN
+    REPLY ~Could you improve Adamantite Staff of Strength further?~
+    GOTO StrStaff
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -248,6 +253,23 @@ IF ~~ THEN BEGIN Damascus2
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!ssw01",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN StrStaff
+  SAY ~Improving a staff made by Hephaestus is no easy task. I need to melt Sentinel +4 Shield and use its special metal to reforge the staff. I need a chunk of Reinforced Amber as well. It will cost you no less than 90000 gp. What do you say?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~Global("Iastaf07forged","GLOBAL",1) PartyHasItem("S!staf07") PartyHasItem("SHLD22") PartyHasItem("S!sramb") PartyGoldGT(89999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(90000) DestroyGold(90000)
+        TakePartyItemNum("S!staf07",1) DestroyItem("S!staf07")
+        TakePartyItemNum("SHLD22",1) DestroyItem("SHLD22")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sstaf1",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
