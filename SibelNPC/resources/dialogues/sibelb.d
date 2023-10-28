@@ -275,7 +275,7 @@ IF ~~ THEN BEGIN B5Agree
 END
 
 IF ~~ THEN BEGIN B5Good
-  SAY ~You words strengthen my resolve, <CHARNAME>. The Arcanis folk are the only true family I have ever known. I will stand by them, whatever may come.~
+  SAY ~Your words strengthen my resolve, <CHARNAME>. The Arcanis folk are the only true family I have ever known. I will stand by them, whatever may come.~
 
   IF ~~ THEN
     DO ~SetGlobal("IaSibelFamilyPath","GLOBAL",1)
@@ -306,7 +306,7 @@ IF ~~ THEN BEGIN B5Evil
   SAY ~What would you propose, then?~
 
   ++ ~If Virtus Arcanis still lives and comes to you, refuse his offer.~ + B5StopQuest
-  ++ ~Cast off the shackles of your past. If Virtus Arcanis reveals himself, you should dispose of him and be done with Arcanis family.~ + B5Leave
+  ++ ~Cast off the shackles of your past. If Virtus Arcanis reveals himself, we should kill him and be done with Arcanis family.~ + B5Leave
 END
 
 IF ~~ THEN BEGIN B5StopQuest
