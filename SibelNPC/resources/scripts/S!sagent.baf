@@ -4,7 +4,8 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaRunOnce","LOCALS",1)
-    CreateCreature("S!szoe",[2286.1832],0)
+    CreateCreature("S!szoe",[2175.965],0)
+    ActionOverride("S!szoe",MoveToPointNoInterrupt([2286.1832]))
     SetInterrupt(FALSE)
     EscapeArea()
 END
