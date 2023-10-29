@@ -242,7 +242,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY DESC @577
 END
 
-/* creatures */
+/* copy creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
   SAY NAME1 @10
@@ -454,18 +454,26 @@ COPY ~SibelNPC/resources/creatures/S!sleat1.cre~ ~override/S!sleat1.cre~
   WRITE_ASCII 0x0248 ~S!sleat1~ #8 // override script
   WRITE_ASCII 0x02cc ~S!sleat1~ #8 // dialog
 
-  COPY_EXISTING ~SPPAIN.cre~ ~override/SPPAIN.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ ~INV14~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+COPY ~SibelNPC/resources/creatures/S!sdruin.cre~ ~override/S!sdruin.cre~
+  SAY NAME1 @40
+  SAY NAME2 @40
 
-  COPY_EXISTING ~CESKEL01.cre~ ~override/CESKEL01.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+  WRITE_ASCII 0x02cc ~S!sdruin~ #8 // dialog
 
-  COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
+/* patch creatures */
+
+COPY_EXISTING ~SPPAIN.cre~ ~override/SPPAIN.cre~
+  ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+  ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ ~INV14~
+  ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+
+COPY_EXISTING ~CESKEL01.cre~ ~override/CESKEL01.cre~
+  ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+  ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+
+COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
+  ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+  ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -565,6 +573,7 @@ COMPILE ~SibelNPC/resources/dialogues/squirrel.d~
 COMPILE ~SibelNPC/resources/dialogues/boy.d~
 COMPILE ~SibelNPC/resources/dialogues/elowen.d~
 COMPILE ~SibelNPC/resources/dialogues/leat1.d~
+COMPILE ~SibelNPC/resources/dialogues/druin.d~
 
 /* scripts */
 
