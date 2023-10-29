@@ -446,6 +446,19 @@ COPY ~SibelNPC/resources/creatures/S!sleat1.cre~ ~override/S!sleat1.cre~
   WRITE_ASCII 0x0248 ~S!sleat1~ #8 // override script
   WRITE_ASCII 0x02cc ~S!sleat1~ #8 // dialog
 
+  COPY_EXISTING ~SPPAIN.cre~ ~override/SPPAIN.cre~
+    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+    ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ ~INV14~
+    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+
+  COPY_EXISTING ~CESKEL01.cre~ ~override/CESKEL01.cre~
+    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
+
+  COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
+    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
@@ -468,20 +481,6 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~S!mitgol.cre~ ~override/S!mitgol.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
-
-  COPY_EXISTING ~SPPAIN.cre~ ~override/SPPAIN.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ ~INV14~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
-
-  COPY_EXISTING ~CESKEL01.cre~ ~override/CESKEL01.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~IDENTIFIED&UNSTEALABLE~ ~INV14~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV15~
-
-  COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
-    ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
-    ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
 END
 
 /* spells */
