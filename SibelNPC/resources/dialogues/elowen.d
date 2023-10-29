@@ -87,6 +87,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could Rimed Club be made more powerful?~
     GOTO Rimed
 
+  // reinforced amber stone
+  IF ~PartyHasItem("S!sioun1")~ THEN
+    REPLY ~Surely, you could do something to this ioun stone made of amber?~
+    GOTO Ioun
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -292,6 +297,23 @@ IF ~~ THEN BEGIN Rimed
         TakePartyItemNum("BLUN35",1) DestroyItem("BLUN35")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sblu03",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Ioun
+  SAY ~Yes, the ioun stone has the potential to become stronger. I will need a chunk of Reinforced Amber and an Amber Shell to do the job. It will cost you 30000 gp. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!sioun1") PartyHasItem("S!smisc2") PartyHasItem("S!sramb") PartyGoldGT(29999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("S!sioun1",1) DestroyItem("S!sioun1")
+        TakePartyItemNum("S!smisc2",1) DestroyItem("S!smisc2")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sioun2",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

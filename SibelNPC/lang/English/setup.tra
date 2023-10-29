@@ -522,6 +522,28 @@ Damage: 2D6 +5
 
 Not Usable By:
  Mage~
+@584 = ~Amber Shell~
+@585 = ~Amber Shell
+
+At first glance, this item looks like an Ioun Stone, but a closer examination reveals that it is only a hollow shell.~
+@586 = ~Reinforced Amber Ioun Stone~
+@587 = ~Reinforced Amber Ioun Stone
+
+This headwear is strenghened with reinforced amber and wrapped into a protective outer shell, made of amber as well.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +3
+- Resistance to Electricity: +15%
+- +20 Max HP
+- Mental Agility: +1 bonus to casting speed
+
+Special: Protects against critical hits
+
+Usable By:
+ Cleric
+ Druid~
 
 @700 = ~Greater Restoration
 (Necromancy)

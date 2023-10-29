@@ -51,3 +51,13 @@ THEN
     SetGlobal("IaSibelGift","AR0711",2)
     SetGlobalTimer("IaSGiftTimer","GLOBAL",7200)
 END
+
+IF
+  Global("IaSibelAsks","AR0711",0)
+  Global("Iaexit","AR0711",2)
+  InPartyAllowDead("S!Sibel")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAsks","AR0711",1)
+    ActionOverride("Container 1",CreateItem("S!SMISC2",0,0,0))
+END
