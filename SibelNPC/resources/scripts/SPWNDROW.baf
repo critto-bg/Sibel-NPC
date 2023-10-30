@@ -1,0 +1,16 @@
+IF
+  OR(6)
+    Entered(Player1)
+    Entered(Player2)
+    Entered(Player3)
+    Entered(Player4)
+    Entered(Player5)
+    Entered(Player6)
+THEN
+  RESPONSE #100
+    CreateCreature("S!DROWW",[-1.-1],0)
+    CreateCreature("DROW07",[-1.-1],0)
+    CreateCreature("S!DROWW",[-1.-1],0)
+    CreateCreature("DROW06",[-1.-1],0)
+    CreateCreature("S!DROWW",[-1.-1],0)
+END
