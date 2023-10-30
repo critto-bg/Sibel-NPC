@@ -1,0 +1,12 @@
+IF
+  !Allegiance(Myself,ENEMY)
+  OR(4)
+    AttackedBy([GOODCUTOFF],DEFAULT)
+    AttackedBy([PC],DEFAULT)
+    SpellCastOnMe([GOODCUTOFF],0)
+    TookDamage()
+THEN
+  RESPONSE #100
+    SetGlobal("IaSVillageHostile","GLOBAL",1)
+    ReputationInc(-4)
+END

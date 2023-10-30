@@ -1,5 +1,15 @@
 BEGIN ~S!SibelJ~
 
+/* react to player's hostility in the village */
+
+IF ~Global("IaSVillageHostile","GLOBAL",2)~ THEN BEGIN VillageHostile
+  SAY ~I will not tolerate any harm done to the innocent folk of my village, <CHARNAME>!~
+
+  IF ~~ THEN
+    DO ~SetGlobal("IaSVillageHostile","GLOBAL",3) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut05")~
+    EXIT
+END
+
 /* post-dream talk */
 
 IF ~Global("IaSibelDream","GLOBAL",2)~ THEN BEGIN DoYouRemember

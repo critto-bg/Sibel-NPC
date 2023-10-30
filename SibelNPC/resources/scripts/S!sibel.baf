@@ -1,3 +1,24 @@
+/* react to player's hostility in the village */
+
+IF
+  InParty(Myself)
+  Global("IaSVillageHostile","GLOBAL",1)
+  OR(9)
+    AreaCheck("ARIA28")
+    AreaCheck("ARIA29")
+    AreaCheck("ARIA30")
+    AreaCheck("ARIA31")
+    AreaCheck("ARIA32")
+    AreaCheck("ARIA33")
+    AreaCheck("ARIA34")
+    AreaCheck("ARIA35")
+    AreaCheck("ARIA36")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSVillageHostile","GLOBAL",2)
+    StartDialogueNoSet(Player1)
+END
+
 /* personal quest */
 
 IF
