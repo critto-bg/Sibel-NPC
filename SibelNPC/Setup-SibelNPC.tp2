@@ -519,7 +519,14 @@ COPY ~SibelNPC/resources/effects/S!shorn.eff~ ~override/S!shorn.eff~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY_EXISTING ~uddrow22.sto~ ~override/uddrow22.sto~
+    WRITE_LONG  0x14 165 // sell price markup
+    WRITE_LONG  0x18 30 // buy price markup
+
   COPY_EXISTING ~uddrow23.sto~ ~override/uddrow23.sto~
+    WRITE_LONG  0x14 165 // sell price markup
+    WRITE_LONG  0x18 30 // buy price markup
+
     READ_LONG 0x38 "itemscount"
 
     PATCH_IF ("%itemscount%" > 0) BEGIN
@@ -548,6 +555,18 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
       PATCH_IF ("%drinksoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x4C ("%drinksoffset%" - ("%removeditems%" * 28)) END
       PATCH_IF ("%curesoffset%" > "%itemsoffset%") BEGIN WRITE_LONG 0x70 ("%curesoffset%" - ("%removeditems%" * 28)) END
     END
+
+  COPY_EXISTING ~uddrow24.sto~ ~Override/uddrow24.sto~
+    WRITE_LONG  0x14 165 // sell price markup
+    WRITE_LONG  0x18 30 // buy price markup
+
+  COPY_EXISTING ~uddrow25.sto~ ~Override/uddrow25.sto~
+    WRITE_LONG  0x14 165 // sell price markup
+    WRITE_LONG  0x18 30 // buy price markup
+
+  COPY_EXISTING ~udduer01.sto~ ~override/udduer01.sto~
+    WRITE_LONG  0x14 165 // sell price markup
+    WRITE_LONG  0x18 30 // buy price markup
 END
 
 /* dialogues */
