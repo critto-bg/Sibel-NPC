@@ -190,7 +190,6 @@ IF
   CombatCounter(0)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IaSAmbushDelay","LOCALS",2400)
     SetGlobal("IaSibelTalks","GLOBAL",11)
     Interact(Player1)
 END
@@ -210,7 +209,6 @@ IF
     AreaCheck("AR1600")
     AreaCheck("AR2100")
   GlobalGT("AsylumPlot","GLOBAL",49)
-  !GlobalTimerNotExpired("IaSAmbushDelay","LOCALS")
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
