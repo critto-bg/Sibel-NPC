@@ -92,6 +92,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Surely, you could do something to this ioun stone made of amber?~
     GOTO Ioun
 
+  // blade of roses
+  IF ~PartyHasItem("sw1h40")~ THEN
+    REPLY ~Is there a way to improve Blade of Roses?~
+    GOTO Roses
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -314,6 +319,25 @@ IF ~~ THEN BEGIN Ioun
         TakePartyItemNum("S!smisc2",1) DestroyItem("S!smisc2")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sioun2",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Roses
+  SAY ~I can imbue the blade with additional enchantments. I will need Kundane sword, a chunk of Reinforced Amber, a Ring of Protection +2 and a Forty Eight sided Garnet to do the job. It will cost you 50000 gp. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("sw1h40") PartyHasItem("sw1h25") PartyHasItem("ring07") PartyHasItem("S!misc21") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("sw1h40",1) DestroyItem("sw1h40")
+        TakePartyItemNum("sw1h25",1) DestroyItem("sw1h25")
+        TakePartyItemNum("ring07",1) DestroyItem("ring07")
+        TakePartyItemNum("S!misc21",1) DestroyItem("S!misc21")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!ssw02",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

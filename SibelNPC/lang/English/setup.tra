@@ -534,7 +534,7 @@ At first glance, this item looks like an Ioun Stone, but a closer examination re
 @586 = ~Reinforced Amber Ioun Stone~
 @587 = ~Reinforced Amber Ioun Stone
 
-This headwear is strenghened with reinforced amber and wrapped into a protective outer shell, made of amber as well.
+This headwear is strengthened with reinforced amber and wrapped in a protective outer shell, made of amber as well.
 
 STATISTICS:
 
@@ -553,6 +553,40 @@ Usable By:
 @589 = ~Amber Star Gem
 
 Gemstones which are Star-shaped by nature without being cut are the most prized form of gems. This unique gem must have a particular use which you have yet to discover.~
+@590 = ~Adorned Blade of Roses +5~
+@591 = ~Adorned Blade of Roses +5
+
+This blade possesses an unearthly splendor, and it is likely that Sune, the goddess of beauty and passion, had a hand in its creation. The effect it has on the wielder is immediate, and more than once in its history has this sword been the secret behind a lackluster soldier's sudden elevation at court.
+
+The weapon was further improved by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +2
+- Charisma: +4
+- Dexterity: +2
+- Resistance to Electricity: +20%
+
+Special abilities:
+- 10% chance per successful hit to inflict 5D8 additional piercing damage
+- 10% chance per successful hit to inflict 5D8 additional electrical damage
+
+THAC0: +5
+Damage: 2d8+5 (slashing)
+Speed Factor: 2
+Proficiency Type: Long Sword
+Type: One-handed
+Requires:
+ 6 Strength
+
+Weight: 3
+
+Not usable By:
+ Druid
+ Cleric
+ Mage
+ Fighter/Mage~
 
 @700 = ~Greater Restoration
 (Necromancy)
