@@ -61,3 +61,27 @@ THEN
     SetGlobal("IaSibelAsks","AR0711",1)
     ActionOverride("Container 1",CreateItem("S!SMISC2",0,0,0))
 END
+
+IF
+  Global("IaSibelExit","AR0711",0)
+  Global("IaSibelAmberAmbush","GLOBAL",8)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelExit","AR0711",1)
+    TriggerActivation("Tran0701",FALSE)
+END
+
+IF
+  Global("IaSibelExit","AR0711",1)
+  GlobalGT("IaSibelAmberAmbush","GLOBAL",8)
+  CombatCounter(0)
+  Dead("S!samb03")
+  Dead("S!samb04")
+  Dead("S!samb05")
+  Dead("S!samb06")
+  Dead("S!samb07")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelExit","AR0711",2)
+    TriggerActivation("Tran0701",TRUE)
+END

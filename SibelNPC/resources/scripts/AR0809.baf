@@ -51,3 +51,27 @@ THEN
     SetGlobal("IaSibelGift","AR0809",2)
     SetGlobalTimer("IaSGiftTimer","GLOBAL",7200)
 END
+
+IF
+  Global("IaSibelExit","AR0809",0)
+  Global("IaSibelAmberAmbush","GLOBAL",8)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelExit","AR0809",1)
+    TriggerActivation("Tran0808",FALSE)
+END
+
+IF
+  Global("IaSibelExit","AR0809",1)
+  GlobalGT("IaSibelAmberAmbush","GLOBAL",8)
+  CombatCounter(0)
+  Dead("S!samb03")
+  Dead("S!samb04")
+  Dead("S!samb05")
+  Dead("S!samb06")
+  Dead("S!samb07")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelExit","AR0809",2)
+    TriggerActivation("Tran0808",TRUE)
+END

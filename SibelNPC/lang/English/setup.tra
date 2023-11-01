@@ -34,6 +34,10 @@
 @38 = ~Elite Berserker Warrior~
 @39 = ~Leather Golem~
 @40 = ~Druid~
+@41 = ~Mage~
+@42 = ~Berserker~
+@43 = ~Elf~
+@44 = ~Rune Assassin~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -545,6 +549,10 @@ Special: Protects against critical hits
 Usable By:
  Cleric
  Druid~
+@588 = ~Amber Star Gem~
+@589 = ~Amber Star Gem
+
+Gemstones which are Star-shaped by nature without being cut are the most prized form of gems. This unique gem must have a particular use which you have yet to discover.~
 
 @700 = ~Greater Restoration
 (Necromancy)

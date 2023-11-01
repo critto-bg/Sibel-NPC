@@ -230,6 +230,10 @@ COPY ~SibelNPC/resources/items/S!sioun2.itm~ ~override/S!sioun2.itm~
   SAY NAME2 @586
   SAY DESC @587
 
+COPY ~SibelNPC/resources/items/S!smisc3.itm~ ~override/S!smisc3.itm~
+  SAY NAME2 @588
+  SAY DESC @589
+
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount
@@ -404,9 +408,6 @@ COPY ~SibelNPC/resources/creatures/S!samber.cre~ ~override/S!samber.cre~
      ~SibelNPC/resources/creatures/S!samb01.cre~ ~override/S!samb01.cre~
      ~SibelNPC/resources/creatures/S!samb02.cre~ ~override/S!samb02.cre~
      ~SibelNPC/resources/creatures/S!samb03.cre~ ~override/S!samb03.cre~
-     ~SibelNPC/resources/creatures/S!samb04.cre~ ~override/S!samb04.cre~
-     ~SibelNPC/resources/creatures/S!samb05.cre~ ~override/S!samb05.cre~
-     ~SibelNPC/resources/creatures/S!samb06.cre~ ~override/S!samb06.cre~
   SAY NAME1 @30
   SAY NAME2 @30
 
@@ -474,6 +475,30 @@ COPY ~SibelNPC/resources/creatures/S!sdruin.cre~ ~override/S!sdruin.cre~
 
   WRITE_ASCII 0x0250 ~S!shost~ #8 // class script
   WRITE_ASCII 0x02cc ~S!sdruin~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!samb04.cre~ ~override/S!samb04.cre~
+  SAY NAME1 @41
+  SAY NAME2 @41
+
+  WRITE_ASCII 0x0248 ~S!samb04~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!samb05.cre~ ~override/S!samb05.cre~
+  SAY NAME1 @42
+  SAY NAME2 @42
+
+  WRITE_ASCII 0x0248 ~S!samb05~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!samb06.cre~ ~override/S!samb06.cre~
+  SAY NAME1 @43
+  SAY NAME2 @43
+
+  WRITE_ASCII 0x0248 ~S!samb06~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!samb07.cre~ ~override/S!samb07.cre~
+  SAY NAME1 @44
+  SAY NAME2 @44
+
+  WRITE_ASCII 0x0248 ~S!samb07~ #8 // override script
 
 /* patch creatures */
 
@@ -617,6 +642,10 @@ COMPILE ~SibelNPC/resources/scripts/aria33.baf~
 COMPILE ~SibelNPC/resources/scripts/aria34.baf~
 COMPILE ~SibelNPC/resources/scripts/aria35.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sagent.baf~
+COMPILE ~SibelNPC/resources/scripts/S!samb04.baf~
+COMPILE ~SibelNPC/resources/scripts/S!samb05.baf~
+COMPILE ~SibelNPC/resources/scripts/S!samb06.baf~
+COMPILE ~SibelNPC/resources/scripts/S!samb07.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scat.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scauld.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~

@@ -285,7 +285,7 @@ IF
     PartyHasItem("S!sglo02")
     PartyHasItem("S!sglo03")
   OR(5)
-    AreaCheck("ARIA11")
+    AreaCheck("AR0711")
     AreaCheck("AR3017")
     AreaCheck("AR0809")
     AreaCheck("AR2808")
@@ -309,10 +309,11 @@ THEN
     SetInterrupt(FALSE)
     SetGlobal("IaSibelAmberAmbush","GLOBAL",8)
     Wait(1)
-    CreateCreatureObject("S!samb03",Player1,0,0,0)
-    CreateCreatureObject("S!samb04",Player1,0,0,0)
-    CreateCreatureObject("S!samb05","S!sibel",0,0,0)
-    CreateCreatureObject("S!samb06","S!sibel",0,0,0)
+    CreateCreatureObject("S!samb03",Player1,0,0,0) // Amber Golem
+    CreateCreatureObject("S!samb04",Player1,0,0,0) // Mage
+    CreateCreatureObject("S!samb05","S!sibel",0,0,0) // Berserker
+    CreateCreatureObject("S!samb06",Player1,0,0,0) // Elf
+    CreateCreatureObject("S!samb07","S!sibel",0,0,0) // Rune Assassin
     SetInterrupt(TRUE)
 END
 
@@ -322,7 +323,7 @@ IF
   Global("IaSibelTalks","GLOBAL",12)
   Global("IaSibelAmberAmbush","GLOBAL",8)
   OR(5)
-    AreaCheck("ARIA11")
+    AreaCheck("AR0711")
     AreaCheck("AR3017")
     AreaCheck("AR0809")
     AreaCheck("AR2808")
@@ -332,6 +333,7 @@ IF
   Dead("S!samb04")
   Dead("S!samb05")
   Dead("S!samb06")
+  Dead("S!samb07")
 THEN
   RESPONSE #100
     SetGlobal("IaSibelAmberAmbush","GLOBAL",9)

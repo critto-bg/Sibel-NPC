@@ -1,0 +1,13 @@
+IF
+  Allegiance(Myself,ENEMY)
+  Global("IaOnce","LOCALS",0)
+  Global("IaSibelAmberAmbush","GLOBAL",8)
+  Dead("S!samb03")
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    SetInterrupt(FALSE)
+    ReallyForceSpellRES("SPWII07",Myself)
+    DestroyItem("minhp20")
+    SetInterrupt(TRUE)
+END
