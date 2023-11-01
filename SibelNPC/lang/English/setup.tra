@@ -587,6 +587,24 @@ Not usable By:
  Cleric
  Mage
  Fighter/Mage~
+@592 = ~Girdle of Majestic Might~
+@593 = ~Girdle of Majestic Might
+
+In the skilled hands of master artificer Lady Elowen this ultimate warrior's girdle has been made to absorb the magical properties of Belt of Inertial Barrier.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +5
+- Save vs. Breath bonus: +5
+- Saving Throws (except vs. Breath): +2
+- Strength: +4
+- +30 Max HP
+- Resistance to Magical Damage: +25%
+- Resistance to Electricity: +25%
+
+Not Usable By:
+ Wizard Slayer~
 
 @700 = ~Greater Restoration
 (Necromancy)

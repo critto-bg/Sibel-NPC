@@ -97,6 +97,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to improve Blade of Roses?~
     GOTO Roses
 
+  // girdle of majestic might
+  IF ~PartyHasItem("S!belt01")~ THEN
+    REPLY ~Can you add more enchantments to Girdle of Lordly Might?~
+    GOTO Majestic
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -338,6 +343,24 @@ IF ~~ THEN BEGIN Roses
         TakePartyItemNum("S!misc21",1) DestroyItem("S!misc21")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!ssw02",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Majestic
+  SAY ~Aye, there's enough capacity left for more. Bring me Belt of Inertial Barrier, a chunk of Reinforced Amber and a Ring of Protection +2. The price is 50000 gold. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("s!belt01") PartyHasItem("belt10") PartyHasItem("ring07") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!belt01",1) DestroyItem("S!belt01")
+        TakePartyItemNum("belt10",1) DestroyItem("belt10")
+        TakePartyItemNum("ring07",1) DestroyItem("ring07")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sbel01",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
