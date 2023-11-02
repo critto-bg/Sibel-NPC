@@ -552,6 +552,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~sahpr2.cre~ ~override/sahpr2.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
+
+  COPY_EXISTING ~udelder.cre~ ~override/udelder.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
 END
 
 /* spells */
