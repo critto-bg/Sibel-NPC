@@ -102,6 +102,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Can you add more enchantments to Girdle of Lordly Might?~
     GOTO Majestic
 
+  // phosphorus
+  IF ~PartyHasItem("S!blun03")~ THEN
+    REPLY ~Is it possible to improve Phosphorus flail further?~
+    GOTO Phosphorus
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -361,6 +366,25 @@ IF ~~ THEN BEGIN Majestic
         TakePartyItemNum("ring07",1) DestroyItem("ring07")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sbel01",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Phosphorus
+  SAY ~There's a recipe I could try. I will need Defender of Easthaven, a chunk of Reinforced Amber and a Ring of Protection +3. I will also a unique Amber Star Gem. The price of my work is 40000 gold. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("s!blun03") PartyHasItem("waflail") PartyHasItem("ring41") PartyHasItem("S!smisc3") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!blun03",1) DestroyItem("S!blun03")
+        TakePartyItemNum("waflail",1) DestroyItem("waflail")
+        TakePartyItemNum("ring41",1) DestroyItem("ring41")
+        TakePartyItemNum("S!smisc3",1) DestroyItem("S!smisc3")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sblu04",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

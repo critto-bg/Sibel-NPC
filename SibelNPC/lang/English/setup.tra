@@ -605,6 +605,32 @@ Equipped abilities:
 
 Not Usable By:
  Wizard Slayer~
+@594 = ~Phosphorus +5~
+@595 = ~Phosphorus +5
+
+'Phosphorus' is an alternate name for Morning star. The morning star is a wooden shaft topped with a metal head made up of a spiked iron sheath. Morning stars have an overall length of about four feet. Strong enchantments, however, have made this particular morning star lighter, faster, and far more deadly than a normal weapon of this kind. Due to other ingredients used in its fabrication, the mighty weapon also grants the strength of a Storm Giant to its wielder.
+
+The flail was further improved by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- Strength: Set to 24
+- Armor Class bonus: +4
+- Resistance to Electricity: +40%
+
+THACO: +5
+Damage: 3D4 +5
+Damage type: crushing
+Weight: 8
+Speed Factor: 3
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 11 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
 
 @700 = ~Greater Restoration
 (Necromancy)
