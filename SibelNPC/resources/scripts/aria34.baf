@@ -6,3 +6,26 @@ THEN
   RESPONSE #100
     SetGlobal("IaAmbervillePlot","GLOBAL",2)
 END
+
+IF
+  InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaFight","ARIA34",0)
+  Global("IaSGAGFightLoc","GLOBAL",1)
+  Global("IaSibelTalks","GLOBAL",23)
+  CombatCounter(0)
+  Dead("S!sgamb")
+  PartyHasItem("S!sclc01")
+  PartyHasItem("S!sesse")
+  PartyHasItem("S!sgramb")
+THEN
+  RESPONSE #100
+    SetGlobal("IaFight","ARIA34",1)
+    SetGlobal("IaSibelTalks","GLOBAL",24)
+    TriggerActivation("To2100",TRUE)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut09")
+END

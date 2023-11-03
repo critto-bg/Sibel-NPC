@@ -38,6 +38,7 @@
 @42 = ~Berserker~
 @43 = ~Elf~
 @44 = ~Rune Assassin~
+@45 = ~Virtus Arcanis~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -632,6 +633,24 @@ Not Usable By:
  Mage
  Thief~
 
+@596 = ~Shades of Elm~
+@597 = ~Shades of Elm
+
+This ancient relic of the Arcanis family carries the paramount blessing of the Elm tree.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +4
+- additional AC bonus vs. Blunt weapons: +4
+- Resistance to Magic Damage: +40%
+- Regeneration: 1HP per second
+- Resistance to damage from all weapon types: +10%
+- Mental Agility: +2 bonus to Casting Speed
+
+Usable By:
+ Sibel~
+
 @700 = ~Greater Restoration
 (Necromancy)
 
@@ -739,6 +758,14 @@ A golem messenger has arrived and instructed Sibel to come and meet his master, 
 @1115 = ~Sibel's Family Dilemma
 
 A golem messenger has arrived and instructed Sibel to come and meet his master, the fabled mage Virtus Arcanis. I couldn't agree to depart immediately, so Sibel chose to move on alone, eager to shed light on the mystery of her heritage.~
+
+@1116 = ~Sibel's Family Dilemma
+
+We have met with Virtus Arcanis. The mage enlisted Sibel's help in an attempt to bring down Lawrence Amberville. I chose to abandon their cause and continue my own journey. Virtus and Sibel have departed together.~
+
+@1117 = ~Sibel's Family Dilemma
+
+We have met with Virtus Arcanis. The mage enlisted our help in an attempt to bring down Lawrence Amberville. I have helped Sibel recover an artifact that would grant us entrance to the villain's lair. Virtus has left with the promise to return when it is time to make the final stand against the Ambervilles.~
 
 @1200 = ~The engine appears to be broken, it's missing a gear.~
 @1201 = ~You need an instrument to fit the gear in its place.~

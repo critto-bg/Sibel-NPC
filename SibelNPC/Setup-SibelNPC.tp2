@@ -171,6 +171,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 END
 
 COPY ~SibelNPC/resources/items/S!sramb.itm~ ~override/S!sramb.itm~
+     ~SibelNPC/resources/items/S!sgramb.itm~ ~override/S!sgramb.itm~
   SAY NAME1 @557
   SAY NAME2 @557
   SAY DESC @558
@@ -245,6 +246,10 @@ COPY ~SibelNPC/resources/items/S!sbel01.itm~ ~override/S!sbel01.itm~
 COPY ~SibelNPC/resources/items/S!sblu04.itm~ ~override/S!sblu04.itm~
   SAY NAME2 @594
   SAY DESC @595
+
+COPY ~SibelNPC/resources/items/S!sclc01.itm~ ~override/S!sclc01.itm~
+  SAY NAME2 @596
+  SAY DESC @597
 
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
@@ -512,6 +517,13 @@ COPY ~SibelNPC/resources/creatures/S!samb07.cre~ ~override/S!samb07.cre~
 
   WRITE_ASCII 0x0248 ~S!samb07~ #8 // override script
 
+COPY ~SibelNPC/resources/creatures/S!svirt1.cre~ ~override/S!svirt1.cre~
+  SAY NAME1 @45
+  SAY NAME2 @45
+
+  WRITE_ASCII 0x0248 ~S!svirt1~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!svirt1~ #8 // dialog
+
 /* patch creatures */
 
 COPY_EXISTING ~SPPAIN.cre~ ~override/SPPAIN.cre~
@@ -565,6 +577,8 @@ COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
 
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
+
+COPY ~SibelNPC/resources/spells/spini82.spl~ ~override/spini82.spl~
 
 /* effects */
 
@@ -648,6 +662,7 @@ COMPILE ~SibelNPC/resources/dialogues/boy.d~
 COMPILE ~SibelNPC/resources/dialogues/elowen.d~
 COMPILE ~SibelNPC/resources/dialogues/leat1.d~
 COMPILE ~SibelNPC/resources/dialogues/druin.d~
+COMPILE ~SibelNPC/resources/dialogues/virt1.d~
 
 /* scripts */
 
@@ -668,6 +683,10 @@ COMPILE ~SibelNPC/resources/scripts/S!scut02.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut03.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut04.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut05.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut06.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut07.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut08.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut09.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
@@ -684,8 +703,10 @@ COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssnake.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssqui.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
+COMPILE ~SibelNPC/resources/scripts/S!svirt1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
+EXTEND_BOTTOM ~AR0406.BCS~ ~SibelNPC/resources/scripts/AR0406.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR0711.BCS~ ~SibelNPC/resources/scripts/AR0711.baf~
@@ -735,9 +756,11 @@ COPY ~SibelNPC/resources/portraits/SibelL.BMP~ ~override/S!SIBELL.BMP~
 
 ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/portraits/ElowenL.BMP~ ~override/ElowenS.bmp~
+  COPY ~SibelNPC/resources/portraits/VirtusL.BMP~ ~override/VirtusS.bmp~
 END
 ELSE BEGIN
   COPY ~SibelNPC/resources/portraits/ElowenS.BMP~ ~override/ElowenS.bmp~
+  COPY ~SibelNPC/resources/portraits/VirtusS.BMP~ ~override/VirtusS.bmp~
 END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
@@ -747,6 +770,7 @@ COPY ~SibelNPC/resources/bam/S!powdc.bam~ ~override/S!powdc.bam~
 COPY ~SibelNPC/resources/bam/S!samul.bam~ ~override/S!samul.bam~
 COPY ~SibelNPC/resources/bam/S!santi.bam~ ~override/S!santi.bam~
 COPY ~SibelNPC/resources/bam/S!sboin.bam~ ~override/S!sboin.bam~
+COPY ~SibelNPC/resources/bam/S!sclcin.bam~ ~override/S!sclcin.bam~
 COPY ~SibelNPC/resources/bam/S!scluin.bam~ ~override/S!scluin.bam~
 COPY ~SibelNPC/resources/bam/S!scoin.bam~ ~override/S!scoin.bam~
 COPY ~SibelNPC/resources/bam/S!sfooin.bam~ ~override/S!sfooin.bam~

@@ -787,6 +787,83 @@ THEN
     GiveItemCreate("S!sgamul",Player1,1,1,1)
 END
 
+// Shades of Elm //
+
+IF
+  HasItemEquiped("S!sclc01",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sclc01",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sclc01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sclc01",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sclc01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sclc01",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sclc01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sclc01",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sclc01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sclc01",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sclc01","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sclc01")
+    DestroyItem("S!sclc01")
+    Wait(2)
+    GiveItemCreate("S!sclc01",Player1,1,1,1)
+END
+
 // remove queen of clubs if King of Clubs has been given //
 
 IF

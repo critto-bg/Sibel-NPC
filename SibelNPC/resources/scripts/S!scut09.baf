@@ -1,0 +1,42 @@
+// Sibel and protagonist return to Copper Coronet after the fight with GAG //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    ActionOverride(Player2,MakeUnselectable(1))
+    ActionOverride(Player3,MakeUnselectable(1))
+    ActionOverride(Player4,MakeUnselectable(1))
+    ActionOverride(Player5,MakeUnselectable(1))
+    ActionOverride(Player6,MakeUnselectable(1))
+    Wait(1)
+
+    LeaveAreaLUAPanic("AR0406","",[930.815],7)
+    LeaveAreaLUA("AR0406","",[930.815],7)
+    ActionOverride("S!sibel",LeaveAreaLUA("AR0406","",[980.840],8))
+    Wait(1)
+    FaceObject("S!svirt1")
+    ActionOverride("S!Sibel",FaceObject("S!svirt1"))
+
+    DestroyItem("S!sgramb")
+    ActionOverride("S!Sibel",DestroyItem("S!sgramb"))
+    GiveItemCreate("S!sramb",Player1,0,0,0)
+
+    ReallyForceSpellRES("SPINI14",Player2)
+    ReallyForceSpellRES("SPINI14",Player3)
+    ReallyForceSpellRES("SPINI14",Player4)
+    ReallyForceSpellRES("SPINI14",Player5)
+    ReallyForceSpellRES("SPINI14",Player6)
+
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!svirt1",StartDialogueNoSet(Player1))
+    EndCutSceneMode()
+END

@@ -1,0 +1,31 @@
+// Virtus Arcanis arrives and talks to Sibel and protagonist (Copper Coronet version) //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    CreateCreature("S!svirt1",[1500.490],0)
+    JumpToPoint([930.815])
+    MoveViewObject(Myself,INSTANT)
+    FaceObject("S!svirt1")
+    ActionOverride("S!Sibel",JumpToPoint([980.840]))
+    ActionOverride("S!Sibel",FaceObject("S!svirt1"))
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!svirt1",MoveToPointNoInterrupt([1070.760]))
+    Wait(5)
+
+    SetGlobal("IaSibelTalks","GLOBAL",22)
+    ActionOverride("S!svirt1",StartDialogueNoSet(Player1))
+
+    EndCutSceneMode()
+END

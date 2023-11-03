@@ -1,0 +1,43 @@
+// Sibel and protagonist go to fight Greater Amber Golem //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    ApplySpellRES("SPINI82","S!sibel")
+    Wait(2)
+    ApplySpellRES("SPINI23",Player2)
+    ApplySpellRES("SPINI23",Player3)
+    ApplySpellRES("SPINI23",Player4)
+    ApplySpellRES("SPINI23",Player5)
+    ApplySpellRES("SPINI23",Player6)
+    Wait(1)
+
+    ActionOverride(Player2,MakeUnselectable(150000))
+    ActionOverride(Player3,MakeUnselectable(150000))
+    ActionOverride(Player4,MakeUnselectable(150000))
+    ActionOverride(Player5,MakeUnselectable(150000))
+    ActionOverride(Player6,MakeUnselectable(150000))
+    Wait(1)
+
+    ActionOverride("S!sibel",MakeUnselectable(1))
+    LeaveAreaLUAPanic("ARIA34","",[475.360],7)
+    LeaveAreaLUA("ARIA34","",[475.360],7)
+    ActionOverride("S!sibel",LeaveAreaLUA("ARIA34","",[542.317],8))
+    Wait(1)
+
+    ReallyForceSpellRES("SPINI14",Myself)
+    ReallyForceSpellRES("SPINI14","S!sibel")
+    Wait(1)
+
+    CreateCreature("S!sgamb",[444.251],1)
+    TriggerActivation("To2100",FALSE)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    EndCutSceneMode()
+END

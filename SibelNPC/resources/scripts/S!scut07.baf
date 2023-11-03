@@ -1,0 +1,27 @@
+// Virtus Arcanis and Sibel leave together //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    ActionOverride("S!Sibel",LeaveParty())
+    ActionOverride("S!Sibel",TakeItemListParty("S!sitems"))
+    ActionOverride("S!svirt1",ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride("S!Sibel",ForceSpell(Myself,DRYAD_TELEPORT))
+    Wait(1)
+
+    ActionOverride("S!svirt1",DestroySelf())
+    ActionOverride("S!Sibel",DestroySelf())
+    Wait(1)
+
+    EraseJournalEntry(@1109)
+    EraseJournalEntry(@1110)
+    EraseJournalEntry(@1111)
+    EraseJournalEntry(@1114)
+    AddJournalEntry(@1116,QUEST_DONE)
+
+    EndCutSceneMode()
+END
