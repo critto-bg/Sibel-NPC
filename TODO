@@ -1,9 +1,10 @@
 general:
 - readme
 - traify all dialogues
+- ship audio files and area tiles compressed, convert during installation
 
 Sibel:
-- 9th event
+- 10th event
 - reputation reactivity
     - does Sibel complain about low reputation and leave the party?
 - tree of life reactivity
@@ -17,18 +18,11 @@ Sibel:
     - set flags to force position of Howard's gift
     - add the 4th banter messenger to baldur25
     - lady elowen moves to saradush and later amkethran
+      - set flag to initiate her appearance if the game has started in ToB
     - re-check and re-test conditions for banters and quest events
+    - event 9
+      - cutscenes in the taverns (AR5003 and AR5501) to meet Virtus
+      - cutscenes to return back to the tavern after the fight with GAG
 
 creatures:
-- play around with colors to produce a new coloring for the amber dragon
-
-items:
-- upgrades for lady elowen's forge
-
-NPC:
-- script Zoe's arrival to the market square in a nice way instead flat out spawning her at point
-- reactivity to player hostility
-
-areas:
-- ship audio files and area tiles compressed, convert during installation
-- main area - prohibit resting via rest interrupt in classic ToB
+- play around with the colors to produce a new coloring for the amber dragon
