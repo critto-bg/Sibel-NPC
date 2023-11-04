@@ -733,6 +733,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
   EXTEND_TOP ~OBSHAL02.BCS~ ~SibelNPC/resources/scripts/OBSHAL02.baf~
   EXTEND_TOP ~SUMDJ01.BCS~ ~SibelNPC/resources/scripts/SUMDJ01.baf~
+  EXTEND_TOP ~S!dracol.bcs~ ~SibelNPC/resources/scripts/S!dracol.baf~
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~

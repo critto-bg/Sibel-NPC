@@ -1,0 +1,42 @@
+IF
+  InMyArea(Player1)
+  XPLT(Player1,3400000)
+  Global("Iasibelsays","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelsays","LOCALS",1)
+    SetGlobal("Iagsilence","LOCALS",3)
+    SetGlobal("Iagreaterdoom","LOCALS",1)
+    SetGlobal("Myfog","LOCALS",3)
+    SetGlobal("Iamywail","LOCALS",4)
+    SetGlobal("Iashadra12","LOCALS",1)
+    SetGlobal("Iashadra09","LOCALS",1)
+    SetGlobal("Iashadra06","LOCALS",1)
+    SetGlobal("Iareversal","LOCALS",3)
+    SetGlobal("Iagreaterdoom","LOCALS",2)
+    SetGlobal("Offensive","LOCALS",1)
+    SetGlobal("Iashadra03","LOCALS",1)
+END
+
+IF
+  AreaCheck("ARia14")
+  InMyArea(Player1)
+  XPLT(Player1,3400000)
+  !HPLT(Myself,1)
+  Global("Iasibeltalks","LOCALS",0)
+  GlobalTimerExpired("SHADOWDRAGONBREATH","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibeltalks","LOCALS",1)
+    SetGlobalTimer("SHADOWDRAGONBREATH","GLOBAL",300)
+END
+
+IF
+  InMyArea(Player1)
+  XPLT(Player1,3400000)
+  Global("Iasibelsays","LOCALS",1)
+  !GlobalTimerNotExpired("Iaexrm","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaexrm","LOCALS",24)
+END
