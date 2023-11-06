@@ -252,6 +252,10 @@ COPY ~SibelNPC/resources/items/S!sclc01.itm~ ~override/S!sclc01.itm~
   SAY NAME2 @596
   SAY DESC @597
 
+COPY ~SibelNPC/resources/items/S!srin01.itm~ ~override/S!srin01.itm~
+  SAY NAME2 @598
+  SAY DESC @599
+
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount
@@ -827,6 +831,7 @@ COPY ~SibelNPC/resources/bam/S!slthr1.bam~ ~override/S!slthr1.bam~
 COPY ~SibelNPC/resources/bam/S!slthr2.bam~ ~override/S!slthr2.bam~
 COPY ~SibelNPC/resources/bam/S!splat1.bam~ ~override/S!splat1.bam~
 COPY ~SibelNPC/resources/bam/S!sramb.bam~ ~override/S!sramb.bam~
+COPY ~SibelNPC/resources/bam/S!srinin.bam~ ~override/S!srinin.bam~
 COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
 COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~

@@ -651,6 +651,28 @@ Equipped abilities:
 
 Usable By:
  Sibel~
+@598 = ~Fruitful Attempt~
+@599 = ~Fruitful Attempt
+
+This wondrous ring of protection was imbued with the strange powers of the Samara fruit, recovered at great cost by merchant Reginald.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +5
+- Saving Throws: +2
+- Resistance to Electricity: +15%
+- Mental Agility: +1 Casting Speed bonus
+
+Special Ability:
+- May cast Chaotic Commands on the entire party once per day
+
+Usable By:
+ Cleric
+ Druid
+
+Not usable by:
+ Cleric/Mage~
 
 @700 = ~Greater Restoration
 (Necromancy)

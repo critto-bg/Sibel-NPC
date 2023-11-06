@@ -107,6 +107,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is it possible to improve Phosphorus flail further?~
     GOTO Phosphorus
 
+  // fruitful attempt
+  IF ~PartyHasItem("S!ssama2")~ THEN
+    REPLY ~Is there a way to extract powers from this strange fruit?~
+    GOTO Fruitful
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -385,6 +390,24 @@ IF ~~ THEN BEGIN Phosphorus
         TakePartyItemNum("S!smisc3",1) DestroyItem("S!smisc3")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sblu04",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Fruitful
+  SAY ~Is it the Samara fruit? A rare sight. I can use it to imbue a simple Ring of Protection +2 with additional powers. Bring me Shield of Harmony +2 and a chunk of Reinforced Amber. This will cost you 30000 gold. Shall I begin?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("s!ssama2") PartyHasItem("SHLD25") PartyHasItem("RING07") PartyHasItem("S!sramb") PartyGoldGT(29999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("S!ssama2",1) DestroyItem("S!ssama2")
+        TakePartyItemNum("SHLD25",1) DestroyItem("SHLD25")
+        TakePartyItemNum("RING07",1) DestroyItem("RING07")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!srin01",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
