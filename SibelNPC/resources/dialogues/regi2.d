@@ -76,6 +76,12 @@ IF ~Global("IaSRegiPlot","GLOBAL",7)~ THEN BEGIN End
         GiveItemCreate("S!misc02",Player1,0,0,0)
         GiveItemCreate("S!misc06",Player1,0,0,0)
         GiveItemCreate("S!smisc",Player1,0,0,0)
+        AddXPObject(Player1,45000)
+        AddXPObject(Player2,45000)
+        AddXPObject(Player3,45000)
+        AddXPObject(Player4,45000)
+        AddXPObject(Player5,45000)
+        AddXPObject(Player6,45000)
         DestroySelf()~
     EXIT
 END
