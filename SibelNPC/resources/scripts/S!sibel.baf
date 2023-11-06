@@ -1,35 +1,6 @@
-/* react to player's hostility in the village */
-
-IF
-  InParty(Myself)
-  Global("IaSVillageHostile","GLOBAL",1)
-  OR(9)
-    AreaCheck("ARIA28")
-    AreaCheck("ARIA29")
-    AreaCheck("ARIA30")
-    AreaCheck("ARIA31")
-    AreaCheck("ARIA32")
-    AreaCheck("ARIA33")
-    AreaCheck("ARIA34")
-    AreaCheck("ARIA35")
-    AreaCheck("ARIA36")
-THEN
-  RESPONSE #100
-    SetGlobal("IaSVillageHostile","GLOBAL",2)
-    StartDialogueNoSet(Player1)
-END
-
 /* personal quest */
 
-IF
-  InParty(Myself)
-  Global("IaSibelDream","GLOBAL",0)
-  XPGT(Myself,835000)
-THEN
-  RESPONSE #100
-    SetGlobal("IaSibelDream","GLOBAL",1)
-END
-
+// this block moved to the top due to PartyRested()
 IF
   Global("IaSibelDream","GLOBAL",1)
   PartyRested()
@@ -42,6 +13,15 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelDream","GLOBAL",2)
     StartDialogueNoSet(Player1)
+END
+
+IF
+  InParty(Myself)
+  Global("IaSibelDream","GLOBAL",0)
+  XPGT(Myself,835000)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelDream","GLOBAL",1)
 END
 
 IF
@@ -78,6 +58,27 @@ THEN
     Wait(1)
     StartDialogueNoSet(Player1)
     SetInterrupt(TRUE)
+END
+
+/* react to player's hostility in the village */
+
+IF
+  InParty(Myself)
+  Global("IaSVillageHostile","GLOBAL",1)
+  OR(9)
+    AreaCheck("ARIA28")
+    AreaCheck("ARIA29")
+    AreaCheck("ARIA30")
+    AreaCheck("ARIA31")
+    AreaCheck("ARIA32")
+    AreaCheck("ARIA33")
+    AreaCheck("ARIA34")
+    AreaCheck("ARIA35")
+    AreaCheck("ARIA36")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSVillageHostile","GLOBAL",2)
+    StartDialogueNoSet(Player1)
 END
 
 /* banters */
