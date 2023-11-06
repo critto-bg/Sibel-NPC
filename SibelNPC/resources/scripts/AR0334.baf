@@ -2,8 +2,9 @@ IF
   InMyArea(Player1)
   InPartyAllowDead("S!Sibel")
   Global("IaElowenCromwell","GLOBAL",0)
-  GlobalGT("IaSibelTalks","GLOBAL",15)
-  !GlobalGT("IaSibelFamilyPath","GLOBAL",2)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
   GlobalGT("Chapter","GLOBAL",5)
 THEN
   RESPONSE #100
