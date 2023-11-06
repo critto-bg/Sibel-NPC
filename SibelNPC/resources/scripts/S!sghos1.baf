@@ -1,0 +1,8 @@
+IF
+  Global("IaSRegiPlot","GLOBAL",3)
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    DestroySelf()
+END

@@ -1,0 +1,14 @@
+IF
+  NumberOfTimesTalkedTo(0)
+  Global("Iapcastts","GLOBAL",0)
+  Global("IaOnce","LOCALS",0)
+  Global("IaSRegiPlot","GLOBAL",5)
+  See(Player1)
+  InParty("S!Sibel")
+  Range([PC],10)
+  CombatCounter(0)
+THEN
+	RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    StartDialogueNoSet(Player1)
+END

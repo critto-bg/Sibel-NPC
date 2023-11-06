@@ -1,0 +1,28 @@
+IF
+  InMyArea(Player1)
+  Global("IaSRegiPlot","GLOBAL",5)
+  Global("IaRegiSpawn","AR0404",0)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaRegiSpawn","AR0404",1)
+    CreateCreature("S!sregi2",[320.850],14)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaSRegiPlot","GLOBAL",6)
+  Global("IaRegiSpawn","AR0404",1)
+  Dead("S!srvam1")
+  Dead("S!srvam2")
+  Dead("S!srvam3")
+  Dead("S!srvam4")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaRegiSpawn","AR0404",2)
+    SetGlobal("IaSRegiPlot","GLOBAL",7)
+    CreateCreatureObject("S!sregi2",Player1,0,0,0)
+    SmallWait(1)
+    ActionOverride("S!sregi2",StartDialogueNoSet(Player1))
+END

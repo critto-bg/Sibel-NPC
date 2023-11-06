@@ -461,3 +461,24 @@ IF ~Global("IaSibelTalks","GLOBAL",20)~ THEN BEGIN B8LeaveForGood
     SOLVED_JOURNAL @1115
     EXIT
 END
+
+/* 10th banter/event */
+
+IF ~Global("IaSRegiPlot","GLOBAL",4)~ THEN BEGIN B10Start
+  SAY ~The ghost has just appeared and called us forth, hasn't it, <CHARNAME>? Or have I begun to hear phantoms?~
+
+  ++ ~I've heard it too.~ + B10WhatIsIt
+END
+
+IF ~~ THEN BEGIN B10WhatIsIt
+  SAY ~Do we proceed to explore the sewers and discover the source of this intrusion?~
+
+  ++ ~Someone might seek to ensnare us. If we proceed, we should do so with caution.~ + B10YouDecide
+  ++ ~I smell a trap. We shouldn't rush headlong into it.~ + B10YouDecide
+END
+
+IF ~~ THEN BEGIN B10YouDecide
+  SAY ~I shall leave the decision to you, <CHARNAME>.~
+
+  IF ~~ THEN DO ~SetGlobal("IaSRegiPlot","GLOBAL",5)~ EXIT
+END

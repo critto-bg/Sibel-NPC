@@ -1,0 +1,44 @@
+// master vampires arrive (Reginald ghost quest) //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    ActionOverride("S!sregi2",DestroySelf())
+
+    JumpToPoint([505.905])
+    Face(6)
+    ActionOverride(Player2,JumpToPoint([565.920]))
+    ActionOverride(Player2,Face(10))
+    ActionOverride(Player3,JumpToPoint([585.980]))
+    ActionOverride(Player3,Face(12))
+    ActionOverride(Player4,JumpToPoint([520.1010]))
+    ActionOverride(Player4,Face(0))
+    ActionOverride(Player5,JumpToPoint([455.990]))
+    ActionOverride(Player5,Face(3))
+    ActionOverride(Player6,JumpToPoint([440.940]))
+    ActionOverride(Player6,Face(6))
+
+    ReallyForceSpellRES("SPINI14",Player1)
+    ReallyForceSpellRES("SPINI14",Player2)
+    ReallyForceSpellRES("SPINI14",Player3)
+    ReallyForceSpellRES("SPINI14",Player4)
+    ReallyForceSpellRES("SPINI14",Player5)
+    ReallyForceSpellRES("SPINI14",Player6)
+
+    CreateCreature("S!srvam1",[480.720],0)
+    CreateCreature("S!srvam2",[690.850],3)
+    CreateCreature("S!srvam3",[530.1175],7)
+    CreateCreature("S!srvam4",[260.930],9)
+
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    EndCutSceneMode()
+END

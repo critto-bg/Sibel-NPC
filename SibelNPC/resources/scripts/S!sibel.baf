@@ -450,3 +450,57 @@ THEN
     SetGlobal("IaSibelTalks","GLOBAL",20)
     Interact(Player1)
 END
+
+/* nineth event */
+
+// the first meeting with virtus
+// the code to start it could be found in Copper Coronet's script (and other taverns in case of ToB)
+
+/* tenth event */
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSRegiPlot","GLOBAL",0)
+  Global("IaSamaraPlot","GLOBAL",11)
+  GlobalGT("Chapter","GLOBAL",5)
+  GlobalLT("Chapter","GLOBAL",8)
+  Global("IASJoinedToB","GLOBAL",0)
+  OR(2)
+    Global("IaSibelFamilyPath","GLOBAL",1)
+    Global("IaSibelFamilyPath","GLOBAL",2)
+  XPGT(Myself,3034999)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSRegiPlot","GLOBAL",1)
+    SetGlobalTimer("IaSGhostTimer","LOCALS",6)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSRegiPlot","GLOBAL",1)
+  GlobalTimerExpired("IaSGhostTimer","LOCALS")
+  !AreaCheck("AR2500")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSRegiPlot","GLOBAL",2)
+    SetInterrupt(FALSE)
+    CreateCreatureObject("S!sghos1",Myself,0,0,0)
+    Wait(1)
+    ActionOverride("S!sghos1",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSRegiPlot","GLOBAL",3)
+  GlobalTimerExpired("IaSGhostTimer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSRegiPlot","GLOBAL",4)
+    Interact(Player1)
+END
