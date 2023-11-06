@@ -693,6 +693,15 @@ COMPILE ~SibelNPC/resources/dialogues/virt1.d~
 COMPILE ~SibelNPC/resources/dialogues/ghost1.d~
 COMPILE ~SibelNPC/resources/dialogues/regi2.d~
 
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY_EXISTING ~KRUIN.DLG~ ~override/KRUIN.DLG~
+    DECOMPILE_DLG_TO_D
+    REPLACE_TEXTUALLY ~TakePartyItem("misc8u")~ ~TakePartyItem("misc8u") SetGlobal("IaGaveKruinSword","GLOBAL",1)~
+    COMPILE_D_TO_DLG
+    BUT_ONLY_IF_IT_CHANGES
+END
+
 /* scripts */
 
 COMPILE ~SibelNPC/resources/scripts/aria28.baf~
@@ -769,6 +778,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~S!dracol.bcs~ ~SibelNPC/resources/scripts/S!dracol.baf~
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
+  EXTEND_BOTTOM ~AR0300.BCS~ ~SibelNPC/resources/scripts/AR0300.baf~
   EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~
   EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000_JD.baf~
   EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500_JD.baf~
