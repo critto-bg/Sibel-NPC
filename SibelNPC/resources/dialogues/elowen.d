@@ -371,7 +371,7 @@ IF ~~ THEN BEGIN Majestic
 END
 
 IF ~~ THEN BEGIN Phosphorus
-  SAY ~There's a recipe I could try. I will need Defender of Easthaven, a chunk of Reinforced Amber and a Ring of Protection +3. I will also a unique Amber Star Gem. The price of my work is 40000 gold. Shall I begin?~
+  SAY ~There's a recipe I could try. I will need Defender of Easthaven, a chunk of Reinforced Amber and a Ring of Protection +3. I will also require a unique Amber Star Gem. The price of my work is 40000 gold. Shall I begin?~
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
