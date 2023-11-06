@@ -463,7 +463,7 @@ IF
   InParty(Myself)
   See(Player1)
   Global("IaSRegiPlot","GLOBAL",0)
-  Global("IaSamaraPlot","GLOBAL",11)
+  GlobalGT("IaSamaraPlot","GLOBAL",8)
   GlobalGT("Chapter","GLOBAL",5)
   GlobalLT("Chapter","GLOBAL",8)
   Global("IASJoinedToB","GLOBAL",0)
