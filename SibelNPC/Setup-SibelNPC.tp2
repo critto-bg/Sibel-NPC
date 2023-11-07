@@ -266,6 +266,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~RING26.itm~ ~override/RING26.itm~
     SAY DESC @577
+
+  COPY_EXISTING ~S!clck05.itm~ ~override/S!clck05.itm~
+    WRITE_LONG 0x34 50000 // price
+
+   COPY_EXISTING ~RODS01.itm~ ~override/RODS01.itm~
+     WRITE_LONG 0x34 60000 // price
 END
 
 /* copy creatures */
