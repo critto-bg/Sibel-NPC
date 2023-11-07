@@ -795,6 +795,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_BOTTOM ~S!fsdrag.BCS~ ~SibelNPC/resources/scripts/S!fsdrag.baf~
   EXTEND_BOTTOM ~S!torgal.BCS~ ~SibelNPC/resources/scripts/S!torgal.baf~
 
+  COPY_EXISTING ~AR0411.BCS~ ~override/AR0411.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~CheckStat(LastSeenBy(Myself),6,SCRIPTINGSTATE1)~ ~CheckStat(Player1,6,SCRIPTINGSTATE1)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
   COPY_EXISTING ~SEVPAT04.BCS~ ~override/SEVPAT04.BCS~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~CheckStatGT(Myself,0,SCRIPTINGSTATE9)~ ~!CheckStatGT(Myself,0,SCRIPTINGSTATE9)~
