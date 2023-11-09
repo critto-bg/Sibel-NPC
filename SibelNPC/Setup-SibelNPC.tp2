@@ -257,6 +257,8 @@ COPY ~SibelNPC/resources/items/S!srin01.itm~ ~override/S!srin01.itm~
   SAY DESC @599
 
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/items/S!sarkan.itm~ ~override/S!sarkan.itm~
+
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount
 
@@ -604,6 +606,87 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~udelder.cre~ ~override/udelder.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
+
+  COPY_EXISTING ~c6drizz2.cre~ ~override/c6drizz2.cre~
+                ~c6drizz3.cre~ ~override/c6drizz3.cre~
+
+    WRITE_BYTE 0x53  2 // number of attacks
+    WRITE_BYTE 0x59  50 // resist fire
+    WRITE_BYTE 0x60  80 // resist slashing
+    WRITE_BYTE 0x61  80 // resist crushing
+    WRITE_BYTE 0x238 19 // strength
+
+    ADD_CRE_ITEM ~helm06~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~HELMET~
+
+    READ_LONG 0x2bc items_offset
+    READ_LONG 0x2c0 items_count
+
+    FOR (index = 0; index < items_count; index = index + 1) BEGIN
+      READ_ASCII ("%items_offset%" + (0x14 * "%index%")) item
+
+      PATCH_IF ("%item%" STRING_COMPARE_CASE "amul21" = 0) BEGIN
+        READ_LONG  ("%items_offset%" + 0x10 + (0x14 * "%index%")) flags
+        WRITE_LONG ("%items_offset%" + 0x10 + (0x14 * "%index%")) (flags | 0b0010)
+      END
+    END
+
+  COPY_EXISTING ~c6eric.cre~ ~override/c6eric.cre~
+                ~c6eric3.cre~ ~override/c6eric3.cre~
+
+    WRITE_BYTE 0x52   1 // thac0
+    WRITE_BYTE 0x53   2 // number of attacks
+    WRITE_BYTE 0x60   40 // resist slashing
+    WRITE_BYTE 0x61   40 // resist crushing
+    WRITE_BYTE 0x238  19 // strength
+
+    ADD_CRE_ITEM ~AMUL21~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~AMULET~
+    ADD_CRE_ITEM ~BOOT01~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~BOOTS~
+
+    READ_LONG 0x2bc items_offset
+    READ_LONG 0x2c0 items_count
+
+    FOR (index = 0; index < items_count; index = index + 1) BEGIN
+      READ_ASCII ("%items_offset%" + (0x14 * "%index%")) item
+
+      PATCH_IF ("%item%" STRING_COMPARE_CASE "helm09" = 0) BEGIN
+        READ_LONG   ("%items_offset%" + 0x10 + (0x14 * "%index%")) flags
+
+        WRITE_ASCII ("%items_offset%" +        (0x14 * "%index%")) ~helm06~ #8
+        WRITE_LONG  ("%items_offset%" + 0x10 + (0x14 * "%index%")) (flags | 0b1010)
+      END
+
+      PATCH_IF ("%item%" STRING_COMPARE_CASE "misc83" = 0) BEGIN
+        READ_LONG   ("%items_offset%" + 0x10 + (0x14 * "%index%")) flags
+
+        WRITE_ASCII ("%items_offset%" +        (0x14 * "%index%")) ~STAF21~ #8
+        WRITE_LONG  ("%items_offset%" + 0x10 + (0x14 * "%index%")) (flags | 0b1010)
+      END
+    END
+
+  COPY_EXISTING ~c6arkan.cre~ ~override/c6arkan.cre~
+                ~c6arkan3.cre~ ~override/c6arkan3.cre~
+
+    WRITE_BYTE 0x52   1 // thac0
+    WRITE_BYTE 0x60   50 // resist slashing
+    WRITE_BYTE 0x61   50 // resist crushing
+
+    ADD_CRE_ITEM ~AMUL21~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~AMULET~
+    ADD_CRE_ITEM ~HELM06~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~HELMET~
+    ADD_CRE_ITEM ~BOOT01~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~BOOTS~
+
+    READ_LONG 0x2bc items_offset
+    READ_LONG 0x2c0 items_count
+
+    FOR (index = 0; index < items_count; index = index + 1) BEGIN
+      READ_ASCII ("%items_offset%" + (0x14 * "%index%")) item
+
+      PATCH_IF ("%item%" STRING_COMPARE_CASE "sw1h10" = 0) BEGIN
+        WRITE_ASCII ("%items_offset%" + (0x14 * "%index%")) ~sw1h28~ #8
+      END
+    END
+
+  COPY_EXISTING ~c6arkan3.cre~ ~override/c6arkan3.cre~
+    ADD_CRE_ITEM ~S!SARKAN~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~RRING~
 END
 
 /* spells */
@@ -782,6 +865,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COMPILE ~SibelNPC/resources/scripts/SPWNDROW.baf~
 
   EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334_JD.baf~
+  EXTEND_TOP ~C6ARKAN.BCS~ ~SibelNPC/resources/scripts/C6ARKAN.baf~
+  EXTEND_TOP ~C6ERIC.BCS~ ~SibelNPC/resources/scripts/C6ERIC.baf~
   EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
   EXTEND_TOP ~OBSHAL02.BCS~ ~SibelNPC/resources/scripts/OBSHAL02.baf~
   EXTEND_TOP ~SUMDJ01.BCS~ ~SibelNPC/resources/scripts/SUMDJ01.baf~
@@ -805,6 +890,29 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~CheckStatGT(Myself,0,SCRIPTINGSTATE9)~ ~!CheckStatGT(Myself,0,SCRIPTINGSTATE9)~
     COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old.baf
+IF
+	Dead("c6bodhi")
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new.baf
+IF
+	Dead("c6bodhi")
+  CombatCounter(0)
+THEN
+	RESPONSE #100
+		EscapeArea()
+END
+>>>>>>>>
+
+  COPY_EXISTING ~C6ARKAN.BCS~ ~override/C6ARKAN.bcs~
+    REPLACE_BCS_BLOCK ~.../inlined/old.baf~ ~.../inlined/new.baf~
     BUT_ONLY_IF_IT_CHANGES
 END
 
