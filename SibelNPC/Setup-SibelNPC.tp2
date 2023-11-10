@@ -687,6 +687,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~c6arkan3.cre~ ~override/c6arkan3.cre~
     ADD_CRE_ITEM ~S!SARKAN~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~RRING~
+
+  COPY_EXISTING ~KAOL.cre~ ~override/KAOL.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
 END
 
 /* spells */
