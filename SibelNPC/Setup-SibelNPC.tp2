@@ -876,6 +876,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_BOTTOM ~AR0300.BCS~ ~SibelNPC/resources/scripts/AR0300.baf~
   EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700_JD.baf~
   EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000_JD.baf~
+  EXTEND_BOTTOM ~AR3016.BCS~ ~SibelNPC/resources/scripts/AR3016.baf~
   EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500_JD.baf~
   EXTEND_BOTTOM ~S!fsdrag.BCS~ ~SibelNPC/resources/scripts/S!fsdrag.baf~
   EXTEND_BOTTOM ~S!torgal.BCS~ ~SibelNPC/resources/scripts/S!torgal.baf~

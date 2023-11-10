@@ -1,0 +1,7 @@
+IF
+  Global("IaSibelItem","AR3016",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelItem","AR3016",1)
+    ActionOverride("Shelf13",CreateItem("BOOT05",0,0,0))
+END
