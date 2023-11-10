@@ -75,3 +75,11 @@ THEN
     SetGlobal("IaSibelExit","AR0809",2)
     TriggerActivation("Tran0808",TRUE)
 END
+
+IF
+  Global("IaSibelItem","AR0809",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelItem","AR0809",1)
+    ActionOverride("Chest 1",CreateItem("S!smisc",0,0,0))
+END
