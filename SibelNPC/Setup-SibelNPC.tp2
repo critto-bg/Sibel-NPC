@@ -803,6 +803,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     REPLACE_TEXTUALLY ~TakePartyItem("misc8u")~ ~TakePartyItem("misc8u") SetGlobal("IaGaveKruinSword","GLOBAL",1)~
     COMPILE_D_TO_DLG
     BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/IASHADOS-fix.d
+REPLACE_SAY ~IASHADOS~ 4 @1215
+>>>>>>>>
+
+  COMPILE ~.../inlined/IASHADOS-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
 END
 
 /* scripts */
