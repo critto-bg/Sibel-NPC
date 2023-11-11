@@ -690,6 +690,13 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~KAOL.cre~ ~override/KAOL.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Necklace of the Rich
+
+  COPY_EXISTING ~S!elemmu.cre~ ~override/S!elemmu.cre~
+    WRITE_BYTE 0x60 80 // resist slashing
+    WRITE_BYTE 0x61 80 // resist crushing
+    WRITE_BYTE 0x62 80 // resist piercing
+
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 END
 
 /* spells */
