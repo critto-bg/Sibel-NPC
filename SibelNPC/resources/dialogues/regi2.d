@@ -73,6 +73,7 @@ IF ~Global("IaSRegiPlot","GLOBAL",7)~ THEN BEGIN End
   IF ~~ THEN
     DO ~SetGlobal("IaSRegiPlot","GLOBAL",8)
         GiveItemCreate("S!ssama2",Player1,0,0,0)
+        GiveItemCreate("S!misc01",Player1,0,0,0)
         GiveItemCreate("S!misc02",Player1,0,0,0)
         GiveItemCreate("S!misc06",Player1,0,0,0)
         GiveItemCreate("S!smisc",Player1,0,0,0)
