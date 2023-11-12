@@ -112,6 +112,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to extract powers from this strange fruit?~
     GOTO Fruitful
 
+  // reinforced horn
+  IF ~PartyHasItem("S!shorn")~ THEN
+    REPLY ~Could you improve Amber Horn of Valhalla even further?~
+    GOTO Horn2
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -408,6 +413,24 @@ IF ~~ THEN BEGIN Fruitful
         TakePartyItemNum("RING07",1) DestroyItem("RING07")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!srin01",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Horn2
+  SAY ~The horn may still grow stronger if I continue apply Reinforced Chunk of Amber to the process. Bring me a single Chunk, Moon Dog Figurine and Golden Lion Figurine. The process will cost 50000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!shorn") PartyHasItem("MISC7T") PartyHasItem("MISC3D") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!shorn",1) DestroyItem("S!shorn")
+        TakePartyItemNum("MISC7T",1) DestroyItem("MISC7T")
+        TakePartyItemNum("MISC3D",1) DestroyItem("MISC3D")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!shorn2",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
