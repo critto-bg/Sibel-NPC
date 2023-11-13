@@ -277,8 +277,16 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~S!clck05.itm~ ~override/S!clck05.itm~
     WRITE_LONG 0x34 50000 // price
 
-   COPY_EXISTING ~RODS01.itm~ ~override/RODS01.itm~
-     WRITE_LONG 0x34 60000 // price
+  COPY_EXISTING ~RODS01.itm~ ~override/RODS01.itm~
+    WRITE_LONG 0x34 60000 // price
+
+  COPY_EXISTING ~deva.itm~ ~override/deva.itm~
+                ~planetar.itm~ ~override/planetar.itm~
+
+    WRITE_LONG 0x60 4 // enchantment
+
+    READ_LONG 0x64 headers_offset
+    WRITE_SHORT (headers_offset + 0x14) 4 // thac0 bonus
 END
 
 /* copy creatures */
@@ -703,6 +711,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     WRITE_BYTE 0x62 80 // resist piercing
 
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
+
+  COPY_EXISTING ~devagood.cre~ ~override/devagood.cre~
+                ~devaevil.cre~ ~override/devaevil.cre~
+    WRITE_BYTE 0x52 1 // thac0
 END
 
 /* spells */
