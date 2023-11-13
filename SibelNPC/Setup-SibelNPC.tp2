@@ -1126,6 +1126,11 @@ COPY ~SibelNPC/resources/areas/aria35.are~ ~override/aria35.are~
 COPY ~SibelNPC/resources/areas/aria36.are~ ~override/aria36.are~
   WRITE_ASCII 0x94 ~aria36~ #8 // area script
 
+// House, Suldanesselar
+COPY_EXISTING ~AR2808.are~ ~override/AR2808.are~
+  READ_BYTE  0x48 location
+  WRITE_BYTE 0x48 (location | 0b10000000)
+
 // Amkethran, Chyil's House
 COPY_EXISTING ~AR5503.are~ ~override/AR5503.are~
   WRITE_ASCII 0x94 ~AR5503~ #8 // area script
