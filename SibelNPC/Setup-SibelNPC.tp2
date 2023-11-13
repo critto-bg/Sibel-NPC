@@ -734,6 +734,32 @@ COPY ~SibelNPC/resources/effects/S!shorn.eff~ ~override/S!shorn.eff~
 
 COPY ~SibelNPC/resources/effects/S!shorn2.eff~ ~override/S!shorn2.eff~
 
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  // Stoneskin
+  COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
+    READ_LONG 0x64 headers_offset
+    READ_SHORT 0x68 headers_count
+    READ_LONG 0x6a effects_offset
+
+    FOR (index = 0; index < headers_count; index = index + 1) BEGIN
+      READ_SHORT ("%headers_offset%" + 0x10 + (0x28 * "%index%")) min_level
+
+      PATCH_IF (min_level = 1) BEGIN
+        READ_SHORT ("%headers_offset%" + 0x1e + (0x28 * "%index%")) effects_count
+        READ_SHORT ("%headers_offset%" + 0x20 + (0x28 * "%index%")) effects_table_offset
+
+        FOR (index2 = 0; index2 < effects_count; index2 = index2 + 1) BEGIN
+          READ_SHORT ("%effects_offset%" + (0x30 * ("%effects_table_offset%" + "%index2%"))) opcode
+
+          PATCH_IF (opcode = 218) BEGIN
+            WRITE_LONG ("%effects_offset%" + 0x04 + (0x30 * ("%effects_table_offset%" + "%index2%"))) 4 // parameter1
+          END
+        END
+      END
+    END
+END
+
 /* stores */
 
 // classic ToB only
