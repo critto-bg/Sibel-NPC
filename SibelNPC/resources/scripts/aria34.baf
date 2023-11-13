@@ -29,3 +29,20 @@ THEN
     StartCutSceneMode()
     StartCutScene("S!scut09")
 END
+
+IF
+   InMyArea(Player1)
+   Dead("S!Sibel")
+   Global("IaKillP1","ARIA34",0)
+THEN
+   RESPONSE #100
+    SetGlobal("IaKillP1","ARIA34",1)
+    ClearAllActions()
+    StartCutSceneMode()
+    Wait(2)
+    MoveViewObject(Player1,-1)
+    DisplayStringHead(Player1,@1214)
+    Wait(4)
+    EndCutSceneMode()
+    Kill(Player1)
+END
