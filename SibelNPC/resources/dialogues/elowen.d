@@ -117,6 +117,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve Amber Horn of Valhalla even further?~
     GOTO Horn2
 
+  // limak brain
+  IF ~PartyHasItem("S!misc20")~ THEN
+    REPLY ~Could you do something with Limak's brain?~
+    GOTO Limak
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -432,5 +437,18 @@ IF ~~ THEN BEGIN Horn2
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shorn2",Player1,1,1,1)
         CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Limak
+  SAY ~I have heard tales about this man. He lives no more, than? I can't produce anything for you, for I lack the necessary experience. I would offer gold to purchase the artefact from you. Say, 75000. Would it suffice?~
+
+  ++ ~I will think on it. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!misc20")~
+  THEN
+    REPLY ~Yes, I will be glad to get rid of it.~
+    DO ~TakePartyItemNum("S!misc20",1) DestroyItem("S!misc20")
+        GiveGoldForce(75000)~
     EXIT
 END
