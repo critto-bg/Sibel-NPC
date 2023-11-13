@@ -680,6 +680,18 @@ In the halls of Valhalla rest the most valiant of warriors. Their service to war
 
 Not Usable By:
  Wizard Slayer~
+@602 = ~Wish~
+@603 = ~Wish
+(Any School)
+
+Level: 9
+Range: Unlimited
+Duration: Special
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+Wish is a more potent version of the Limited Wish spell. It will fulfill literally the utterance of the spellcaster. Thus, the actuality of the past, present, or future might be altered (but possibly only for the wizard unless the wording of the spell is most carefully stated) in some limited manner. Greedy desires usually end in disaster for the wisher. Lastly, the wiser the wizard, the better chance that <PRO_HESHE> will choose the right wording. Wizards with low Wisdom will more often than not meet with disaster when asking for a wish.~
 
 @700 = ~Greater Restoration
 (Necromancy)

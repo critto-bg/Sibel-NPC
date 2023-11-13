@@ -28,6 +28,10 @@ THEN
     ActionOverride("S!Sibel",DestroyItem("S!sgramb"))
     GiveItemCreate("S!sramb",Player1,0,0,0)
 
+    DestroyItem("S!swish")
+    ActionOverride("S!Sibel",DestroyItem("S!swish"))
+    GiveItemCreate("SCRLB4",Player1,0,0,0)
+
     ReallyForceSpellRES("SPINI14",Player2)
     ReallyForceSpellRES("SPINI14",Player3)
     ReallyForceSpellRES("SPINI14",Player4)
