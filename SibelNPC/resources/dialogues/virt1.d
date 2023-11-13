@@ -125,8 +125,8 @@ END
 
 IF ~~ THEN BEGIN TurnedLich
   SAY ~Lord Lawrence chose to abandon his humanity and transform into a Grave Lich, so strong was his lust for power. Dark magic keeps him alive and impervous to any harm caused by a member of Arcanis family. That is how he brought destruction upon us.~
-  = ~Yet as I promised, there's still hope that we may defeat him. Amberville blood courses through our veins, and that gives us a chance to bring the villain down if we were to join our strengths. Neither of us may best him alone.~
-  = ~Which brings me to the most important question. Will you fight at my side? Together, we shall put an end to his miserable existence.~
+  = ~Yet as I promised, there's still hope that we may defeat him. Neither you nor I are of a pure Arcanis lineage. Amberville blood courses through your veins, and that gives us a chance to bring the villain down.~
+  = ~Which brings me to the most important question. Will you fight at my side? Let us join our strengths, and together we shall put an end to his miserable existence. For even I may not best him alone.~
 
   IF ~~ THEN EXTERN ~S!SibelJ~ AsksPlayerHelp
 END
