@@ -295,7 +295,6 @@ THEN
   RESPONSE #100
     SetInterrupt(FALSE)
     SetGlobal("IaSibelAmberAmbush","GLOBAL",6)
-    Wait(3)
     Interact(Player1)
     SetInterrupt(TRUE)
 END
