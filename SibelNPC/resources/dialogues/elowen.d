@@ -441,7 +441,7 @@ IF ~~ THEN BEGIN Horn2
 END
 
 IF ~~ THEN BEGIN Limak
-  SAY ~I have heard tales about this man. He lives no more, than? I can't produce anything for you, for I lack the necessary experience. I would offer gold to purchase the artefact from you. Say, 75000. Would it suffice?~
+  SAY ~I have heard tales about this man. He lives no more, then? I can't produce anything for you, for I lack the necessary experience. I would offer gold to purchase the artefact from you. Say, 75000. Would it suffice?~
 
   ++ ~I will think on it. Could you work on something else?~ + ItemList
 
