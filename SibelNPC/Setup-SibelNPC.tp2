@@ -458,6 +458,15 @@ COPY ~SibelNPC/resources/creatures/S!samber.cre~ ~override/S!samber.cre~
   SAY NAME1 @30
   SAY NAME2 @30
 
+COPY ~SibelNPC/resources/creatures/S!samb08.cre~ ~override/S!samb08.cre~
+     ~SibelNPC/resources/creatures/S!samb09.cre~ ~override/S!samb09.cre~
+     ~SibelNPC/resources/creatures/S!samb10.cre~ ~override/S!samb10.cre~
+     ~SibelNPC/resources/creatures/S!samb11.cre~ ~override/S!samb11.cre~
+  SAY NAME1 @30
+  SAY NAME2 @30
+
+  WRITE_ASCII 0x0248 ~S!SAMBGD~ #8 // override script
+
 COPY ~SibelNPC/resources/creatures/S!ssmil.cre~ ~override/S!ssmil.cre~
   SAY NAME1 @31
   SAY NAME2 @31
@@ -568,6 +577,24 @@ COPY ~SibelNPC/resources/creatures/S!sghos1.cre~ ~override/S!sghos1.cre~
 
   WRITE_ASCII 0x0248 ~S!sghos1~ #8 // override script
   WRITE_ASCII 0x02cc ~S!sghos1~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!smess1.cre~ ~override/S!smess1.cre~
+  SAY NAME1 @47
+  SAY NAME2 @47
+
+  WRITE_ASCII 0x02cc ~S!smess1~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sliia.cre~ ~override/S!sliia.cre~
+  SAY NAME1 @48
+  SAY NAME2 @48
+
+  WRITE_ASCII 0x02cc ~S!sliia~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!slamb1.cre~ ~override/S!slamb1.cre~
+  SAY NAME1 @49
+  SAY NAME2 @49
+
+  WRITE_ASCII 0x0248 ~S!slamb~ #8 // override script
 
 COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam1.cre~
   WRITE_ASCII 0x0280 ~S!srvam1~ #32 // death variable
@@ -845,6 +872,8 @@ COMPILE ~SibelNPC/resources/dialogues/druin.d~
 COMPILE ~SibelNPC/resources/dialogues/virt1.d~
 COMPILE ~SibelNPC/resources/dialogues/ghost1.d~
 COMPILE ~SibelNPC/resources/dialogues/regi2.d~
+COMPILE ~SibelNPC/resources/dialogues/mess1.d~
+COMPILE ~SibelNPC/resources/dialogues/liia.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -868,7 +897,9 @@ COMPILE ~SibelNPC/resources/scripts/aria32.baf~
 COMPILE ~SibelNPC/resources/scripts/aria33.baf~
 COMPILE ~SibelNPC/resources/scripts/aria34.baf~
 COMPILE ~SibelNPC/resources/scripts/aria35.baf~
+COMPILE ~SibelNPC/resources/scripts/aria37.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sagent.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sambgd.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb04.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb05.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb06.baf~
@@ -885,6 +916,9 @@ COMPILE ~SibelNPC/resources/scripts/S!scut07.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut08.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut09.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut10.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut11.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut12.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut13.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
@@ -896,12 +930,14 @@ COMPILE ~SibelNPC/resources/scripts/S!sghos1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!shost.baf~
 COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
+COMPILE ~SibelNPC/resources/scripts/S!slamb.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sleat1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sregi2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssnake.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssqui.baf~
+COMPILE ~SibelNPC/resources/scripts/S!stran1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!svirt1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
@@ -1167,6 +1203,10 @@ COPY ~SibelNPC/resources/areas/aria35.are~ ~override/aria35.are~
 // Library
 COPY ~SibelNPC/resources/areas/aria36.are~ ~override/aria36.are~
   WRITE_ASCII 0x94 ~aria36~ #8 // area script
+
+// Government District (Amber golem fight)
+COPY ~SibelNPC/resources/areas/aria37.are~ ~override/aria37.are~
+  WRITE_ASCII 0x94 ~aria37~ #8 // area script
 
 // House, Suldanesselar
 COPY_EXISTING ~AR2808.are~ ~override/AR2808.are~

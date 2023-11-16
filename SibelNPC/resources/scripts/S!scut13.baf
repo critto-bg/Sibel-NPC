@@ -1,0 +1,39 @@
+// party returns to AR1002 after the combat in ARia37 //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    CopyGroundPilesTo("AR1002",[1010.620])
+    LeaveAreaLUAPanic("AR1002","",[865.640],0)
+    LeaveAreaLUA("AR1002","",[865.640],0)
+    ActionOverride(Player2,LeaveAreaLUA("AR1002","",[865.640],7))
+    ActionOverride(Player3,LeaveAreaLUA("AR1002","",[865.640],7))
+    ActionOverride(Player4,LeaveAreaLUA("AR1002","",[865.640],7))
+    ActionOverride(Player5,LeaveAreaLUA("AR1002","",[865.640],7))
+    ActionOverride(Player6,LeaveAreaLUA("AR1002","",[865.640],7))
+
+    MoveViewObject(Player1,INSTANT)
+
+    FaceObject("S!sliia")
+
+    ActionOverride(Player2,FaceObject("S!sliia"))
+    ActionOverride(Player3,FaceObject("S!sliia"))
+    ActionOverride(Player4,FaceObject("S!sliia"))
+    ActionOverride(Player5,FaceObject("S!sliia"))
+    ActionOverride(Player6,FaceObject("S!sliia"))
+    ActionOverride("S!sliia",FaceObject(Player1))
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!sliia",StartDialogueNoSet(Player1))
+    EndCutSceneMode()
+END

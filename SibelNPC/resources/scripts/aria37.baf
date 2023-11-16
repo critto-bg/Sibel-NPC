@@ -1,0 +1,114 @@
+IF
+  InMyArea(Player1)
+  OnCreation()
+  Global("IaCombat","ARIA37",0)
+  Global("IaAmberPlot","GLOBAL",3)
+THEN
+  RESPONSE #100
+    SetGlobal("IaCombat","ARIA37",1)
+    CreateCreature("S!samb08",[4660.3771],0)
+    CreateCreature("S!samb09",[1482.2122],0)
+    CreateCreature("S!samb10",[2892.2966],0)
+    CreateCreature("S!samb11",[969.1249],0)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  Dead("S!samb08")
+  Dead("S!samb09")
+  Dead("S!samb10")
+  Dead("S!samb11")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaCombat","ARIA37",2)
+    SetGlobal("IaAmberPlot","GLOBAL",4)
+    TriggerActivation("Tran1002",TRUE)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  !Dead("S!samb08")
+  !GlobalTimerNotExpired("IaGolemTimer","ARIA37")
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPPLANAR",[3944.3252])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("S!slamb1",[3944.3252],0)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  !Dead("S!samb09")
+  !GlobalTimerNotExpired("IaGolemTimer","ARIA37")
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPPLANAR",[1557.2060])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("S!slamb1",[1557.2060],0)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  !Dead("S!samb10")
+  !GlobalTimerNotExpired("IaGolemTimer","ARIA37")
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPPLANAR",[3000.3023])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("S!slamb1",[3000.3023],0)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  !Dead("S!samb11")
+  !GlobalTimerNotExpired("IaGolemTimer","ARIA37")
+THEN
+  RESPONSE #100
+    CreateVisualEffect("SPPLANAR",[807.1205])
+    Wait(1)
+    SmallWait(10)
+    CreateCreature("S!slamb1",[807.1205],0)
+    Continue()
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaCombat","ARIA37",1)
+  !GlobalTimerNotExpired("IaGolemTimer","ARIA37")
+THEN
+  RESPONSE #100
+  SetGlobalTimer("IaGolemTimer","ARIA37",18)
+  Continue()
+END
+
+IF
+  OpenState("Door14",TRUE)
+  Global("Door14Opened","ARIA37",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Door14Opened","ARIA37",1)
+    Continue()
+END
+
+IF
+  OpenState("Door14",FALSE)
+  Global("Door14Opened","ARIA37",1)
+THEN
+  RESPONSE #100
+    OpenDoor("Door01")
+    Continue()
+END

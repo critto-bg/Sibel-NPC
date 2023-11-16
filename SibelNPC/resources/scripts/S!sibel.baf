@@ -504,3 +504,46 @@ THEN
     SetGlobal("IaSRegiPlot","GLOBAL",4)
     Interact(Player1)
 END
+
+/* 11th event */
+
+IF
+  InParty(Myself)
+  Global("IaSibelTalks","GLOBAL",25)
+  Global("IaAmberPlot","GLOBAL",0)
+  GlobalTimerExpired("IaAmberAssaultTimer","GLOBAL")
+  XPGT(Myself,3909999)
+  ReputationGT(Player1,18)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAmberPlot","GLOBAL",1)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaAmberPlot","GLOBAL",1)
+  Global("IaMessenger","LOCALS",0)
+  OR(2)
+    Global("Chapter","GLOBAL",6)
+    Global("Chapter","GLOBAL",7)
+  OR(7)
+    AreaCheck("AR0020") // city gate
+    AreaCheck("AR0300") // the docks
+    AreaCheck("AR0400") // slums
+    AreaCheck("AR0500") // the bridge
+    AreaCheck("AR0700") // waukeen's promenade
+    AreaCheck("AR0900") // temple district
+    AreaCheck("AR1000") // government district
+  OR(2)
+    !Exists("S!limak")
+    Dead("S!limak")
+THEN
+  RESPONSE #100
+    SetGlobal("IaMessenger","LOCALS",1)
+    SetInterrupt(FALSE)
+    CreateCreatureObject("S!smess1",Myself,0,0,0)
+    SmallWait(15)
+    ActionOverride("S!smess1",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END

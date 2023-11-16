@@ -1,0 +1,37 @@
+// party travels to ARia37 to fight the amber golem assault //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    LeaveAreaLUAPanic("ARIA37","",[3090.1035],0)
+    LeaveAreaLUA("ARIA37","",[3090.1035],0)
+    ActionOverride(Player2,LeaveAreaLUA("ARIA37","",[3090.1035],7))
+    ActionOverride(Player3,LeaveAreaLUA("ARIA37","",[3090.1035],7))
+    ActionOverride(Player4,LeaveAreaLUA("ARIA37","",[3090.1035],7))
+    ActionOverride(Player5,LeaveAreaLUA("ARIA37","",[3090.1035],7))
+    ActionOverride(Player6,LeaveAreaLUA("ARIA37","",[3090.1035],7))
+
+    Explore()
+    DayNight(DAWN_END)
+    MoveViewObject(Player1,INSTANT)
+
+    ReallyForceSpellRES("SPINI14",Myself)
+    ReallyForceSpellRES("SPINI14",Player2)
+    ReallyForceSpellRES("SPINI14",Player3)
+    ReallyForceSpellRES("SPINI14",Player4)
+    ReallyForceSpellRES("SPINI14",Player5)
+    ReallyForceSpellRES("SPINI14",Player6)
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    EndCutSceneMode()
+END

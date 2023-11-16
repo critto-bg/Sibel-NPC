@@ -166,7 +166,8 @@ IF ~~ THEN BEGIN VirtusLeaves
   IF ~~ THEN
     DO ~SetGlobal("IaSibelTalks","GLOBAL",25)
         AddXPObject(Player1,90000)
-        AddXPObject("S!Sibel",90000)~
+        AddXPObject("S!Sibel",90000)
+        SetGlobalTimer("IaAmberAssaultTimer","GLOBAL",THREE_DAYS)~
     UNSOLVED_JOURNAL @1117
     EXIT
 END
