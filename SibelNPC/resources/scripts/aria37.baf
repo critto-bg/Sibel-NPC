@@ -96,7 +96,7 @@ THEN
 END
 
 IF
-  OpenState("Door14",TRUE)
+  OpenState("DOOR14",TRUE)
   Global("Door14Opened","ARIA37",0)
 THEN
   RESPONSE #100
@@ -105,10 +105,10 @@ THEN
 END
 
 IF
-  OpenState("Door14",FALSE)
+  OpenState("DOOR14",FALSE)
   Global("Door14Opened","ARIA37",1)
 THEN
   RESPONSE #100
-    OpenDoor("Door01")
+    OpenDoor("DOOR14")
     Continue()
 END

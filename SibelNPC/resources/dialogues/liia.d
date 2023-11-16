@@ -24,7 +24,7 @@ END
 IF ~~ THEN BEGIN Wait
   SAY ~I am relieved to hear that. We shall seek shelter in this building. Please, find me when the threat has passed.~
 
-  IF ~~ THEN DO ~SetGlobal("IaAmberPlot","GLOBAL",3) ClearAllActions() StartCutSceneMode() StartCutScene("S!scut12")~ EXIT
+  IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("S!scut12")~ EXIT
 END
 
 IF ~Global("IaAmberPlot","GLOBAL",4)~ THEN BEGIN AfterAttack

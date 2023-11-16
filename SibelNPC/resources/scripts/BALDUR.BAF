@@ -1,3 +1,18 @@
+// get the party back into the aria37 while the encounter is still on-going //
+
+IF
+  Global("IaAmberPlot","GLOBAL",3)
+  !AreaCheck("ARIA37")
+THEN
+  RESPONSE #100
+    // to prevent the block from re-firing
+    // the variable will re-init to 3 during the cutscene
+    SetGlobal("IaAmberPlot","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut12")
+END
+
 // spawn boy messenger with the letter
 
 IF

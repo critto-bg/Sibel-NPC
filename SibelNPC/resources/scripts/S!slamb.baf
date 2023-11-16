@@ -1,4 +1,14 @@
 IF
+  AreaCheck("ARIA37")
+  Global("IaCombat","ARIA37",2)
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    DestroySelf()
+END
+
+IF
   Global("Iapcastts","GLOBAL",1)
   Global("Iatsinvulner","LOCALS",0)
 THEN

@@ -33,5 +33,7 @@ THEN
     FadeFromColor([20.0],0)
     Wait(2)
 
+    SetGlobal("IaAmberPlot","GLOBAL",3)
+
     EndCutSceneMode()
 END
