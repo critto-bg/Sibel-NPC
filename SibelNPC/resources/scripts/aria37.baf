@@ -10,7 +10,6 @@ THEN
     CreateCreature("S!samb09",[1482.2122],0)
     CreateCreature("S!samb10",[2892.2966],0)
     CreateCreature("S!samb11",[969.1249],0)
-    Continue()
 END
 
 IF
@@ -26,7 +25,6 @@ THEN
     SetGlobal("IaCombat","ARIA37",2)
     SetGlobal("IaAmberPlot","GLOBAL",4)
     TriggerActivation("Tran1002",TRUE)
-    Continue()
 END
 
 IF
@@ -92,7 +90,6 @@ IF
 THEN
   RESPONSE #100
   SetGlobalTimer("IaGolemTimer","ARIA37",18)
-  Continue()
 END
 
 IF
@@ -101,7 +98,6 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("Door14Opened","ARIA37",1)
-    Continue()
 END
 
 IF
@@ -110,5 +106,4 @@ IF
 THEN
   RESPONSE #100
     OpenDoor("DOOR14")
-    Continue()
 END

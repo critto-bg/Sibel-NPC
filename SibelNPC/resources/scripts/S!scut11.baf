@@ -12,13 +12,13 @@ THEN
 
     ActionOverride("S!smess1",DestroySelf())
 
-    LeaveAreaLUAPanic("AR1002","",[865.640],0)
-    LeaveAreaLUA("AR1002","",[865.640],0)
-    ActionOverride(Player2,LeaveAreaLUA("AR1002","",[865.640],7))
-    ActionOverride(Player3,LeaveAreaLUA("AR1002","",[865.640],7))
-    ActionOverride(Player4,LeaveAreaLUA("AR1002","",[865.640],7))
-    ActionOverride(Player5,LeaveAreaLUA("AR1002","",[865.640],7))
-    ActionOverride(Player6,LeaveAreaLUA("AR1002","",[865.640],7))
+    LeaveAreaLUAPanic("AR1002","",[824.655],0)
+    LeaveAreaLUA("AR1002","",[824.655],0)
+    ActionOverride(Player2,LeaveAreaLUA("AR1002","",[872.617],7))
+    ActionOverride(Player3,LeaveAreaLUA("AR1002","",[870.690],7))
+    ActionOverride(Player4,LeaveAreaLUA("AR1002","",[920.653],7))
+    ActionOverride(Player5,LeaveAreaLUA("AR1002","",[886.715],7))
+    ActionOverride(Player6,LeaveAreaLUA("AR1002","",[946.685],7))
 
     MoveViewObject(Player1,INSTANT)
 
