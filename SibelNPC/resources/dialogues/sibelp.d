@@ -1,5 +1,26 @@
 BEGIN ~S!SibelP~
 
+/* leaves due to unhappiness */
+
+IF ~HappinessLT(Myself,-290)~ THEN BEGIN Unhappy
+  SAY ~Never before have I met a <MANWOMAN> as corrupted by evil as you are, <CHARNAME>. I shall not remain in your company any longer.~
+
+  IF ~~ THEN
+    DO ~TakeItemListParty("S!sitems")
+        EraseJournalEntry(@1100)
+        EraseJournalEntry(@1101)
+        EraseJournalEntry(@1103)
+        EraseJournalEntry(@1104)
+        EraseJournalEntry(@1107)
+        EraseJournalEntry(@1109)
+        EraseJournalEntry(@1110)
+        EraseJournalEntry(@1111)
+        EraseJournalEntry(@1114)
+        EraseJournalEntry(@1117)
+        SetGlobal("IaSibelTalks","GLOBAL",99)~
+    EXIT
+END
+
 /* entry states */
 
 IF ~Global("IaSibelJoined","LOCALS",1)
