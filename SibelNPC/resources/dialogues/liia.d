@@ -18,7 +18,7 @@ IF ~~ THEN BEGIN Attack
   SAY ~Alas, we did underestimate the criminal, and the city is now besieged by a veritable army of golems. The goverment district is flooded with the creatures.~
   = ~I beg of you, help us put a stop to this menace, and you shall know the gratitude of the city council.~
 
-  ++ ~Very well, Liia. I will lend my aid to you this time.~ + Wait
+  ++ ~Very well, Liia. I will lend my aid to you.~ + Wait
 END
 
 IF ~~ THEN BEGIN Wait
@@ -30,5 +30,15 @@ END
 IF ~Global("IaAmberPlot","GLOBAL",4)~ THEN BEGIN AfterAttack
   SAY ~You return victorious, <CHARNAME>! The city remains unharmed. Please, accept these gifts in gratitude for your timely intervention.~
 
-  IF ~~ THEN DO ~SetGlobal("IaAmberPlot","GLOBAL",5) GiveGoldForce(50000) GiveItemCreate("S!misc02",Player1,0,0,0) EscapeArea()~ EXIT
+  IF ~~ THEN
+    DO ~SetGlobal("IaAmberPlot","GLOBAL",5)
+        GiveGoldForce(50000)
+        GiveItemCreate("S!misc02",Player1,0,0,0)
+        AddXPObject(Player1,50000)
+        AddXPObject(Player2,50000)
+        AddXPObject(Player3,50000)
+        AddXPObject(Player4,50000)
+        AddXPObject(Player5,50000)
+        AddXPObject(Player6,50000)
+        EscapeArea()~ EXIT
 END

@@ -19,7 +19,6 @@ IF
   Dead("S!samb09")
   Dead("S!samb10")
   Dead("S!samb11")
-  CombatCounter(0)
 THEN
   RESPONSE #100
     SetGlobal("IaCombat","ARIA37",2)
