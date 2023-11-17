@@ -746,6 +746,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~devagood.cre~ ~override/devagood.cre~
                 ~devaevil.cre~ ~override/devaevil.cre~
     WRITE_BYTE 0x52 1 // thac0
+
+  COPY_EXISTING ~theshal.cre~ ~override/theshal.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 END
 
 /* spells */
