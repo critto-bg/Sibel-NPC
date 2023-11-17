@@ -5,7 +5,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaOnce","LOCALS",1)
-    DestroySelf()
+    Kill(Myself)
 END
 
 IF
