@@ -946,6 +946,7 @@ COMPILE ~SibelNPC/resources/scripts/S!svirt1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
 EXTEND_BOTTOM ~AR0406.BCS~ ~SibelNPC/resources/scripts/AR0406.baf~
+EXTEND_BOTTOM ~AR0412.BCS~ ~SibelNPC/resources/scripts/AR0412.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
 EXTEND_BOTTOM ~AR0702.BCS~ ~SibelNPC/resources/scripts/AR0702.baf~
 EXTEND_BOTTOM ~AR0711.BCS~ ~SibelNPC/resources/scripts/AR0711.baf~

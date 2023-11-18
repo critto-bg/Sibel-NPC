@@ -1,0 +1,10 @@
+IF
+  InMyArea(Player1)
+  InPartyAllowDead("S!Sibel")
+  Global("Iacreature","AR0412",1)
+  Global("Iasibelasks","AR0412",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelasks","AR0412",1)
+    ActionOverride("Container 1",CreateItem("S!SMISC",0,0,0))
+END
