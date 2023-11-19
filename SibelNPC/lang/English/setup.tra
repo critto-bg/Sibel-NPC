@@ -84,6 +84,9 @@ This ancient club was crafted from the wood of the ancient Elm tree. The weapon 
 
 STATISTICS
 
+Equipped Abilities:
+- one extra attack per round
+
 Special Abilities:
 - 10% chance per successful hit to cast Iron Skins spell on the wielder
 - 10% chance per successful hit to cast Mass Cure Spell on the wielder
@@ -695,6 +698,30 @@ Area of Effect: Special
 Saving Throw: None
 
 Wish is a more potent version of the Limited Wish spell. It will fulfill literally the utterance of the spellcaster. Thus, the actuality of the past, present, or future might be altered (but possibly only for the wizard unless the wording of the spell is most carefully stated) in some limited manner. Greedy desires usually end in disaster for the wisher. Lastly, the wiser the wizard, the better chance that <PRO_HESHE> will choose the right wording. Wizards with low Wisdom will more often than not meet with disaster when asking for a wish.~
+@604 = ~Warlord's blade +5~
+@605 = ~Warlord's blade +5
+
+Warblade has been reforged to this mighty weapon. Sacrificing Lilarcor during the upgrade process was worth the attempt, because the new sword grants immunity to charm and confusion to its wielder. Thanks to the wide variety of information found in the Manual of Elaboration, an additional and optional ability has also been added to the great sword during the process.
+
+Equipped abilities:
+Immunity to Charm and Confusion
+Immunity to Backstab, Fear and Poison
+
+THAC0: +5 bonus
+Damage: 1D12 + 5
+Damage type: slashing
+Weight: 11
+Speed Factor: 6
+Proficiency Type: Two handed sword
+Type: 2-handed
+Requires: 14 Strength
+Not Usable By:
+ Druid
+ Cleric
+ Mage
+ Thief
+ Monk
+ Beast Master~
 
 @700 = ~Greater Restoration
 (Necromancy)
