@@ -1,9 +1,0 @@
-IF
-  InMyArea(Player1)
-  Global("IaSibelAsks","AR3000",0)
-  Global("Iajdcancelled","GLOBAL",1)
-THEN
-  RESPONSE #100
-    SetGlobal("IaSibelAsks","AR3000",1)
-    SetGlobal("Iacreature","AR3000",2)
-END
