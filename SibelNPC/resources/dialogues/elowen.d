@@ -122,6 +122,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you do something with Limak's brain?~
     GOTO Limak
 
+  // gauntlets of the gracelord
+  IF ~PartyHasItem("brac06")~ THEN
+    REPLY ~What could be done with these potent gauntlets of Ogre Power?~
+    GOTO Grandlord
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -450,5 +455,24 @@ IF ~~ THEN BEGIN Limak
     REPLY ~Yes, I will be glad to get rid of it.~
     DO ~TakePartyItemNum("S!misc20",1) DestroyItem("S!misc20")
         GiveGoldForce(75000)~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Grandlord
+  SAY ~These are a powerful vessel, capable of storing multiple enchantments. Bring me Gauntlets of Weapon Expertise, Gauntlets of Dexterity, Gloves of Healing and a chunk of Reinforced Amber. The price is 30000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("brac10") PartyHasItem("brac06") PartyHasItem("brac07") PartyHasItem("brac20") PartyHasItem("S!sramb") PartyGoldGT(29999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("brac10",1) DestroyItem("brac10")
+        TakePartyItemNum("brac06",1) DestroyItem("brac06")
+        TakePartyItemNum("brac07",1) DestroyItem("brac07")
+        TakePartyItemNum("brac20",1) DestroyItem("brac20")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sbrac1",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END

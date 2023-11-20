@@ -711,6 +711,25 @@ Not Usable By:
  Thief
  Monk
  Beast Master~
+@606 = ~Gauntlets of the Grandlord~
+@607 = ~Gauntlets of the Grandlord
+
+This potent protective item came to be as a combination of several enchanted bracers united into one by the mysterious powers of Reinforced Amber, guarded closely as a trade secret by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+- THAC0 bonus: +1
+- Damage bonus: +2
+- Strength bonus: +1
+- Armor Class bonus: +1
+- Resistance to Electricity: +15%
+- Regeneration: 1HP every 2 seconds
+
+NOT usable By:
+ Kensai
+ Riskbreaker
+ Wizard Slayer~
 
 @700 = ~Greater Restoration
 (Necromancy)

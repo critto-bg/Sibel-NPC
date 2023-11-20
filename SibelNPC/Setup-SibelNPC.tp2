@@ -264,6 +264,10 @@ COPY ~SibelNPC/resources/items/S!swish.itm~ ~override/S!swish.itm~
   SAY NAME2 @602
   SAY DESC @603
 
+COPY ~SibelNPC/resources/items/S!sbrac1.itm~ ~override/S!sbrac1.itm~
+  SAY NAME2 @606
+  SAY DESC @607
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!sarkan.itm~ ~override/S!sarkan.itm~
