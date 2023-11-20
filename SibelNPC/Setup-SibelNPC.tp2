@@ -272,6 +272,8 @@ COPY ~SibelNPC/resources/items/S!sbrac1.itm~ ~override/S!sbrac1.itm~
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!sarkan.itm~ ~override/S!sarkan.itm~
 
+  COPY ~SibelNPC/resources/items/S!spidsu.itm~ ~override/S!spidsu.itm~
+
   COPY ~SibelNPC/resources/items/S!sw11.itm~ ~override/S!sw11.itm~
     SAY NAME2 @604
     SAY DESC @605
@@ -299,6 +301,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
     READ_LONG 0x64 headers_offset
     WRITE_SHORT (headers_offset + 0x14) 4 // thac0 bonus
+
+  COPY_EXISTING ~S!spifig.itm~ ~override/S!spifig.itm~
+    SAY DESC @608
 END
 
 /* copy creatures */

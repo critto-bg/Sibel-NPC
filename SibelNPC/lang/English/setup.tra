@@ -730,6 +730,24 @@ NOT usable By:
  Kensai
  Riskbreaker
  Wizard Slayer~
+@608 = ~Golden Spider Figurine
+
+With the help of the information scripted in the Manual of Elaboration, Black Spider Figurine has been combined with the eggs of a Spider Queen, resulted in this golden figurine which comes to life as a Noble Spider for 30 rounds once per day.
+
+Noble Spider:
+
+Hit Points: 100
+Armor Class: -5
+50% Resistance to magic and all damage types
+Immune to Poison, Fear, Web, Hold, Slow, Charm, Confusion
+Regeneration: 6 hit points per round
+
+THAC0: -4
+Number of Attacks: 4
+Damage: 3D4 +6
+10% Chance (per hit) to poison the target (Save vs. Poison with -3 penalty or take 24 points of damage every round for 4 rounds)
+10% Chance (per hit) to inflict additional 6D10 crushing damage (no save)
+Special ability: Summons lesser spiders.~
 
 @700 = ~Greater Restoration
 (Necromancy)
