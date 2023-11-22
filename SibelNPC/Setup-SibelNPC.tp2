@@ -268,6 +268,8 @@ COPY ~SibelNPC/resources/items/S!sbrac1.itm~ ~override/S!sbrac1.itm~
   SAY NAME2 @606
   SAY DESC @607
 
+COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!sarkan.itm~ ~override/S!sarkan.itm~
@@ -614,6 +616,10 @@ COPY ~SibelNPC/resources/creatures/S!slamb1.cre~ ~override/S!slamb1.cre~
 COPY ~SibelNPC/resources/creatures/S!spool1.cre~ ~override/S!spool1.cre~
   SAY NAME1 @50
   SAY NAME2 @50
+
+COPY ~SibelNPC/resources/creatures/S!srat1.cre~ ~override/S!srat1.cre~
+  SAY NAME1 @51
+  SAY NAME2 @51
 
 COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam1.cre~
   WRITE_ASCII 0x0280 ~S!srvam1~ #32 // death variable
