@@ -611,6 +611,10 @@ COPY ~SibelNPC/resources/creatures/S!slamb1.cre~ ~override/S!slamb1.cre~
 
   WRITE_ASCII 0x0248 ~S!slamb~ #8 // override script
 
+COPY ~SibelNPC/resources/creatures/S!spool1.cre~ ~override/S!spool1.cre~
+  SAY NAME1 @50
+  SAY NAME2 @50
+
 COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam1.cre~
   WRITE_ASCII 0x0280 ~S!srvam1~ #32 // death variable
 
