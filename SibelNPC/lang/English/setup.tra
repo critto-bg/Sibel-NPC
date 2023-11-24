@@ -750,6 +750,89 @@ Damage: 3D4 +6
 10% Chance (per hit) to poison the target (Save vs. Poison with -3 penalty or take 24 points of damage every round for 4 rounds)
 10% Chance (per hit) to inflict additional 6D10 crushing damage (no save)
 Special ability: Summons lesser spiders.~
+@609 = ~This flail has been in the care of Lord Arnise for some time, a relic of his adventuring youth. It has been kept disassembled, the individual pieces stored in separate locations, and only used in the direst of emergencies. Lord Arnise was likely concerned about the powerful magic that the weapon radiated when compiled, and rightfully so. A trail of destruction has followed it through history, leading straight back to the original owners. The flail was the creation of the warlike Rakshasa, a race of vengeful spirits that crave human meat, and used as an adaptable weapon that could suit any battle. During a particularly violent hunt the flail was lost, only to be returned when they used their affinity for magic to locate its powerful aura. They discovered that the weapon had found its way into the hands of a great human warrior, and the battle that followed was truly splendid. They have since used the item as bait countless times, 'losing' it again and again. Powerful items gravitate towards powerful people, and powerful people yield the most glorious battles.
+
+STATISTICS:
+
+Combat Abilities:
+- 10% chance per hit to inflict 15 points of additional crushing damage
+- 5% chance per hit to inflict 10 Fire Damage, 10 Cold Damage and 10 Acid Damage
+
+THACO: +3 bonus
+Damage: 1D6 +4
+Damage type: crushing
+Weight: 10
+Speed Factor: 4
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@610= ~This four-headed flail causes fire, cold, acid and poison damage. If the fifth head for the Flail of Ages could be found, it would make this awesome weapon even more powerful.
+
+STATISTICS:
+
+Combat Abilities:
+- 15% chance per hit to inflict 20 points of additional crushing damage
+- 5% chance per hit to inflict 10 Fire Damage, 10 Cold Damage, 10 Acid Damage and 10 Poison Damage
+
+THAC0: +4
+Damage: 1D6 +5
+Damage type: crushing
+Weight: 9
+Speed Factor: 3
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@611 = ~This four-headed flail causes fire, cold, acid and electrical damage. If the fifth head for the Flail of Ages could be found, it would make this awesome weapon even more powerful.
+
+STATISTICS:
+
+Combat Abilities:
+- 15% chance per hit to inflict 20 points of additional crushing damage
+- 5% chance per hit to inflict 10 Fire Damage, 10 Cold Damage, 10 Acid Damage and 10 Electrical Damage
+
+THAC0: +4
+Damage: 1D6 +5
+Damage type: crushing
+Weight: 9
+Speed Factor: 3
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
+@612 = ~With the addition of the fifth and final head to this weapon created by the evil Rakshasa race the true potential of the Flail of Ages is finally realized.
+
+STATISTICS:
+
+Equipped Ability:
+- 5% bonus to Magic Resistance
+
+Combat Abilities:
+- 20% chance per hit to inflict 25 points of additional crushing damage
+- 5% chance per hit to inflict 20 Fire Damage, 20 Cold Damage, 20 Acid Damage, 20 Poison Damage and 20 Electrical Damage
+
+THACO: +5 bonus
+Damage: 1D6 +6
+Damage type: crushing
+Weight: 8
+Speed Factor: 2
+Proficiency Type: Flail/Morningstar
+Type: 1-handed
+Requires: 13 Strength
+Not Usable By:
+ Druid
+ Mage
+ Thief~
 
 @700 = ~Greater Restoration
 (Necromancy)
