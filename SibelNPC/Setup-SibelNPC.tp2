@@ -1243,6 +1243,11 @@ COPY_EXISTING ~AR2808.are~ ~override/AR2808.are~
 COPY_EXISTING ~AR5503.are~ ~override/AR5503.are~
   WRITE_ASCII 0x94 ~AR5503~ #8 // area script
 
+// Sewers beneath CC
+COPY_EXISTING ~AR0404.are~ ~override/AR0404.are~
+  READ_LONG  0xbc songs_offset
+  WRITE_LONG (songs_offset + 0x0c) 57
+
 /* area resources */
 
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
