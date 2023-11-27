@@ -1,0 +1,14 @@
+IF
+  InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaSibelTalks","GLOBAL",12)
+  Global("IaSibelAmberAmbush","GLOBAL",2)
+  GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelAmberAmbush","GLOBAL",3)
+    CreateCreatureObject("S!samb01",Player1,0,0,0)
+    CreateCreatureObject("S!samb02","S!sibel",0,0,0)
+END

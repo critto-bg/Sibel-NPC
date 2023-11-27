@@ -55,7 +55,7 @@ THEN
   RESPONSE #100
     SetGlobal("IaTreePlot","GLOBAL",2)
     SetInterrupt(FALSE)
-    Wait(1)
+    SmallWait(15)
     StartDialogueNoSet(Player1)
     SetInterrupt(TRUE)
 END
@@ -235,23 +235,8 @@ THEN
   RESPONSE #100
     SetInterrupt(FALSE)
     SetGlobal("IaSibelAmberAmbush","GLOBAL",1)
-    Wait(3)
+    SmallWait(15)
     Interact(Player1)
-    SetInterrupt(TRUE)
-END
-
-IF
-  InParty(Myself)
-  Global("IaSibelTalks","GLOBAL",12)
-  Global("IaSibelAmberAmbush","GLOBAL",2)
-  GlobalTimerExpired("IaSibelAmberTimer","GLOBAL")
-THEN
-  RESPONSE #100
-    SetInterrupt(FALSE)
-    SetGlobal("IaSibelAmberAmbush","GLOBAL",3)
-    Wait(1)
-    CreateCreatureObject("S!samb01",Player1,0,0,0)
-    CreateCreatureObject("S!samb02","S!sibel",0,0,0)
     SetInterrupt(TRUE)
 END
 
@@ -308,7 +293,7 @@ THEN
   RESPONSE #100
     SetInterrupt(FALSE)
     SetGlobal("IaSibelAmberAmbush","GLOBAL",8)
-    Wait(1)
+    SmallWait(15)
     CreateCreatureObject("S!samb03",Player1,0,0,0) // Amber Golem
     CreateCreatureObject("S!samb04",Player1,0,0,0) // Mage
     CreateCreatureObject("S!samb05","S!sibel",0,0,0) // Berserker
