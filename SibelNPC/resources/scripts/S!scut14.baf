@@ -1,0 +1,46 @@
+// AR0404, Andrias and his gang appear //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    CreateCreature("S!sandri",[2306.2752],0)
+    CreateCreature("S!sshad1",[2254.2510],0)
+
+    CreateCreature("S!sgamb2",[2230.2562],0)
+    CreateCreature("S!sgamb2",[2190.2532],0)
+    CreateCreature("S!sgamb2",[1977.2573],0)
+    CreateCreature("S!sgamb2",[2012.2553],0)
+
+    JumpToPoint([2215.2703])
+    ActionOverride(Player2,JumpToPoint([2232.2729]))
+    ActionOverride(Player3,JumpToPoint([2262.2682]))
+    ActionOverride(Player4,JumpToPoint([2151.2718]))
+    ActionOverride(Player5,JumpToPoint([2215.2646]))
+    ActionOverride(Player6,JumpToPoint([2170.2676]))
+
+    Wait(1)
+
+    FaceObject("S!sandri")
+    ActionOverride(Player2,FaceObject("S!sandri"))
+    ActionOverride(Player3,FaceObject("S!sandri"))
+    ActionOverride(Player4,FaceObject("S!sandri"))
+    ActionOverride(Player5,FaceObject("S!sandri"))
+    ActionOverride(Player6,FaceObject("S!sandri"))
+
+    ActionOverride("S!sandri",FaceObject(Player1))
+    ActionOverride("S!sshad1",FaceObject(Player1))
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!sibel",Interact(Player1))
+    EndCutSceneMode()
+END

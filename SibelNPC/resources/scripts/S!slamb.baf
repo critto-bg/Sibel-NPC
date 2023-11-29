@@ -9,6 +9,17 @@ THEN
 END
 
 IF
+  AreaCheck("AR0404")
+  GlobalGT("IaAndriasPlot","GLOBAL",5)
+  Dead("S!spool1")
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    Kill(Myself)
+END
+
+IF
   Global("Iapcastts","GLOBAL",1)
   Global("Iatsinvulner","LOCALS",0)
 THEN

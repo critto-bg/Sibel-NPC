@@ -532,3 +532,63 @@ THEN
     ActionOverride("S!smess1",StartDialogueNoSet(Player1))
     SetInterrupt(TRUE)
 END
+
+/* 12th event */
+
+IF
+  InParty(Myself)
+  See(Player1)
+  XPGT(Myself,4884999)
+  Global("IaMerchant","LOCALS",0)
+  GlobalGT("IaSRegiPlot","GLOBAL",7)
+  Global("IaAmberPlot","GLOBAL",5)
+  OR(2)
+    Global("Chapter","GLOBAL",6)
+    Global("Chapter","GLOBAL",7)
+  OR(7)
+    AreaCheck("AR0020") // city gate
+    AreaCheck("AR0300") // the docks
+    AreaCheck("AR0400") // slums
+    AreaCheck("AR0500") // the bridge
+    AreaCheck("AR0700") // waukeen's promenade
+    AreaCheck("AR0900") // temple district
+    AreaCheck("AR1000") // government district
+  Dead("SEWCC")
+  PartyGoldGT(4999)
+THEN
+  RESPONSE #100
+    SetGlobal("IaMerchant","LOCALS",1)
+    SetInterrupt(FALSE)
+    CreateCreatureObject("S!smerc1",Myself,0,0,0)
+    SmallWait(15)
+    ActionOverride("S!smerc1",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaAndriasPlot","GLOBAL",1)
+  GlobalTimerExpired("IaSMerchTimer","GLOBAL")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",2)
+    Interact(Player1)
+END
+
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaAndriasPlot","GLOBAL",3)
+  GlobalTimerExpired("IaSLeather2Timer","LOCALS")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",4)
+    SetInterrupt(FALSE)
+    CreateCreatureObjectDoor("S!sleat2",Myself,0,0,0)
+    Wait(5)
+    ActionOverride("S!sleat2",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END

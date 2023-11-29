@@ -1,0 +1,11 @@
+IF
+  Global("IaAndriasPlot","GLOBAL",5)
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    SetInterrupt(FALSE)
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    Wait(1)
+    DestroySelf()
+END

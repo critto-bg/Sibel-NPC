@@ -482,3 +482,40 @@ IF ~~ THEN BEGIN B10YouDecide
 
   IF ~~ THEN DO ~SetGlobal("IaSRegiPlot","GLOBAL",5)~ EXIT
 END
+
+/* 12th event */
+
+IF ~Global("IaAndriasPlot","GLOBAL",2)~ THEN BEGIN B12Start
+  SAY ~That was an odd man. He talked as if he was not aware that the amber is bought and sold in chunks. Have you noticed?~
+
+  ++ ~Yes, he did seem intentionally vague.~ + B12End
+  ++ ~Perhaps. What are you implying?~ + B12End
+END
+
+IF ~~ THEN BEGIN B12End
+  SAY ~It is amber golems that we may find down in the sewers, not a stockpile of pure amber.~
+
+  IF ~~ THEN
+    REPLY ~We shall see soon enough.~
+    DO ~SetGlobalTimer("IaSLeather2Timer","LOCALS",3) SetGlobal("IaAndriasPlot","GLOBAL",3)~
+    EXIT
+END
+
+IF ~Global("IaAndriasPlot","GLOBAL",8)~ THEN BEGIN B12Fight
+  SAY ~These are Greater Amber Golems, <CHARNAME>! We fought one of these creatures in Amberville House! And the liches are fighting on their side. Could we handle such a group of foes?~
+
+  ++ ~Steel yourself, Sibel! We've handled worse, let them come.~ + B12Attack
+  ++ ~The situation may become dire. We should seek aid.~ + B12Help
+END
+
+IF ~~ THEN BEGIN B12Attack
+  SAY ~They shall taste our wrath!~
+
+  IF ~~ THEN DO ~SetGlobal("IaFightBegins","AR0404",1)~ EXIT
+END
+
+IF ~~ THEN BEGIN B12Help
+  SAY ~So shall it be. I ask Virtus Arcanis to aid us!~
+
+  IF ~~ THEN DO ~ClearAllActions() StartCutSceneMode() StartCutScene("S!scut15")~ EXIT
+END

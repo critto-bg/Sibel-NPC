@@ -9,17 +9,6 @@ BEGIN @2
 DESIGNATED 1
 REQUIRE_COMPONENT ~Setup-SibelNPC.tp2~ ~0~ @3
 
-/* items */
-
-COPY_EXISTING ~S!sgamb.itm~ ~override/S!sgamb.itm~
-  LAUNCH_PATCH_FUNCTION ~CLONE_EFFECT~
-    INT_VAR
-      check_headers = 0
-      match_opcode = 232
-    STR_VAR
-      resource = ~SPWII57~
-  END
-
 /* creatures */
 
 COPY_EXISTING ~S!ssnake.cre~ ~override/S!ssnake.cre~

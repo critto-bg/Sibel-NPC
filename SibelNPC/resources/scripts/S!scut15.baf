@@ -1,0 +1,19 @@
+// AR0404, Virtus arrives to help //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    MoveViewObject(Player1,INSTANT)
+    Wait(1)
+    CreateCreatureDoor("S!svirt2",[2140.2648],0)
+    Wait(5)
+    ActionOverride("S!svirt2",FaceObject("S!sandri"))
+    ActionOverride("S!sandri",FaceObject("S!svirt2"))
+    SmallWait(30)
+    ActionOverride("S!svirt2",StartDialogueNoSet(Player1))
+
+    EndCutSceneMode()
+END

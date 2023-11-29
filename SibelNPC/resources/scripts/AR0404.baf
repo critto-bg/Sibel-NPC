@@ -1,3 +1,222 @@
+/* Andrias Amberville plot, AoE stuff during the fight */
+
+IF
+  InMyArea(Player1)
+  Global("IasP1blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP1blessed","AR0404",0)
+    ActionOverride(Player1,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player2,1)
+  Global("IasP2blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP2blessed","AR0404",0)
+    ActionOverride(Player2,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player3,1)
+  Global("IasP3blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP3blessed","AR0404",0)
+    ActionOverride(Player3,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player4,1)
+  Global("IasP4blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP4blessed","AR0404",0)
+    ActionOverride(Player4,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player5,1)
+  Global("IasP5blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP5blessed","AR0404",0)
+    ActionOverride(Player5,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player6,1)
+  Global("IasP6blessed","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP6blessed","AR0404",0)
+    ActionOverride(Player6,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  Global("Iasenergy","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasenergy","AR0404",0)
+    ActionOverride("S!SIBEL",ReallyForceSpellRES("SPINI86",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  GlobalTimerExpired("Iastrsight","AR0404")
+  Global("IaTrueSight","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTrueSight","AR0404",0)
+END
+
+IF
+  InMyArea(Player1)
+  StateCheck(Player1,STATE_SILENCED)
+  OR(3)
+    Class(Player1,MAGE_ALL)
+    Class(Player1,BARD_ALL)
+    CheckStat(Player1,1,SCRIPTINGSTATE16)
+  Global("Iadisabled1","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled1","AR0404",1)
+    ActionOverride(Player1,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !StateCheck(Player1,STATE_SILENCED)
+  Global("Iadisabled1","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled1","AR0404",0)
+END
+
+IF
+  InMyArea(Player2)
+  StateCheck(Player2,STATE_SILENCED)
+  OR(3)
+    Class(Player2,MAGE_ALL)
+    Class(Player2,BARD_ALL)
+    CheckStat(Player2,1,SCRIPTINGSTATE16)
+  Global("Iadisabled2","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled2","AR0404",1)
+    ActionOverride(Player2,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player2)
+  !StateCheck(Player2,STATE_SILENCED)
+  Global("Iadisabled2","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled2","AR0404",0)
+END
+
+IF
+  InMyArea(Player3)
+  StateCheck(Player3,STATE_SILENCED)
+  OR(3)
+    Class(Player3,MAGE_ALL)
+    Class(Player3,BARD_ALL)
+    CheckStat(Player3,1,SCRIPTINGSTATE16)
+  Global("Iadisabled3","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled3","AR0404",1)
+    ActionOverride(Player3,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player3)
+  !StateCheck(Player3,STATE_SILENCED)
+  Global("Iadisabled3","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled3","AR0404",0)
+END
+
+IF
+  InMyArea(Player4)
+  StateCheck(Player4,STATE_SILENCED)
+  OR(3)
+    Class(Player4,MAGE_ALL)
+    Class(Player4,BARD_ALL)
+    CheckStat(Player4,1,SCRIPTINGSTATE16)
+  Global("Iadisabled4","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled4","AR0404",1)
+    ActionOverride(Player4,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player4)
+  !StateCheck(Player4,STATE_SILENCED)
+  Global("Iadisabled4","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled4","AR0404",0)
+END
+
+IF
+  InMyArea(Player5)
+  StateCheck(Player5,STATE_SILENCED)
+  OR(3)
+    Class(Player5,MAGE_ALL)
+    Class(Player5,BARD_ALL)
+    CheckStat(Player5,1,SCRIPTINGSTATE16)
+  Global("Iadisabled5","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled5","AR0404",1)
+    ActionOverride(Player5,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player5)
+  !StateCheck(Player5,STATE_SILENCED)
+  Global("Iadisabled5","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled5","AR0404",0)
+END
+
+IF
+  InMyArea(Player6)
+  StateCheck(Player6,STATE_SILENCED)
+  OR(3)
+    Class(Player6,MAGE_ALL)
+    Class(Player6,BARD_ALL)
+    CheckStat(Player6,1,SCRIPTINGSTATE16)
+  Global("Iadisabled6","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled6","AR0404",1)
+    ActionOverride(Player6,ReallyForceSpellRES("SPWII44",Myself))
+END
+
+IF
+  InMyArea(Player6)
+  !StateCheck(Player6,STATE_SILENCED)
+  Global("Iadisabled6","AR0404",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iadisabled6","AR0404",0)
+END
+
+/* reginald ghost plot */
+
 IF
   InMyArea(Player1)
   Global("IaSRegiPlot","GLOBAL",5)
@@ -23,6 +242,127 @@ THEN
     SetGlobal("IaRegiSpawn","AR0404",2)
     SetGlobal("IaSRegiPlot","GLOBAL",7)
     CreateCreatureObject("S!sregi2",Player1,0,0,0)
-    SmallWait(1)
+    SmallWait(15)
     ActionOverride("S!sregi2",StartDialogueNoSet(Player1))
+END
+
+/* andrias amberville plot, main logic */
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",6)
+    TriggerActivation("Door0406",FALSE)
+    TriggerActivation("Tran0418",FALSE)
+    TriggerActivation("Door0405",FALSE)
+    ReallyForceSpellRES("SPINI14",Player1)
+    ReallyForceSpellRES("SPINI14",Player2)
+    ReallyForceSpellRES("SPINI14",Player3)
+    ReallyForceSpellRES("SPINI14",Player4)
+    ReallyForceSpellRES("SPINI14",Player5)
+    ReallyForceSpellRES("SPINI14",Player6)
+    CreateCreature("S!sspyA",[168.855],0)
+    CreateCreature("S!sspyB",[1049.1441],0)
+    CreateCreature("S!sspyC",[2570.1656],0)
+    CreateCreature("S!spool1",[2272.2727],0)
+    ActionOverride("QUALLO",DestroySelf())
+END
+
+IF
+  InMyArea(Player1)
+  Dead("S!Sibel")
+  GlobalGT("IaAndriasPlot","GLOBAL",5)
+  Global("IaKillP1","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaKillP1","AR0404",1)
+    ClearAllActions()
+    StartCutSceneMode()
+    Wait(2)
+    MoveViewObject(Player1,-1)
+    DisplayStringHead(Player1,@1214)
+    Wait(4)
+    EndCutSceneMode()
+    Kill(Player1)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",6)
+  Global("IaSPoolMet","AR0404",3)
+  Dead("S!spool1")
+THEN
+  RESPONSE #100
+    SetGlobal("IaSPoolMet","AR0404",4)
+    ActionOverride("S!spool1",CreateVisualEffectObject("SPBOLTGL",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",6)
+  Global("IaSPoolMet","AR0404",4)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",7)
+    SaveGame(0)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",7)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",8)
+    Wait(3)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut14")
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",8)
+  Global("IasLawrenceSaw","GLOBAL",0)
+  Dead("S!sandri")
+  Dead("S!sshad1")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",9)
+    TriggerActivation("Door0406",TRUE)
+    TriggerActivation("Tran0418",TRUE)
+    TriggerActivation("Door0405",TRUE)
+    AddXPObject(Player1,90000)
+    AddXPObject(Player2,90000)
+    AddXPObject(Player3,90000)
+    AddXPObject(Player4,90000)
+    AddXPObject(Player5,90000)
+    AddXPObject(Player6,90000)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaAndriasPlot","GLOBAL",8)
+  Global("IasLawrenceSaw","GLOBAL",1)
+  Dead("S!sandri")
+  Dead("S!sshad1")
+  Dead("S!sshad2")
+  Dead("S!sshad3")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaAndriasPlot","GLOBAL",9)
+    TriggerActivation("Door0406",TRUE)
+    TriggerActivation("Tran0418",TRUE)
+    TriggerActivation("Door0405",TRUE)
+    AddXPObject(Player1,45000)
+    AddXPObject(Player2,45000)
+    AddXPObject(Player3,45000)
+    AddXPObject(Player4,45000)
+    AddXPObject(Player5,45000)
+    AddXPObject(Player6,45000)
 END

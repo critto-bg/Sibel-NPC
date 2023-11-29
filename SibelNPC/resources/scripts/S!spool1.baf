@@ -1,0 +1,60 @@
+IF
+  Allegiance(Myself,ENEMY)
+  !See([PC])
+  !See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaGolemTimer","LOCALS")
+  Global("IaSPoolMet","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaGolemTimer","LOCALS",24)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  OR(2)
+    See([PC])
+    See([GOODCUTOFF])
+  Global("IaSPoolMet","AR0404",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSPoolMet","AR0404",1)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("IaSPoolMet","AR0404",1)
+  HPPercentLT(Myself,100)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSPoolMet","AR0404",2)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  Global("IaSPoolMet","AR0404",2)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSPoolMet","AR0404",3)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+    CreateCreatureObject("S!slamb1",Myself,0,0,0)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  OR(2)
+    See([PC])
+    See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaBoltTimer","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaBoltTimer","LOCALS",9)
+    CreateVisualEffectObject("SPBOLTGL",Myself)
+END

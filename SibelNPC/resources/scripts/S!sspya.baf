@@ -1,0 +1,62 @@
+IF
+  Global("IaAndriasPlot","GLOBAL",9)
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    DestroySelf()
+END
+
+IF
+  !See([PC])
+  !See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaRatsATimer","LOCALS")
+  Global("IaAndriasPlot","GLOBAL",6)
+  Global("IaSSpyBMet","AR0404",1)
+  GlobalLT("IaSPoolMet","AR0404",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaRatsATimer","LOCALS",24)
+    CreateCreatureObject("S!srat1",Myself,0,0,0)
+END
+
+IF
+  !See([PC])
+  !See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaRatsATimer","LOCALS")
+  Global("IaAndriasPlot","GLOBAL",6)
+  Global("IaSSpyBMet","AR0404",1)
+  Global("IaSPoolMet","AR0404",2)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaRatsATimer","LOCALS",18)
+    CreateCreatureObject("S!srat1",Myself,0,0,0)
+END
+
+IF
+  !See([PC])
+  !See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaRatsATimer","LOCALS")
+  Global("IaAndriasPlot","GLOBAL",6)
+  Global("IaSSpyBMet","AR0404",1)
+  Global("IaSPoolMet","AR0404",3)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaRatsATimer","LOCALS",12)
+    CreateCreatureObject("S!srat1",Myself,0,0,0)
+END
+
+IF
+  OR(3)
+    See([PC])
+    Detect([PC])
+    See([GOODCUTOFF])
+  !GlobalTimerNotExpired("IaRatsATimer","LOCALS")
+  GlobalGT("IaAndriasPlot","GLOBAL",6)
+  Global("IaSSpyBMet","AR0404",1)
+  Global("IaSPoolMet","AR0404",4)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("IaRatsATimer","LOCALS",12)
+    CreateCreatureObject("S!srat1",Myself,0,0,0)
+END

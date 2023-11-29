@@ -45,6 +45,9 @@
 @49 = ~Lesser Amber Golem~
 @50 = ~Pool of Amber~
 @51 = ~Mutated Virulent Rat~
+@52 = ~Andrias Amberville~
+@53 = ~Shade Lich~
+@54 = ~Merchant~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -833,6 +836,10 @@ Not Usable By:
  Druid
  Mage
  Thief~
+@613 = ~Empty Flask of Andrias Amberville~
+@614 = ~Empty Flask of Andrias Amberville
+
+This flask radiates strong magic even though it is empty now. The Ambervilles may have used it to seal the sewers beneath Copper Coronet in preparation of their trap.~
 
 @700 = ~Greater Restoration
 (Necromancy)
@@ -847,6 +854,9 @@ Saving Throw: None
 
 When this spell is cast, the life energy level of the recipient is raised. This reverses any previous life energy level drain of the creature by a force or monster. A Greater Restoration spell will also restore the Intelligence score of a creature affected by the Feeblemind spell and negate any form of insanity, such as confusion or berserk. It fully heals the target and cures any diseases or poisons. The casting of this spell is very draining on the priest, and <PRO_HESHE> will likely require rest immediately afterward.~
 @701 = ~Tristan's Blessing~
+@702 = ~Mnemosyne's Crushing Hand~
+@703 = ~Mnemosyne's Blessing~
+@704 = ~Universal Protection From Energy~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]

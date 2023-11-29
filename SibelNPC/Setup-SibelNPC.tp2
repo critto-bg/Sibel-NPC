@@ -268,6 +268,12 @@ COPY ~SibelNPC/resources/items/S!sbrac1.itm~ ~override/S!sbrac1.itm~
   SAY NAME2 @606
   SAY DESC @607
 
+COPY ~SibelNPC/resources/items/S!smisc4.itm~ ~override/S!smisc4.itm~
+  SAY NAME1 @613
+  SAY NAME2 @613
+  SAY UNIDENTIFIED_DESC @614
+  SAY DESC @614
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 // classic ToB only
@@ -540,6 +546,8 @@ COPY ~SibelNPC/resources/creatures/S!sboy01.cre~ ~override/S!sboy01.cre~
   WRITE_ASCII 0x02cc ~S!sboy01~ #8 // dialog
 
 COPY ~SibelNPC/resources/creatures/S!sgamb.cre~ ~override/S!sgamb.cre~
+     ~SibelNPC/resources/creatures/S!sgamb2.cre~ ~override/S!sgamb2.cre~
+     ~SibelNPC/resources/creatures/S!sgamb3.cre~ ~override/S!sgamb3.cre~
   SAY NAME1 @36
   SAY NAME2 @36
 
@@ -561,6 +569,13 @@ COPY ~SibelNPC/resources/creatures/S!sleat1.cre~ ~override/S!sleat1.cre~
 
   WRITE_ASCII 0x0248 ~S!sleat1~ #8 // override script
   WRITE_ASCII 0x02cc ~S!sleat1~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sleat2.cre~ ~override/S!sleat2.cre~
+  SAY NAME1 @39
+  SAY NAME2 @39
+
+  WRITE_ASCII 0x0248 ~S!sleat2~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!sleat2~ #8 // dialog
 
 COPY ~SibelNPC/resources/creatures/S!sdruin.cre~ ~override/S!sdruin.cre~
   SAY NAME1 @40
@@ -600,6 +615,13 @@ COPY ~SibelNPC/resources/creatures/S!svirt1.cre~ ~override/S!svirt1.cre~
   WRITE_ASCII 0x0248 ~S!svirt1~ #8 // override script
   WRITE_ASCII 0x02cc ~S!svirt1~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!svirt2.cre~ ~override/S!svirt2.cre~
+  SAY NAME1 @45
+  SAY NAME2 @45
+
+  WRITE_ASCII 0x0248 ~S!svirt2~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!svirt2~ #8 // dialog
+
 COPY ~SibelNPC/resources/creatures/S!sghos1.cre~ ~override/S!sghos1.cre~
   SAY NAME1 @46
   SAY NAME2 @46
@@ -629,9 +651,41 @@ COPY ~SibelNPC/resources/creatures/S!spool1.cre~ ~override/S!spool1.cre~
   SAY NAME1 @50
   SAY NAME2 @50
 
+  WRITE_ASCII 0x0248 ~S!spool1~ #8 // override script
+
 COPY ~SibelNPC/resources/creatures/S!srat1.cre~ ~override/S!srat1.cre~
   SAY NAME1 @51
   SAY NAME2 @51
+
+COPY ~SibelNPC/resources/creatures/S!sandri.cre~ ~override/S!sandri.cre~
+  SAY NAME1 @52
+  SAY NAME2 @52
+
+  WRITE_ASCII 0x0248 ~S!sandri~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!sandri~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sshad1.cre~ ~override/S!sshad1.cre~
+     ~SibelNPC/resources/creatures/S!sshad2.cre~ ~override/S!sshad2.cre~
+     ~SibelNPC/resources/creatures/S!sshad3.cre~ ~override/S!sshad3.cre~
+  SAY NAME1 @53
+  SAY NAME2 @53
+
+  WRITE_ASCII 0x0248 ~S!sshad1~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!smerc1.cre~ ~override/S!smerc1.cre~
+  SAY NAME1 @54
+  SAY NAME2 @54
+
+  WRITE_ASCII 0x02cc ~S!smerc1~ #8 // dialog
+
+COPY ~SibelNPC/resources/creatures/S!sspya.cre~ ~override/S!sspya.cre~
+  WRITE_ASCII 0x0248 ~S!sspya~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!sspyb.cre~ ~override/S!sspyb.cre~
+  WRITE_ASCII 0x0248 ~S!sspyb~ #8 // override script
+
+COPY ~SibelNPC/resources/creatures/S!sspyc.cre~ ~override/S!sspyc.cre~
+  WRITE_ASCII 0x0248 ~S!sspyc~ #8 // override script
 
 COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam1.cre~
   WRITE_ASCII 0x0280 ~S!srvam1~ #32 // death variable
@@ -793,14 +847,32 @@ END
 
 /* spells */
 
+COPY ~SibelNPC/resources/spells/spini82.spl~ ~override/spini82.spl~
+
+COPY ~SibelNPC/resources/spells/spini86.spl~ ~override/spini86.spl~
+
 COPY ~SibelNPC/resources/spells/S!swiz.spl~ ~override/S!swiz.spl~
   SAY NAME1 @701
   SAY NAME2 @701
 
+COPY ~SibelNPC/resources/spells/SPWII63.spl~ ~override/SPWII63.spl~
+  SAY NAME1 @702
+  SAY NAME2 @702
+
+COPY ~SibelNPC/resources/spells/spini83.spl~ ~override/spini83.spl~
+  SAY NAME1 @703
+  SAY NAME2 @703
+
+COPY ~SibelNPC/resources/spells/spini84.spl~ ~override/spini84.spl~
+  SAY NAME1 #-1
+  SAY NAME2 #-1
+
+COPY ~SibelNPC/resources/spells/spini85.spl~ ~override/spini85.spl~
+  SAY NAME1 @704
+  SAY NAME2 @704
+
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
-
-COPY ~SibelNPC/resources/spells/spini82.spl~ ~override/spini82.spl~
 
 /* effects */
 
@@ -917,6 +989,10 @@ COMPILE ~SibelNPC/resources/dialogues/ghost1.d~
 COMPILE ~SibelNPC/resources/dialogues/regi2.d~
 COMPILE ~SibelNPC/resources/dialogues/mess1.d~
 COMPILE ~SibelNPC/resources/dialogues/liia.d~
+COMPILE ~SibelNPC/resources/dialogues/merc1.d~
+COMPILE ~SibelNPC/resources/dialogues/leat2.d~
+COMPILE ~SibelNPC/resources/dialogues/andrias.d~
+COMPILE ~SibelNPC/resources/dialogues/virt2.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -947,6 +1023,7 @@ COMPILE ~SibelNPC/resources/scripts/S!samb04.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb05.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb06.baf~
 COMPILE ~SibelNPC/resources/scripts/S!samb07.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sandri.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scat.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scauld.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut01.baf~
@@ -962,6 +1039,9 @@ COMPILE ~SibelNPC/resources/scripts/S!scut10.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut11.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut12.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut13.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut14.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut15.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut16.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
@@ -975,16 +1055,24 @@ COMPILE ~SibelNPC/resources/scripts/S!showa.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sibel.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slamb.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sleat1.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sleat2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
+COMPILE ~SibelNPC/resources/scripts/S!spool1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sregi2.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sshad1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssmil.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssnake.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sspya.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sspyb.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sspyc.baf~
 COMPILE ~SibelNPC/resources/scripts/S!ssqui.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stran1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!svirt1.baf~
+COMPILE ~SibelNPC/resources/scripts/S!svirt2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
+EXTEND_BOTTOM ~AR0405.BCS~ ~SibelNPC/resources/scripts/AR0405.baf~
 EXTEND_BOTTOM ~AR0406.BCS~ ~SibelNPC/resources/scripts/AR0406.baf~
 EXTEND_BOTTOM ~AR0412.BCS~ ~SibelNPC/resources/scripts/AR0412.baf~
 EXTEND_BOTTOM ~AR0516.BCS~ ~SibelNPC/resources/scripts/AR0516.baf~
@@ -1076,6 +1164,7 @@ END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
 COPY ~SibelNPC/resources/bam/2102FP2.BAM~ ~override/2102FP2.BAM~
+COPY ~SibelNPC/resources/bam/S!flasin.bam~ ~override/S!flasin.bam~
 COPY ~SibelNPC/resources/bam/S!powdb.bam~ ~override/S!powdb.bam~
 COPY ~SibelNPC/resources/bam/S!powdc.bam~ ~override/S!powdc.bam~
 COPY ~SibelNPC/resources/bam/S!samul.bam~ ~override/S!samul.bam~
