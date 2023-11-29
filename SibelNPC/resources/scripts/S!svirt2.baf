@@ -31,6 +31,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("Iaprep","LOCALS",1)
+    SetGlobalTimer("pfmw","LOCALS",24)
     DisplayString(Myself,26328) // Chain Contingency
     ReallyForceSpellRES("SPWI807",Myself)
     ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
