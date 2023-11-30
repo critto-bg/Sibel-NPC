@@ -32,6 +32,18 @@ END
 
 IF
   Allegiance(Myself,ENEMY)
+  OR(2)
+    Detect([GOODCUTOFF])
+    Detect([PC])
+  Global("partyfled","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("partyfled","LOCALS",0)
+    Shout(ALERT)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
   Global("Iapcastts","GLOBAL",1)
 THEN
@@ -852,6 +864,63 @@ THEN
 END
 
 IF
+  !Detect([PC])
+  !Detect([GOODCUTOFF])
+  Global("partyfled","LOCALS",0)
+  Allegiance(Myself,ENEMY)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("chase","LOCALS",120)
+    SetGlobal("partyfled","LOCALS",1)
+END
+
+IF
+  !Detect([PC])
+  !Detect([GOODCUTOFF])
+  InMyArea(Player1)
+  Global("partyfled","LOCALS",1)
+  GlobalTimerNotExpired("chase","LOCALS")
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  InMyArea(Player1)
+  !Detect([PC])
+  !Detect([GOODCUTOFF])
+  GlobalTimerExpired("chase","LOCALS")
+  Global("partyfled","LOCALS",1)
+  Global("Prep","LOCALS",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",0)
+    SetGlobal("Iaprotection","LOCALS",0)
+    SetGlobal("Iainterrupt","LOCALS",0)
+    SetGlobal("Iagsilence","LOCALS",0)
+    SetGlobal("IaRemoveMagic","LOCALS",0)
+    SetGlobal("Iacomet","LOCALS",0)
+    SetGlobal("IaRcomettimer","LOCALS",0)
+    SetGlobal("Iapword","LOCALS",0)
+    SetGlobal("Iacontingency","LOCALS",0)
+    ReallyForceSpellRES("SPWII07",Myself)
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !StateCheck(Myself,STATE_HELPLESS)
+  !See([GOODCUTOFF])
+  Global("Prep","LOCALS",0)
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
   Allegiance(Myself,ENEMY)
   ActionListEmpty()
   See(SecondNearestEnemyOf(Myself))
@@ -898,13 +967,4 @@ IF
 THEN
   RESPONSE #100
     AttackOneRound(NearestEnemyOf(Myself))
-END
-
-IF
-  !Detect([PC])
-  !Detect([GOODCUTOFF])
-  InMyArea(Player1)
-THEN
-  RESPONSE #100
-    MoveToObject(Player1)
 END
