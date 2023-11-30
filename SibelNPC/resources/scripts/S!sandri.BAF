@@ -2,6 +2,7 @@ IF
   See(NearestEnemyOf(Myself))
   Global("Prep","LOCALS",0)
   Global("IaFightBegins","AR0404",1)
+  Global("IasLawrenceSaw","GLOBAL",1)
   !HPLT(Myself,1)
 THEN
   RESPONSE #100
@@ -10,6 +11,21 @@ THEN
     ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
     ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)
     ReallyForceSpell(Myself,WIZARD_SPELL_IMMUNITY_INVOCATION)
+END
+
+IF
+  See(NearestEnemyOf(Myself))
+  Global("Prep","LOCALS",0)
+  Global("IaFightBegins","AR0404",1)
+  Global("IasLawrenceSaw","GLOBAL",0)
+  !HPLT(Myself,1)
+THEN
+  RESPONSE #100
+    SetGlobal("Prep","LOCALS",1)
+    SetGlobalTimer("pfmw","LOCALS",24)
+    ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
+    ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)
+    ReallyForceSpell(Myself,WIZARD_SPELL_IMMUNITY_ABJURATION)
 END
 
 IF
