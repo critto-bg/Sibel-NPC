@@ -10,7 +10,15 @@ IF ~NumTimesTalkedTo(1)~ THEN BEGIN MoreEnemies
     DO ~SetGlobal("IasLawrenceSaw","GLOBAL",1)
         SetGlobal("IaFightBegins","AR0404",1)
         ActionOverride(Player1,ReallyForceSpellRES("SPINI84",Myself))
-        ActionOverride(Player1,ReallyForceSpellRES("SPWISH16",Myself))~
+        ActionOverride(Player1,ReallyForceSpellRES("SPINI86",Myself))
+        ActionOverride(Player1,ReallyForceSpellRES("SPWISH16",Myself))
+        ActionOverride(Player1,ReallyForceSpellRES("SPWISH12",Myself))
+        ActionOverride(Player1,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player2,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player3,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player4,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player5,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player6,ReallyForceSpellRES("SPWI611",Myself))~
     EXIT
 END
 

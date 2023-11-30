@@ -32,22 +32,12 @@ THEN
   RESPONSE #100
     SetGlobal("Iaprep","LOCALS",1)
     SetGlobalTimer("pfmw","LOCALS",24)
-    DisplayString(Myself,26328) // Chain Contingency
     ReallyForceSpellRES("SPWI807",Myself)
     ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
     ReallyForceSpell(Myself,WIZARD_SPELL_TURNING)
-END
-
-IF
-  See(NearestEnemyOf(Player1))
-  Global("SpellTrigger","LOCALS",0)
-THEN
-  RESPONSE #100
-    SetGlobal("SpellTrigger","LOCALS",1)
-    SetGlobalTimer("Iaspell","LOCALS",6)
-    DisplayString(Myself,39968) // Spell Trigger: Fired
     ReallyForceSpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
     ReallyForceSpell(Myself,WIZARD_GLOBE_OF_INVULNERABILITY)
+    ReallyForceSpell(Myself,WIZARD_SPELL_IMMUNITY_NECROMANCY)
     ReallyForceSpell(Myself,WIZARD_STONE_SKIN)
 END
 
@@ -106,16 +96,6 @@ THEN
   RESPONSE #100
     SetGlobalTimer("Iaspell","LOCALS",6)
     SpellNoDec(Myself,WIZARD_SPELL_IMMUNITY_NECROMANCY)
-END
-
-IF
-  CheckStatGT(Myself,0,AURACLEANSING)
-  See(NearestEnemyOf(Player1))
-  !HasBounceEffects(Myself)
-THEN
-  RESPONSE #100
-    SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Myself,WIZARD_SPELL_TURNING)
 END
 
 // Help Party now //
@@ -392,14 +372,66 @@ END
 IF
   CheckStatGT(Myself,0,AURACLEANSING)
   See(NearestEnemyOf(Player1))
+  !Race(LastSeenBy(Myself),GOLEM)
+  !Race(LastSeenBy(Myself),LICH)
+  !GlobalTimerNotExpired("Ianear","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaspell","LOCALS",6)
+    SetGlobalTimer("Ianear","LOCALS",1)
+    SpellNoDecRES("SPWII63",LastSeenBy(Myself))
+END
+
+IF
+  CheckStatGT(Myself,0,AURACLEANSING)
+  See(SecondNearestEnemyOf(Player1))
+  !Race(LastSeenBy(Myself),GOLEM)
+  !Race(LastSeenBy(Myself),LICH)
+  !GlobalTimerNotExpired("Ia2ndnear","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaspell","LOCALS",6)
+    SetGlobalTimer("Ia2ndnear","LOCALS",1)
+    SpellNoDecRES("SPWII63",LastSeenBy(Myself))
+END
+
+IF
+  CheckStatGT(Myself,0,AURACLEANSING)
+  See(ThirdNearestEnemyOf(Player1))
+  !Race(LastSeenBy(Myself),GOLEM)
+  !Race(LastSeenBy(Myself),LICH)
+  !GlobalTimerNotExpired("Ia3rdnear","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaspell","LOCALS",6)
+    SetGlobalTimer("Ia3rdnear","LOCALS",1)
+    SpellNoDecRES("SPWII63",LastSeenBy(Myself))
+END
+
+IF
+  CheckStatGT(Myself,0,AURACLEANSING)
+  See(FourthNearestEnemyOf(Player1))
+  !Race(LastSeenBy(Myself),GOLEM)
+  !Race(LastSeenBy(Myself),LICH)
+  !GlobalTimerNotExpired("Ia4thnear","LOCALS")
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaspell","LOCALS",6)
+    SetGlobalTimer("Ia4thnear","LOCALS",1)
+    SpellNoDecRES("SPWII63",LastSeenBy(Myself))
+END
+
+IF
+  CheckStatGT(Myself,0,AURACLEANSING)
+  See(NearestEnemyOf(Player1))
   Race(LastSeenBy(Myself),GOLEM)
   !GlobalTimerNotExpired("Ianearest","LOCALS")
 THEN
-  RESPONSE #50
+  RESPONSE #30
     SetGlobalTimer("Iaspell","LOCALS",6)
     SetGlobalTimer("Ianearest","LOCALS",1)
     SpellNoDecRES("SPWII63",LastSeenBy(Myself))
-  RESPONSE #50
+  RESPONSE #70
     SetGlobalTimer("Iaspell","LOCALS",6)
     SpellNoDecRES("SPWI413",LastSeenBy(Myself))
 END
@@ -410,11 +442,11 @@ IF
   Race(LastSeenBy(Myself),GOLEM)
   !GlobalTimerNotExpired("Ia2ndnearest","LOCALS")
 THEN
-  RESPONSE #50
+  RESPONSE #30
     SetGlobalTimer("Iaspell","LOCALS",6)
     SetGlobalTimer("Ia2ndnearest","LOCALS",1)
     SpellNoDecRES("SPWII63",LastSeenBy(Myself))
-  RESPONSE #50
+  RESPONSE #70
     SetGlobalTimer("Iaspell","LOCALS",6)
     SpellNoDecRES("SPWI413",LastSeenBy(Myself))
 END
@@ -425,26 +457,13 @@ IF
   Race(LastSeenBy(Myself),GOLEM)
   !GlobalTimerNotExpired("Ia3rdnearest","LOCALS")
 THEN
-  RESPONSE #50
+  RESPONSE #30
     SetGlobalTimer("Iaspell","LOCALS",6)
     SetGlobalTimer("Ia3rdnearest","LOCALS",1)
     SpellNoDecRES("SPWII63",LastSeenBy(Myself))
-  RESPONSE #50
+  RESPONSE #70
     SetGlobalTimer("Iaspell","LOCALS",6)
     SpellNoDecRES("SPWI413",LastSeenBy(Myself))
-END
-
-IF
-  CheckStatGT(Myself,0,AURACLEANSING)
-  See(NearestEnemyOf(Player1))
-  !Race(LastSeenBy(Myself),GOLEM)
-  !Race(LastSeenBy(Myself),LICH)
-  !GlobalTimerNotExpired("Ianear","LOCALS")
-THEN
-  RESPONSE #100
-    SetGlobalTimer("Iaspell","LOCALS",6)
-    SetGlobalTimer("Ianear","LOCALS",1)
-    SpellNoDecRES("SPWII63",LastSeenBy(Myself))
 END
 
 IF
