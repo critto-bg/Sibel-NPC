@@ -15,15 +15,14 @@ THEN
 
     CreateCreature("S!sgamb2",[2230.2562],0)
     CreateCreature("S!sgamb2",[2190.2532],0)
-    CreateCreature("S!sgamb2",[1977.2573],0)
     CreateCreature("S!sgamb2",[2012.2553],0)
 
-    JumpToPoint([2215.2703])
-    ActionOverride(Player2,JumpToPoint([2232.2729]))
-    ActionOverride(Player3,JumpToPoint([2262.2682]))
-    ActionOverride(Player4,JumpToPoint([2151.2718]))
-    ActionOverride(Player5,JumpToPoint([2215.2646]))
-    ActionOverride(Player6,JumpToPoint([2170.2676]))
+    JumpToPoint([2132.2716])
+    ActionOverride(Player2,JumpToPoint([2071.2685]))
+    ActionOverride(Player3,JumpToPoint([2099.2741]))
+    ActionOverride(Player4,JumpToPoint([2039.2708]))
+    ActionOverride(Player5,JumpToPoint([2069.2763]))
+    ActionOverride(Player6,JumpToPoint([2012.2734]))
 
     Wait(1)
 

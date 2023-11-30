@@ -9,14 +9,13 @@ THEN
     MoveViewObject(Player1,INSTANT)
     Wait(1)
     CreateCreatureDoor("S!sgamb3",[2289.2695],0)
-    CreateCreatureDoor("S!sgamb3",[2215.2738],0)
     Wait(5)
 
     MoveViewObject("S!svirt2",VERY_FAST)
     Wait(3)
 
     CreateCreatureDoor("S!sshad2",[1973.2514],0)
-    CreateCreatureDoor("S!sshad3",[1934.2536],0)
+    CreateCreatureDoor("S!sshad3",[1920.2532],0)
     Wait(5)
 
     MoveViewObject(Player1,VERY_FAST)
