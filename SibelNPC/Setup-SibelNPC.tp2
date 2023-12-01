@@ -280,6 +280,12 @@ COPY ~SibelNPC/resources/items/S!smisc4.itm~ ~override/S!smisc4.itm~
   SAY UNIDENTIFIED_DESC @614
   SAY DESC @614
 
+COPY ~SibelNPC/resources/items/S!smisc5.itm~ ~override/S!smisc5.itm~
+  SAY NAME1 @615
+  SAY NAME2 @615
+  SAY UNIDENTIFIED_DESC @616
+  SAY DESC @616
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 // classic ToB only
@@ -684,6 +690,13 @@ COPY ~SibelNPC/resources/creatures/S!smerc1.cre~ ~override/S!smerc1.cre~
 
   WRITE_ASCII 0x02cc ~S!smerc1~ #8 // dialog
 
+COPY ~SibelNPC/resources/creatures/S!swish1.cre~ ~override/S!swish1.cre~
+  SAY NAME1 @55
+  SAY NAME2 @55
+
+  WRITE_ASCII 0x0248 ~S!swish1~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!swish1~ #8 // dialog
+
 COPY ~SibelNPC/resources/creatures/S!sspya.cre~ ~override/S!sspya.cre~
   WRITE_ASCII 0x0248 ~S!sspya~ #8 // override script
 
@@ -877,6 +890,30 @@ COPY ~SibelNPC/resources/spells/spini85.spl~ ~override/spini85.spl~
   SAY NAME1 @704
   SAY NAME2 @704
 
+COPY ~SibelNPC/resources/spells/S!sfla01.spl~ ~override/S!sfla01.spl~
+  SAY NAME1 @705
+  SAY NAME2 @705
+
+COPY ~SibelNPC/resources/spells/S!sfla02.spl~ ~override/S!sfla02.spl~
+  SAY NAME1 @706
+  SAY NAME2 @706
+
+COPY ~SibelNPC/resources/spells/S!sfla03.spl~ ~override/S!sfla03.spl~
+  SAY NAME1 @707
+  SAY NAME2 @707
+
+COPY ~SibelNPC/resources/spells/S!sfla04.spl~ ~override/S!sfla04.spl~
+  SAY NAME1 @708
+  SAY NAME2 @708
+
+COPY ~SibelNPC/resources/spells/S!sfla05.spl~ ~override/S!sfla05.spl~
+  SAY NAME1 @709
+  SAY NAME2 @709
+
+COPY ~SibelNPC/resources/spells/S!sfla06.spl~ ~override/S!sfla06.spl~
+  SAY NAME1 @710
+  SAY NAME2 @710
+
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
 
@@ -885,6 +922,8 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 COPY ~SibelNPC/resources/effects/S!shorn.eff~ ~override/S!shorn.eff~
 
 COPY ~SibelNPC/resources/effects/S!shorn2.eff~ ~override/S!shorn2.eff~
+
+COPY ~SibelNPC/resources/effects/S!swish1.eff~ ~override/S!swish1.eff~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -999,6 +1038,7 @@ COMPILE ~SibelNPC/resources/dialogues/merc1.d~
 COMPILE ~SibelNPC/resources/dialogues/leat2.d~
 COMPILE ~SibelNPC/resources/dialogues/andrias.d~
 COMPILE ~SibelNPC/resources/dialogues/virt2.d~
+COMPILE ~SibelNPC/resources/dialogues/wish1.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -1076,6 +1116,7 @@ COMPILE ~SibelNPC/resources/scripts/S!stran1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!stree.baf~
 COMPILE ~SibelNPC/resources/scripts/S!svirt1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!svirt2.baf~
+COMPILE ~SibelNPC/resources/scripts/S!swish1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!szoe.baf~
 
 EXTEND_BOTTOM ~AR0405.BCS~ ~SibelNPC/resources/scripts/AR0405.baf~

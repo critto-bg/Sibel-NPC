@@ -48,6 +48,7 @@
 @52 = ~Andrias Amberville~
 @53 = ~Shade Lich~
 @54 = ~Merchant~
+@55 = ~Greater Djinni~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -840,6 +841,10 @@ Not Usable By:
 @614 = ~Empty Flask of Andrias Amberville
 
 This flask radiates strong magic even though it is empty now. The Ambervilles may have used it to seal the sewers beneath Copper Coronet in preparation of their trap.~
+@615 = ~Flask of Greater Wish~
+@616 = ~Flask of Greater Wish
+
+This flask radiates strong magic. It can be used to cast Greater Wish three times.~
 
 @700 = ~Greater Restoration
 (Necromancy)
@@ -857,6 +862,12 @@ When this spell is cast, the life energy level of the recipient is raised. This 
 @702 = ~Mnemosyne's Crushing Hand~
 @703 = ~Mnemosyne's Blessing~
 @704 = ~Universal Protection From Energy~
+@705 = ~Greater Wish: Max HP~
+@706 = ~Greater Wish: Magic Damage Resistance~
+@707 = ~Greater Wish: Dexterity~
+@708 = ~Greater Wish: Electrical Discharge Immunity~
+@709 = ~Greater Wish: Critical Strike~
+@710 = ~Greater Wish: Regeneration~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]

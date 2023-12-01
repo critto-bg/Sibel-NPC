@@ -127,6 +127,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What could be done with these potent gauntlets of Ogre Power?~
     GOTO Grandlord
 
+  // flask of greater wish
+  IF ~PartyHasItem("S!smisc4")~ THEN
+    REPLY ~What do you make of this mysterious flask?~
+    GOTO Flask
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -473,6 +478,24 @@ IF ~~ THEN BEGIN Grandlord
         TakePartyItemNum("brac20",1) DestroyItem("brac20")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sbrac1",Player1,1,1,1)
+        CreateVisualEffect("spcrtwpn",[655.220])~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Flask
+  SAY ~I may know a way to bind a powerful magic spell to this artefact. But the final result may be upredictable. Bring me a scroll of Wish, a chunk of Reinforced Amber and a Manual of Elaboration. The price is 50000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!smisc4") PartyHasItem("SCRLB4") PartyHasItem("S!misc06") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!smisc4",1) DestroyItem("S!smisc4")
+        TakePartyItemNum("SCRLB4",1) DestroyItem("SCRLB4")
+        TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!smisc5",Player1,3,0,0)
         CreateVisualEffect("spcrtwpn",[655.220])~
     EXIT
 END
