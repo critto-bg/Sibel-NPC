@@ -274,6 +274,7 @@ IF
   InMyArea(Player1)
   Dead("S!Sibel")
   GlobalGT("IaAndriasPlot","GLOBAL",5)
+  GlobalLT("IaAndriasPlot","GLOBAL",9)
   Global("IaKillP1","AR0404",0)
 THEN
   RESPONSE #100
