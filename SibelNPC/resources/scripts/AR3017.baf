@@ -1,3 +1,103 @@
+// door opener //
+
+IF
+  OpenState("DOOR01",TRUE)
+  Global("Door01Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Door01Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR01",FALSE)
+  Global("Door01Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR01")
+END
+
+IF
+  OpenState("DOOR02",TRUE)
+  Global("DOOR02Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DOOR02Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR02",FALSE)
+  Global("DOOR02Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR02")
+END
+
+IF
+  OpenState("DOOR03",TRUE)
+  Global("DOOR03Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DOOR03Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR03",FALSE)
+  Global("DOOR03Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR03")
+END
+
+IF
+  OpenState("DOOR04",TRUE)
+  Global("DOOR04Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DOOR04Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR04",FALSE)
+  Global("DOOR04Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR04")
+END
+
+IF
+  OpenState("DOOR05",TRUE)
+  Global("DOOR05Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DOOR05Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR05",FALSE)
+  Global("DOOR05Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR05")
+END
+
+IF
+  OpenState("DOOR06",TRUE)
+  Global("DOOR06Opened","AR3017",0)
+THEN
+  RESPONSE #100
+    SetGlobal("DOOR06Opened","AR3017",1)
+END
+
+IF
+  OpenState("DOOR06",FALSE)
+  Global("DOOR06Opened","AR3017",1)
+THEN
+  RESPONSE #100
+    OpenDoor("DOOR06")
+END
+
+// sibel stuff //
+
 IF
   Global("IaSibelGift","AR3017",0)
   OR(3)
@@ -18,7 +118,7 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelGift","AR3017",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Container 2",CreateItem("S!sglo01",0,0,0))
+    ActionOverride("Container 16",CreateItem("S!sglo01",0,0,0))
 END
 
 IF
@@ -29,7 +129,7 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelGift","AR3017",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Container 2",CreateItem("S!sglo02",0,0,0))
+    ActionOverride("Container 16",CreateItem("S!sglo02",0,0,0))
 END
 
 IF
@@ -40,7 +140,7 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelGift","AR3017",1)
     SetGlobal("IaSGiftPlace","GLOBAL",6)
-    ActionOverride("Container 2",CreateItem("S!sglo03",0,0,0))
+    ActionOverride("Container 16",CreateItem("S!sglo03",0,0,0))
 END
 
 IF
