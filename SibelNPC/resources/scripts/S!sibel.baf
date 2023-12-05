@@ -291,7 +291,6 @@ THEN
   RESPONSE #100
     SetInterrupt(FALSE)
     SetGlobal("IaSibelAmberAmbush","GLOBAL",8)
-    SmallWait(15)
     CreateCreatureObject("S!samb03",Player1,0,0,0) // Amber Golem
     CreateCreatureObject("S!samb04",Player1,0,0,0) // Mage
     CreateCreatureObject("S!samb05","S!sibel",0,0,0) // Berserker
@@ -526,7 +525,6 @@ THEN
     SetGlobal("IaMessenger","LOCALS",1)
     SetInterrupt(FALSE)
     CreateCreatureObject("S!smess1",Myself,0,0,0)
-    SmallWait(15)
     ActionOverride("S!smess1",StartDialogueNoSet(Player1))
     SetInterrupt(TRUE)
 END
@@ -558,7 +556,6 @@ THEN
     SetGlobal("IaMerchant","LOCALS",1)
     SetInterrupt(FALSE)
     CreateCreatureObject("S!smerc1",Myself,0,0,0)
-    SmallWait(15)
     ActionOverride("S!smerc1",StartDialogueNoSet(Player1))
     SetInterrupt(TRUE)
 END
