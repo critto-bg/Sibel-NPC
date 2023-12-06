@@ -286,6 +286,12 @@ COPY ~SibelNPC/resources/items/S!smisc5.itm~ ~override/S!smisc5.itm~
   SAY UNIDENTIFIED_DESC @616
   SAY DESC @616
 
+COPY ~SibelNPC/resources/items/S!sblu05.itm~ ~override/S!sblu05.itm~
+  SAY NAME2 @504
+  SAY DESC @617
+
+  WRITE_ASCII 0x3a ~S!scluin~ #8 // inventory icon
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 // classic ToB only

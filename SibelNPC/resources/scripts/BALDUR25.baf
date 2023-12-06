@@ -306,7 +306,7 @@ THEN
     GiveItemCreate("S!sblu01",Player1,1,1,1)
 END
 
-// King of Clubs //
+// King of Clubs (clerical version) //
 
 IF
   HasItemEquiped("S!sblu02",Player1)
@@ -381,6 +381,83 @@ THEN
     DestroyItem("S!sblu02")
     Wait(2)
     GiveItemCreate("S!sblu02",Player1,1,1,1)
+END
+
+// King of Clubs (figher version) //
+
+IF
+  HasItemEquiped("S!sblu05",Player1)
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu05",Player2)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu05","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu05",Player3)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu05","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu05",Player4)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu05","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu05",Player5)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu05","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
+END
+
+IF
+  HasItemEquiped("S!sblu05",Player6)
+  OR(2)
+    !InPartyAllowDead("S!sibel")
+    !HasItemEquiped("S!sblu05","S!sibel")
+THEN
+  RESPONSE #100
+    TakePartyItem("S!sblu05")
+    DestroyItem("S!sblu05")
+    Wait(2)
+    GiveItemCreate("S!sblu05",Player1,1,1,1)
 END
 
 // Howard's Gift (version 1) //

@@ -845,6 +845,29 @@ This flask radiates strong magic even though it is empty now. The Ambervilles ma
 @616 = ~Flask of Greater Wish
 
 This flask radiates strong magic. It can be used to cast Greater Wish three times.~
+@617 = ~King of Clubs
+
+This ancient club was crafted from the wood of the ancient Elm tree. The weapon grew more powerful after Sibel had performed an act of restoration on the Elm tree.
+
+STATISTICS
+
+Equipped Abilities:
+- +20 Max HP
+
+Special Abilities:
+- 10% chance per successful hit to cast Iron Skins spell on the wielder
+- 10% chance per successful hit to cast Mass Cure Spell on the wielder
+
+Enchanthment: +5
+THAC0: +4 bonus
+Damage: 4D6 + 4
+Damage type: crushing
+Weight: 1
+Speed Factor: 1
+Proficiency Type: Club
+
+Usable By:
+ Sibel~
 
 @700 = ~Greater Restoration
 (Necromancy)
