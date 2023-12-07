@@ -25,6 +25,15 @@ APPEND ~pdialog.2da~
 COPY ~SibelNPC/resources/2da/S!sitems.2da~ ~override/S!sitems.2da~
 
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/2da/lucl0.2da~ ~override/lucl0.2da~
+  COPY ~SibelNPC/resources/2da/lucl1.2da~ ~override/lucl1.2da~
+  COPY ~SibelNPC/resources/2da/lucl2.2da~ ~override/lucl2.2da~
+  COPY ~SibelNPC/resources/2da/lucl3.2da~ ~override/lucl3.2da~
+  COPY ~SibelNPC/resources/2da/ludr0.2da~ ~override/ludr0.2da~
+  COPY ~SibelNPC/resources/2da/ludr1.2da~ ~override/ludr1.2da~
+  COPY ~SibelNPC/resources/2da/ludr2.2da~ ~override/ludr2.2da~
+  COPY ~SibelNPC/resources/2da/ludr3.2da~ ~override/ludr3.2da~
+
   COPY_EXISTING ~wish.2da~  ~override/wish.2da~
     REPLACE_TEXTUALLY ~23.+23.+23.+22~ ~23 23 23 25~
     REPLACE_TEXTUALLY ~27.+27.+22~ ~27 27 18~
@@ -936,6 +945,13 @@ COPY ~SibelNPC/resources/spells/S!sfla06.spl~ ~override/S!sfla06.spl~
 COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
   SAY UNIDENTIFIED_DESC @700
 
+// classic ToB only
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/spells/spcli22.spl~ ~override/SPCLI22.SPL~
+    SAY NAME1 @711
+    SAY UNIDENTIFIED_DESC @712
+END
+
 /* effects */
 
 COPY ~SibelNPC/resources/effects/S!shorn.eff~ ~override/S!shorn.eff~
@@ -1234,6 +1250,8 @@ END
 ELSE BEGIN
   COPY ~SibelNPC/resources/portraits/ElowenS.BMP~ ~override/ElowenS.bmp~
   COPY ~SibelNPC/resources/portraits/VirtusS.BMP~ ~override/VirtusS.bmp~
+
+  COPY ~SibelNPC/resources/bam/spcli22b.bam~ ~override/spcli22b.bam~
 END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~

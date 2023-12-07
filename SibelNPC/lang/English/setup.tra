@@ -874,7 +874,7 @@ Usable By:
 
 Level: 7
 Sphere: Necromantic
-Range: Touch
+Range: Special
 Duration: Permanent
 Casting Time: 3
 Area of Effect: Caster's Party
@@ -891,6 +891,17 @@ When this spell is cast, the life energy level of the recipient is raised. This 
 @708 = ~Greater Wish: Electrical Discharge Immunity~
 @709 = ~Greater Wish: Critical Strike~
 @710 = ~Greater Wish: Regeneration~
+@711 = ~Word of Wisdom~
+@712 = ~Word of Wisdom
+
+Level: Quest
+Range: Special
+Duration: Permanent
+Casting Time: 0
+Area of Effect: Caster's Party
+Saving Throw: None
+
+This powerful incantation negates confusion, stun, feeblemindedness and most of the other disabling effects from its recipient. It also reverses any previous life energy level drain of the creature by a force or monster.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
