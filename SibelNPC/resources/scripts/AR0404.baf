@@ -318,7 +318,6 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaAndriasPlot","GLOBAL",8)
-    Wait(3)
     ClearAllActions()
     StartCutSceneMode()
     StartCutScene("S!scut14")
