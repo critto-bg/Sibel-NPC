@@ -49,6 +49,8 @@
 @53 = ~Shade Lich~
 @54 = ~Merchant~
 @55 = ~Greater Djinni~
+@56 = ~Archdeva~
+@57 = ~Fallen Archdeva~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -902,6 +904,30 @@ Area of Effect: Caster's Party
 Saving Throw: None
 
 This powerful incantation negates confusion, stun, feeblemindedness and most of the other disabling effects from its recipient. It also reverses any previous life energy level drain of the creature by a force or monster.~
+@713 = ~Summon Archdeva~
+@714 = ~Summon Archdeva
+
+(Conjuration/Summoning)
+Level: Quest
+Range: 40 yards
+Duration: 20 rounds
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens a celestial gate and calls forth a powerful archdeva to fight at the caster's side until the spell expires or the archdeva's earthly avatar is slain.~
+@715 = ~Summon Fallen Archdeva~
+@716 = ~Summon Fallen Archdeva
+
+(Conjuration/Summoning)
+Level: Quest
+Range: 40 yards
+Duration: 20 rounds
+Casting Time: 5
+Area of Effect: Special
+Saving Throw: None
+
+This spell opens an abyssal gate and calls forth a powerful demonic archdeva to fight at the caster's side until the spell expires or the archdeva's earthly avatar is slain.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
