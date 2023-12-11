@@ -960,6 +960,8 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/spells/spcli10.spl~ ~override/SPCLI10.SPL~
+
   COPY ~SibelNPC/resources/spells/spcli22.spl~ ~override/SPCLI22.SPL~
     SAY NAME1 @711
     SAY UNIDENTIFIED_DESC @712
