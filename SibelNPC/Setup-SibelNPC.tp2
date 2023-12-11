@@ -1123,6 +1123,12 @@ REPLACE_SAY ~IASHADOS~ 4 @1215
 >>>>>>>>
 
   COMPILE ~.../inlined/IASHADOS-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
+
+<<<<<<<< .../inlined/IAMORID2-fix.d
+REPLACE_SAY ~IAMORID2~ 26 @1216
+>>>>>>>>
+
+  COMPILE ~.../inlined/IAMORID2-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
 END
 
 /* scripts */
