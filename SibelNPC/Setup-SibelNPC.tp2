@@ -903,6 +903,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~S!spideq.cre~ ~override/S!spideq.cre~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
+
+  COPY_EXISTING ~S!vipe1.cre~ ~override/S!vipe1.cre~
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~
 END
 
 /* spells */
