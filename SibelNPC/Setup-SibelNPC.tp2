@@ -1210,6 +1210,7 @@ EXTEND_BOTTOM ~AR1600.BCS~ ~SibelNPC/resources/scripts/AR1600.baf~
 EXTEND_BOTTOM ~AR2100.BCS~ ~SibelNPC/resources/scripts/AR2100.baf~
 EXTEND_BOTTOM ~AR2209.BCS~ ~SibelNPC/resources/scripts/AR2209.baf~
 EXTEND_BOTTOM ~AR2808.BCS~ ~SibelNPC/resources/scripts/AR2808.baf~
+EXTEND_BOTTOM ~AR2811.BCS~ ~SibelNPC/resources/scripts/AR2811.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
 EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
 EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
