@@ -965,6 +965,8 @@ COPY_EXISTING ~SPPR713.spl~ ~override/SPPR713.spl~
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/spells/spcli10.spl~ ~override/SPCLI10.SPL~
 
+  COPY ~SibelNPC/resources/spells/spwi310.spl~ ~override/SPWI310.SPL~
+
   COPY ~SibelNPC/resources/spells/spcli22.spl~ ~override/SPCLI22.SPL~
     SAY NAME1 @711
     SAY UNIDENTIFIED_DESC @712
@@ -976,6 +978,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/spells/spcli24.spl~ ~override/SPCLI24.SPL~
     SAY NAME1 @715
     SAY UNIDENTIFIED_DESC @716
+
+  COPY ~SibelNPC/resources/spells/spcli25.spl~ ~override/SPCLI25.SPL~
+    SAY NAME1 @717
+    SAY UNIDENTIFIED_DESC @718
 
   // Stoneskin
   COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
@@ -1292,6 +1298,7 @@ ELSE BEGIN
 
   COPY ~SibelNPC/resources/bam/spcli22b.bam~ ~override/spcli22b.bam~
   COPY ~SibelNPC/resources/bam/spcli23b.bam~ ~override/spcli23b.bam~
+  COPY ~SibelNPC/resources/bam/spcli25b.bam~ ~override/spcli25b.bam~
 END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
@@ -1635,6 +1642,12 @@ COPY ~SibelNPC/resources/audio/SS_2100K.wav~ ~override~
 COPY ~SibelNPC/resources/audio/SS_2100M.wav~ ~override~
 COPY ~SibelNPC/resources/audio/SS_2100O.wav~ ~override~
 COPY ~SibelNPC/resources/audio/SS_2100P.wav~ ~override~
+
+/* strings */
+
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  STRING_SET ~17422~ @717
+END
 
 /* EE extras as a separate component */
 
