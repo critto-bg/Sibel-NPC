@@ -1258,6 +1258,13 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 
+  COPY_EXISTING ~s!hlcler.bcs~ ~override/s!hlcler.bcs~
+                ~s!hlstal.bcs~ ~override/s!hlstal.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~ReallyForceSpell(Myself,CLERIC_SUMMON_FALLEN_DEVA)~ ~ReallyForceSpellRES("SPCLI24",Myself)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
 <<<<<<<< .../inlined/old.baf
 IF
 	Dead("c6bodhi")
