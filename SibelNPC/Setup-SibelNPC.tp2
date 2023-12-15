@@ -1239,8 +1239,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~C6ERIC.BCS~ ~SibelNPC/resources/scripts/C6ERIC.baf~
   EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
   EXTEND_TOP ~OBSHAL02.BCS~ ~SibelNPC/resources/scripts/OBSHAL02.baf~
+  EXTEND_TOP ~OBSDEM01.BCS~ ~SibelNPC/resources/scripts/OBSDEM01.baf~
   EXTEND_TOP ~SUMDJ01.BCS~ ~SibelNPC/resources/scripts/SUMDJ01.baf~
   EXTEND_TOP ~S!dracol.bcs~ ~SibelNPC/resources/scripts/S!dracol.baf~
+  EXTEND_TOP ~S!FORCE2.bcs~ ~SibelNPC/resources/scripts/S!FORCE2.baf~
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0300.BCS~ ~SibelNPC/resources/scripts/AR0300.baf~
@@ -1286,6 +1288,12 @@ END
 
   COPY_EXISTING ~C6ARKAN.BCS~ ~override/C6ARKAN.bcs~
     REPLACE_BCS_BLOCK ~.../inlined/old.baf~ ~.../inlined/new.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!BALOR2.BCS~ ~override/S!BALOR2.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SPWII01~ ~SPWI418~
+    COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
 
