@@ -147,7 +147,7 @@ IF ~~ THEN BEGIN Chunk
         TakePartyItemNum("S!misc27",2) DestroyItem("S!misc27")
                                        DestroyItem("S!misc27")
         GiveItemCreate("S!sramb",Player1,0,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -166,7 +166,7 @@ IF ~~ THEN BEGIN AmberAmulet
         TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         GiveItemCreate("S!sgamul",Player1,0,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -184,7 +184,7 @@ IF ~~ THEN BEGIN BarbDream
         TakePartyItemNum("POTN33",1) DestroyItem("POTN33")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!schan1",Player1,0,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -203,7 +203,7 @@ IF ~~ THEN BEGIN FullPlate
         TakePartyItemNum("POTN37",1) DestroyItem("POTN37")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!splat1",Player1,0,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -220,7 +220,7 @@ IF ~~ THEN BEGIN Ultimate
         TakePartyItemNum("S!plat06",1) DestroyItem("S!plat06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!splat2",Player1,0,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -236,7 +236,7 @@ IF ~~ THEN BEGIN Horn
         TakePartyItemNum("S!misc10",1) DestroyItem("S!misc10")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shorn",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -255,7 +255,7 @@ IF ~~ THEN BEGIN Balduran
         TakePartyItemNum("helm04",1) DestroyItem("helm04")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shelm1",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -272,7 +272,7 @@ IF ~~ THEN BEGIN Balduran2
         TakePartyItemNum("S!helm02",1) DestroyItem("S!helm02")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shelm1",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -303,7 +303,7 @@ IF ~~ THEN BEGIN Damascus2
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!ssw01",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -320,7 +320,7 @@ IF ~~ THEN BEGIN StrStaff
         TakePartyItemNum("SHLD22",1) DestroyItem("SHLD22")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sstaf1",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -337,7 +337,7 @@ IF ~~ THEN BEGIN Rimed
         TakePartyItemNum("BLUN35",1) DestroyItem("BLUN35")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sblu03",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -354,7 +354,7 @@ IF ~~ THEN BEGIN Ioun
         TakePartyItemNum("S!smisc2",1) DestroyItem("S!smisc2")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sioun2",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -373,7 +373,7 @@ IF ~~ THEN BEGIN Roses
         TakePartyItemNum("S!misc21",1) DestroyItem("S!misc21")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!ssw02",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -391,7 +391,7 @@ IF ~~ THEN BEGIN Majestic
         TakePartyItemNum("ring07",1) DestroyItem("ring07")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sbel01",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -410,7 +410,7 @@ IF ~~ THEN BEGIN Phosphorus
         TakePartyItemNum("S!smisc3",1) DestroyItem("S!smisc3")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sblu04",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -428,7 +428,7 @@ IF ~~ THEN BEGIN Fruitful
         TakePartyItemNum("RING07",1) DestroyItem("RING07")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!srin01",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -446,7 +446,7 @@ IF ~~ THEN BEGIN Horn2
         TakePartyItemNum("MISC3D",1) DestroyItem("MISC3D")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shorn2",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -478,7 +478,7 @@ IF ~~ THEN BEGIN Grandlord
         TakePartyItemNum("brac20",1) DestroyItem("brac20")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sbrac1",Player1,1,1,1)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
 
@@ -496,6 +496,6 @@ IF ~~ THEN BEGIN Flask
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!smisc5",Player1,3,0,0)
-        CreateVisualEffect("spcrtwpn",[655.220])~
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
