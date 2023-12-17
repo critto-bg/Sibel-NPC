@@ -19,7 +19,7 @@ APPEND ~mastarea.2da~ ~ARia28     value~
   UNLESS ~ARia28~
 
 APPEND ~pdialog.2da~
-  ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!Sib25P S!Sib25J S!Sib25D S!Sibe25~
+  ~S!SIBEL S!SibelP S!SibelJ S!SibelD S!SibelP S!SibelJ S!Sib25D S!Sibel~
   UNLESS ~S!SIBEL~
 
 COPY ~SibelNPC/resources/2da/S!sitems.2da~ ~override/S!sitems.2da~
