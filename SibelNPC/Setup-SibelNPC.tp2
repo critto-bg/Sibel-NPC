@@ -1113,6 +1113,7 @@ COMPILE ~SibelNPC/resources/dialogues/leat2.d~
 COMPILE ~SibelNPC/resources/dialogues/andrias.d~
 COMPILE ~SibelNPC/resources/dialogues/virt2.d~
 COMPILE ~SibelNPC/resources/dialogues/wish1.d~
+COMPILE ~SibelNPC/resources/dialogues/player1.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
