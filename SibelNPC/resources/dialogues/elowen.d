@@ -8,6 +8,14 @@ IF ~NumTimesTalkedTo(0) AreaCheck("AR0334")~ THEN BEGIN FirstMeetingSoA
   ++ ~Can you forge gear for us?~ + Specialty
 END
 
+IF ~NumTimesTalkedTo(0) AreaCheck("AR5003") Global("IaElowenCromwell","GLOBAL",0)~ THEN BEGIN FirstMeetingSaradush
+  SAY ~Greetings, adventurer! My name is Elowen. I am pleased to make your acquaintance, for I have just recently arrived to Saradush.~
+  = ~The tavern owner was kind in his hospitality, allowing me to guest in his quarters.~
+
+  ++ ~Are you a blacksmith?~ + Artificer
+  ++ ~Can you forge gear for us?~ + Specialty
+END
+
 IF ~~ THEN BEGIN Artificer
   SAY ~I am an artificer or an artisan. Whichever one you prefer, you may call me.~
 
@@ -19,6 +27,14 @@ IF ~~ THEN BEGIN Specialty
 
   ++ ~Do we have any items you can upgrade?~ + ItemList
   ++ ~Goodbye, lady Elowen.~ + Leave
+END
+
+IF ~NumTimesTalkedTo(0) AreaCheck("AR5003") Global("IaElowenCromwell","GLOBAL",1)~ THEN BEGIN MeetAgainSaradush
+  SAY ~Greetings, <CHARNAME>! You seem to go where the trouble is. Or is it the other way around, I wonder?~
+  = ~No matter. I am on commission with the city goverment, but I am happy to lend you my services, yet again.~
+
+  ++ ~It is a pleasure seeing you again. Do we have any items you can upgrade?~ + ItemList
+  ++ ~I am glad to meet you, lady Elowen. We'll come back when we've a need of your skill.~ + Leave
 END
 
 IF ~NumTimesTalkedToGT(0)~ THEN BEGIN MainMenu

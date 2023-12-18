@@ -1223,6 +1223,7 @@ EXTEND_BOTTOM ~AR2808.BCS~ ~SibelNPC/resources/scripts/AR2808.baf~
 EXTEND_BOTTOM ~AR2811.BCS~ ~SibelNPC/resources/scripts/AR2811.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
 EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
+EXTEND_BOTTOM ~AR5003.BCS~ ~SibelNPC/resources/scripts/AR5003.baf~
 EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
 EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
