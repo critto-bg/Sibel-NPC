@@ -138,6 +138,10 @@ IF ~~ THEN BEGIN WhereToGo
     REPLY ~I'll send you back to the pocket plane... wait there.~
     DO ~CreateVisualEffectObject("SPDIMNDR",Myself) Wait(2) MoveBetweenAreas("AR4500",[1510.1370],0)~
     GOTO SibelGoesToPocketPlane
+
+  IF ~~ THEN
+    REPLY ~I've changed my mind. Sibel, you should remain with us.~
+    DO ~SetGlobal("IaSibelJoined","LOCALS",1) JoinParty()~ EXIT
 END
 
 IF ~~ THEN BEGIN SibelStaysPut
