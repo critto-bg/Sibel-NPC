@@ -373,6 +373,7 @@ END
 /* copy creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
+     ~SibelNPC/resources/creatures/S!sibe25.cre~ ~override/S!sibe25.cre~
   SAY NAME1 @10
   SAY NAME2 @10
   SAY BIO @11
@@ -391,7 +392,6 @@ COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
 
   WRITE_ASCII 0x0248 ~S!SIBEL~ #8 // override script
   WRITE_ASCII 0x0280 ~S!SIBEL~ #32 // death variable
-  WRITE_ASCII 0x02cc ~S!SIBEL~ #8 // dialog
 
   SAY LEADER @1000
   SAY TIRED @1001
@@ -1114,6 +1114,8 @@ COMPILE ~SibelNPC/resources/dialogues/andrias.d~
 COMPILE ~SibelNPC/resources/dialogues/virt2.d~
 COMPILE ~SibelNPC/resources/dialogues/wish1.d~
 COMPILE ~SibelNPC/resources/dialogues/player1.d~
+COMPILE ~SibelNPC/resources/dialogues/fatesp.d~
+COMPILE ~SibelNPC/resources/dialogues/sibel25.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -1223,6 +1225,8 @@ EXTEND_BOTTOM ~AR2808.BCS~ ~SibelNPC/resources/scripts/AR2808.baf~
 EXTEND_BOTTOM ~AR2811.BCS~ ~SibelNPC/resources/scripts/AR2811.baf~
 EXTEND_BOTTOM ~AR3000.BCS~ ~SibelNPC/resources/scripts/AR3000.baf~
 EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
+EXTEND_BOTTOM ~AR4000.BCS~ ~SibelNPC/resources/scripts/AR4000.baf~
+EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500.baf~
 EXTEND_BOTTOM ~AR5003.BCS~ ~SibelNPC/resources/scripts/AR5003.baf~
 EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~

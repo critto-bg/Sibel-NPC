@@ -1,3 +1,26 @@
+/* ToB stuff */
+
+IF
+  AreaCheck("AR4500")  // Pocket Plane
+  GlobalGT("Iacreature","AR4500",0)  // Pocket Plane
+  GlobalGT("Iaepicbattle","AR4500",0)  // Pocket Plane
+  GlobalLT("Iaepicbattle","AR4500",3)  // Pocket Plane
+  !InPartyAllowDead(Myself)
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    DestroySelf()
+END
+
+IF
+  Global("IaSibelSummoned","GLOBAL",1)
+  Global("IaSibelSpawnPlane","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelSpawnPlane","GLOBAL",2)
+    StartDialogueNoSet(Player1)
+END
+
 /* personal quest */
 
 // this block moved to the top due to PartyRested()
