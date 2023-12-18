@@ -117,12 +117,27 @@ IF ~~ THEN BEGIN WhereToGo
       !AreaCheck("AR1301")  // De'Arnise Cellar
       !AreaCheck("AR1302")  // De'Arnise Keep 1st Floor
       !AreaCheck("AR1303")  // De'Arnise Keep 2nd Floor (Destroyed)
+
+      !AreaCheck("AR4000")  // Forest of Tethir
+      !AreaCheck("AR4500")  // Pocket Plane
+      !AreaCheck("AR6200")  // Throne of Bhaal
+
       !AmIInWatchersKeepPleaseIgnoreTheLackOfApostophe()~
     THEN REPLY ~Yes, we'll come back for you later.~ GOTO SibelStaysPut
 
-  IF ~!AreaCheck("AR0702")~ THEN
+  IF ~GlobalLT("Chapter","GLOBAL",8) !AreaCheck("AR0702")~ THEN
     REPLY ~No, you should go back to Adventurer's Mart. I will look for you there if I need your help again.~
     GOTO SibelGoesBack
+
+  IF ~GlobalGT("Chapter","GLOBAL",7) AreaCheck("AR4500")~ THEN
+    REPLY ~Yes, we'll come back for you later.~
+    DO ~MoveToPointNoInterrupt([1510.1370]) Face(0)~
+    GOTO SibelStaysPut
+
+  IF ~GlobalGT("Chapter","GLOBAL",7) !AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ THEN
+    REPLY ~I'll send you back to the pocket plane... wait there.~
+    DO ~CreateVisualEffectObject("SPDIMNDR",Myself) Wait(2) MoveBetweenAreas("AR4500",[1510.1370],0)~
+    GOTO SibelGoesToPocketPlane
 END
 
 IF ~~ THEN BEGIN SibelStaysPut
@@ -133,6 +148,11 @@ END
 IF ~~ THEN BEGIN SibelGoesBack
   SAY "As you wish, <CHARNAME>. Goodbye."
   IF ~~ THEN DO ~EscapeAreaMove("AR0702",755,335,3)~ EXIT
+END
+
+IF ~~ THEN BEGIN SibelGoesToPocketPlane
+  SAY "As you wish, <CHARNAME>."
+  IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN SayWelcome
