@@ -1,3 +1,22 @@
+// spawn boy messenger with the letter
+
+IF
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaSibelTalks","GLOBAL",7)
+  Global("IaSibelMessenger","GLOBAL",0)
+  GlobalTimerExpired("IaSibelMessTimer","GLOBAL")
+  CombatCounter(0)
+  !AreaType(DUNGEON)
+  !Global("Chapter","GLOBAL",5)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelMessenger","GLOBAL",1)
+    CreateCreatureObject("S!sboy01","S!sibel",0,0,0)
+    SmallWait(1)
+    ActionOverride("S!sboy01",StartDialogueNoSet(Player1))
+END
+
 // Arcanis Family Armor //
 
 IF
