@@ -870,6 +870,10 @@ Proficiency Type: Club
 
 Usable By:
  Sibel~
+@618 = ~Ultimate Horn of Valhalla~
+@619 = ~Ultimate Horn of Valhalla
+
+In the halls of Valhalla rest the most valiant of warriors. Their service to war during their lives has rewarded them with honored positions in Valhalla. As part of their service these warriors must offer their service to any who blow a horn of Valhalla. This horn will summon an improved hasted 21st level berserker warrior for 10 rounds. The warrior has 75% resistance to all damage types and 100% resistance to electricity. The warrior will not be considered a summoned creature and thus won't be affected by spells such as Death Fog and Death Spell. The horn may be used once per day.~
 
 @700 = ~Greater Restoration
 (Necromancy)

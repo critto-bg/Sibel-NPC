@@ -301,6 +301,10 @@ COPY ~SibelNPC/resources/items/S!sblu05.itm~ ~override/S!sblu05.itm~
 
   WRITE_ASCII 0x3a ~S!scluin~ #8 // inventory icon
 
+COPY ~SibelNPC/resources/items/S!shorn3.itm~ ~override/S!shorn3.itm~
+  SAY NAME2 @618
+  SAY DESC @619
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 // classic ToB only
@@ -602,6 +606,7 @@ COPY ~SibelNPC/resources/creatures/S!selow.cre~ ~override/S!selow.cre~
 
 COPY ~SibelNPC/resources/creatures/S!sbers.cre~ ~override/S!sbers.cre~
      ~SibelNPC/resources/creatures/S!sbers2.cre~ ~override/S!sbers2.cre~
+     ~SibelNPC/resources/creatures/S!sbers3.cre~ ~override/S!sbers3.cre~
   SAY NAME1 @38
   SAY NAME2 @38
 
@@ -1023,6 +1028,8 @@ END
 COPY ~SibelNPC/resources/effects/S!shorn.eff~ ~override/S!shorn.eff~
 
 COPY ~SibelNPC/resources/effects/S!shorn2.eff~ ~override/S!shorn2.eff~
+
+COPY ~SibelNPC/resources/effects/S!shorn3.eff~ ~override/S!shorn3.eff~
 
 COPY ~SibelNPC/resources/effects/S!swish1.eff~ ~override/S!swish1.eff~
 

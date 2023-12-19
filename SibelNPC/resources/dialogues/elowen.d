@@ -148,6 +148,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What do you make of this mysterious flask?~
     GOTO Flask
 
+  // ultimate horn
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!shorn2")~ THEN
+    REPLY ~Could you improve Reinforced Horn of Valhalla even further?~
+    GOTO Horn3
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -512,6 +517,23 @@ IF ~~ THEN BEGIN Flask
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!smisc5",Player1,3,0,0)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Horn3
+  SAY ~There is still more that we can accomplish with the horn. Bring me a single Chunk of Reinforced Amber and Shakti Figurine. The process will cost 50000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!shorn2") PartyHasItem("FIGURE01") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!shorn2",1) DestroyItem("S!shorn2")
+        TakePartyItemNum("FIGURE01",1) DestroyItem("FIGURE01")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!shorn3",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
