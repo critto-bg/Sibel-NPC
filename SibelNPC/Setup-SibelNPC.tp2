@@ -12,7 +12,7 @@ REQUIRE_FILE ~override/AMDK.2da~ @1
 /* tables */
 
 APPEND ~interdia.2da~
-  ~S!SIBEL S!SibelB S!SibB25~
+  ~S!SIBEL S!SibelB S!SibelB~
   UNLESS ~S!SIBEL~
 
 APPEND ~mastarea.2da~ ~ARia28     value~
