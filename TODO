@@ -1,24 +1,14 @@
 general:
 - readme
 - traify all dialogues
+- support for multiple languages
 - ship audio files and area tiles compressed, convert during installation
 
 Sibel:
-- 10th event
-- reputation reactivity
-    - does Sibel complain about low reputation and leave the party?
-- tree of life reactivity
+- final battle
 - ToB stuff
-    - summoning
-        - swash->cleric
-        - set IASJoinedToB
-    - ToB versions of joining, P, B and J scripts
-        - test if the same scripts could be used in tob
-        - research the role of the ToB override script
-    - set flags to force position of Howard's gift
     - add the 4th banter messenger to baldur25
-    - lady elowen moves to saradush and later amkethran
-      - set flag to initiate her appearance if the game has started in ToB
+    - lady elowen moves to amkethran
     - re-check and re-test conditions for banters and quest events
     - event 9
       - cutscenes in the taverns (AR5003 and AR5501) to meet Virtus
