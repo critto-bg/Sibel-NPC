@@ -305,6 +305,10 @@ COPY ~SibelNPC/resources/items/S!shorn3.itm~ ~override/S!shorn3.itm~
   SAY NAME2 @618
   SAY DESC @619
 
+COPY ~SibelNPC/resources/items/S!sioun3.itm~ ~override/S!sioun3.itm~
+  SAY NAME2 @620
+  SAY DESC @621
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 // classic ToB only

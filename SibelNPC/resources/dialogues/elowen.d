@@ -153,6 +153,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you improve Reinforced Horn of Valhalla even further?~
     GOTO Horn3
 
+  // reinforced indigo stone
+  IF ~PartyHasItem("S!helm01")~ THEN
+    REPLY ~Is there a way to improve this indigo ioun stone?~
+    GOTO Ioun2
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -534,6 +539,24 @@ IF ~~ THEN BEGIN Horn3
         TakePartyItemNum("FIGURE01",1) DestroyItem("FIGURE01")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!shorn3",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Ioun2
+  SAY ~I can imbue it with the power of two more lesser stones. Bring me Obsidian Ioun Stone, Lavender Ioun Stone and a single Chunk of Reinforced Amber. The price is 40000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!helm01") PartyHasItem("helm24") PartyHasItem("helm26") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!helm01",1) DestroyItem("S!helm01")
+        TakePartyItemNum("helm24",1) DestroyItem("helm24")
+        TakePartyItemNum("helm26",1) DestroyItem("helm26")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!sioun3",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
