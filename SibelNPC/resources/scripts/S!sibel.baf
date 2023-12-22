@@ -163,6 +163,8 @@ IF
   Global("IaSibelClericTalk","GLOBAL",0)
   Global("IaTreePlot","GLOBAL",6)
   Global("IaAmbervillePlot","GLOBAL",7)
+  !Global("IaSibelTalks","GLOBAL",4) // these two to make sure the 3rd banter does not start at the same time as the 2nd
+  !Global("IaSibelTalks","GLOBAL",5)
   Dead("S!samber")
   XPGT(Myself,1660000)
   Class(Myself,CLERIC_ALL)
@@ -191,6 +193,7 @@ IF
   Global("IaSibelTalks","GLOBAL",6)
   Global("IaTreePlot","GLOBAL",6)
   Global("IaAmbervillePlot","GLOBAL",7)
+  !Global("IaSibelClericTalk","GLOBAL",1) // to make sure the 4th banter does not start at the same time as the 3nd
   Dead("S!samber")
   XPGT(Myself,1810000)
   CombatCounter(0)
@@ -347,13 +350,12 @@ END
 
 /* eighth banter/event */
 
-// gift requested and found, one day has passed, party in SoA
+// gift requested and found, one day has passed
 IF
   InParty(Myself)
   See(Player1)
   Global("IaSibelTalks","GLOBAL",12)
   GlobalGT("Chapter","GLOBAL",5)
-  Global("IASJoinedToB","GLOBAL",0)
   OR(2)
     Global("IaSibelFamilyPath","GLOBAL",1)
     Global("IaSibelFamilyPath","GLOBAL",2)
@@ -382,7 +384,7 @@ THEN
     SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
 END
 
-// gift not requested, party in ToB, one day passed since banter #5
+// gift not requested, Sibel joined in ToB, one day passed since banter #5
 IF
   InParty(Myself)
   See(Player1)
@@ -519,6 +521,9 @@ IF
   GlobalTimerExpired("IaAmberAssaultTimer","GLOBAL")
   XPGT(Myself,3909999)
   ReputationGT(Player1,18)
+  OR(2)
+    Global("Chapter","GLOBAL",6)
+    Global("Chapter","GLOBAL",7)
 THEN
   RESPONSE #100
     SetGlobal("IaAmberPlot","GLOBAL",1)
