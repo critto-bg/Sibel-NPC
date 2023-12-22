@@ -959,6 +959,19 @@ Area of Effect: Special
 Saving Throw: None
 
 By using this ability, the caster employs his or hers high wisdom to outwit the enemies and make them falsely believe that their target has all the immunities of a Barbarian under rage effect for 10 rounds. The spell does not actually give any of those immunities, but the enemies will believe in their existence and won't target the cleric with any disabling spells, level draining or backstab attacks. However, if the cleric is caught in the area of effect of any such spell, he or she will be affected by the ill effects.~
+@719 = ~Continual Cure~
+@720 = ~Continual Cure
+(Necromancy)
+
+Level: 7
+Sphere: Healing
+Range: 0
+Duration: 10 rounds
+Casting time: 5
+Area of Effect: The caster
+Saving Throw: None
+
+Continual Cure is a significantly stronger version of the 5th level spell Cure Critical Wounds. It cures the cleric for 27 points of damage, and continues to do so every round of the spell's duration. The spell also cures effects of poison and disease, and removes fear each round as well.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]

@@ -1003,6 +1003,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY NAME1 @717
     SAY UNIDENTIFIED_DESC @718
 
+  COPY ~SibelNPC/resources/spells/SPPRI26.spl~ ~override/SPPRI26.spl~
+    SAY NAME1 @719
+    SAY UNIDENTIFIED_DESC @720
+
+  COPY ~SibelNPC/resources/spells/SPPRI26A.spl~ ~override/SPPRI26A.spl~
+
   // Stoneskin
   COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
     READ_LONG 0x64 headers_offset
@@ -1343,6 +1349,8 @@ ELSE BEGIN
   COPY ~SibelNPC/resources/bam/spcli22b.bam~ ~override/spcli22b.bam~
   COPY ~SibelNPC/resources/bam/spcli23b.bam~ ~override/spcli23b.bam~
   COPY ~SibelNPC/resources/bam/spcli25b.bam~ ~override/spcli25b.bam~
+  COPY ~SibelNPC/resources/bam/sppri26b.bam~ ~override/sppri26b.bam~
+  COPY ~SibelNPC/resources/bam/sppri26c.bam~ ~override/sppri26c.bam~
 END
 
 COPY ~SibelNPC/resources/bam/2102FP1.BAM~ ~override/2102FP1.BAM~
