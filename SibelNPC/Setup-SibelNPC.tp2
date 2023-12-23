@@ -29,10 +29,16 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/2da/lucl1.2da~ ~override/lucl1.2da~
   COPY ~SibelNPC/resources/2da/lucl2.2da~ ~override/lucl2.2da~
   COPY ~SibelNPC/resources/2da/lucl3.2da~ ~override/lucl3.2da~
+  COPY ~SibelNPC/resources/2da/lucm0.2da~ ~override/lucm0.2da~
+  COPY ~SibelNPC/resources/2da/lucr0.2da~ ~override/lucr0.2da~
+  COPY ~SibelNPC/resources/2da/luct0.2da~ ~override/luct0.2da~
   COPY ~SibelNPC/resources/2da/ludr0.2da~ ~override/ludr0.2da~
   COPY ~SibelNPC/resources/2da/ludr1.2da~ ~override/ludr1.2da~
   COPY ~SibelNPC/resources/2da/ludr2.2da~ ~override/ludr2.2da~
   COPY ~SibelNPC/resources/2da/ludr3.2da~ ~override/ludr3.2da~
+  COPY ~SibelNPC/resources/2da/lufc0.2da~ ~override/lufc0.2da~
+  COPY ~SibelNPC/resources/2da/lufd0.2da~ ~override/lufd0.2da~
+  COPY ~SibelNPC/resources/2da/lufmc.2da~ ~override/lufmc.2da~
 
   COPY_EXISTING ~wish.2da~  ~override/wish.2da~
     REPLACE_TEXTUALLY ~23.+23.+23.+22~ ~23 23 23 25~
