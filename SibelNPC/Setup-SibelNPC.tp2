@@ -1037,6 +1037,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
         END
       END
     END
+
+  COPY_EXISTING ~SPWISH10.spl~ ~override/SPWISH10.spl~
+    WRITE_BYTE 0x25 0 // Primary School
 END
 
 /* effects */
