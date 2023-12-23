@@ -1262,6 +1262,7 @@ EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
 EXTEND_BOTTOM ~AR4000.BCS~ ~SibelNPC/resources/scripts/AR4000.baf~
 EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500.baf~
 EXTEND_BOTTOM ~AR5003.BCS~ ~SibelNPC/resources/scripts/AR5003.baf~
+EXTEND_BOTTOM ~AR5501.BCS~ ~SibelNPC/resources/scripts/AR5501.baf~
 EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
 EXTEND_BOTTOM ~BALDUR25.BCS~ ~SibelNPC/resources/scripts/BALDUR25.baf~
@@ -1557,6 +1558,10 @@ COPY_EXISTING ~AR5503.are~ ~override/AR5503.are~
 COPY_EXISTING ~AR0404.are~ ~override/AR0404.are~
   READ_LONG  0xbc songs_offset
   WRITE_LONG (songs_offset + 0x0c) 57
+
+// Amkethran, Tavern
+COPY_EXISTING ~AR5501.are~ ~override/AR5501.are~
+  WRITE_ASCII 0x94 ~AR5501~ #8 // area script
 
 /* area resources */
 

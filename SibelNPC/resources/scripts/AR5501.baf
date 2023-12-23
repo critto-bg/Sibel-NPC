@@ -2,24 +2,23 @@ IF
   InMyArea(Player1)
   InPartyAllowDead("S!Sibel")
   GlobalLT("IaElowenCromwell","GLOBAL",2)
-  Global("IaElowenSaradush","GLOBAL",0)
+  GlobalLT("IaElowenSaradush","GLOBAL",2)
+  Global("IaElowenAmkethran","GLOBAL",0)
   OR(2)
     Global("IaSibelFamilyPath","GLOBAL",1)
     Global("IaSibelFamilyPath","GLOBAL",2)
 THEN
   RESPONSE #100
-    SetGlobal("IaElowenSaradush","GLOBAL",1)
-    CreateCreature("S!selow",[670.558],11)
+    SetGlobal("IaElowenAmkethran","GLOBAL",1)
+    CreateCreature("S!selow",[557.263],11)
 END
 
 IF
   InMyArea(Player1)
-  OR(2)
-    !InPartyAllowDead("S!Sibel")
-    Global("IaElowenAmkethran","GLOBAL",1)
-  Global("IaElowenSaradush","GLOBAL",1)
+  !InPartyAllowDead("S!Sibel")
+  Global("IaElowenAmkethran","GLOBAL",1)
 THEN
   RESPONSE #100
-    SetGlobal("IaElowenSaradush","GLOBAL",2)
+    SetGlobal("IaElowenAmkethran","GLOBAL",2)
     ActionOverride("S!selow",DestroySelf())
 END
