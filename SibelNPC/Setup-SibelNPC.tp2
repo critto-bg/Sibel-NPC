@@ -924,6 +924,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~DRAGBLAC.CRE~ ~override/DRAGBLAC.CRE~
     ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV16~
+
+  COPY_EXISTING ~GORSAL.cre~ ~override/GORSAL.cre~
+    WRITE_SHORT 0x24     215 // current hp
+    WRITE_SHORT 0x26     215 // max hp
+    WRITE_BYTE  0x5d     0   // resist magic
 END
 
 /* spells */
@@ -1349,6 +1354,14 @@ END
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~SMITE~ ~CRITICAL_STRIKE~
     REPLACE_TEXTUALLY ~Global("Iajamis03","LOCALS",3)~ ~False()~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~GORSAL.bcs~ ~override/GORSAL.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~CheckStatLT(Myself,40,RESISTMAGIC)~ ~False()~
+    REPLACE_TEXTUALLY ~Global("Iafcloud","LOCALS",0)~ ~False()~
+    REPLACE_TEXTUALLY ~Global("Iacure","LOCALS",0)~ ~False()~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
