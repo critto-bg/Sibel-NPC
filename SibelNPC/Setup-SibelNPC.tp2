@@ -929,6 +929,22 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     WRITE_SHORT 0x24     215 // current hp
     WRITE_SHORT 0x26     215 // max hp
     WRITE_BYTE  0x5d     0   // resist magic
+
+  COPY_EXISTING ~GORGIT.cre~ ~override/GORGIT.cre~
+    WRITE_SHORT 0x46 (0 - 9) // base ac
+    WRITE_SHORT 0x48 (0 - 9) // effective ac
+
+    ADD_CRE_ITEM ~S!smisc~ #0 #0 #0 ~UNSTEALABLE~ ~INV16~
+
+  COPY_EXISTING ~S!HRACK.cre~ ~override/S!HRACK.cre~
+    WRITE_BYTE  0x60      75 // resist slashing
+    WRITE_BYTE  0x61      60 // resist crushing
+    WRITE_BYTE  0x62      75 // resist piercing
+
+  COPY_EXISTING ~S!MLAR.cre~ ~override/S!MLAR.cre~
+    WRITE_BYTE  0x60      75 // resist slashing
+    WRITE_BYTE  0x61      75 // resist crushing
+    WRITE_BYTE  0x62      60 // resist piercing
 END
 
 /* spells */
@@ -1362,6 +1378,26 @@ END
     REPLACE_TEXTUALLY ~CheckStatLT(Myself,40,RESISTMAGIC)~ ~False()~
     REPLACE_TEXTUALLY ~Global("Iafcloud","LOCALS",0)~ ~False()~
     REPLACE_TEXTUALLY ~Global("Iacure","LOCALS",0)~ ~False()~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!MLAR.bcs~ ~override/S!MLAR.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
+    REPLACE_TEXTUALLY ~ SetGlobalTimer("Iacreatecoin","LOCALS",18)~ ~ SetGlobalTimer("Iacreatecoin","LOCALS",36)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!HRACK.bcs~ ~override/S!HRACK.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
+    REPLACE_TEXTUALLY ~ SetGlobalTimer("Iacreategem","LOCALS",18)~ ~ SetGlobalTimer("Iacreategem","LOCALS",36)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!GORGIT.bcs~ ~override/S!GORGIT.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~GlobalLT("Iahla","LOCALS",9)~ ~GlobalLT("Iahla","LOCALS",5)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
