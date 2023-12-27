@@ -1400,6 +1400,17 @@ END
     REPLACE_TEXTUALLY ~GlobalLT("Iahla","LOCALS",9)~ ~GlobalLT("Iahla","LOCALS",5)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~ROCK.bcs~ ~override/ROCK.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~HasItem("POTN55",Myself)~ ~HasItem("POTN55",Myself) !GlobalTimerNotExpired("Iaspell","LOCALS")~
+    REPLACE_TEXTUALLY ~DisplayStringHead(Myself,46150)~ ~SetGlobalTimer("Iaspell","LOCALS",6) DisplayStringHead(Myself,46150)~
+    REPLACE_TEXTUALLY ~HaveSpell(WARRIOR_GREATER_WHIRLWIND)~ ~HaveSpell(WARRIOR_GREATER_WHIRLWIND) !GlobalTimerNotExpired("Iaspell","LOCALS") Global("RockHardiness","LOCALS",1)~
+    REPLACE_TEXTUALLY ~ForceSpell(Myself,WARRIOR_GREATER_WHIRLWIND)~ ~SetGlobalTimer("Iaspell","LOCALS",6) ForceSpell(Myself,WARRIOR_GREATER_WHIRLWIND)~
+   REPLACE_TEXTUALLY ~HaveSpell((WARRIOR_HARDINESS)~ ~HaveSpell(WARRIOR_HARDINESS) !GlobalTimerNotExpired("Iaspell","LOCALS")~
+   REPLACE_TEXTUALLY ~ForceSpell(Myself,WARRIOR_HARDINESS)~ ~SetGlobalTimer("Iaspell","LOCALS",6) ForceSpell(Myself,WARRIOR_HARDINESS)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 /* graphics */
