@@ -796,6 +796,9 @@ COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
   ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
   ADD_CRE_ITEM ~scrl8g~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
 
+COPY_EXISTING ~DRAGBLUE.cre~ ~override/DRAGBLUE.cre~
+  WRITE_LONG 0x1c 50000 // gold
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   // Dracolich
