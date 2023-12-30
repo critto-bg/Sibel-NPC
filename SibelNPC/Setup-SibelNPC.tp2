@@ -772,6 +772,13 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/creatures/S!devae.cre~ ~override/S!devae.cre~
     SAY NAME1 @57
     SAY NAME2 @57
+
+  COPY ~SibelNPC/resources/creatures/S!amber2.cre~ ~override/S!amber2.cre~
+       ~SibelNPC/resources/creatures/S!amberd.cre~ ~override/S!amberd.cre~
+       ~SibelNPC/resources/creatures/S!amberg.cre~ ~override/S!amberg.cre~
+       ~SibelNPC/resources/creatures/S!amberl.cre~ ~override/S!amberl.cre~
+    SAY NAME1 @58
+    SAY NAME2 @58
 END
 
 /* patch creatures */
@@ -945,6 +952,19 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     WRITE_BYTE  0x60      75 // resist slashing
     WRITE_BYTE  0x61      75 // resist crushing
     WRITE_BYTE  0x62      60 // resist piercing
+
+  COPY_EXISTING ~S!ultgg1.cre~ ~override/S!ultgg1.cre~
+                ~S!ultgg2.cre~ ~override/S!ultgg2.cre~
+                ~S!ultgol.cre~ ~override/S!ultgol.cre~
+                ~S!ultgoa.cre~ ~override/S!ultgoa.cre~
+                ~S!ultgod.cre~ ~override/S!ultgod.cre~
+
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV8~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV9~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV10~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV13~
 END
 
 /* spells */
@@ -1118,7 +1138,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
         PATCH_IF (opcode = 17) BEGIN
           WRITE_LONG ("%effects_offset%" + 0x04 + (0x30 * ("%effects_table_offset%" + "%index2%"))) 20 // parameter1
-          WRITE_LONG ("%effects_offset%" + 0x08 + (0x30 * ("%effects_table_offset%" + "%index2%"))) 0 // parameter1
+          WRITE_LONG ("%effects_offset%" + 0x08 + (0x30 * ("%effects_table_offset%" + "%index2%"))) 0 // parameter2
         END
       END
     END
@@ -1488,6 +1508,18 @@ END
     REPLACE_TEXTUALLY ~ForceSpell(Myself,WARRIOR_GREATER_WHIRLWIND)~ ~SetGlobalTimer("Iaspell","LOCALS",6) ForceSpell(Myself,WARRIOR_GREATER_WHIRLWIND)~
     REPLACE_TEXTUALLY ~HaveSpell(WARRIOR_HARDINESS)~ ~HaveSpell(WARRIOR_HARDINESS) !GlobalTimerNotExpired("Iaspell","LOCALS")~
     REPLACE_TEXTUALLY ~ForceSpell(Myself,WARRIOR_HARDINESS)~ ~SetGlobalTimer("Iaspell","LOCALS",6) ForceSpell(Myself,WARRIOR_HARDINESS)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!ultgoa.bcs~ ~override/S!ultgoa.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~DestroySelf()~ ~Kill(Myself)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!ultgol.bcs~ ~override/S!ultgol.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~S!amber~ ~S!amberl~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
