@@ -1409,6 +1409,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COMPILE ~SibelNPC/resources/scripts/S!devag.baf~
   COMPILE ~SibelNPC/resources/scripts/S!devae.baf~
 
+  EXTEND_TOP ~AR3025.BCS~ ~SibelNPC/resources/scripts/AR3025.baf~
   EXTEND_TOP ~AR5203.BCS~ ~SibelNPC/resources/scripts/AR5203.baf~
   EXTEND_TOP ~C6ARKAN.BCS~ ~SibelNPC/resources/scripts/C6ARKAN.baf~
   EXTEND_TOP ~C6ERIC.BCS~ ~SibelNPC/resources/scripts/C6ERIC.baf~
