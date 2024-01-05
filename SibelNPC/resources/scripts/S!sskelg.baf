@@ -1,0 +1,22 @@
+IF
+  InMyArea(Player1)
+  AreaCheck("ARIA38")
+  Dead("S!sund01")
+  Dead("S!sund02")
+  Dead("S!schri")
+  Dead("S!sfran")
+  Dead("S!slesl")
+  Dead("S!smelb")
+  Dead("S!sfort")
+  Dead("S!sgamb4")
+  Dead("S!sgamb5")
+  Dead("S!sgamb6")
+  Dead("S!sgamb7")
+  Dead("S!sgamb8")
+  Dead("S!sgamb9")
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    Kill(Myself)
+END

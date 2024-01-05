@@ -1,0 +1,97 @@
+IF
+  AreaCheck("ARIA38")
+  Global("IaSLawrencePlot","GLOBAL",6)
+  Global("IaOnce","LOCALS",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaOnce","LOCALS",1)
+    SetInterrupt(FALSE)
+    ForceSpell(Myself,DRYAD_TELEPORT)
+    Wait(1)
+    DestroySelf()
+END
+
+IF
+  !GlobalTimerNotExpired("Iareconstruct","LOCALS")
+  Global("Iaheal","LOCALS",0)
+  !HPLT(Myself,1)
+  HPPercentLT(Myself,75)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iareconstruct","LOCALS",12)
+    IncrementGlobal("Iaheal","LOCALS",1)
+    ReallyForceSpellRES("SPWII45",Myself)
+END
+
+IF
+  !GlobalTimerNotExpired("Iareconstruct","LOCALS")
+  Global("Iaheal","LOCALS",1)
+  !HPLT(Myself,1)
+  HPPercentLT(Myself,50)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iareconstruct","LOCALS",12)
+    IncrementGlobal("Iaheal","LOCALS",1)
+    ReallyForceSpellRES("SPWII45",Myself)
+END
+
+IF
+  !GlobalTimerNotExpired("Iareconstruct","LOCALS")
+  Global("Iaheal","LOCALS",2)
+  !HPLT(Myself,1)
+  HPPercentLT(Myself,25)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iareconstruct","LOCALS",12)
+    IncrementGlobal("Iaheal","LOCALS",1)
+    ReallyForceSpellRES("SPWII45",Myself)
+END
+
+IF
+  See(NearestEnemyOf(Player1))
+  !CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+THEN
+  RESPONSE #100
+    AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+  See(SecondNearestEnemyOf(Player1))
+  !CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+THEN
+  RESPONSE #100
+    AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+  See(ThirdNearestEnemyOf(Player1))
+  !CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+THEN
+  RESPONSE #100
+    AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+  See(NearestEnemyOf(Player1))
+THEN
+  RESPONSE #100
+    AttackOneRound(LastSeenBy(Myself))
+END
+
+IF
+  !See(NearestEnemyOf(Player1))
+  !Dead("S!slawr2")
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
+  !See(NearestEnemyOf(Player1))
+  Dead("S!slawr2")
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    RandomWalk()
+END

@@ -1,5 +1,40 @@
 IF
   InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaSibelTalks","GLOBAL",27)
+  Global("IaSLawrencePlot","GLOBAL",1)
+  Global("IASVirtusFinale","AR5501",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSLawrencePlot","GLOBAL",2)
+    SetGlobal("IASVirtusFinale","AR5501",1)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut17")
+END
+
+IF
+  InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaSibelTalks","GLOBAL",27)
+  Global("IaSLawrencePlot","GLOBAL",3)
+  GlobalTimerExpired("IaSDepartTimer","GLOBAL")
+  Global("IASVirtusFinale","AR5501",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSLawrencePlot","GLOBAL",4)
+    SetGlobal("IASVirtusFinale","AR5501",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut18")
+END
+
+IF
+  InMyArea(Player1)
   InPartyAllowDead("S!Sibel")
   GlobalLT("IaElowenCromwell","GLOBAL",2)
   GlobalLT("IaElowenSaradush","GLOBAL",2)

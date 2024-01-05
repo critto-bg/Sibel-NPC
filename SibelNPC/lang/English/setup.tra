@@ -52,6 +52,15 @@
 @56 = ~Archdeva~
 @57 = ~Fallen Archdeva~
 @58 = ~Amber Golem~
+@59 = ~Christopher Amberville~
+@60 = ~Francis Amberville~
+@61 = ~Leslie Amberville~
+@62 = ~Melbourne Amberville~
+@63 = ~Fortescue Amberville~
+@64 = ~Skeleton Grandlord~
+@65 = ~Undertaker~
+@66 = ~Lawrence Amberville~
+@67 = ~Greater Dracolich~
 
 @500 = ~Arcanis Family Armor~
 @501 = ~Arcanis Family Armor
@@ -891,6 +900,12 @@ Equipped Abilities:
 - Resistance to Electricity: +15%
 
 Special: Protects Against Critical Hits~
+@622 = ~Powdered Body of Greater Dracolich~
+@623 = ~Powdered Body of Greater Dracolich
+
+The dracolich is an undead creature resulting from the unnatural transformation of an evil dragon. A dracolich has the abilities of the original dragon plus the immunities of a lich. The body of a destroyed dracolich (except its skin) crumbles into a foul-smelling powder; this powder can be used as a component for creating magical items.
+
+Lawrence Amberville has used unknown magics to turn himself into a fiercer form of the dreadful creature. This is all that remains of his dead body.~
 
 @700 = ~Greater Restoration
 (Necromancy)
@@ -986,6 +1001,7 @@ Area of Effect: The caster
 Saving Throw: None
 
 When the cleric casts this powerful spell, he or she immediately gains +75% bonus to the maximum amount of HP. One second later, all of the caster's current damage is healed. Then, 58 seconds later (59 seconds after the spell is cast and one second before the duration of the spell ends) all damage the caster might have accrued is healed again, so that he or she won't die when the extra hit points are gone.~
+@723 = ~Greater Dracolich Breath~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
@@ -1088,6 +1104,14 @@ We have met with Virtus Arcanis. The mage enlisted Sibel's help in an attempt to
 @1117 = ~Sibel's Family Dilemma
 
 We have met with Virtus Arcanis. The mage enlisted our help in an attempt to bring down Lawrence Amberville. I have helped Sibel recover an artifact that would grant us entrance to the villain's lair. Virtus has left with the promise to return when it is time to make the final stand against the Ambervilles.~
+
+@1118 = ~Sibel's Family Dilemma
+
+The time has come to make the final stand agains the Ambervilles. Virtus Arcanis has discovered the villain's location. The wizard has left us to make our preparations. We will reconvene in eight hours and depart for battle.~
+
+@1119 = ~Sibel's Family Dilemma
+
+At long last, the victory is ours. Sibel and I fought at Virtus' side and slew Lawrence Amberville. The threat of Amberville family has now been put to rest. Virtus Arcanis bade us farewell and left with a promise to keep an eye on his only remaining sibling.~
 
 @1200 = ~The engine appears to be broken, it's missing a gear.~
 @1201 = ~You need an instrument to fit the gear in its place.~

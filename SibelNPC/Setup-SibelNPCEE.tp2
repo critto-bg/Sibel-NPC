@@ -12,9 +12,11 @@ REQUIRE_COMPONENT ~Setup-SibelNPC.tp2~ ~0~ @3
 /* creatures */
 
 COPY_EXISTING ~S!ssnake.cre~ ~override/S!ssnake.cre~
-
   REPLACE_CRE_ITEM ~s!drgrng~ #0 #0 #0 ~UNSTEALABLE&UNDROPPABLE~ ~RRING~
+
+COPY_EXISTING ~S!sskelg.cre~ ~override/S!sskelg.cre~
+  WRITE_SHORT 0x28 0xE242 // animation
 
 /* journal entries */
 
-ADD_JOURNAL @1100 @1101 @1102 @1103 @1104 @1105 @1106 @1107 @1108 @1109 @1110 @1111 @1112 @1113 @1114 @1115 @1116 @1117
+ADD_JOURNAL @1100 @1101 @1102 @1103 @1104 @1105 @1106 @1107 @1108 @1109 @1110 @1111 @1112 @1113 @1114 @1115 @1116 @1117 @1118 @1119

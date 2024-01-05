@@ -1,0 +1,32 @@
+// Virtus Arcanis arrives to take the party to the final battle //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    JumpToPoint([590.300])
+    ActionOverride("S!Sibel",JumpToPoint([640.350]))
+
+    CreateCreature("S!svirt3",[310.545],0)
+    MoveViewObject(Myself,INSTANT)
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(1)
+
+    ActionOverride("S!svirt3",MoveToPointNoInterrupt([590.340])
+    Wait(3)
+
+    ActionOverride("S!Sibel",FaceObject("S!svirt3"))
+    FaceObject("S!svirt3")
+    Wait(1)
+
+    ActionOverride("S!svirt3",StartDialogueNoSet(Player1))
+    EndCutSceneMode()
+END

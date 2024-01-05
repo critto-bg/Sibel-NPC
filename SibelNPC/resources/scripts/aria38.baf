@@ -1,0 +1,166 @@
+IF
+  InMyArea(Player1)
+  Global("Iaexit","ARIA38",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iaexit","ARIA38",1)
+    TriggerActivation("TRANIA38",FALSE)
+END
+
+IF
+  InMyArea(Player1)
+  Global("Iaexit","ARIA38",1)
+  GlobalGT("IaDragonBattle","ARIA38",0)
+  Dead("S!slawr2")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iaexit","ARIA38",2)
+    SetGlobal("IaSLawrencePlot","GLOBAL",6)
+    AddXPObject(Player1,90000)
+    AddXPObject(Player2,90000)
+    AddXPObject(Player3,90000)
+    AddXPObject(Player4,90000)
+    AddXPObject(Player5,90000)
+    AddXPObject(Player6,90000)
+END
+
+IF
+  Dead("S!sgamb4")
+  Dead("S!sgamb5")
+  Dead("S!sgamb6")
+  Dead("S!sgamb7")
+  Dead("S!sgamb8")
+  Dead("S!sgamb9")
+  Dead("S!schri")
+  Dead("S!sfran")
+  Dead("S!slesl")
+  Dead("S!smelb")
+  Dead("S!sfort")
+  Dead("S!sund01")
+  Dead("S!sund02")
+  Global("IaDragonBattle","ARIA38",0)
+  Global("IaSecondPhase","ARIA38",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSecondPhase","ARIA38",1)
+    SetGlobalTimer("IaSkeletonsTimer","ARIA38",2)
+END
+
+IF
+  GlobalTimerExpired("IaSkeletonsTimer","ARIA38")
+  Global("IaDragonBattle","ARIA38",0)
+  Global("IaSecondPhase","ARIA38",1)
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSecondPhase","ARIA38",2)
+    SaveGame(0)
+END
+
+IF
+  Global("IaDragonBattle","ARIA38",0)
+  Global("IaSecondPhase","ARIA38",2)
+THEN
+  RESPONSE #100
+    SetGlobal("IaDragonBattle","ARIA38",1)
+    SetGlobal("IaSecondPhase","ARIA38",3)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut20")
+END
+
+IF
+  InMyArea(Player1)
+  Global("IasP1blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP1blessed","ARIA38",0)
+    ActionOverride(Player1,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player2,1)
+  Global("IasP2blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP2blessed","ARIA38",0)
+    ActionOverride(Player2,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player3,1)
+  Global("IasP3blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP3blessed","ARIA38",0)
+    ActionOverride(Player3,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player4,1)
+  Global("IasP4blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP4blessed","ARIA38",0)
+    ActionOverride(Player4,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player5,1)
+  Global("IasP5blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP5blessed","ARIA38",0)
+    ActionOverride(Player5,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  !HPLT(Player6,1)
+  Global("IasP6blessed","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IasP6blessed","ARIA38",0)
+    ActionOverride(Player6,ReallyForceSpellRES("SPINI84",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  Global("Iasenergy","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasenergy","ARIA38",0)
+    ActionOverride("S!SIBEL",ReallyForceSpellRES("SPINI86",Myself))
+END
+
+IF
+  InMyArea(Player1)
+  GlobalTimerExpired("Iastrsight","ARIA38")
+  Global("IaTrueSight","ARIA38",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaTrueSight","ARIA38",0)
+END
+
+IF
+  InMyArea(Player1)
+  AreaCheck("ARIA38")
+  Dead("S!Sibel")
+  Global("IaKillP1","ARIA38",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaKillP1","ARIA38",1)
+    ClearAllActions()
+    StartCutSceneMode()
+    Wait(2)
+    MoveViewObject(Player1,-1)
+    DisplayStringHead(Player1,@1214)
+    Wait(4)
+    EndCutSceneMode()
+    Kill(Player1)
+END

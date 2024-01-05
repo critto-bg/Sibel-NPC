@@ -1,0 +1,64 @@
+// the party teleports to the final battle area //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    ActionOverride("S!svirt3",ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player2,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player3,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player4,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player5,ForceSpell(Myself,DRYAD_TELEPORT))
+    ActionOverride(Player6,ForceSpell(Myself,DRYAD_TELEPORT))
+    ForceSpell(Myself,DRYAD_TELEPORT)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    ActionOverride("S!svirt3",DestroySelf())
+    LeaveAreaLUAPanic("ARia38","",[1226.1158],6)
+    LeaveAreaLUA("ARia38","",[1226.1158],6)
+    ActionOverride(Player2,LeaveAreaLUA("ARia38","",[1288.1205],6))
+    ActionOverride(Player3,LeaveAreaLUA("ARia38","",[1220.1205],6))
+    ActionOverride(Player4,LeaveAreaLUA("ARia38","",[1153.1198],6))
+    ActionOverride(Player5,LeaveAreaLUA("ARia38","",[1346.1208],6))
+    ActionOverride(Player6,LeaveAreaLUA("ARia38","",[1099.1183],6))
+    Wait(1)
+    Explore()
+    ReallyForceSpellRES("SPINI14",Myself)
+    ReallyForceSpellRES("SPINI14",Player2)
+    ReallyForceSpellRES("SPINI14",Player3)
+    ReallyForceSpellRES("SPINI14",Player4)
+    ReallyForceSpellRES("SPINI14",Player5)
+    ReallyForceSpellRES("SPINI14",Player6)
+
+    CreateCreature("S!svirt3",[1285.1154],6)
+    CreateCreature("S!sleat4",[1159.1154],6)
+    CreateCreature("S!slawr1",[1225.1084],0)
+    CreateCreature("S!sund01",[284.1216],0)
+    CreateCreature("S!sund02",[2154.699],0)
+    CreateCreature("S!sgamb4",[1139.1043],0)
+    CreateCreature("S!sgamb5",[1051.1033],0)
+    CreateCreature("S!sgamb6",[959.1032],0)
+    CreateCreature("S!sgamb7",[1258.1035],0)
+    CreateCreature("S!sgamb8",[1369.1045],0)
+    CreateCreature("S!sgamb9",[1446.1058],0)
+    CreateCreature("S!schri",[1256.954],0)
+    CreateCreature("S!sfran",[1370.962],0)
+    CreateCreature("S!slesl",[1142.952],0)
+    CreateCreature("S!smelb",[1051.952],0)
+    CreateCreature("S!sfort",[1492.981],0)
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    MoveViewObject("S!svirt3",INSTANT)
+    Wait(1)
+    ActionOverride("S!slawr1",StartDialogueNoSet(Player1))
+
+    EndCutSceneMode()
+END

@@ -1,0 +1,31 @@
+// Virtus Arcanis talks to Sibel and protagonist, pre-final battle //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    CreateCreature("S!svirt3",[660.290],0)
+    MoveViewObject("S!svirt3",INSTANT)
+    ActionOverride("S!svirt3", FaceObject(Player1))
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!Sibel",MoveToPointNoInterrupt([640.350]))
+    MoveToPointNoInterrupt([590.300])
+    Wait(3)
+
+    ActionOverride("S!Sibel",FaceObject("S!svirt3"))
+    FaceObject("S!svirt3")
+    Wait(1)
+
+    ActionOverride("S!svirt3",StartDialogueNoSet(Player1))
+    EndCutSceneMode()
+END

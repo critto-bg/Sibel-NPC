@@ -1,0 +1,27 @@
+IF
+  Detect([PC])
+  !GlobalTimerNotExpired("Iavisuals","LOCALS")
+THEN
+  RESPONSE #50
+    SetGlobalTimer("Iavisuals","LOCALS",7)
+    CreateVisualEffectObject("SPNWCHRM",Myself)
+END
+
+IF
+  !GlobalTimerNotExpired("Iaspell","LOCALS")
+  !StateCheck(Myself,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Myself,STATE_SILENCED)
+THEN
+  RESPONSE #100
+    SetGlobalTimer("Iaspell","LOCALS",6)
+    ApplySpell(Myself,WIZARD_IMPROVED_INVISIBILITY)
+END
+
+IF
+  !GlobalTimerNotExpired("Iaanimate","LOCALS")
+  !HPLT(Myself,1)
+THEN
+  RESPONSE #50
+    SetGlobalTimer("Iaanimate","LOCALS",18)
+    CreateCreatureObjectEffect("S!SSKELG","SPRAISED",Myself)
+END

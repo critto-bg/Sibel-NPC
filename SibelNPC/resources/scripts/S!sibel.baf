@@ -615,3 +615,36 @@ THEN
     ActionOverride("S!sleat2",StartDialogueNoSet(Player1))
     SetInterrupt(TRUE)
 END
+
+/* 13th event */
+
+IF
+  InParty(Myself)
+  See(Player1)
+  XPGT(Myself,7809999)
+  AreaCheck("AR5500")
+  PartyHasItem("S!sclc01")
+  Dead("S!sgamb")
+  Global("IaSibelTalks","GLOBAL",25)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelTalks","GLOBAL",26)
+    SetGlobalTimer("IaSLeather3Timer","GLOBAL",2)
+END
+
+// golem messenger arrives
+IF
+  InParty(Myself)
+  See(Player1)
+  Global("IaSibelTalks","GLOBAL",26)
+  GlobalTimerExpired("IaSLeather3Timer","GLOBAL")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelTalks","GLOBAL",27)
+    CreateCreatureObject("S!sleat3","S!sibel",0,0,0)
+    SmallWait(1)
+    ActionOverride("S!sleat3",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END

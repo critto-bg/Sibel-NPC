@@ -1,0 +1,38 @@
+// second phase of the final battle begins //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    JumpToPoint([1210.1247])
+    Face(6)
+    ActionOverride("S!svirt3",JumpToPoint([1421.1231]))
+    ActionOverride("S!svirt3",Face(6))
+    ActionOverride("S!sleat4",JumpToPoint([1010.1196]))
+    ActionOverride("S!sleat4",Face(6))
+    ActionOverride(Player2,JumpToPoint([1320.1243]))
+    ActionOverride(Player2,Face(6))
+    ActionOverride(Player3,JumpToPoint([1093.1224]))
+    ActionOverride(Player3,Face(0))
+    ActionOverride(Player4,JumpToPoint([1481.1168]))
+    ActionOverride(Player4,Face(4))
+    ActionOverride(Player5,JumpToPoint([968.1127]))
+    ActionOverride(Player5,Face(9))
+    ActionOverride(Player6,JumpToPoint([1002.1013]))
+    ActionOverride(Player6,Face(11))
+    CreateCreature("S!slawr2",[1225.1084],0)
+    MoveViewObject("S!slawr2",INSTANT)
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    ActionOverride("S!slawr2",StartDialogueNoSet(Player1))
+    EndCutSceneMode()
+END
