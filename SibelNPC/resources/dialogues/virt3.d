@@ -68,6 +68,7 @@ IF ~~ THEN BEGIN Conclusion
         ActionOverride(Player4,CreateVisualEffectObject("SPCONTIN",Myself))
         ActionOverride(Player5,CreateVisualEffectObject("SPCONTIN",Myself))
         ActionOverride(Player6,CreateVisualEffectObject("SPCONTIN",Myself))
+        GiveGoldForce(250000)
         EraseJournalEntry(@1109)
         EraseJournalEntry(@1110)
         EraseJournalEntry(@1111)
