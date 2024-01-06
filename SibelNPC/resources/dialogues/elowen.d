@@ -182,6 +182,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to improve this indigo ioun stone?~
     GOTO Ioun2
 
+  // greater dracolich body
+  IF ~PartyHasItem("S!smisc6")~ THEN
+    REPLY ~Do you have interest in these remains of a Greater Dracolich?~
+    GOTO draco
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -582,5 +587,19 @@ IF ~~ THEN BEGIN Ioun2
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!sioun3",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN draco
+  SAY ~Greater Dracolich? Surely, such a creature is but a myth? If someone else were to offer me such a treasure, I'd call him a charlatan.~
+  = ~Yet you tend to find the most exotic artefacts. I am willing to buy such a rare specimen for 150 thousand gold. Shall we have a deal?~
+
+  ++ ~I will think on it. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!smisc6")~
+  THEN
+    REPLY ~Yes, I have no purpose for it.~
+    DO ~TakePartyItemNum("S!smisc6",1) DestroyItem("S!smisc6")
+        GiveGoldForce(150000)~
     EXIT
 END
