@@ -33,5 +33,17 @@ CHAIN
         ActionOverride(Player3,ReallyForceSpellRES("SPWI611",Myself))
         ActionOverride(Player4,ReallyForceSpellRES("SPWI611",Myself))
         ActionOverride(Player5,ReallyForceSpellRES("SPWI611",Myself))
-        ActionOverride(Player6,ReallyForceSpellRES("SPWI611",Myself))~
+        ActionOverride(Player6,ReallyForceSpellRES("SPWI611",Myself))
+        ActionOverride(Player1,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player2,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player3,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player4,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player5,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player6,ReallyForceSpellRES("SPWI408",Myself))
+        ActionOverride(Player1,ReallyForceSpellRES("SPWI590",Myself))
+        ActionOverride(Player2,ReallyForceSpellRES("SPWI590",Myself))
+        ActionOverride(Player3,ReallyForceSpellRES("SPWI590",Myself))
+        ActionOverride(Player4,ReallyForceSpellRES("SPWI590",Myself))
+        ActionOverride(Player5,ReallyForceSpellRES("SPWI590",Myself))
+        ActionOverride(Player6,ReallyForceSpellRES("SPWI590",Myself))~
 EXIT
