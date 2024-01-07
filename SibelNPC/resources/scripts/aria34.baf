@@ -55,6 +55,20 @@ THEN
 END
 
 IF
+  InMyArea(Player1)
+  Global("IaFight","ARIA34",1)
+  Global("IaSGAGFightLoc","GLOBAL",3)
+  Global("IaSibelTalks","GLOBAL",24)
+THEN
+  RESPONSE #100
+    SetGlobal("IaFight","ARIA34",2)
+    TriggerActivation("To2100",TRUE)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut24")
+END
+
+IF
    InMyArea(Player1)
    Dead("S!Sibel")
    Global("IaKillP1","ARIA34",0)
