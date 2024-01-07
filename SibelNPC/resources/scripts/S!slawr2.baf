@@ -130,6 +130,50 @@ THEN
 END
 
 IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("Iainterrupter","LOCALS")
+  See(FifthNearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
+  !StateCheck(LastSeenBy(Myself),STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself),STATE_STUNNED)
+  OR(2)
+    CheckStatGT(LastSeenBy(Myself),0,AURACLEANSING)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE20)
+  !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+  !HasBounceEffects(LastSeenBy(Myself))
+  GlobalLT("Iainterrupt","LOCALS",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iainterrupt","LOCALS",1)
+    SetGlobalTimer("Iainterrupter","LOCALS",6)
+    ReallyForceSpellRES("SPWI511",LastSeenBy(Myself))
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("Iainterrupter","LOCALS")
+  See(SixthNearestEnemyOfType([PC.0.0.MAGE_ALL]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
+  !StateCheck(LastSeenBy(Myself),STATE_SILENCED)
+  !StateCheck(LastSeenBy(Myself),STATE_STUNNED)
+  OR(2)
+    CheckStatGT(LastSeenBy(Myself),0,AURACLEANSING)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE20)
+  !StateCheck(LastSeenBy(Myself),STATE_MIRRORIMAGE)
+  !HasBounceEffects(LastSeenBy(Myself))
+  GlobalLT("Iainterrupt","LOCALS",3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iainterrupt","LOCALS",1)
+    SetGlobalTimer("Iainterrupter","LOCALS",6)
+    ReallyForceSpellRES("SPWI511",LastSeenBy(Myself))
+END
+
+IF
   Global("Iapcastts","GLOBAL",0)
   See(Player1)
   !StateCheck(Player1,STATE_IMPROVEDINVISIBILITY)
@@ -205,6 +249,108 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iasstrike","LOCALS",1)
     ForceSpell(Player6,WIZARD_SPELL_STRIKE)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player1)
+  Class(Player1,MAGE_ALL)
+  !StateCheck(Player1,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player1,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player1,0,AURACLEANSING)
+    CheckStat(Player1,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player1)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player1,WIZARD_RUBY_RAY_OF_REVERSAL)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player2)
+  Class(Player2,MAGE_ALL)
+  !StateCheck(Player2,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player2,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player2,0,AURACLEANSING)
+    CheckStat(Player2,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player2)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player2,WIZARD_RUBY_RAY_OF_REVERSAL)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player3)
+  Class(Player3,MAGE_ALL)
+  !StateCheck(Player3,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player3,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player3,0,AURACLEANSING)
+    CheckStat(Player3,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player3)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player3,WIZARD_RUBY_RAY_OF_REVERSAL)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player4)
+  Class(Player4,MAGE_ALL)
+  !StateCheck(Player4,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player4,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player4,0,AURACLEANSING)
+    CheckStat(Player4,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player4)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player4,WIZARD_RUBY_RAY_OF_REVERSAL)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player5)
+  Class(Player5,MAGE_ALL)
+  !StateCheck(Player5,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player5,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player5,0,AURACLEANSING)
+    CheckStat(Player5,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player5)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player5,WIZARD_RUBY_RAY_OF_REVERSAL)
+END
+
+IF
+  Global("Iapcastts","GLOBAL",0)
+  See(Player6)
+  Class(Player6,MAGE_ALL)
+  !StateCheck(Player6,STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(Player6,STATE_INVISIBLE)
+  OR(2)
+    CheckStatGT(Player6,0,AURACLEANSING)
+    CheckStat(Player6,1,SCRIPTINGSTATE20)
+  GlobalLT("Iareversal","LOCALS",5)
+  HasBounceEffects(Player6)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iareversal","LOCALS",1)
+    ForceSpell(Player6,WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
@@ -344,7 +490,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerFtimer","LOCALS",18)
+    SetGlobalTimer("IalowerFtimer","LOCALS",15)
     ReallyForceSpell(LastSeenBy(Myself),DRAGON_LOWER_FIRE)
 END
 
@@ -358,7 +504,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerFtimer","LOCALS",18)
+    SetGlobalTimer("IalowerFtimer","LOCALS",15)
     ReallyForceSpell(LastSeenBy(Myself),DRAGON_LOWER_FIRE)
 END
 
@@ -372,7 +518,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerFtimer","LOCALS",18)
+    SetGlobalTimer("IalowerFtimer","LOCALS",15)
     ReallyForceSpell(LastSeenBy(Myself),DRAGON_LOWER_FIRE)
 END
 
@@ -386,7 +532,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerEtimer","LOCALS",18)
+    SetGlobalTimer("IalowerEtimer","LOCALS",15)
     ReallyForceSpellRES("SPIN532",LastSeenBy(Myself))
 END
 
@@ -400,7 +546,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerEtimer","LOCALS",18)
+    SetGlobalTimer("IalowerEtimer","LOCALS",15)
     ReallyForceSpellRES("SPIN532",LastSeenBy(Myself))
 END
 
@@ -414,7 +560,7 @@ IF
   Range(LastSeenBy(Myself),15)
 THEN
   RESPONSE #100
-    SetGlobalTimer("IalowerEtimer","LOCALS",18)
+    SetGlobalTimer("IalowerEtimer","LOCALS",15)
     ReallyForceSpellRES("SPIN532",LastSeenBy(Myself))
 END
 
@@ -431,7 +577,7 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobalTimer("Iabreathtimer","LOCALS",18)
+    SetGlobalTimer("Iabreathtimer","LOCALS",15)
     ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
     Wait(1)
     ForceSpellRES("SPINI103",LastSeenBy(Myself))
@@ -452,7 +598,7 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobalTimer("Iabreathtimer","LOCALS",18)
+    SetGlobalTimer("Iabreathtimer","LOCALS",15)
     ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
     Wait(1)
     ForceSpellRES("SPINI103",LastSeenBy(Myself))
@@ -473,7 +619,7 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobalTimer("Iabreathtimer","LOCALS",18)
+    SetGlobalTimer("Iabreathtimer","LOCALS",15)
     ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
     Wait(1)
     ForceSpellRES("SPINI103",LastSeenBy(Myself))
@@ -494,7 +640,28 @@ IF
 THEN
   RESPONSE #100
     SetInterrupt(FALSE)
-    SetGlobalTimer("Iabreathtimer","LOCALS",18)
+    SetGlobalTimer("Iabreathtimer","LOCALS",15)
+    ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
+    Wait(1)
+    ForceSpellRES("SPINI103",LastSeenBy(Myself))
+    ReallyForceSpellRES("SPINI102",LastSeenBy(Myself))
+    SetInterrupt(TRUE)
+END
+
+IF
+  !GlobalTimerNotExpired("Iabreathtimer","LOCALS")
+  See(FifthNearestEnemyOf(Myself))
+  !HasItemEquipedReal("S!HALB01",LastSeenBy(Myself))
+  LevelLT(LastSeenBy(Myself),39)
+  !Race(LastSeenBy(Myself),GOLEM)
+  OR(2)
+    CheckStatLT(LastSeenBy(Myself),100,RESISTFIRE)
+    CheckStatLT(LastSeenBy(Myself),100,RESISTELECTRICITY)
+  Range(LastSeenBy(Myself),15)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobalTimer("Iabreathtimer","LOCALS",15)
     ForceSpell(LastSeenBy(Myself),DRAGON_WING_BUFFET)
     Wait(1)
     ForceSpellRES("SPINI103",LastSeenBy(Myself))
@@ -550,7 +717,7 @@ IF
   !GlobalTimerNotExpired("Iawail","LOCALS")
   GlobalLT("Iamywail","LOCALS",5)
   See([PC])
-  Range(LastSeenBy(Myself),13)
+  Range(LastSeenBy(Myself),15)
   !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
   !CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
   !CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
@@ -568,7 +735,7 @@ IF
   !GlobalTimerNotExpired("Iawail","LOCALS")
   GlobalLT("Iamywail","LOCALS",5)
   See(SecondNearest([PC]))
-  Range(LastSeenBy(Myself),13)
+  Range(LastSeenBy(Myself),15)
   !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
   !CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
   !CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
@@ -586,7 +753,25 @@ IF
   !GlobalTimerNotExpired("Iawail","LOCALS")
   GlobalLT("Iamywail","LOCALS",5)
   See(ThirdNearest([PC]))
-  Range(LastSeenBy(Myself),13)
+  Range(LastSeenBy(Myself),15)
+  !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
+  !CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
+  !CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
+  CheckStatGT(LastSeenBy(Myself),5,SAVEVSDEATH)
+  CheckStatLT(LastSeenBy(Myself),30,RESISTMAGIC)
+THEN
+  RESPONSE #100
+    IncrementGlobal("Iamywail","LOCALS",1)
+    SetGlobalTimer("Iawail","LOCALS",18)
+    ForceSpellRES("SPINI31",Myself) //
+END
+
+IF
+  Allegiance(Myself,ENEMY)
+  !GlobalTimerNotExpired("Iawail","LOCALS")
+  GlobalLT("Iamywail","LOCALS",5)
+  See(FourthNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   !CheckStat(LastSeenBy(Myself),5,SCRIPTINGSTATE7)
   !CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE2)
   !CheckStat(LastSeenBy(Myself),2,SCRIPTINGSTATE3)
@@ -604,6 +789,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See([PC])
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -622,6 +808,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See(SecondNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -640,6 +827,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See(ThirdNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -658,6 +846,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See(FourthNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -676,6 +865,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See(FifthNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -694,6 +884,7 @@ IF
   GlobalLT("Ialowermr","LOCALS",2)
   Global("Iapcastts","GLOBAL",0)
   See(SixthNearest([PC]))
+  Range(LastSeenBy(Myself),15)
   CheckStatGT(LastSeenBy(Myself),29,RESISTMAGIC)
   !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
   !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
@@ -854,6 +1045,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player1,WIZARD_BREACH)
+    AttackReevaluate(Player1,30)
 END
 
 IF
@@ -871,6 +1063,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player2,WIZARD_BREACH)
+    AttackReevaluate(Player2,30)
 END
 
 IF
@@ -888,6 +1081,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player3,WIZARD_BREACH)
+    AttackReevaluate(Player3,30)
 END
 
 IF
@@ -905,6 +1099,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player4,WIZARD_BREACH)
+    AttackReevaluate(Player4,30)
 END
 
 IF
@@ -922,6 +1117,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player5,WIZARD_BREACH)
+    AttackReevaluate(Player5,30)
 END
 
 IF
@@ -939,6 +1135,7 @@ THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     ForceSpell(Player6,WIZARD_BREACH)
+    AttackReevaluate(Player6,30)
 END
 
 IF
