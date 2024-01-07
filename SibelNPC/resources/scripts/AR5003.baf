@@ -1,5 +1,23 @@
 IF
   InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  GlobalGT("IaSibelTalks","GLOBAL",14)
+  GlobalLT("IaSibelTalks","GLOBAL",21)
+  Global("IASVirtus","AR5003",0)
+  Global("IaSGAGFightLoc","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IASVirtus","AR5003",1)
+    SetGlobal("IaSGAGFightLoc","GLOBAL",2)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut21")
+END
+
+IF
+  InMyArea(Player1)
   InPartyAllowDead("S!Sibel")
   GlobalLT("IaElowenCromwell","GLOBAL",2)
   Global("IaElowenSaradush","GLOBAL",0)

@@ -1,0 +1,28 @@
+// Virtus Arcanis arrives and talks to Sibel and protagonist (Saradush tavern version) //
+
+IF
+  True()
+THEN
+  RESPONSE #100
+    CutSceneId(Player1)
+
+    Wait(1)
+    FadeToColor([20.0],0)
+    Wait(1)
+
+    CreateCreature("S!svirt1",[510.670],0)
+    JumpToPoint([595.710])
+    MoveViewObject(Myself,INSTANT)
+    FaceObject("S!svirt1")
+    ActionOverride("S!Sibel",JumpToPoint([585.645]))
+    ActionOverride("S!Sibel",FaceObject("S!svirt1"))
+
+    Wait(1)
+    FadeFromColor([20.0],0)
+    Wait(2)
+
+    SetGlobal("IaSibelTalks","GLOBAL",22)
+    ActionOverride("S!svirt1",StartDialogueNoSet(Player1))
+
+    EndCutSceneMode()
+END

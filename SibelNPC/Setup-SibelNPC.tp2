@@ -1438,6 +1438,8 @@ COMPILE ~SibelNPC/resources/scripts/S!scut17.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut18.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut19.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scut20.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut21.baf~
+COMPILE ~SibelNPC/resources/scripts/S!scut22.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~

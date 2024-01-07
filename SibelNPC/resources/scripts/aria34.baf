@@ -13,7 +13,6 @@ IF
   InParty("S!Sibel")
   !Dead("S!Sibel")
   Global("IaFight","ARIA34",0)
-  Global("IaSGAGFightLoc","GLOBAL",1)
   Global("IaSibelTalks","GLOBAL",23)
   CombatCounter(0)
   Dead("S!sgamb")
@@ -25,10 +24,34 @@ THEN
   RESPONSE #100
     SetGlobal("IaFight","ARIA34",1)
     SetGlobal("IaSibelTalks","GLOBAL",24)
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaFight","ARIA34",1)
+  Global("IaSGAGFightLoc","GLOBAL",1)
+  Global("IaSibelTalks","GLOBAL",24)
+THEN
+  RESPONSE #100
+    SetGlobal("IaFight","ARIA34",2)
     TriggerActivation("To2100",TRUE)
     ClearAllActions()
     StartCutSceneMode()
     StartCutScene("S!scut09")
+END
+
+IF
+  InMyArea(Player1)
+  Global("IaFight","ARIA34",1)
+  Global("IaSGAGFightLoc","GLOBAL",2)
+  Global("IaSibelTalks","GLOBAL",24)
+THEN
+  RESPONSE #100
+    SetGlobal("IaFight","ARIA34",2)
+    TriggerActivation("To2100",TRUE)
+    ClearAllActions()
+    StartCutSceneMode()
+    StartCutScene("S!scut22")
 END
 
 IF
