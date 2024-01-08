@@ -1132,6 +1132,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/spells/SPCL934.SPL~ ~override/SPCL934.SPL~
 
+  COPY ~SibelNPC/resources/spells/SPCLI05.SPL~ ~override/SPCLI05.SPL~
+
   COPY ~SibelNPC/resources/spells/spcli22.spl~ ~override/SPCLI22.SPL~
     SAY NAME1 @711
     SAY UNIDENTIFIED_DESC @712
