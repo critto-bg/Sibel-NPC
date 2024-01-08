@@ -906,6 +906,61 @@ Special: Protects Against Critical Hits~
 The dracolich is an undead creature resulting from the unnatural transformation of an evil dragon. A dracolich has the abilities of the original dragon plus the immunities of a lich. The body of a destroyed dracolich (except its skin) crumbles into a foul-smelling powder; this powder can be used as a component for creating magical items.
 
 Lawrence Amberville has used unknown magics to turn himself into a fiercer form of the dreadful creature. This is all that remains of his dead body.~
+@624 = ~Spear of Withering +4
+
+Carved from the heart of a rotten Treant, this spear smells of death.  When held in your hands it groans a little as if reluctant to allow a living thing to touch it.  In battle the Spear of Withering spits a foul poison into its target upon each successful hit.
+
+STATISTICS:
+
+Special Abilities:
+- +10% chance per hit to inflict 40 Poison Damage
+
+THAC0: +4 bonus
+Damage: 1D6 +4
+Damage type: piercing
+Weight: 5
+Speed Factor: 6
+Proficiency Type: Spear
+Type: 2-handed
+Requires: 5 Strength
+Not Usable By:
+ Cleric
+ Mage
+ Thief
+ Monk
+ Beast Master~
+@625 = ~Spear of Shrivel +5~
+@626 = ~Spear of Shrivel +5
+
+Carved from the heart of a rotten Treant, this spear smells of death. When held in your hands it groans a little as if reluctant to allow a living thing to touch it. In battle the Spear of Withering spits a foul poison into its target upon each successful hit.
+
+Imbued with the mysterious powers stored within the powdered remains of a Greater Dracolich, this fearful weapon gained even more potential for destruction.
+
+STATISTICS:
+
+Special Abilities:
+- +10% chance per hit to inflict 40 Poison Damage
+- +10% chance per hit to inflict 40 Electrical Damage
+- +10% chance per hit to inflict 40 Cold Damage
+
+Equipped Abilities:
+- Resistance to Cold: +50%
+- Resistance to Electricity: +50%
+
+THAC0: +5 bonus
+Damage: 2D6 +5
+Damage type: piercing
+Weight: 5
+Speed Factor: 6
+Proficiency Type: Spear
+Type: 2-handed
+Requires: 5 Strength
+Not Usable By:
+ Cleric
+ Mage
+ Thief
+ Monk
+ Beast Master~
 
 @700 = ~Greater Restoration
 (Necromancy)

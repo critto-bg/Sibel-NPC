@@ -182,10 +182,15 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to improve this indigo ioun stone?~
     GOTO Ioun2
 
+  // spear of withering
+  IF ~PartyHasItem("sper10")~ THEN
+    REPLY ~What can be done about this dangerous spear?~
+    GOTO Shrivel
+
   // greater dracolich body
   IF ~PartyHasItem("S!smisc6")~ THEN
     REPLY ~Do you have interest in these remains of a Greater Dracolich?~
-    GOTO draco
+    GOTO Draco
 
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
@@ -590,9 +595,38 @@ IF ~~ THEN BEGIN Ioun2
     EXIT
 END
 
-IF ~~ THEN BEGIN draco
-  SAY ~Greater Dracolich? Surely, such a creature is but a myth? If someone else were to offer me such a treasure, I'd call him a charlatan.~
-  = ~Yet you tend to find the most exotic artefacts. I am willing to buy such a rare specimen for 150 thousand gold. Shall we have a deal?~
+IF ~~ THEN BEGIN Shrivel
+  SAY ~That is a vile thing indeed. It has potential for stronger enchantment, but I would need something incredibly powerful to match. Is there an artefact you may offer?~
+
+  ++ ~I will think on it. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!smisc6")~
+  THEN
+    REPLY ~Yes, I have this powdered body of a Greater Dracolich.~
+    GOTO Shrivel2
+END
+
+IF ~~ THEN BEGIN Shrivel2
+  SAY ~You carry the remains of a dracolich? You tease me not? In that case, I can improve your spear.~
+  = ~Bring me the artefact called Sekolah's Tooth to complete the recipe. The job will cost sixty thousand gold. Are you willing to proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("SPER10") PartyHasItem("KEY26") PartyHasItem("S!smisc6") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("SPER10",1) DestroyItem("SPER10")
+        TakePartyItemNum("KEY26",1) DestroyItem("KEY26")
+        TakePartyItemNum("S!smisc6",1) DestroyItem("S!smisc6")
+        GiveItemCreate("S!sspe01",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Draco
+  SAY ~Men have claimed the creature to be but a myth. If someone else were to offer me this treasure, I'd call him a charlatan.~
+  = ~Yet you tend to find the most exotic artefacts. I am willing to buy such a rare specimen for 150 thousand gold. Does it suit you?~
 
   ++ ~I will think on it. Could you work on something else?~ + ItemList
 

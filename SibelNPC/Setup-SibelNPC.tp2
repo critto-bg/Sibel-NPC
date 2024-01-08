@@ -319,6 +319,10 @@ COPY ~SibelNPC/resources/items/S!smisc6.itm~ ~override/S!smisc6.itm~
   SAY NAME2 @622
   SAY DESC @623
 
+COPY ~SibelNPC/resources/items/S!sspe01.itm~ ~override/S!sspe01.itm~
+  SAY NAME2 @625
+  SAY DESC @626
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~
@@ -354,6 +358,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/items/blun30.itm~ ~override/blun30.itm~
     SAY DESC @612
+
+  COPY ~SibelNPC/resources/items/sper10.itm~ ~override/sper10.itm~
+    SAY DESC @624
 
   COPY_EXISTING ~potn37.itm~ ~override/potn37.itm~
     WRITE_SHORT 0x38 99 // max in stack amount
@@ -1689,6 +1696,7 @@ COPY ~SibelNPC/resources/bam/S!srinin.bam~ ~override/S!srinin.bam~
 COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
 COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
+COPY ~SibelNPC/resources/bam/S!spe1in.bam~ ~override/S!spe1in.bam~
 
 /* areas */
 
