@@ -961,6 +961,21 @@ Not Usable By:
  Thief
  Monk
  Beast Master~
+@627 = ~Shield of The Missionnaire +5~
+@628 = ~Shield of The Missionnaire +5
+
+According to Lady Elowen, a story of a shield once belonged to a human cleric inspired her to create this piece. The clergyman was sent to the northern barbarian tribes as a messenger. Rumors say that his last words before death were: "I wish I was half as tough as they are".
+
+STATISTICS:
+
+Equipped Abilities:
+- Armor Class Bonus: +6
+- Resistance to Elemental Damage: +10%
+- Resistance to Magic Damage: +10%
+- Resistance to Physical Damage: +10%
+
+Usably By:
+ Human Cleric~
 
 @700 = ~Greater Restoration
 (Necromancy)

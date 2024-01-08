@@ -323,6 +323,10 @@ COPY ~SibelNPC/resources/items/S!sspe01.itm~ ~override/S!sspe01.itm~
   SAY NAME2 @625
   SAY DESC @626
 
+COPY ~SibelNPC/resources/items/S!sshld1.itm~ ~override/S!sshld1.itm~
+  SAY NAME2 @627
+  SAY DESC @628
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~
@@ -1699,6 +1703,7 @@ COPY ~SibelNPC/resources/bam/S!sroot.bam~ ~override/S!sroot.bam~
 COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
 COPY ~SibelNPC/resources/bam/S!spe1in.bam~ ~override/S!spe1in.bam~
+COPY ~SibelNPC/resources/bam/S!sshld1.bam~ ~override/S!sshld1.bam~
 
 /* areas */
 

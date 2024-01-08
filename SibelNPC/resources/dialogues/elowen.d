@@ -192,6 +192,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Do you have interest in these remains of a Greater Dracolich?~
     GOTO Draco
 
+  // missionnaire
+  IF ~PartyHasItem("SHLD31")~ THEN
+    REPLY ~Can you make Darksteel Shield better?~
+    GOTO Darksteel
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -635,5 +640,24 @@ IF ~~ THEN BEGIN Draco
     REPLY ~Yes, I have no purpose for it.~
     DO ~TakePartyItemNum("S!smisc6",1) DestroyItem("S!smisc6")
         GiveGoldForce(150000)~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Darksteel
+  SAY ~Ah, this shield reminds me of an amusing story. I may improve it if you bring me another shield, Saving Grace +3, a potion of Magic Shielding, a potion of Barbarian Essence and a Permanency scroll. The price is 40000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("shld31") PartyHasItem("shld27") PartyHasItem("potn35") PartyHasItem("potn33") PartyHasItem("S!misc02") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("shld31",1) DestroyItem("shld31")
+        TakePartyItemNum("shld27",1) DestroyItem("shld27")
+        TakePartyItemNum("potn35",1) DestroyItem("potn35")
+        TakePartyItemNum("potn33",1) DestroyItem("potn33")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!sshld1",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
