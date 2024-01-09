@@ -1001,6 +1001,40 @@ Usable by:
  Ranger
  Paladin
  Fighter (single- and multi-class)~
+@631 = ~Boots of Jogging and Dodging~
+@632 = ~Boots of Jogging and Dodging
+
+Legends say that Hermes himself had made these boots and bestowed them on one of his mortal followers. Along with the gift came a promise that the boots may be improved once the follower's Riskbreaker strength has grown, something which apparently never happened.
+
+STATISTICS:
+
+Equipped Abilities:
+- Bonus to Movement Speed: +2
+- Armor Class Bonus: +2
+- Bonus to save vs. Breath Weapon: +2
+
+Usable By:
+ Riskbreaker~
+@633 = ~Boots of The Riskbreaker Lord~
+@634 = ~Boots of The Riskbreaker Lord
+
+Legends say that Hermes himself had made these boots and bestowed them on one of his mortal followers. Along with the gift came a promise that the boots may be improved once the follower's Riskbreaker strength has grown, something which apparently had never happened.
+
+The Artificer Lady Elowen fulfilled the original promise by elevating the legendary boots to their true potential.
+
+STATISTICS:
+
+Equipped Abilities:
+- Bonus to Movement Speed: +4
+- Armor Class Bonus: +4
+- Bonus to all Saving Throws: +4
+- APR bonus: +1/2
+- Regeneration: 1 HP per second
+- Magic Damage Resistance: +25%
+- Immunity to the 3rd level Haste and Slow spells (including Golem Slow)
+
+Usable By:
+ Riskbreaker~
 
 @700 = ~Greater Restoration
 (Necromancy)

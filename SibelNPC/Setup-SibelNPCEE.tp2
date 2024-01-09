@@ -17,6 +17,17 @@ COPY_EXISTING ~S!ssnake.cre~ ~override/S!ssnake.cre~
 COPY_EXISTING ~S!sskelg.cre~ ~override/S!sskelg.cre~
   WRITE_SHORT 0x28 0xE242 // animation
 
+/* items */
+
+COPY_EXISTING ~S!sboo03.itm~ ~override/S!sboo03.itm~
+  LPF ALTER_EFFECT
+  	INT_VAR
+      check_globals = 1
+  		check_headers = 0
+  		match_opcode = 328
+      parameter2 = IDS_OF_SYMBOL (~SPLSTATE~ ~SLOW_IMMUNITY~)
+  END
+
 /* journal entries */
 
 ADD_JOURNAL @1100 @1101 @1102 @1103 @1104 @1105 @1106 @1107 @1108 @1109 @1110 @1111 @1112 @1113 @1114 @1115 @1116 @1117 @1118 @1119

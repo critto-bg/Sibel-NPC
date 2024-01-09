@@ -407,6 +407,17 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     WRITE_LONG 0x34 80000 // price
 END
 
+// EE only
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/items/S!sboo02.itm~ ~override/S!sboo02.itm~
+    SAY NAME2 @631
+    SAY DESC @632
+
+  COPY ~SibelNPC/resources/items/S!sboo03.itm~ ~override/S!sboo03.itm~
+    SAY NAME2 @633
+    SAY DESC @634
+END
+
 /* copy creatures */
 
 COPY ~SibelNPC/resources/creatures/S!sibel.cre~ ~override/S!sibel.cre~
@@ -1654,6 +1665,11 @@ END
     BUT_ONLY_IF_IT_CHANGES
 END
 
+// EE only
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  EXTEND_BOTTOM ~AR0310.BCS~ ~SibelNPC/resources/scripts/AR0310.baf~
+END
+
 /* graphics */
 
 COPY ~SibelNPC/resources/portraits/SibelS.BMP~ ~override/S!SIBELS.BMP~
@@ -1708,6 +1724,8 @@ COPY ~SibelNPC/resources/bam/S!ssain.bam~ ~override/S!ssain.bam~
 COPY ~SibelNPC/resources/bam/S!ssawin.bam~ ~override/S!ssawin.bam~
 COPY ~SibelNPC/resources/bam/S!spe1in.bam~ ~override/S!spe1in.bam~
 COPY ~SibelNPC/resources/bam/S!sshld1.bam~ ~override/S!sshld1.bam~
+COPY ~SibelNPC/resources/bam/S!srbbin.bam~ ~override/S!srbbin.bam~
+COPY ~SibelNPC/resources/bam/S!srbb2n.bam~ ~override/S!srbb2n.bam~
 
 /* areas */
 

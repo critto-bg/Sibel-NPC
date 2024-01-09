@@ -202,6 +202,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Can you improve the Volcano axe further?~
     GOTO Gleaming
 
+  // riskbreaker lord boots
+  IF ~PartyHasItem("S!sboo02")~ THEN
+    REPLY ~What can you do for these potent Riskbreaker boots?~
+    GOTO Bootlord
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -680,6 +685,26 @@ IF ~~ THEN BEGIN Gleaming
         TakePartyItemNum("ring07",1) DestroyItem("ring07")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!saxe01",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Bootlord
+  SAY ~A legend follows this pair of footwear. I may just help you fulfill it. Bring me a Cloak of Protection +2, an Oil of Speed, Oil of Resurgence, a potion of Magic Shielding and a Permanency scroll. The job's price is 30 thousand gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!sboo02") PartyHasItem("CLCK02") PartyHasItem("POTN14") PartyHasItem("POTN37") PartyHasItem("POTN35") PartyHasItem("S!misc02") PartyGoldGT(29999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("S!sboo02",1) DestroyItem("S!sboo02")
+        TakePartyItemNum("CLCK02",1) DestroyItem("CLCK02")
+        TakePartyItemNum("POTN14",1) DestroyItem("POTN14")
+        TakePartyItemNum("POTN37",1) DestroyItem("POTN37")
+        TakePartyItemNum("POTN35",1) DestroyItem("POTN35")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!sboo03",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

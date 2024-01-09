@@ -1,0 +1,8 @@
+IF
+  Global("Iasibelsays","AR0310",0)
+  Global("Iaexit","AR0310",2)
+THEN
+  RESPONSE #100
+    SetGlobal("Iasibelsays","AR0310",1)
+    ActionOverride("Pool 1",CreateItem("S!sboo02",0,0,0))
+END
