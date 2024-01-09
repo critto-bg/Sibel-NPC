@@ -197,6 +197,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Can you make Darksteel Shield better?~
     GOTO Darksteel
 
+  // axe of gleaming lava
+  IF ~PartyHasItem("S!axe01")~ THEN
+    REPLY ~Can you improve the Volcano axe further?~
+    GOTO Gleaming
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -658,6 +663,23 @@ IF ~~ THEN BEGIN Darksteel
         TakePartyItemNum("potn33",1) DestroyItem("potn33")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!sshld1",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Gleaming
+  SAY ~Yes, I have a simple, but efficient improvement to offer. Bring me a Ring of Protection +2 and a chunk of Reinforced Amber. I will ask 60 thousand gold for the job. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!axe01") PartyHasItem("ring07") PartyHasItem("S!sramb") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("S!axe01",1) DestroyItem("S!axe01")
+        TakePartyItemNum("ring07",1) DestroyItem("ring07")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!saxe01",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

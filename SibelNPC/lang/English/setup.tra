@@ -976,6 +976,31 @@ Equipped Abilities:
 
 Usably By:
  Human Cleric~
+@629 = ~Axe of Gleaming Lava +5~
+@630 = ~Axe of Gleaming Lava +5
+
+Reforging Stonefire battle axe with Volcanic ore has proven to be worth its cost. The weapon has been strengthened by amber, and a ring of protection was embedded into the pommel.
+
+STATISTICS:
+
+Special Abilities:
+- +10% chance per hit to inflict 8D10 additional fire damage.
+- +10% chance per hit to inflict 8D10 additional electrical damage.
+
+Equipped Abilities:
+- Resistance to Fire: +25%
+- Resistance to Electricity: +25%
+- Armor Class Bonus: +2
+
+THAC0: +5
+Damage: 2D8 +5
+Damage Type: Slashing
+Proficiency Type: Axe
+
+Usable by:
+ Ranger
+ Paladin
+ Fighter (single- and multi-class)~
 
 @700 = ~Greater Restoration
 (Necromancy)
