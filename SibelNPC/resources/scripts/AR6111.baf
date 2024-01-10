@@ -1,0 +1,8 @@
+IF
+  InMyArea(Player1)
+  Global("IaSibel","AR6111",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibel","AR6111",1)
+    ActionOverride("Container 1",DestroyItem("COMPON09"))
+END

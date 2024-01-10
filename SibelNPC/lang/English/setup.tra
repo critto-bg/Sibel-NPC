@@ -1035,6 +1035,31 @@ Equipped Abilities:
 
 Usable By:
  Riskbreaker~
+@635 = ~Hammer Axe +5: Riskbreaker's Dream~
+@636 = ~Hammer Axe +5: Riskbreaker's Dream
+
+Even though crafting a hammer axe is a very demanding job, using it efficiently is even harder and requires the skill of a Riskbreaker lord. The dwarven Rune of Clangeddin needs to be consumed in order to fuse an axe with a war hammer. It does both slashing and crushing damage, and carries additional enchantments as well.
+
+STATISTICS:
+
+Special Abilities:
+- +5% extra chance to 'Hard Hit'
+- +5% extra chance to 'Risk Increment'
+- +5% extra chance to 'Avert Risk'
+
+Equipped Abilities:
+- Strength bonus: +1
+- Armor Class bonus: +2
+- Resistance to Fire: +25%
+- Resistance to Electricity: +25%
+
+THAC0: +5
+2D8 +5 (slashing), +20 crushing damage
+Damage Type: Slashing
+Proficiency Type: Axe
+
+Usable By:
+ Riskbreaker~
 
 @700 = ~Greater Restoration
 (Necromancy)

@@ -416,6 +416,10 @@ ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!sboo03.itm~ ~override/S!sboo03.itm~
     SAY NAME2 @633
     SAY DESC @634
+
+  COPY ~SibelNPC/resources/items/S!saxe02.itm~ ~override/S!saxe02.itm~
+    SAY NAME2 @635
+    SAY DESC @636
 END
 
 /* copy creatures */
@@ -1079,6 +1083,13 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     ADD_CRE_ITEM ~MISC07~ #30000 #0 #0 ~UNSTEALABLE~ ~INV2~
 END
 
+// EE only
+ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
+  // Insane Dwarf Warrior
+  COPY_EXISTING ~UDDWARF.cre~ ~override/UDDWARF.cre~
+    ADD_CRE_ITEM ~COMPON09~ #0 #0 #0 ~UNSTEALABLE~ ~INV1~ // Rune of Clangeddin
+END
+
 /* spells */
 
 COPY ~SibelNPC/resources/spells/spini82.spl~ ~override/spini82.spl~
@@ -1668,6 +1679,7 @@ END
 // EE only
 ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_BOTTOM ~AR0310.BCS~ ~SibelNPC/resources/scripts/AR0310.baf~
+  EXTEND_BOTTOM ~AR6111.BCS~ ~SibelNPC/resources/scripts/AR6111.baf~
 END
 
 /* graphics */
@@ -1726,6 +1738,7 @@ COPY ~SibelNPC/resources/bam/S!spe1in.bam~ ~override/S!spe1in.bam~
 COPY ~SibelNPC/resources/bam/S!sshld1.bam~ ~override/S!sshld1.bam~
 COPY ~SibelNPC/resources/bam/S!srbbin.bam~ ~override/S!srbbin.bam~
 COPY ~SibelNPC/resources/bam/S!srbb2n.bam~ ~override/S!srbb2n.bam~
+COPY ~SibelNPC/resources/bam/S!srbdre.bam~ ~override/S!srbdre.bam~
 
 /* areas */
 
@@ -1896,6 +1909,10 @@ COPY_EXISTING ~AR0404.are~ ~override/AR0404.are~
 // Amkethran, Tavern
 COPY_EXISTING ~AR5501.are~ ~override/AR5501.are~
   WRITE_ASCII 0x94 ~AR5501~ #8 // area script
+
+// Woodcutter's House
+COPY_EXISTING ~AR6111.are~ ~override/AR6111.are~
+  WRITE_ASCII 0x94 ~AR6111~ #8 // area script
 
 /* area resources */
 

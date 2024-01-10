@@ -207,6 +207,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What can you do for these potent Riskbreaker boots?~
     GOTO Bootlord
 
+  // riskbreaker hammer axe
+  IF ~PartyHasItem("AX1H12")~ THEN
+    REPLY ~Is there a way to improve Stonefire axe?~
+    GOTO Axelord
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -705,6 +710,24 @@ IF ~~ THEN BEGIN Bootlord
         TakePartyItemNum("POTN35",1) DestroyItem("POTN35")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!sboo03",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Axelord
+  SAY ~There's an old dwarven recipe that may fuse this axe with a war hammer. Bring me an unenchanted War Hammer +3, a dwarven Rune of Clangeddin and a chunk of Reinforced Amber. The price is 50 thousand gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("AX1H12") PartyHasItem("HAMM12") PartyHasItem("COMPON09") PartyHasItem("S!sramb") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("AX1H12",1) DestroyItem("AX1H12")
+        TakePartyItemNum("HAMM12",1) DestroyItem("HAMM12")
+        TakePartyItemNum("COMPON09",1) DestroyItem("COMPON09")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!saxe02",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
