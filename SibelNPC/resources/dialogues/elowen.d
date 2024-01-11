@@ -178,12 +178,12 @@ IF ~~ THEN BEGIN ItemList
     GOTO Horn3
 
   // reinforced indigo stone
-  IF ~PartyHasItem("S!helm01")~ THEN
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!helm01")~ THEN
     REPLY ~Is there a way to improve this indigo ioun stone?~
     GOTO Ioun2
 
   // spear of withering
-  IF ~PartyHasItem("sper10")~ THEN
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("sper10")~ THEN
     REPLY ~What can be done about this dangerous spear?~
     GOTO Shrivel
 
