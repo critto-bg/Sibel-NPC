@@ -24,6 +24,11 @@ APPEND ~pdialog.2da~
 
 COPY ~SibelNPC/resources/2da/S!sitems.2da~ ~override/S!sitems.2da~
 
+COPY ~SibelNPC/resources/2da/sibelend.2da~ ~override/sibelend.2da~
+  REPLACE ~99999~ @1120
+  REPLACE ~99990~ @1121
+  REPLACE ~99991~ @1122
+
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/2da/lucl0.2da~ ~override/lucl0.2da~
   COPY ~SibelNPC/resources/2da/lucl1.2da~ ~override/lucl1.2da~
@@ -1558,6 +1563,44 @@ EXTEND_TOP ~AR0334.BCS~ ~SibelNPC/resources/scripts/AR0334.baf~
 EXTEND_TOP ~AR0404.BCS~ ~SibelNPC/resources/scripts/AR0404.baf~
 EXTEND_TOP ~S!BOUNTY.BCS~ ~SibelNPC/resources/scripts/S!bounty.baf~
 EXTEND_TOP ~S!WARDEN.BCS~ ~SibelNPC/resources/scripts/S!warden.baf~
+
+<<<<<<<< .../inlined/old-AR6200.baf
+IF
+	Global("StartEndBios","AR6200",1)
+THEN
+	RESPONSE #100
+		SetCursorState(TRUE)
+		SmallWait(1)
+		Continue()
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-AR6200.baf
+IF
+	Global("StartEndBios","AR6200",1)
+THEN
+	RESPONSE #100
+		SetCursorState(TRUE)
+		SmallWait(1)
+		Continue()
+END
+
+IF
+  Global("StartEndBios","AR6200",1)
+  InParty("S!Sibel")
+  Global("IaSibelBio","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelBio","GLOBAL",1)
+    TextScreen("SIBELEND")
+    SmallWait(1)
+    Continue()
+END
+>>>>>>>>
+
+COPY_EXISTING ~AR6200.BCS~ ~override/AR6200.bcs~
+  REPLACE_BCS_BLOCK ~.../inlined/old-AR6200.baf~ ~.../inlined/new-AR6200.baf~
+  BUT_ONLY_IF_IT_CHANGES
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
