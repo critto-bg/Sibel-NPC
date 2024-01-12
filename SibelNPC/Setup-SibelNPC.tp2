@@ -691,6 +691,13 @@ COPY ~SibelNPC/resources/creatures/S!sleat4.cre~ ~override/S!sleat4.cre~
 
   WRITE_ASCII 0x0248 ~S!sleat4~ #8 // override script
 
+COPY ~SibelNPC/resources/creatures/S!sleat5.cre~ ~override/S!sleat5.cre~
+  SAY NAME1 @39
+  SAY NAME2 @39
+
+  WRITE_ASCII 0x0248 ~S!sleat5~ #8 // override script
+  WRITE_ASCII 0x02cc ~S!sleat5~ #8 // dialog
+
 COPY ~SibelNPC/resources/creatures/S!sdruin.cre~ ~override/S!sdruin.cre~
   SAY NAME1 @40
   SAY NAME2 @40
@@ -1408,6 +1415,7 @@ COMPILE ~SibelNPC/resources/dialogues/sibel25.d~
 COMPILE ~SibelNPC/resources/dialogues/virt3.d~
 COMPILE ~SibelNPC/resources/dialogues/lawr1.d~
 COMPILE ~SibelNPC/resources/dialogues/lawr2.d~
+COMPILE ~SibelNPC/resources/dialogues/leat5.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
@@ -1502,6 +1510,7 @@ COMPILE ~SibelNPC/resources/scripts/S!sleat1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sleat2.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sleat3.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sleat4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sleat5.baf~
 COMPILE ~SibelNPC/resources/scripts/S!slena.baf~
 COMPILE ~SibelNPC/resources/scripts/S!spool1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sregi2.baf~
