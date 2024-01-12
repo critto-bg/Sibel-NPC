@@ -1411,6 +1411,9 @@ COMPILE ~SibelNPC/resources/dialogues/lawr2.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COMPILE ~SibelNPC/resources/dialogues/wsmith01.d~
+  COMPILE ~SibelNPC/resources/dialogues/botsmith.d~
+
   COPY_EXISTING ~KRUIN.DLG~ ~override/KRUIN.DLG~
     DECOMPILE_DLG_TO_D
     REPLACE_TEXTUALLY ~TakePartyItem("misc8u")~ ~TakePartyItem("misc8u") SetGlobal("IaGaveKruinSword","GLOBAL",1)~
