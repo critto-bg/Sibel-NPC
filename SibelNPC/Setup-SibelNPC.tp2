@@ -1285,6 +1285,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/spells/SPWM128.spl~ ~override/SPWM128.spl~
 
+  COPY ~SibelNPC/resources/spells/SPCL907.spl~ ~override/SPCL907.spl~
+
+  COPY ~SibelNPC/resources/spells/SPWISH12.spl~ ~override/SPWISH12.spl~
+
   // Stoneskin
   COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
     READ_LONG 0x64 headers_offset
