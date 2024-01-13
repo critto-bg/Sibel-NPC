@@ -1775,14 +1775,14 @@ END
   COPY_EXISTING ~S!MLAR.bcs~ ~override/S!MLAR.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
-    REPLACE_TEXTUALLY ~ SetGlobalTimer("Iacreatecoin","LOCALS",18)~ ~ SetGlobalTimer("Iacreatecoin","LOCALS",36)~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreatecoin","LOCALS",18)~ ~ SetGlobalTimer("Iacreatecoin","LOCALS",36)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 
   COPY_EXISTING ~S!HRACK.bcs~ ~override/S!HRACK.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
-    REPLACE_TEXTUALLY ~ SetGlobalTimer("Iacreategem","LOCALS",18)~ ~ SetGlobalTimer("Iacreategem","LOCALS",36)~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreategem","LOCALS",18)~ ~ SetGlobalTimer("Iacreategem","LOCALS",36)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 
