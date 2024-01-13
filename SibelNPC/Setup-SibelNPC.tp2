@@ -1174,6 +1174,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~sengua04.cre~ ~override/sengua04.cre~
     WRITE_LONG  0x14       40000 // xp
     WRITE_LONG  0x1c       30000 // gold
+
+  COPY_EXISTING ~senlich.cre~ ~override/senlich.cre~
+    WRITE_LONG  0x1c       30000 // gold
 END
 
 // EE only
@@ -1820,6 +1823,16 @@ END
                 ~S!elegos.bcs~ ~override/S!elegos.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~S!ambers~ ~S!ambere~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!SENLIC.bcs~ ~override/S!SENLIC.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~WIZARD_SPELL_IMMUNITY_DIVINATION~ ~WIZARD_SPELL_IMMUNITY_ABJURATION~
+    REPLACE_TEXTUALLY ~SPWII41~ ~SPWI701~
+    REPLACE_TEXTUALLY ~SPPR725~ ~SPCLI24~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("blades","LOCALS",60)~ ~SetGlobalTimer("blades","LOCALS",121)~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("blades","LOCALS",53)~ ~SetGlobalTimer("blades","LOCALS",121)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
