@@ -893,9 +893,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY NAME2 @57
 
   COPY ~SibelNPC/resources/creatures/S!amber2.cre~ ~override/S!amber2.cre~
+       ~SibelNPC/resources/creatures/S!amber3.cre~ ~override/S!amber3.cre~
        ~SibelNPC/resources/creatures/S!amberd.cre~ ~override/S!amberd.cre~
        ~SibelNPC/resources/creatures/S!amberg.cre~ ~override/S!amberg.cre~
        ~SibelNPC/resources/creatures/S!amberl.cre~ ~override/S!amberl.cre~
+       ~SibelNPC/resources/creatures/S!ambere.cre~ ~override/S!ambere.cre~
     SAY NAME1 @58
     SAY NAME2 @58
 END
@@ -1085,6 +1087,17 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV9~
     ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV10~
     ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV13~
+
+  COPY_EXISTING ~S!elegos.cre~ ~override/S!elegos.cre~
+                ~S!gelego.cre~ ~override/S!gelego.cre~
+                ~S!gelegs.cre~ ~override/S!gelegs.cre~
+
+    ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV14~
+
+  COPY_EXISTING ~GORCHR.cre~ ~override/GORCHR.cre~
+
     ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
     ADD_CRE_ITEM ~S!MISC27~ #0 #0 #0 ~UNSTEALABLE~ ~INV13~
 
@@ -1795,6 +1808,14 @@ END
   COPY_EXISTING ~S!ultgol.bcs~ ~override/S!ultgol.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~S!amber~ ~S!amberl~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!gelegs.bcs~ ~override/S!gelegs.bcs~
+                ~S!gelego.bcs~ ~override/S!gelego.bcs~
+                ~S!elegos.bcs~ ~override/S!elegos.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~S!ambers~ ~S!ambere~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
