@@ -410,6 +410,18 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     WRITE_BYTE 0x18 (flags BXOR 0b00000001) // remove Critical Item falg
 
     WRITE_LONG 0x34 80000 // price
+
+  COPY_EXISTING ~elemogre.itm~ ~override/elemogre.itm~
+    READ_LONG  0x64 abil_off
+    READ_SHORT 0x68 abil_num
+
+    FOR (i = 0; i < "%abil_num%"; i += 1) BEGIN
+      READ_BYTE (%abil_off% + %i% * 0x38) attack_type
+
+      PATCH_IF %attack_type% = 1 BEGIN
+        WRITE_SHORT (%abil_off% + %i% * 0x38 + 0x01a) 40 // damage bonus
+      END
+    END
 END
 
 // EE only
