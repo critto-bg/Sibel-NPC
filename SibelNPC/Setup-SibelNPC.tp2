@@ -340,6 +340,14 @@ COPY ~SibelNPC/resources/items/S!samu01.itm~ ~override/S!samu01.itm~
   SAY NAME2 @637
   SAY DESC @638
 
+COPY ~SibelNPC/resources/items/S!shead.itm~ ~override/S!shead.itm~
+  SAY NAME2 @639
+  SAY DESC @640
+
+COPY ~SibelNPC/resources/items/S!sstaf2.itm~ ~override/S!sstaf2.itm~
+  SAY NAME2 @641
+  SAY DESC @642
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~
@@ -1422,6 +1430,8 @@ COPY ~SibelNPC/resources/effects/S!shorn3.eff~ ~override/S!shorn3.eff~
 
 COPY ~SibelNPC/resources/effects/S!swish1.eff~ ~override/S!swish1.eff~
 
+COPY ~SibelNPC/resources/effects/S!sgolem.eff~ ~override/S!sgolem.eff~
+
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/effects/S!devag.eff~ ~override/S!devag.eff~
@@ -1916,6 +1926,7 @@ COPY ~SibelNPC/resources/bam/S!sshld1.bam~ ~override/S!sshld1.bam~
 COPY ~SibelNPC/resources/bam/S!srbbin.bam~ ~override/S!srbbin.bam~
 COPY ~SibelNPC/resources/bam/S!srbb2n.bam~ ~override/S!srbb2n.bam~
 COPY ~SibelNPC/resources/bam/S!srbdre.bam~ ~override/S!srbdre.bam~
+COPY ~SibelNPC/resources/bam/S!shead.bam~ ~override/S!shead.bam~
 
 /* areas */
 

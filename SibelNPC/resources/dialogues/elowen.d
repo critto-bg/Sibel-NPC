@@ -217,6 +217,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could Talisman of Greater Protection be improved futher?~
     GOTO Shielding
 
+  // undoer
+  IF ~PartyHasItem("S!staf05")~ THEN
+    REPLY ~Could you possibly improve Golem Slayer?~
+    GOTO Undoer
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -752,6 +757,24 @@ IF ~~ THEN BEGIN Shielding
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!samu01",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Undoer
+  SAY ~I will need a great amount of amber to empower the staff. Bring the head of a Greater Amber golem, a chunk of Reinforced Amber and a scroll of Wish. The price is 75.000 gold pieces. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!staf05") PartyHasItem("SCRLB4") PartyHasItem("S!sramb") PartyHasItem("S!shead") PartyGoldGT(74999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(75000) DestroyGold(75000)
+        TakePartyItemNum("S!staf05",1) DestroyItem("S!staf05")
+        TakePartyItemNum("SCRLB4",1) DestroyItem("SCRLB4")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        TakePartyItemNum("S!shead",1) DestroyItem("S!shead")
+        GiveItemCreate("S!sstaf2",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

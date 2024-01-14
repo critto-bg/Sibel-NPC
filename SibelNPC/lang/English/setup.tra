@@ -1077,6 +1077,36 @@ Equipped Abilities:
 
 Not Usable By:
  Wizard Slayer~
+@639 = ~Head of a Greater Amber Golem~
+@640 = ~Head of a Greater Amber Golem
+
+This head made of amber was retrieved by you following the aftermath of the confrontation with Andreas Amberville.~
+@641 = ~The Undoer +5~
+@642 = ~The Undoer +5
+
+This heavily enchanted staff might very well be the most potent weapon against golems ever created. Only a pure mage dedicated to the pursuit of arcane arts is capable of wielding such an implement.
+
+STATISTICS:
+
+Combat Abilities:
+- Slays Flesh, Stone, Clay, Iron, and Adamantite golems (no save)
+- Septuple damage against golems (i.e 6D8 +60 extra crushing damage to golems)
+- 30% chance per hit to fragmentize the target (as per the 4th level spell)
+
+Equipped Ability:
+- Resistance to Crushing Damage: 30%
+- Immunity to Electrical Discharge
+
+THAC0: +10
+Damage: 1D8 +10
+Damage type: Crushing
+Weight: 3
+Speed Factor: 1
+Proficiency Type: Quarterstaff
+Type: 2-handed
+
+Usable By:
+ Mage (Single Class)~
 
 @700 = ~Greater Restoration
 (Necromancy)
