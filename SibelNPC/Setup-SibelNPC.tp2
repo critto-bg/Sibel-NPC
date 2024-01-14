@@ -30,6 +30,10 @@ COPY ~SibelNPC/resources/2da/sibelend.2da~ ~override/sibelend.2da~
   REPLACE ~99991~ @1122
 
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/2da/luba0.2da~ ~override/luba0.2da~
+  COPY ~SibelNPC/resources/2da/luba1.2da~ ~override/luba1.2da~
+  COPY ~SibelNPC/resources/2da/luba2.2da~ ~override/luba2.2da~
+  COPY ~SibelNPC/resources/2da/luba3.2da~ ~override/luba3.2da~
   COPY ~SibelNPC/resources/2da/lucl0.2da~ ~override/lucl0.2da~
   COPY ~SibelNPC/resources/2da/lucl1.2da~ ~override/lucl1.2da~
   COPY ~SibelNPC/resources/2da/lucl2.2da~ ~override/lucl2.2da~
@@ -41,6 +45,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/2da/ludr1.2da~ ~override/ludr1.2da~
   COPY ~SibelNPC/resources/2da/ludr2.2da~ ~override/ludr2.2da~
   COPY ~SibelNPC/resources/2da/ludr3.2da~ ~override/ludr3.2da~
+  COPY ~SibelNPC/resources/2da/luth0.2da~ ~override/luth0.2da~
+  COPY ~SibelNPC/resources/2da/luth1.2da~ ~override/luth1.2da~
+  COPY ~SibelNPC/resources/2da/luth2.2da~ ~override/luth2.2da~
+  COPY ~SibelNPC/resources/2da/luth3.2da~ ~override/luth3.2da~
+  COPY ~SibelNPC/resources/2da/luth4.2da~ ~override/luth4.2da~
   COPY ~SibelNPC/resources/2da/lufc0.2da~ ~override/lufc0.2da~
   COPY ~SibelNPC/resources/2da/lufd0.2da~ ~override/lufd0.2da~
   COPY ~SibelNPC/resources/2da/lufmc.2da~ ~override/lufmc.2da~
@@ -1316,6 +1325,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/spells/SPWISH12.spl~ ~override/SPWISH12.spl~
 
+  COPY ~SibelNPC/resources/spells/spcli27.spl~ ~override/SPCLI27.SPL~
+    SAY NAME1 @724
+    SAY UNIDENTIFIED_DESC @725
+
   // Stoneskin
   COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
     READ_LONG 0x64 headers_offset
@@ -1888,6 +1901,7 @@ ELSE BEGIN
   COPY ~SibelNPC/resources/bam/spcli22b.bam~ ~override/spcli22b.bam~
   COPY ~SibelNPC/resources/bam/spcli23b.bam~ ~override/spcli23b.bam~
   COPY ~SibelNPC/resources/bam/spcli25b.bam~ ~override/spcli25b.bam~
+  COPY ~SibelNPC/resources/bam/spcli27b.bam~ ~override/spcli27b.bam~
   COPY ~SibelNPC/resources/bam/sppri26b.bam~ ~override/sppri26b.bam~
   COPY ~SibelNPC/resources/bam/sppri26c.bam~ ~override/sppri26c.bam~
   COPY ~SibelNPC/resources/bam/sppri27b.bam~ ~override/sppri27b.bam~
