@@ -212,6 +212,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to improve Stonefire axe?~
     GOTO Axelord
 
+  // talisman of greater shielding
+  IF ~PartyHasItem("S!amul02")~ THEN
+    REPLY ~Could Talisman of Greater Protection be improved futher?~
+    GOTO Shielding
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -728,6 +733,25 @@ IF ~~ THEN BEGIN Axelord
         TakePartyItemNum("COMPON09",1) DestroyItem("COMPON09")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!saxe02",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Shielding
+  SAY ~The amulet may be infused with more magics still. Bring me Shield amulet, an Amulet of Protection, a chunk of Reinforced Amber and a Permanency scroll. The job will cost you 60 thousand gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!amul02") PartyHasItem("AMUL15") PartyHasItem("AMUL14") PartyHasItem("S!sramb") PartyHasItem("S!misc02") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("S!amul02",1) DestroyItem("S!amul02")
+        TakePartyItemNum("AMUL15",1) DestroyItem("AMUL15")
+        TakePartyItemNum("AMUL14",1) DestroyItem("AMUL14")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!samu01",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

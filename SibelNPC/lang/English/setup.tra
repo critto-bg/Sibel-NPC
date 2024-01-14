@@ -1060,6 +1060,23 @@ Proficiency Type: Axe
 
 Usable By:
  Riskbreaker~
+@637 = ~Talisman of Greater Shielding~
+@638 = ~Talisman of Greater Shielding
+
+This powerful talisman was enhanced even further by the addition of a few protective effects from two more lesser amulets.
+
+STATISTICS:
+
+Equipped Abilities:
+- Armor Class bonus: +3
+- extra AC vs. Blunt weapons: +3
+- All Saving Throws bonus: +3
+- Magic Resistance: +15%
+- Resistance to Electricity: +15%
+- Immunity to Poison
+
+Not Usable By:
+ Wizard Slayer~
 
 @700 = ~Greater Restoration
 (Necromancy)
