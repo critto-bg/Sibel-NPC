@@ -375,6 +375,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/items/S!gtwist.itm~ ~override/S!gtwist.itm~
 
+  COPY ~SibelNPC/resources/items/S!gtwiso.itm~ ~override/S!gtwiso.itm~
+
   COPY ~SibelNPC/resources/items/DRAGRING.ITM~ ~override/DRAGRING.ITM~
 
   COPY ~SibelNPC/resources/items/S!sw11.itm~ ~override/S!sw11.itm~
@@ -1213,6 +1215,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~sendai.cre~ ~override/sendai.cre~
     WRITE_LONG  0x1c       50000 // gold
+
+  COPY_EXISTING ~S!sencoi.cre~ ~override/S!sencoi.cre~
+                ~S!sengem.cre~ ~override/S!sengem.cre~
+
+    WRITE_BYTE  0x61      98 // resist crushing
 END
 
 // EE only
