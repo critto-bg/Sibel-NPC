@@ -17,7 +17,7 @@ IF
   !Dead("S!Sibel")
   Global("IaSibelTalks","GLOBAL",27)
   Global("IaSLawrencePlot","GLOBAL",6)
-  Global("Iaepicbattle","AR4500",1)
+  GlobalGT("Iaepicbattle","AR4500",0)
   Global("Iacreature","AR4500",1)
   Global("Iathethree","AR4500",1)
   Global("IaSibelEDE","AR4500",0)
