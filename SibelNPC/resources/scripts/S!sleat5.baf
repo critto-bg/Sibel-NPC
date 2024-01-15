@@ -128,6 +128,16 @@ THEN
 END
 
 IF
+  Global("Iathethree","AR4500",1)
+  See(NearestEnemyOf(Player1))
+  HasItem("S!rakp",LastSeenBy(Myself))
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+
+IF
   Global("Iathethree","AR4500",2)
   See(NearestEnemyOf(Player1))
   !CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
