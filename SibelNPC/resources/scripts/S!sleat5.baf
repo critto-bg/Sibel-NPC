@@ -1,11 +1,10 @@
 IF
   NumTimesTalkedTo(0)
-  See(Player1)
+  See([PC])
   Global("Iapcastts","GLOBAL",0)
 THEN
   RESPONSE #100
-    Wait(3)
-    StartDialogNoSet(Player1)
+    StartDialogNoSet([PC])
 END
 
 IF

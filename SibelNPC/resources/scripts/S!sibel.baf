@@ -664,5 +664,5 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaEDE","LOCALS",1)
-    CreateCreatureObjectDoor("S!sleat5",Myself,0,0,0)
+    CreateCreatureObject("S!sleat5",Myself,0,0,0)
 END
