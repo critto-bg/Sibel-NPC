@@ -1303,6 +1303,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/spells/SPCLI05.SPL~ ~override/SPCLI05.SPL~
 
+  COPY ~SibelNPC/resources/spells/spini64.spl~ ~override/spini64.spl~
+
   COPY ~SibelNPC/resources/spells/spcli22.spl~ ~override/SPCLI22.SPL~
     SAY NAME1 @711
     SAY UNIDENTIFIED_DESC @712
@@ -1589,6 +1591,8 @@ REPLACE_SAY ~IAMORID2~ 26 @1216
 >>>>>>>>
 
   COMPILE ~.../inlined/IAMORID2-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
+
+  COMPILE ~SibelNPC/resources/dialogues/iaspy4.d~ USING ~SibelNPC/lang/English/spy4.tra~
 END
 
 /* scripts */
