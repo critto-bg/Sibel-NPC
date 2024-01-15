@@ -1080,7 +1080,7 @@ Not Usable By:
 @639 = ~Head of a Greater Amber Golem~
 @640 = ~Head of a Greater Amber Golem
 
-This head made of amber was retrieved by you following the aftermath of the confrontation with Andreas Amberville.~
+This head made of amber was retrieved by you following the aftermath of the confrontation with Andrias Amberville.~
 @641 = ~The Undoer +5~
 @642 = ~The Undoer +5
 
@@ -1090,7 +1090,7 @@ STATISTICS:
 
 Combat Abilities:
 - Slays Flesh, Stone, Clay, Iron, and Adamantite golems (no save)
-- Septuple damage against golems (i.e 6D8 +60 extra crushing damage to golems)
+- Septuple damage against golems
 - 30% chance per hit to fragmentize the target (as per the 4th level spell)
 
 Equipped Ability:
