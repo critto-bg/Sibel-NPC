@@ -1443,6 +1443,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~SPWISH10.spl~ ~override/SPWISH10.spl~
     WRITE_BYTE 0x25 0 // Primary School
+
+  COPY_EXISTING ~SPCLI16.spl~ ~override/SPCLI16.spl~
+    SAY UNIDENTIFIED_DESC @726
 END
 
 /* effects */
@@ -1462,6 +1465,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/effects/S!devag.eff~ ~override/S!devag.eff~
 
   COPY ~SibelNPC/resources/effects/S!devae.eff~ ~override/S!devae.eff~
+
+  COPY_EXISTING ~S!fist.eff~ ~override/S!fist.eff~
+    WRITE_LONG 0x38 24 // dice thrown
 END
 
 /* stores */

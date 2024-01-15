@@ -1207,6 +1207,16 @@ When the cleric casts this powerful spell, he or she immediately gains +75% bonu
 @725 = ~Extend Lifespan
 
 A high-level rogue's astute powers of observation allow them to improve their health by incorporation of their companions' training regiments. Effect: Adds +5 Max HP permanently. Can be picked up to 6 times.~
+@726 = ~Fist of Nature
+Level: Quest
+Sphere: Combat, Summoning
+Range: Visual range of caster
+Duration: Permanent
+Casting Time: 5
+Area of Effect: One Creature
+Saving Throw: None
+
+By means of this powerful spell, the druid uses his connection with nature to creates a huge disembodied fist that inflicts 4D10 crushing damage to the target. This spell not only affects the Rakshasa (who are otherwise immune to druidic spells), but even inflicts septuple damage to them.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
