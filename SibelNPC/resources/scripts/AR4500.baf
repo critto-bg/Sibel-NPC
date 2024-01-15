@@ -9,3 +9,21 @@ THEN
     SetGlobal("IASJoinedToB","GLOBAL",1)
     SetGlobal("IaSibelSpawnPlane","GLOBAL",1)
 END
+
+IF
+  InMyArea(Player1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  Global("IaSibelTalks","GLOBAL",27)
+  Global("IaSLawrencePlot","GLOBAL",6)
+  Global("Iaepicbattle","AR4500",1)
+  Global("Iacreature","AR4500",1)
+  Global("Iathethree","AR4500",1)
+  Global("IaSibelEDE","AR4500",0)
+  !Global("Iapcastts","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("IaSibelEDE","AR4500",1)
+    CreateCreatureObject("S!sleat5","S!Sibel",0,0,0)
+END

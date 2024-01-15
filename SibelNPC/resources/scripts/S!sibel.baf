@@ -648,21 +648,3 @@ THEN
     ActionOverride("S!sleat3",StartDialogueNoSet(Player1))
     SetInterrupt(TRUE)
 END
-
-/* EDE */
-
-IF
-  InParty(Myself)
-  See(Player1)
-  AreaCheck("AR4500")
-  Global("IaSibelTalks","GLOBAL",27)
-  Global("IaSLawrencePlot","GLOBAL",6)
-  Global("Iaepicbattle","AR4500",1)
-  Global("Iacreature","AR4500",1)
-  Global("IaEDE","LOCALS",0)
-  !Global("Iapcastts","GLOBAL",1)
-THEN
-  RESPONSE #100
-    SetGlobal("IaEDE","LOCALS",1)
-    CreateCreatureObject("S!sleat5",Myself,0,0,0)
-END
