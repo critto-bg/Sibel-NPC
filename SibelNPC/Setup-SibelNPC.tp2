@@ -1597,8 +1597,6 @@ REPLACE_SAY ~IAMORID2~ 26 @1216
 >>>>>>>>
 
   COMPILE ~.../inlined/IAMORID2-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
-
-  COMPILE ~SibelNPC/resources/dialogues/iaspy4.d~ USING ~SibelNPC/lang/English/spy4.tra~
 END
 
 /* scripts */
