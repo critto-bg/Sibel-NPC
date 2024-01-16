@@ -1837,14 +1837,14 @@ END
   COPY_EXISTING ~S!MLAR.bcs~ ~override/S!MLAR.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
-    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreatecoin","LOCALS",18)~ ~ SetGlobalTimer("Iacreatecoin","LOCALS",36)~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreatecoin","LOCALS",18)~ ~SetGlobalTimer("Iacreatecoin","LOCALS",36)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 
   COPY_EXISTING ~S!HRACK.bcs~ ~override/S!HRACK.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~SetGlobalTimer("Iaspell","LOCALS",6)~ ~SetGlobalTimer("Iaspell","LOCALS",12)~
-    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreategem","LOCALS",18)~ ~ SetGlobalTimer("Iacreategem","LOCALS",36)~
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iacreategem","LOCALS",18)~ ~SetGlobalTimer("Iacreategem","LOCALS",36)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 
@@ -1903,6 +1903,41 @@ END
     REPLACE_TEXTUALLY ~SPPR725~ ~SPCLI24~
     REPLACE_TEXTUALLY ~SetGlobalTimer("blades","LOCALS",60)~ ~SetGlobalTimer("blades","LOCALS",121)~
     REPLACE_TEXTUALLY ~SetGlobalTimer("blades","LOCALS",53)~ ~SetGlobalTimer("blades","LOCALS",121)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-pasha2.baf
+IF
+  Allegiance(Myself,GOODBUTBLUE)
+  Global("Iathethree","AR4500",2)
+  See(NearestEnemyOf(Player1))
+  CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+  HasItem("S!rakp",LastSeenBy(Myself))
+  InMyArea(Player1)
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-pasha2.baf
+IF
+  False()
+THEN
+  RESPONSE #100
+    MoveToObject(Player1)
+END
+>>>>>>>>
+
+  COPY_EXISTING ~S!PASHA2.BCS~ ~override/S!PASHA2.bcs~
+    REPLACE_BCS_BLOCK ~.../inlined/old-pasha2.baf~ ~.../inlined/new-pasha2.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!RAKP.bcs~ ~override/S!RAKP.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Ianoble","LOCALS",30)~ ~SetGlobalTimer("Ianoble","LOCALS",90)~
+    REPLACE_TEXTUALLY ~IncrementGlobal("Iaminion2","LOCALS",1)~ ~IncrementGlobal("Iaminion2","LOCALS",2)~
+    REPLACE_TEXTUALLY ~IncrementGlobal("Iarak02","LOCALS",1)~ ~IncrementGlobal("Iarak02","LOCALS",1) IncrementGlobal("Iarak03","LOCALS",1)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
