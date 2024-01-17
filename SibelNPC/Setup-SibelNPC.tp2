@@ -954,6 +954,7 @@ COPY_EXISTING ~TORGAL.cre~ ~override/TORGAL.cre~
 
 COPY_EXISTING ~DRAGBLUE.cre~ ~override/DRAGBLUE.cre~
   WRITE_LONG 0x1c 50000 // gold
+  ADD_CRE_ITEM ~S!SMISC~ #0 #0 #0 ~UNSTEALABLE~ ~INV12~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
