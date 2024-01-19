@@ -1938,6 +1938,12 @@ END
     REPLACE_TEXTUALLY ~IncrementGlobal("Iarak02","LOCALS",1)~ ~IncrementGlobal("Iarak02","LOCALS",1) IncrementGlobal("Iarak03","LOCALS",1)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!mitgol.bcs~ ~override/S!mitgol.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)~ ~!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE) !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE5)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
