@@ -377,6 +377,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/items/S!gtwiso.itm~ ~override/S!gtwiso.itm~
 
+  COPY ~SibelNPC/resources/items/S!mitgol.itm~ ~override/S!mitgol.itm~
+
   COPY ~SibelNPC/resources/items/DRAGRING.ITM~ ~override/DRAGRING.ITM~
 
   COPY ~SibelNPC/resources/items/S!sw11.itm~ ~override/S!sw11.itm~
