@@ -381,6 +381,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/items/DRAGRING.ITM~ ~override/DRAGRING.ITM~
 
+  COPY ~SibelNPC/resources/items/finmel01.itm~ ~override/finmel01.itm~
+
   COPY ~SibelNPC/resources/items/S!sw11.itm~ ~override/S!sw11.itm~
     SAY NAME2 @604
     SAY DESC @605
@@ -921,6 +923,8 @@ COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam4.cre~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  COPY ~SibelNPC/resources/creatures/finmel01.cre~ ~override/finmel01.cre~
+
   COPY ~SibelNPC/resources/creatures/S!devag.cre~ ~override/S!devag.cre~
     SAY NAME1 @56
     SAY NAME2 @56
@@ -937,6 +941,26 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
        ~SibelNPC/resources/creatures/S!ambere.cre~ ~override/S!ambere.cre~
     SAY NAME1 @58
     SAY NAME2 @58
+
+  COPY ~SibelNPC/resources/creatures/S!sskelm.cre~ ~override/S!sskelm.cre~
+    SAY NAME1 @64
+    SAY NAME2 @64
+
+  COPY ~SibelNPC/resources/creatures/S!smgol1.cre~ ~override/S!smgol1.cre~
+    SAY NAME1 @68
+    SAY NAME2 @68
+
+  COPY ~SibelNPC/resources/creatures/S!smgol2.cre~ ~override/S!smgol2.cre~
+    SAY NAME1 @68
+    SAY NAME2 @68
+
+  COPY ~SibelNPC/resources/creatures/S!smtg1.cre~ ~override/S!smtg1.cre~
+    SAY NAME1 @69
+    SAY NAME2 @69
+
+  COPY ~SibelNPC/resources/creatures/S!smtg2.cre~ ~override/S!smtg2.cre~
+    SAY NAME1 @69
+    SAY NAME2 @69
 END
 
 /* patch creatures */
@@ -1750,12 +1774,18 @@ COPY_EXISTING ~AR6200.BCS~ ~override/AR6200.bcs~
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COMPILE ~SibelNPC/resources/scripts/cut44a.baf~
+  COMPILE ~SibelNPC/resources/scripts/finmel01.baf~
+  COMPILE ~SibelNPC/resources/scripts/meliss01.baf~
+  COMPILE ~SibelNPC/resources/scripts/meliss02.baf~
+  COMPILE ~SibelNPC/resources/scripts/meliss03.baf~
   COMPILE ~SibelNPC/resources/scripts/SPWNDROW.baf~
   COMPILE ~SibelNPC/resources/scripts/S!devag.baf~
   COMPILE ~SibelNPC/resources/scripts/S!devae.baf~
+  COMPILE ~SibelNPC/resources/scripts/S!melsum.baf~
 
   EXTEND_TOP ~AR3025.BCS~ ~SibelNPC/resources/scripts/AR3025.baf~
   EXTEND_TOP ~AR5203.BCS~ ~SibelNPC/resources/scripts/AR5203.baf~
+  EXTEND_TOP ~AR6200.BCS~ ~SibelNPC/resources/scripts/AR6200.baf~
   EXTEND_TOP ~C6ARKAN.BCS~ ~SibelNPC/resources/scripts/C6ARKAN.baf~
   EXTEND_TOP ~C6ERIC.BCS~ ~SibelNPC/resources/scripts/C6ERIC.baf~
   EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
