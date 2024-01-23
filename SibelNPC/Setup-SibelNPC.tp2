@@ -1609,18 +1609,6 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     REPLACE_TEXTUALLY ~RandomNumGT(100,75)~ ~RandomNumGT(100,75) False()~
     REPLACE_TEXTUALLY ~GlobalGT("Iawishp21","GLOBAL",2)~ ~GlobalGT("Iawishp21","GLOBAL",2) False()~
     COMPILE_D_TO_DLG
-
-<<<<<<<< .../inlined/IASHADOS-fix.d
-REPLACE_SAY ~IASHADOS~ 4 @1215
->>>>>>>>
-
-  COMPILE ~.../inlined/IASHADOS-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
-
-<<<<<<<< .../inlined/IAMORID2-fix.d
-REPLACE_SAY ~IAMORID2~ 26 @1216
->>>>>>>>
-
-  COMPILE ~.../inlined/IAMORID2-fix.d~ USING ~SibelNPC/lang/English/setup.tra~
 END
 
 /* scripts */
