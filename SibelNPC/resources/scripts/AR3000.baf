@@ -1,5 +1,24 @@
 IF
   InMyArea(Player1)
+  Global("IaSibelDream","GLOBAL",3)
+  Global("EnteredArea","AR3000",1)
+  InMyArea("S!Sibel")
+  InParty("S!Sibel")
+  !Dead("S!Sibel")
+  CombatCounter(0)
+THEN
+  RESPONSE #100
+    SetInterrupt(FALSE)
+    SetGlobal("IaSibelDream","GLOBAL",4)
+    // the wait here if the party enters WK for the first time
+    // the game will show the text screen with the intro in that case
+    Wait(3)
+    ActionOverride("S!Sibel",StartDialogueNoSet(Player1))
+    SetInterrupt(TRUE)
+END
+
+IF
+  InMyArea(Player1)
   Global("IaSibelInWK","GLOBAL",0)
   GlobalLT("IaSibelDream","GLOBAL",2)
   InMyArea("S!Sibel")

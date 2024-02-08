@@ -49,25 +49,6 @@ THEN
     SetGlobal("IaSibelDream","GLOBAL",1)
 END
 
-IF
-  Global("IaSibelDream","GLOBAL",3)
-  Global("EnteredArea","AR3000",1)
-  AreaCheck("AR3000")
-  InParty(Myself)
-  See(Player1)
-  Range(Player1,10)
-  CombatCounter(0)
-THEN
-  RESPONSE #100
-    SetGlobal("IaSibelDream","GLOBAL",4)
-    // the wait here if the party enters WK for the first time
-    // the game will show the text screen with the intro in that case
-    SetInterrupt(FALSE)
-    Wait(3)
-    StartDialogueNoSet(Player1)
-    SetInterrupt(TRUE)
-END
-
 // piece of the root tree research banter
 IF
   Global("IaLabFixed","ARIA31",4)
