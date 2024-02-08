@@ -1962,6 +1962,45 @@ END
     REPLACE_TEXTUALLY ~!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)~ ~!CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE) !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE5) !Class(LastSeenBy(Myself),MONK)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-drshnl01.baf
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Prep","LOCALS",0)
+THEN
+	RESPONSE #100
+		ForceSpell(Myself,CLERIC_PHYSICAL_MIRROR)  // SPPR613.SPL (Protection From Missiles)
+		ForceSpell(Myself,CLERIC_DEATH_WARD)  // SPPR409.SPL (Death Ward)
+		ForceSpell(Myself,CLERIC_SHIELD_OF_THE_ARCHONS)  // SPPR701.SPL (Shield of the Archons)
+		SetGlobal("Prep","LOCALS",1)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-drshnl01.baf
+IF
+  !See(NearestEnemyOf(Myself))
+  Heard([ANYONE],ALERT)
+  See(LastHeardBy(Myself))
+THEN
+  RESPONSE #100
+    MoveToObject(LastHeardBy(Myself))
+END
+
+IF
+	See(NearestEnemyOf(Myself))
+	Global("Prep","LOCALS",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Prep","LOCALS",1)
+    ReallyForceSpell(Myself,CLERIC_PHYSICAL_MIRROR)  // SPPR613.SPL (Protection From Missiles)
+		ReallyForceSpell(Myself,CLERIC_DEATH_WARD)  // SPPR409.SPL (Death Ward)
+		ReallyForceSpell(Myself,CLERIC_SHIELD_OF_THE_ARCHONS)  // SPPR701.SPL (Shield of the Archons)
+END
+>>>>>>>>
+
+  COPY_EXISTING ~drshnl01.BCS~ ~override/drshnl01.bcs~
+    REPLACE_BCS_BLOCK ~.../inlined/old-drshnl01.baf~ ~.../inlined/new-drshnl01.baf~
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
