@@ -1,0 +1,7 @@
+IF
+	Global("Iasibel","AR0806",0)
+THEN
+	RESPONSE #100
+		SetGlobal("Iasibel","AR0806",1)
+		ActionOverride("Container 1",CreateItem("SCRL7I",0,0,0))
+END

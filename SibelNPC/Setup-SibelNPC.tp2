@@ -1794,6 +1794,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0300.BCS~ ~SibelNPC/resources/scripts/AR0300.baf~
+  EXTEND_BOTTOM ~AR0806.BCS~ ~SibelNPC/resources/scripts/AR0806.baf~
   EXTEND_BOTTOM ~AR3016.BCS~ ~SibelNPC/resources/scripts/AR3016.baf~
 
   COPY_EXISTING ~AR0411.BCS~ ~override/AR0411.BCS~
