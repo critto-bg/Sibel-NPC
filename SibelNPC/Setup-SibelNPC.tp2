@@ -2005,6 +2005,48 @@ END
   COPY_EXISTING ~drshnl01.BCS~ ~override/drshnl01.bcs~
     REPLACE_BCS_BLOCK ~.../inlined/old-drshnl01.baf~ ~.../inlined/new-drshnl01.baf~
     BUT_ONLY_IF_IT_CHANGES
+
+<<<<<<<< .../inlined/old-sevpat02.baf
+IF
+	!Allegiance(Myself,ENEMY)
+	!CheckStatGT(Myself,0,SCRIPTINGSTATE9)
+	!StateCheck(Myself,STATE_HELPLESS)
+	!StateCheck(Myself,STATE_STUNNED)
+	Global("Iapcastts","GLOBAL",0)
+	!GlobalTimerNotExpired("Iaspell","LOCALS")
+	CheckStatLT(Myself,50,RESISTFIRE)
+	OR(2)
+		Detect([PC])
+		InMyArea(Player1)
+THEN
+	RESPONSE #100
+		SetGlobalTimer("Iaspell","LOCALS",6)
+		SpellNoDec(Myself,WIZARD_PROTECTION_FROM_FIRE)  // SPWI319.SPL (Protection From Fire)
+END
+
+IF
+	!Allegiance(Myself,ENEMY)
+	!CheckStatGT(Myself,0,SCRIPTINGSTATE9)
+	!StateCheck(Myself,STATE_HELPLESS)
+	!StateCheck(Myself,STATE_STUNNED)
+	Global("Iapcastts","GLOBAL",0)
+	CheckStatLT(Myself,1,STONESKINS)
+	OR(2)
+		Detect([PC])
+		InMyArea(Player1)
+THEN
+	RESPONSE #100
+		SpellNoDec(Myself,WIZARD_STONE_SKIN)  // SPWI408.SPL (Stoneskin)
+END
+>>>>>>>>
+
+<<<<<<<< .../inlined/new-sevpat02.baf
+
+>>>>>>>>
+
+  COPY_EXISTING ~SEVPAT02.BCS~ ~override/SEVPAT02.bcs~
+    REPLACE_BCS_BLOCK ~.../inlined/old-sevpat02.baf~ ~.../inlined/new-sevpat02.baf~
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
