@@ -43,7 +43,7 @@ END
 /* amberville plot */
 
 IF ~~ THEN BEGIN WillardQuest
-  SAY ~Ahh, it such a silly little thing. Probably isn't worth your time. You see, my dear fellow, I am also a researcher. I have been performing studies that require a certain quantity of amber.~
+  SAY ~Ahh, it is such a silly little thing. Probably isn't worth your time. You see, my dear fellow, I am also a researcher. I have been performing studies that require a certain quantity of amber.~
   = ~Unfortunately, I have none. I believe there's a way to procure some, however. Just south of my library lies a house that belonged to the old Lord Amberville. He comes from an old clan of amber barons.~
   = ~Now, he was a spiteful, jealous little man, and I am happy to say his family has been gone from the village for some time now. But the amber they've had might lay there still. Would you help me recover it?~
 

@@ -65,7 +65,7 @@ IF ~~ THEN BEGIN SoldLeather
 END
 
 IF ~~ THEN BEGIN SellMediocre
-  SAY ~Very well. I will pay two Arcanis coins for one sheet. Do you ready to sell all your stock of mediocre leather?~
+  SAY ~Very well. I will pay two Arcanis coins for one sheet. Are you ready to sell all your stock of mediocre leather?~
 
   IF  ~NumItemsPartyGT("S!slthr1",0) NumItemsPartyLT("S!slthr1",2)~ THEN
     REPLY ~I do, let's trade.~
@@ -260,7 +260,7 @@ IF ~~ THEN BEGIN SellMediocre
 END
 
 IF ~~ THEN BEGIN SellHQ
-  SAY ~Very well. I will pay three Arcanis coins for one sheet. Do you ready to sell all your stock of high quality leather?~
+  SAY ~Very well. I will pay three Arcanis coins for one sheet. Are you ready to sell all your stock of high quality leather?~
 
   IF  ~NumItemsPartyGT("S!slthr2",0) NumItemsPartyLT("S!slthr2",2)~ THEN
     REPLY ~I do, let's trade.~
