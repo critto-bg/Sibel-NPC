@@ -1109,6 +1109,32 @@ Type: 2-handed
 
 Usable By:
  Mage (Single Class)~
+@643 = ~True Sword of Arvoreen +5~
+@644 = ~True Sword of Arvoreen +5
+
+Another gift to Mazzy from Arvoreen, this short sword may only be used by halflings. This sword has recently been upgraded to a truly powerful weapon.
+
+STATISTICS:
+
+Equipped abilities:
+- Armor Class bonus: +2
+- Constitution bonus: +1
+- Regeneration: 1HP every 2 seconds
+- Wielder of the sword is immune to slow, hold and stun effects
+
+Special abilities:
+- Target must save vs. wand with a -4 penalty or suffer extra 2D6 piercing damage
+
+THAC0: +5 bonus
+Damage: 1D6 +5
+Damage type: piercing
+Weight: 3
+Speed Factor: 1
+Proficiency Type: Short Sword
+Type: 1-handed
+
+Usable By:
+ Mazzy~
 
 @700 = ~Greater Restoration
 (Necromancy)
