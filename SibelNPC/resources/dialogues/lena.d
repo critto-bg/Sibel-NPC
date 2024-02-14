@@ -3,21 +3,21 @@ BEGIN ~S!SLENA~
 IF ~NumTimesTalkedTo(0)~ THEN BEGIN FirstMeeting
   SAY ~Hello, stranger. I am Lena, a traveling merchant and purveyor of rare alchemical ingredients. Do you wish to look at the samples of my goods?~
   ++ ~Greetings. Yes, show me what you have.~ + BuyStuff
-  ++ ~Hello, Lena. Are interested in buying some Arcanis leather?~ + SellStuff
+  ++ ~Hello, Lena. Are you interested in buying some Arcanis leather?~ + SellStuff
   ++ ~Maybe later, thank you.~ + Leave
 END
 
 IF ~NumTimesTalkedToGT(0)~ THEN BEGIN SubsequentMeeting
   SAY ~Hello again. Do you wish to take a look at my stock?~
   ++ ~Greetings. Yes, show me what you have.~ + BuyStuff
-  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Hello, Lena. Are interested in buying some Arcanis leather?~ + SellStuff
+  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Hello, Lena. Are you interested in buying some Arcanis leather?~ + SellStuff
   ++ ~Maybe later, thank you.~ + Leave
 END
 
 IF ~~ THEN BEGIN MainMenu
   SAY ~Very well. Do you wish do buy or sell something?~
   ++ ~Show me your goods.~ + BuyStuff
-  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Are interested in buying some Arcanis leather?~ + SellStuff
+  + ~Global("IaLenaBoughtLeather","GLOBAL",0)~ + ~Are you interested in buying some Arcanis leather?~ + SellStuff
   ++ ~Maybe later, thank you.~ + Leave
 END
 
