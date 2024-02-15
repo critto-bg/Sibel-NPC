@@ -1244,6 +1244,27 @@ Area of Effect: One Creature
 Saving Throw: None
 
 By means of this powerful spell, the druid uses his connection with nature to creates a huge disembodied fist that inflicts 4D10 crushing damage to the target. This spell not only affects the Rakshasa (who are otherwise immune to druidic spells), but even inflicts septuple damage to them.~
+@727 = ~Invoke Courage
+
+When Mazzy uses this ability, she becomes immune to fear and gains a +1 bonus to THAC0 as well as to all Saving Throws. The effect lasts for 2 turns.~
+@728 = ~Prayer to Arvoreen~
+@729 = ~Prayer to Arvoreen
+
+When a Champion of Arvoreen uses this ability, she calls upon Arvoreen to grant her strength so she may overcome whatever obstacle lies ahead. The power of the prayer increases along with her devotion to her goddess. The ability grants a +20 bonus to maximum HP. At 13th it becomes 30 and, finally, at 25th level the health bonus reaches the value of 40. The effect lasts for 2 turns.~
+@730 = ~Lay on Hands
+
+The Champion of Arvoreen channels positive energy to heal the touched creature. The power and benefical effects of the ritual grow along with the Champion's spiritual strength.
+- at 9th level, the spell restores 16 hit points and cleanses all poisons;
+- at 11th level, the spell restores 28 hit points and cleanses all poisons and diseases;
+- at 13th level, the spell restores 34 hit points, cleanses poisons and diseases, removes curses and paralysis;
+- at 15th level, the spell also restores all the energy drained from afflicted person by a vampire or similar creature;
+- at 19th level, the power of the spell grows to a value of 50 hit points;
+- at 21th level, the power of the spell grows to a value of 75 hit points;
+- at 25th level, the spell completely heals the touched creature and all afflictions that ail him.~
+@731 = ~Blessed Watchfulness~
+@732 = ~Blessed Watchfulness
+
+By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 1 turn.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
@@ -1376,3 +1397,41 @@ At long last, the victory is ours. Sibel and I fought at Virtus' side and slew L
 @1212 = ~You have amassed quite a few Arcanis gold coins.~
 @1213 = ~We are now in my family's ancient village. As long as we are in this place and this era, our life forces are linked to each other.~
 @1214 = ~You have failed to keep Sibel alive. Your life force escapes your body.~
+
+@1215 = ~CHAMPION OF ARVOREEN~
+@1216 = ~Champion of Arvoreen~
+@1217 = ~CHAMPION OF ARVOREEN: Arvoreen is the nearest thing to a halfling war god. He is of stern defense and aggressive watchfulness, always preparing for incursions into halfling lands and making ready to repulse hostile creatures at the first sign of trouble. Arvoreen is not exactly a popular power among most halflings and his priests are often perceived as overly serious and "grumpy as dwarves" by the Small Folk.
+
+Being a champion of Arvoreen is the closest thing to a paladin that a halfling can strive to become. The narrowness of society's views on what is right and wrong does not permit a member of the Small Folk to be pronounced as a holy warrior. It does not mean, however, that <PRO_HESHE> may not be courageous and decent at heart.
+
+Champions of Arvoreen are brave and honest warriors. While they might lack the advanced expertise and knowledge of melee combat, Champions fight against evil fiercely and selflessly, and their God rewards their devotion with powers a mere swordsman would never attain.
+
+Advantages:
+- May achieve Grandmastery (five slots) in all weapons that are favoured by the Small Folk: Short Swords, Daggers, Short Bows and Slings.
+- May use two innate abilities once per day: Prayer to Arvoreen and Invoke Courage.
+- May use the Lay on Hands ability. Gains one use at levels 9, 15 and 21.
+- Gains the ability Blessed Watchfulness at level 11.
+- Gains a +3 bonus to Dexterity at level 16.
+- Gains a permanent 1/2 bonus to attacks per round at level 22.
+
+Disadvantages:
+- Race restricted to Hafling.
+- Alignment restricted to Lawful Good.
+- May not exceed Mastery (three slots) in single-handed weapons.
+- May not exceed Specialization (two slots) in any other weapon.
+- May not achieve any proficency in two-handed weapon style.
+
+PRAYER TO ARVOREEN: When a Champion of Arvoreen uses this ability, <PRO_HESHE> calls upon Arvoreen to grant <PRO_HIMHER> strength so <PRO_HESHE> may overcome whatever obstacle lies ahead. The power of the prayer increases along with <PRO_HISHER> devotion to <PRO_HISHER> goddess. The ability grants a +20 bonus to maximum HP. At 13th it becomes 30 and, finally, at 25th level the health bonus reaches the value of 40. The effect lasts for 2 turns.
+
+INVOKE COURAGE: When a Champion of Arvoreen uses this ability, <PRO_HESHE> becomes immune to fear and gains a +1 bonus to THAC0 as well as to all Saving Throws. At 13th level, the Champion receives extra +1 bonus and another one at 18th level, to a total of +3. The effect lasts for 2 turns.
+
+LAY ON HANDS: The Champion of Arvoreen channels positive energy to heal the touched creature. The power and benefical effects of the ritual grow along with the Champion's spiritual strength.
+- at 9th level, the spell restores 16 hit points and cleanses all poisons;
+- at 11th level, the spell restores 28 hit points and cleanses all poisons and diseases;
+- at 13th level, the spell restores 34 hit points, cleanses poisons and diseases, removes curses and paralysis;
+- at 15th level, the spell also restores all the energy drained from afflicted person by a vampire or similar creature;
+- at 19th level, the power of the spell grows to a value of 50 hit points;
+- at 21th level, the power of the spell grows to a value of 75 hit points;
+- at 25th level, the spell completely heals the touched creature and all afflictions that ail him.
+
+BLESSED WATCHFULNESS: By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 1 turn.~

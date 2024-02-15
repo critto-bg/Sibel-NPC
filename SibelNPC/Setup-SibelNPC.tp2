@@ -1376,6 +1376,24 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
     SAY NAME1 @724
     SAY UNIDENTIFIED_DESC @725
 
+  COPY ~SibelNPC/resources/spells/spin676.spl~ ~override/spin676.spl~
+    SAY UNIDENTIFIED_DESC @727
+
+  COPY ~SibelNPC/resources/spells/spin826.spl~ ~override/spin826.spl~
+    SAY NAME1 @728
+    SAY UNIDENTIFIED_DESC @729
+
+  COPY ~SibelNPC/resources/spells/spin827.spl~ ~override/spin827.spl~
+    SAY UNIDENTIFIED_DESC @730
+
+  COPY ~SibelNPC/resources/spells/spini98.spl~ ~override/spini98.spl~
+    SAY NAME1 @731
+    SAY UNIDENTIFIED_DESC @732
+
+  COPY ~SibelNPC/resources/spells/SPCLI28.spl~ ~override/SPCLI28.spl~
+
+  COPY ~SibelNPC/resources/spells/SPCLI29.spl~ ~override/SPCLI29.spl~
+
   // Stoneskin
   COPY_EXISTING ~SPWI408.spl~ ~override/SPWI408.spl~
     READ_LONG 0x64 headers_offset
@@ -2085,6 +2103,7 @@ ELSE BEGIN
   COPY ~SibelNPC/resources/bam/sppri26c.bam~ ~override/sppri26c.bam~
   COPY ~SibelNPC/resources/bam/sppri27b.bam~ ~override/sppri27b.bam~
   COPY ~SibelNPC/resources/bam/sppri27c.bam~ ~override/sppri27c.bam~
+  COPY ~SibelNPC/resources/bam/spini98b.bam~ ~override/spini98b.bam~
 
   COPY ~SibelNPC/resources/bam/S!smisc6-tob.bam~ ~override/S!smisc6.bam~
 END
@@ -2452,6 +2471,53 @@ COPY ~SibelNPC/resources/audio/SS_2100P.wav~ ~override~
 
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   STRING_SET ~17422~ @717
+END
+
+/* kits */
+
+ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
+  ADD_KIT ~ARVOREEN~
+  ~ARVOREEN 1 1 1 1 1 1 1 1~  // clasweap
+  ~ARVOREEN 3 5 2 2 3 3 3 5 3 3 5 3 2 3 3 5 3 3 2 2 3 3 2 2 2 5 2 5 0 2 2 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0~ // weapprof
+  ~ARVOREEN 9 9 0 0 0 0~ // abclasrq
+  ~ARVOREEN 0 0 0 0 0 0~ // abclsmod
+  ~ARVOREEN 0 0 0 0 0 0~ // abdcdsrq
+  ~ARVOREEN 0 0 0 0 0 0~ // abdcscrq
+  ~ARVOREEN 1 0 0 0 0 0 0 0 0~ // alignmnt
+  ~ARVOREEN 0 0 0 0 0 0~ // dualclas
+  ~SibelNPC\resources\2da\arvoreen.2da~ // clab file
+  ~K_F_HL~ // allowed races
+  ~0x00000000 2~ // usability & class flags
+  ~Fi0~ // HLA table
+  ~CHAN09 * HELM07 BAG20 RING06 RING31 * BOOT01 AMUL19 BRAC16 BELT06 AROW11,40 BULL03,40 * POTN52,5 POTN04,2 POTN14,5 HAMM07 STAF08 SW1H27~
+  SAY @1215
+  SAY @1216
+  SAY @1217
+
+  // assign the new kit to Mazzy
+  COPY ~SibelNPC/resources/creatures/MAZZY9.cre~ ~override/MAZZY9.cre~
+    WRITE_BYTE  0x54       7 // save vs death
+    WRITE_BYTE  0x55       9 // save vs wands
+    WRITE_BYTE  0x58      10 // save vs spell
+    WRITE_SHORT 0x0024    90 // current HP
+    WRITE_SHORT 0x0026    90 // maximum HP
+    WRITE_BYTE  0x238     17 // strength
+    WRITE_SHORT 0x244     0
+    WRITE_BYTE  0x246     ~%ARVOREEN%~
+    WRITE_BYTE  0x247     0x40
+
+  COPY ~SibelNPC/resources/creatures/MAZZY15.cre~ ~override/MAZZY15.CRE~
+    WRITE_BYTE  0x54       6 // save vs death
+    WRITE_BYTE  0x55       8 // save vs wands
+    WRITE_BYTE  0x58       9 // save vs spell
+    WRITE_BYTE  0x238     17 // strength
+    WRITE_SHORT 0x244     0
+    WRITE_BYTE  0x246     ~%ARVOREEN%~
+    WRITE_BYTE  0x247     0x40
+
+  COPY_EXISTING ~MAZZY9.cre~ ~Override/mazzy8.cre~
+  COPY_EXISTING ~MAZZY9.cre~ ~Override/mazzy11.cre~
+  COPY_EXISTING ~MAZZY9.cre~ ~Override/mazzy12.cre~
 END
 
 /* EE extras as a separate component */
