@@ -595,223 +595,223 @@ END
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player1)
-  !StateCheck(Player1,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player1,STATE_INVISIBLE)
+  See(Nearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
     HasBounceEffects(Player1)
-    CheckStatGT(Player1,0,MINORGLOBE)
-    CheckStatGT(Player1,0,SCRIPTINGSTATE7)
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player1,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player2)
-  !StateCheck(Player2,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player2,STATE_INVISIBLE)
+  See(SecondNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
-    HasBounceEffects(Player2)
-    CheckStatGT(Player2,0,MINORGLOBE)
-    CheckStatGT(Player2,0,SCRIPTINGSTATE7)
+    HasBounceEffects(LastSeenBy(Myself))
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player2,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player3)
-  !StateCheck(Player3,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player3,STATE_INVISIBLE)
+  See(ThirdNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
-    HasBounceEffects(Player3)
-    CheckStatGT(Player3,0,MINORGLOBE)
-    CheckStatGT(Player3,0,SCRIPTINGSTATE7)
+    HasBounceEffects(LastSeenBy(Myself))
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player3,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player4)
-  !StateCheck(Player4,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player4,STATE_INVISIBLE)
+  See(FourthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
-    HasBounceEffects(Player4)
-    CheckStatGT(Player4,0,MINORGLOBE)
-    CheckStatGT(Player4,0,SCRIPTINGSTATE7)
+    HasBounceEffects(LastSeenBy(Myself))
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player4,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player5)
-  !StateCheck(Player5,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player5,STATE_INVISIBLE)
+  See(FifthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
-    HasBounceEffects(Player5)
-    CheckStatGT(Player5,0,MINORGLOBE)
-    CheckStatGT(Player5,0,SCRIPTINGSTATE7)
+    HasBounceEffects(LastSeenBy(Myself))
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player5,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player6)
-  !StateCheck(Player6,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player6,STATE_INVISIBLE)
+  See(SixthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
   OR(3)
-    HasBounceEffects(Player6)
-    CheckStatGT(Player6,0,MINORGLOBE)
-    CheckStatGT(Player6,0,SCRIPTINGSTATE7)
+    HasBounceEffects(LastSeenBy(Myself))
+    CheckStatGT(LastSeenBy(Myself),0,MINORGLOBE)
+    CheckStatGT(LastSeenBy(Myself),0,SCRIPTINGSTATE7)
   GlobalLT("IaRROR","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("IaRROR","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player6,WIZARD_RUBY_RAY_OF_REVERSAL)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_RUBY_RAY_OF_REVERSAL)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player1)
-  !StateCheck(Player1,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player1,STATE_INVISIBLE)
-  !CheckStat(Player1,1,SCRIPTINGSTATE7)
+  See(Nearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player1,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player1,0,STONESKINS)
-    CheckStat(Player1,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player1,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player2)
-  !StateCheck(Player2,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player2,STATE_INVISIBLE)
-  !CheckStat(Player2,1,SCRIPTINGSTATE7)
+  See(SecondNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player2,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player2,0,STONESKINS)
-    CheckStat(Player2,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player2,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player3)
-  !StateCheck(Player3,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player3,STATE_INVISIBLE)
-  !CheckStat(Player3,1,SCRIPTINGSTATE7)
+  See(ThirdNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player3,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player3,0,STONESKINS)
-    CheckStat(Player3,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player3,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player4)
-  !StateCheck(Player4,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player4,STATE_INVISIBLE)
-  !CheckStat(Player4,1,SCRIPTINGSTATE7)
+  See(FourthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player4,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player4,0,STONESKINS)
-    CheckStat(Player4,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player4,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player5)
-  !StateCheck(Player5,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player5,STATE_INVISIBLE)
-  !CheckStat(Player5,1,SCRIPTINGSTATE7)
+  See(FifthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player5,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player5,0,STONESKINS)
-    CheckStat(Player5,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player5,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
   RandomNum(5,1)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
-  See(Player6)
-  !StateCheck(Player6,STATE_IMPROVEDINVISIBILITY)
-  !StateCheck(Player6,STATE_INVISIBLE)
-  !CheckStat(Player6,1,SCRIPTINGSTATE7)
+  See(SixthNearest([PC]))
+  !StateCheck(LastSeenBy(Myself),STATE_IMPROVEDINVISIBILITY)
+  !StateCheck(LastSeenBy(Myself),STATE_INVISIBLE)
+  !CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE7)
   OR(3)
-    CheckStatGT(Player6,2,SCRIPTINGSTATE6)
-    CheckStatGT(Player6,0,STONESKINS)
-    CheckStat(Player6,1,SCRIPTINGSTATE11)
+    CheckStatGT(LastSeenBy(Myself),2,SCRIPTINGSTATE6)
+    CheckStatGT(LastSeenBy(Myself),0,STONESKINS)
+    CheckStat(LastSeenBy(Myself),1,SCRIPTINGSTATE11)
   GlobalLT("Iacastbreach","LOCALS",3)
 THEN
   RESPONSE #100
     IncrementGlobal("Iacastbreach","LOCALS",1)
     SetGlobalTimer("Iaspell","LOCALS",6)
-    SpellNoDec(Player6,WIZARD_BREACH)
+    SpellNoDec(LastSeenBy(Myself),WIZARD_BREACH)
 END
 
 IF
