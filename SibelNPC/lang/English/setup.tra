@@ -1134,6 +1134,27 @@ Type: 1-handed
 
 Usable By:
  Mazzy~
+@645 = ~Wild Mage's Dream~
+@646 = ~Wild Mage's Dream
+
+This robe was fashioned for Hayes, the traitorous husband of Telana, soon after he discovered his talents as a wild mage. Very wealthy at the time, Hayes commissioned Halruaan wizards to craft it with silk, expensive dyes, and enchantments that would complement his unique talents.
+
+The garment has been imbued with additional magics by the artificer Lady Elowen.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 0
+– bonus to all Saving Throws: +1
+– THAC0 bonus: +1
+– Casting Speed bonus: +1
+– bonus to the Wild-Surge Rolls: 10
+– doubles the amount of first level spells
+– wearer can memorize one additional 9th level spell
+– Resistance to Fire: +75%
+– Resistance to Electricity: +75%
+
+Weight: 3~
 
 @700 = ~Greater Restoration
 (Necromancy)

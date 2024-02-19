@@ -222,6 +222,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you possibly improve Golem Slayer?~
     GOTO Undoer
 
+  // wild mage's dream
+  IF ~PartyHasItem("ohnrobe1")~ THEN
+    REPLY ~Would this wild mage's robe be able to hold more enchantments?~
+    GOTO Goodman
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -762,7 +767,7 @@ IF ~~ THEN BEGIN Shielding
 END
 
 IF ~~ THEN BEGIN Undoer
-  SAY ~I will need a great amount of amber to empower the staff. Bring the head of a Greater Amber golem, a chunk of Reinforced Amber and a scroll of Wish. The price is 75.000 gold pieces. Shall I proceed?~
+  SAY ~I will need a great amount of amber to empower the staff. Bring the head of a Greater Amber golem, a chunk of Reinforced Amber and a scroll of Wish. The price is 75,000 gold pieces. Shall I proceed?~
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
@@ -775,6 +780,27 @@ IF ~~ THEN BEGIN Undoer
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         TakePartyItemNum("S!shead",1) DestroyItem("S!shead")
         GiveItemCreate("S!sstaf2",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Goodman
+  SAY ~I believe I might strengthen the robe in a unique fashion. Bring me a scroll of Foreknowledge, a wizard's scroll of Protection From Fire, a potion of Defense, a chunk of Reinforced Amber, a Permanency scroll and a scroll of Memory Boosting. The price is 60,000 gold pieces. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("ohnrobe1") PartyHasItem("S!scrl06") PartyHasItem("SCRL6H") PartyHasItem("potn24") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("ohnrobe1",1) DestroyItem("ohnrobe1")
+        TakePartyItemNum("S!scrl06",1) DestroyItem("S!scrl06")
+        TakePartyItemNum("SCRL6H",1) DestroyItem("SCRL6H")
+        TakePartyItemNum("potn24",1) DestroyItem("potn24")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!srobe1",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
