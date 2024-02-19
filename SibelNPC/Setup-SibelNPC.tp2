@@ -363,10 +363,6 @@ COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~
 
 COPY ~SibelNPC/resources/items/S!slawr2.itm~ ~override/S!slawr2.itm~
 
-COPY ~SibelNPC/resources/items/S!srobe1.itm~ ~override/S!srobe1.itm~
-  SAY NAME2 @645
-  SAY DESC @646
-
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!sarkan.itm~ ~override/S!sarkan.itm~
@@ -474,6 +470,14 @@ ACTION_IF (FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/items/S!saxe02.itm~ ~override/S!saxe02.itm~
     SAY NAME2 @635
     SAY DESC @636
+
+  COPY ~SibelNPC/resources/items/S!srobe1.itm~ ~override/S!srobe1.itm~
+    SAY NAME2 @645
+    SAY DESC @646
+
+  COPY ~SibelNPC/resources/items/S!samu02.itm~ ~override/S!samu02.itm~
+    SAY NAME2 @647
+    SAY DESC @648
 END
 
 /* copy creatures */

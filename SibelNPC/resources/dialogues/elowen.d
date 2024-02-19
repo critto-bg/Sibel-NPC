@@ -227,6 +227,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Would this wild mage's robe be able to hold more enchantments?~
     GOTO Goodman
 
+  // amulet of styx
+  IF ~!Kit(Player1,MAGESCHOOL_NECROMANCER) PartyHasItem("S!amul04")~ THEN
+    REPLY ~Is there a way to make this necromantic amulet wearable by any mage?~
+    GOTO Styx
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -801,6 +806,27 @@ IF ~~ THEN BEGIN Goodman
         TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!srobe1",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Styx
+  SAY ~A bold task. I will attempt to do what you ask. Bring me Metaspell Influence amulet, an Amulet of Protection, a wizard's scroll of Protection From Magic Energy, a chunk of Reinforced Amber, a Permanency scroll and a scroll of Memory Boosting. The price will be 40,000 gold pieces. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~!Kit(Player1,MAGESCHOOL_NECROMANCER) PartyHasItem("S!amul04") PartyHasItem("amul16") PartyHasItem("amul14") PartyHasItem("SCRL7J") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!amul04",1) DestroyItem("S!amul04")
+        TakePartyItemNum("amul16",1) DestroyItem("amul16")
+        TakePartyItemNum("amul14",1) DestroyItem("amul14")
+        TakePartyItemNum("SCRL7J",1) DestroyItem("SCRL7J")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!samu02",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END
