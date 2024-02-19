@@ -228,7 +228,7 @@ IF ~~ THEN BEGIN ItemList
     GOTO Goodman
 
   // amulet of styx
-  IF ~!Kit(Player1,MAGESCHOOL_NECROMANCER) PartyHasItem("S!amul04")~ THEN
+  IF ~!CheckStat(Player1,6,SCRIPTINGSTATE1) PartyHasItem("S!amul04")~ THEN
     REPLY ~Is there a way to make this necromantic amulet wearable by any mage?~
     GOTO Styx
 
@@ -815,7 +815,7 @@ IF ~~ THEN BEGIN Styx
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
-  IF ~!Kit(Player1,MAGESCHOOL_NECROMANCER) PartyHasItem("S!amul04") PartyHasItem("amul16") PartyHasItem("amul14") PartyHasItem("SCRL7J") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(39999)~
+  IF ~!CheckStat(Player1,6,SCRIPTINGSTATE1) PartyHasItem("S!amul04") PartyHasItem("amul16") PartyHasItem("amul14") PartyHasItem("SCRL7J") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(39999)~
   THEN
     REPLY ~Yes please, go ahead.~
     DO ~TakePartyGold(40000) DestroyGold(40000)
