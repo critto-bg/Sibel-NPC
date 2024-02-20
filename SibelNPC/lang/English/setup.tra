@@ -401,7 +401,7 @@ STATISTICS:
 Equipped abilities:
 - Resistance to Acid, Cold and Fire: +25%
 - Resitance to Electricity: +65%
-- Regeneration: 3HP per second
+- Regeneration: 2HP per second
 
 Armor Class: -4
 Weight: 40
@@ -420,7 +420,7 @@ STATISTICS:
 Equipped abilities:
 - Resistance to Acid, Cold, Fire and Magic Damage: +30%
 - Resistance to Electricity: +80%
-- Regeneration: 3HP per second
+- Regeneration: 2HP per second
 
 Armor Class: -5
 Weight: 40

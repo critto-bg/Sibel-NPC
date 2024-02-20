@@ -289,14 +289,14 @@ IF ~~ THEN BEGIN BarbDream
 END
 
 IF ~~ THEN BEGIN FullPlate
-  SAY ~I can merge your Full Plate +2 with Improved Ankheg Plate Mail. Bring me the both plates, a single Reinforced Chunk of Amber, a single Oil of Resurgence and a Permanency scroll. The cost is 125000 gold. Shall I proceed?~
+  SAY ~I can merge your Full Plate +2 with Improved Ankheg Plate Mail. Bring me the both plates, a single Reinforced Chunk of Amber, a single Oil of Resurgence and a Permanency scroll. The cost is 100,000 gold. Shall I proceed?~
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
-  IF ~PartyHasItem("plat19") PartyHasItem("S!plat03") PartyHasItem("S!sramb") PartyHasItem("POTN37") PartyHasItem("S!misc02") PartyGoldGT(124999)~
+  IF ~PartyHasItem("plat19") PartyHasItem("S!plat03") PartyHasItem("S!sramb") PartyHasItem("POTN37") PartyHasItem("S!misc02") PartyGoldGT(99999)~
   THEN
     REPLY ~Yes please, go ahead.~
-    DO ~TakePartyGold(125000) DestroyGold(125000)
+    DO ~TakePartyGold(100000) DestroyGold(100000)
         TakePartyItemNum("plat19",1) DestroyItem("plat19")
         TakePartyItemNum("S!plat03",1) DestroyItem("S!plat03")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
