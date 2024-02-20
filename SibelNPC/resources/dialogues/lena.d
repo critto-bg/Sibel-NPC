@@ -68,14 +68,14 @@ IF ~~ THEN BEGIN SellMediocre
   SAY ~Very well. I will pay two Arcanis coins for one sheet. Are you ready to sell all your stock of mediocre leather?~
 
   IF  ~NumItemsPartyGT("S!slthr1",0) NumItemsPartyLT("S!slthr1",2)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",1) DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,2,0,0)
         SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",1) NumItemsPartyLT("S!slthr1",3)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",2) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         GiveItemCreate("S!scoin",Player1,4,0,0)
@@ -83,7 +83,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",2) NumItemsPartyLT("S!slthr1",4)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",3) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -92,7 +92,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",3) NumItemsPartyLT("S!slthr1",5)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",4) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -102,7 +102,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",4) NumItemsPartyLT("S!slthr1",6)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",5) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -113,7 +113,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",5) NumItemsPartyLT("S!slthr1",7)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",6) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -125,7 +125,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",6) NumItemsPartyLT("S!slthr1",8)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",7) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -138,7 +138,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",7) NumItemsPartyLT("S!slthr1",9)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",8) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -152,7 +152,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",8) NumItemsPartyLT("S!slthr1",10)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",9) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -167,7 +167,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",9) NumItemsPartyLT("S!slthr1",11)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",10) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -183,7 +183,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",10) NumItemsPartyLT("S!slthr1",12)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",11) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -200,7 +200,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",11) NumItemsPartyLT("S!slthr1",13)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",12) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -218,7 +218,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",12) NumItemsPartyLT("S!slthr1",14)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",13) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -237,7 +237,7 @@ IF ~~ THEN BEGIN SellMediocre
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr1",13) NumItemsPartyLT("S!slthr1",15)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr1",14) DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
         DestroyItem("S!slthr1")
@@ -263,14 +263,14 @@ IF ~~ THEN BEGIN SellHQ
   SAY ~Very well. I will pay three Arcanis coins for one sheet. Are you ready to sell all your stock of high quality leather?~
 
   IF  ~NumItemsPartyGT("S!slthr2",0) NumItemsPartyLT("S!slthr2",2)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",1) DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,3,0,0)
         SetGlobal("IaLenaBoughtLeather","GLOBAL",1)~
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",1) NumItemsPartyLT("S!slthr2",3)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",2) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         GiveItemCreate("S!scoin",Player1,6,0,0)
@@ -278,7 +278,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",2) NumItemsPartyLT("S!slthr2",4)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",3) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -287,7 +287,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",3) NumItemsPartyLT("S!slthr2",5)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",4) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -297,7 +297,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",4) NumItemsPartyLT("S!slthr2",6)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",5) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -308,7 +308,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",5) NumItemsPartyLT("S!slthr2",7)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",6) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -320,7 +320,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",6) NumItemsPartyLT("S!slthr2",8)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",7) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -333,7 +333,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",7) NumItemsPartyLT("S!slthr2",9)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",8) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
@@ -347,7 +347,7 @@ IF ~~ THEN BEGIN SellHQ
     GOTO SoldLeather
 
   IF  ~NumItemsPartyGT("S!slthr2",8) NumItemsPartyLT("S!slthr2",10)~ THEN
-    REPLY ~I do, let's trade.~
+    REPLY ~I am, let's trade.~
     DO ~TakePartyItemNum("S!slthr2",9) DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
         DestroyItem("S!slthr2")
