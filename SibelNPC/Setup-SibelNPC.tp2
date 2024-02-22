@@ -2077,11 +2077,22 @@ END
 >>>>>>>>
 
 <<<<<<<< .../inlined/new-sevpat02.baf
-
+IF
+	False()
+THEN
+	RESPONSE #100
+		NoAction()
+END
 >>>>>>>>
 
   COPY_EXISTING ~SEVPAT02.BCS~ ~override/SEVPAT02.bcs~
     REPLACE_BCS_BLOCK ~.../inlined/old-sevpat02.baf~ ~.../inlined/new-sevpat02.baf~
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~SEVPAT02.bcs~ ~override/SEVPAT02.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)~ ~ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE) ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_FIRE)~
+    COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
 
