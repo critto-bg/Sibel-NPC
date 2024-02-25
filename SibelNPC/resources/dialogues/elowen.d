@@ -735,7 +735,7 @@ IF ~~ THEN BEGIN Bootlord
 END
 
 IF ~~ THEN BEGIN Axelord
-  SAY ~There's an old dwarven recipe that may fuse this axe with a war hammer. Bring me an unenchanted War Hammer +3, a dwarven Rune of Clangeddin and a chunk of Reinforced Amber. The price is 50 thousand gold. Shall I proceed?~
+  SAY ~There's an old dwarven recipe that may fuse this axe with a war hammer. Bring me a War Hammer +3, a dwarven Rune of Clangeddin and a chunk of Reinforced Amber. The price is 50 thousand gold. Shall I proceed?~
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
