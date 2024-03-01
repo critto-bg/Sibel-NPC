@@ -1,0 +1,7 @@
+IF
+  AreaCheck("AR0809")
+  Global("C6DrizztHelp","GLOBAL",1)
+THEN
+  RESPONSE #100
+    SetGlobal("C6DrizztHelp","GLOBAL",2)
+END
