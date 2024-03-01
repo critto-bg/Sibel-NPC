@@ -32,6 +32,10 @@ THEN
     ReallyForceSpellRES("SPINI14",Player5)
     ReallyForceSpellRES("SPINI14",Player6)
 
+    TriggerActivation("Door0406",FALSE)
+    TriggerActivation("Tran0418",FALSE)
+    TriggerActivation("Door0405",FALSE)
+
     CreateCreature("S!srvam1",[480.720],0)
     CreateCreature("S!srvam2",[690.850],3)
     CreateCreature("S!srvam3",[530.1175],7)

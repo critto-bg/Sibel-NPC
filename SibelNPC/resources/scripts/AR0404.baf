@@ -241,6 +241,9 @@ THEN
   RESPONSE #100
     SetGlobal("IaRegiSpawn","AR0404",2)
     SetGlobal("IaSRegiPlot","GLOBAL",7)
+    TriggerActivation("Door0406",TRUE)
+    TriggerActivation("Tran0418",TRUE)
+    TriggerActivation("Door0405",TRUE)
     CreateCreatureObject("S!sregi2",Player1,0,0,0)
     SmallWait(15)
     ActionOverride("S!sregi2",StartDialogueNoSet(Player1))
