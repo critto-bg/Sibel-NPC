@@ -36,7 +36,7 @@ IF
   InParty("S!Sibel")
   !Dead("S!Sibel")
   Global("IaSibelTalks","GLOBAL",13)
-  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  GlobalTimerExpired("IaSLeatherTimer","GLOBAL")
   CombatCounter(0)
 THEN
   RESPONSE #100
@@ -51,12 +51,12 @@ IF
   InParty("S!Sibel")
   !Dead("S!Sibel")
   Global("IaAndriasPlot","GLOBAL",3)
-  GlobalTimerExpired("IaSLeather2Timer","LOCALS")
+  GlobalTimerExpired("IaSLeather2Timer","GLOBAL")
   CombatCounter(0)
 THEN
   RESPONSE #100
     SetGlobal("IaAndriasPlot","GLOBAL",4)
-    CreateCreatureObjectDoor("S!sleat2",Myself,0,0,0)
+    CreateCreatureObjectDoor("S!sleat2","S!sibel",0,0,0)
     Wait(5)
     ActionOverride("S!sleat2",StartDialogueNoSet(Player1))
 END

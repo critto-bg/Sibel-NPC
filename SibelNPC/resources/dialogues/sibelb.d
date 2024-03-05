@@ -407,7 +407,7 @@ IF ~~ THEN BEGIN B8ThankYou
 
   IF ~~ THEN
     DO ~SetGlobal("IaSibelTalks","GLOBAL",17)
-        SetGlobalTimer("IaSLeatherTimer","LOCALS",28800)~
+        SetGlobalTimer("IaSLeatherTimer","GLOBAL",28800)~
     UNSOLVED_JOURNAL @1114
     EXIT
 END
@@ -424,7 +424,7 @@ IF ~~ THEN BEGIN B8ThankYouAgain
 
   IF ~~ THEN
     DO ~SetGlobal("IaSibelTalks","GLOBAL",19)
-        SetGlobalTimer("IaSLeatherTimer","LOCALS",14400)~
+        SetGlobalTimer("IaSLeatherTimer","GLOBAL",14400)~
     EXIT
 END
 
@@ -497,7 +497,7 @@ IF ~~ THEN BEGIN B12End
 
   IF ~~ THEN
     REPLY ~We shall see soon enough.~
-    DO ~SetGlobalTimer("IaSLeather2Timer","LOCALS",3) SetGlobal("IaAndriasPlot","GLOBAL",3)~
+    DO ~SetGlobalTimer("IaSLeather2Timer","GLOBAL",3) SetGlobal("IaAndriasPlot","GLOBAL",3)~
     EXIT
 END
 

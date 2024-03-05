@@ -10,7 +10,7 @@ APPEND ~S!SibelJ~
     SAY ~We will come as soon as possible.~
 
     IF ~~ THEN
-      DO ~SetGlobal("IaSVirtusArrives","GLOBAL",1) SetGlobal("IaSibelTalks","GLOBAL",15) SetGlobalTimer("IaSLeatherTimer","LOCALS",6)~
+      DO ~SetGlobal("IaSVirtusArrives","GLOBAL",1) SetGlobal("IaSibelTalks","GLOBAL",15) SetGlobalTimer("IaSLeatherTimer","GLOBAL",6)~
       EXIT
   END
 END

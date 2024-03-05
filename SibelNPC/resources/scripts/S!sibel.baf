@@ -347,7 +347,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",13)
-    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+    SetGlobalTimer("IaSLeatherTimer","GLOBAL",6)
 END
 
 // gift not requested, party enters Suldanesselar
@@ -364,7 +364,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",13)
-    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+    SetGlobalTimer("IaSLeatherTimer","GLOBAL",6)
 END
 
 // gift not requested, Sibel joined in ToB, one day passed since banter #5
@@ -382,7 +382,7 @@ IF
 THEN
   RESPONSE #100
     SetGlobal("IaSibelTalks","GLOBAL",13)
-    SetGlobalTimer("IaSLeatherTimer","LOCALS",6)
+    SetGlobalTimer("IaSLeatherTimer","GLOBAL",6)
 END
 
 // golem messenger arrival is located in baldur.bcs
@@ -392,7 +392,7 @@ IF
   InParty(Myself)
   See(Player1)
   Global("IaSibelTalks","GLOBAL",15)
-  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  GlobalTimerExpired("IaSLeatherTimer","GLOBAL")
   CombatCounter(0)
 THEN
   RESPONSE #100
@@ -405,7 +405,7 @@ IF
   InParty(Myself)
   See(Player1)
   Global("IaSibelTalks","GLOBAL",17)
-  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  GlobalTimerExpired("IaSLeatherTimer","GLOBAL")
   CombatCounter(0)
 THEN
   RESPONSE #100
@@ -418,7 +418,7 @@ IF
   InParty(Myself)
   See(Player1)
   Global("IaSibelTalks","GLOBAL",19)
-  GlobalTimerExpired("IaSLeatherTimer","LOCALS")
+  GlobalTimerExpired("IaSLeatherTimer","GLOBAL")
   CombatCounter(0)
 THEN
   RESPONSE #100
