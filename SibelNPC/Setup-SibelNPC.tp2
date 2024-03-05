@@ -2340,6 +2340,24 @@ COPY_EXISTING ~AR5501.are~ ~override/AR5501.are~
 COPY_EXISTING ~AR6111.are~ ~override/AR6111.are~
   WRITE_ASCII 0x94 ~AR6111~ #8 // area script
 
+ACTION_IF !(FILE_EXISTS ~engine.lua~) THEN BEGIN
+  // WK level 4 main area
+  COPY_EXISTING ~ar3016.ARE~ ~override/ar3016.ARE~
+    READ_SHORT 0x64 "spcount"
+    READ_LONG 0x60 "spoffset"
+    SET "it" = 0
+    WHILE ("%it%" < "%spcount%") BEGIN
+      READ_ASCII ("%spoffset%" + "%it%" * 200) "spname" (13)
+
+      PATCH_IF ("%spname%" STRING_COMPARE_CASE "Spawn Point 2" = 0) BEGIN
+        WRITE_SHORT ("%spoffset%" + ("%it%" * 200) + 140) 100          // Probability (day)
+        WRITE_SHORT ("%spoffset%" + ("%it%" * 200) + 142) 100          // Probability (night)
+      END
+
+      "it" = "%it%" + 1
+    END
+END
+
 /* area resources */
 
 COPY ~SibelNPC/resources/areas/aria28.wed~ ~override/aria28.wed~
