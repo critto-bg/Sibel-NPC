@@ -30,7 +30,7 @@ IF ~~ THEN BEGIN WhatTrap
 END
 
 IF ~~ THEN BEGIN Knowledge
-  SAY ~A magical barrier envelops the area you are about to enter. Waste no time on arcane protections, for they will cease their existence whence you set foot into the trap.~
+  SAY ~A magical barrier envelops the area you are about to enter. Waste no time on arcane protections, for they will cease their existence when you set foot into the trap.~
   = ~Master wishes you luck. Farewell.~
 
   IF ~~ THEN DO ~SetGlobal("IaAndriasPlot","GLOBAL",5)~ EXIT
