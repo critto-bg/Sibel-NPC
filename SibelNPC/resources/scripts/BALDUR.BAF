@@ -37,6 +37,14 @@ IF
   !Dead("S!Sibel")
   Global("IaSibelTalks","GLOBAL",13)
   GlobalTimerExpired("IaSLeatherTimer","GLOBAL")
+  OR(7)
+    AreaCheck("AR0020") // city gate
+    AreaCheck("AR0300") // the docks
+    AreaCheck("AR0400") // slums
+    AreaCheck("AR0500") // the bridge
+    AreaCheck("AR0700") // waukeen's promenade
+    AreaCheck("AR0900") // temple district
+    AreaCheck("AR1000") // government district
   CombatCounter(0)
 THEN
   RESPONSE #100
@@ -52,6 +60,14 @@ IF
   !Dead("S!Sibel")
   Global("IaAndriasPlot","GLOBAL",3)
   GlobalTimerExpired("IaSLeather2Timer","GLOBAL")
+  OR(7)
+    AreaCheck("AR0020") // city gate
+    AreaCheck("AR0300") // the docks
+    AreaCheck("AR0400") // slums
+    AreaCheck("AR0500") // the bridge
+    AreaCheck("AR0700") // waukeen's promenade
+    AreaCheck("AR0900") // temple district
+    AreaCheck("AR1000") // government district
   CombatCounter(0)
 THEN
   RESPONSE #100
