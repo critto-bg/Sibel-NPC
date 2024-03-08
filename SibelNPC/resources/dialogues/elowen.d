@@ -232,6 +232,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Is there a way to make this necromantic amulet wearable by any mage?~
     GOTO Styx
 
+  // neera's wish
+  IF ~PartyHasItem("S!robe03") PartyHasItem("S!srobe1")~ THEN
+    REPLY ~Could you possibly fashion an even stronger garment for a wild mage?~
+    GOTO NeeraWish
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -827,6 +832,23 @@ IF ~~ THEN BEGIN Styx
         TakePartyItemNum("S!misc01",1) DestroyItem("S!misc01")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!samu02",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN NeeraWish
+  SAY ~Your half-elf companion should be wary of what she desires. I will humor the request, but if anything goes awry, the consequences lie with her. Give me Neera's Greater Robe of Invocation, it is a perfect vessel for such an experiment. I will need a copy of Manual of Elaboration as well. The task will cost you 60,000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!robe03") PartyHasItem("S!srobe1") PartyHasItem("S!misc06") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("S!robe03",1) DestroyItem("S!robe03")
+        TakePartyItemNum("S!srobe1",1) DestroyItem("S!srobe1")
+        TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
+        GiveItemCreate("S!srobe2",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

@@ -1174,6 +1174,29 @@ Requires 18 Wisdom to wear.
 
 Usable By:
  Single Class Mage or Sorcerer~
+@649 = ~Neera's Careless Wish~
+@650 = ~Neera's Careless Wish
+
+Only an artisan of Lady Elowen's caliber could produce such a magnificent robe. The garment's complicated web of enchantments transcends beyond even the most daring wild mage's dreams.
+
+STATISTICS:
+
+Equipped abilities:
+– Armor Class: 0
+– bonus to all Saving Throws: +1
+– THAC0 bonus: +1
+– Casting Speed bonus: +1
+– Movement Speed bonus: +1
+– bonus to the Wild-Surge Rolls: 5
+– doubles the amount of first level spells
+– wearer can memorize two additional spells per level (except the 1st level)
+– Resistance to Fire: +75%
+– Resistance to Electricity: +75%
+– Resistance to Acid: +30%
+– Resistance to Cold: +30%
+– Resistance to Magic Damage: +20%
+
+Weight: 6~
 
 @700 = ~Greater Restoration
 (Necromancy)
