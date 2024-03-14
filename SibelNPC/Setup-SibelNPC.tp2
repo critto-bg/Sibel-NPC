@@ -1268,6 +1268,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY_EXISTING ~S!mitgol.cre~ ~override/S!mitgol.cre~
     WRITE_SHORT 0x24     200 // current hp
     WRITE_SHORT 0x26     200 // max hp
+
+  COPY_EXISTING ~telwrai.cre~ ~override/telwrai.cre~
+    ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~UNSTEALABLE~ ~INV8~
 END
 
 // EE only
