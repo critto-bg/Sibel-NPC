@@ -43,7 +43,7 @@ END
 
 IF ~NumTimesTalkedTo(0) AreaCheck("AR5003") Global("IaElowenCromwell","GLOBAL",1)~ THEN BEGIN MeetAgainSaradush
   SAY ~Greetings, <CHARNAME>! You seem to go where the trouble is. Or is it the other way around, I wonder?~
-  = ~No matter. I am on commission with the city goverment, but I am happy to lend you my services, yet again.~
+  = ~No matter. I am happy to lend you my services, yet again.~
 
   ++ ~It is a pleasure seeing you again. Do we have any items you can upgrade?~ + ItemList
   ++ ~I am glad to meet you, lady Elowen. We'll come back when we've a need of your skill.~ + Leave
