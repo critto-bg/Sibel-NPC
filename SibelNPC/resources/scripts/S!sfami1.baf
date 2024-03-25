@@ -67,7 +67,7 @@ THEN
     SetGlobalTimer("Iaspell","LOCALS",6)
     SpellNoDec(Myself,WIZARD_PROTECTION_FROM_MAGIC_WEAPONS)
 END
-*/
+
 IF
   Allegiance(Myself,ENEMY)
   !GlobalTimerNotExpired("Iaspell","LOCALS")
