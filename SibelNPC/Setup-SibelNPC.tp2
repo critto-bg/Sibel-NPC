@@ -1704,7 +1704,11 @@ COMPILE ~SibelNPC/resources/scripts/S!scutf3.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf4.baf~
 COMPILE ~SibelNPC/resources/scripts/S!scutf5.baf~
 COMPILE ~SibelNPC/resources/scripts/S!selow.baf~
-COMPILE ~SibelNPC/resources/scripts/S!sfamil.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sfami1.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sfami2.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sfami3.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sfami4.baf~
+COMPILE ~SibelNPC/resources/scripts/S!sfami5.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sflava.baf~
 COMPILE ~SibelNPC/resources/scripts/S!sghos1.baf~
 COMPILE ~SibelNPC/resources/scripts/S!shost.baf~
