@@ -981,6 +981,10 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/creatures/S!smtg2.cre~ ~override/S!smtg2.cre~
     SAY NAME1 @69
     SAY NAME2 @69
+
+  COPY ~SibelNPC/resources/creatures/fsdragon.cre~ ~override/fsdragon.cre~
+    SAY NAME1 @70
+    SAY NAME2 @70
 END
 
 /* patch creatures */
@@ -2132,6 +2136,12 @@ END
   COPY_EXISTING ~S!SENLIC.BCS~ ~override/S!SENLIC.BCS~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~GlobalLT("Iasenlic02","LOCALS",9)~ ~GlobalLT("Iasenlic02","LOCALS",5)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!FSDRAG.BCS~ ~override/S!FSDRAG.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~GlobalLT("Iagsilence","LOCALS",7)~ ~GlobalLT("Iagsilence","LOCALS",4)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
