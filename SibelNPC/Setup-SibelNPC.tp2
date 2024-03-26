@@ -943,6 +943,8 @@ COPY_EXISTING ~S!masvam.cre~ ~override/S!srvam4.cre~
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/creatures/finmel01.cre~ ~override/finmel01.cre~
 
+  COPY ~SibelNPC/resources/creatures/senlich.cre~ ~override/senlich.cre~
+
   COPY ~SibelNPC/resources/creatures/S!devag.cre~ ~override/S!devag.cre~
     SAY NAME1 @56
     SAY NAME2 @56
@@ -2119,6 +2121,12 @@ END
   COPY_EXISTING ~SEVPAT02.bcs~ ~override/SEVPAT02.bcs~
     DECOMPILE_BCS_TO_BAF
     REPLACE_TEXTUALLY ~ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE)~ ~ReallyForceSpell(Myself,WIZARD_MIRROR_IMAGE) ReallyForceSpell(Myself,WIZARD_PROTECTION_FROM_FIRE)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!SENLIC.BCS~ ~override/S!SENLIC.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~GlobalLT("Iasenlic02","LOCALS",9)~ ~GlobalLT("Iasenlic02","LOCALS",5)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
 END
