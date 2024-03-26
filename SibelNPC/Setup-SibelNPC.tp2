@@ -1273,6 +1273,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~telwrai.cre~ ~override/telwrai.cre~
     ADD_CRE_ITEM ~S!misc02~ #0 #0 #0 ~UNSTEALABLE~ ~INV8~
+
+  COPY_EXISTING ~SENGUA03.cre~ ~override/SENGUA03.cre~
+    WRITE_BYTE 0x5d     50 // resist magic
 END
 
 // EE only
@@ -1830,6 +1833,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~MAGE20A.BCS~ ~SibelNPC/resources/scripts/mage20a.baf~
   EXTEND_TOP ~OBSHAL02.BCS~ ~SibelNPC/resources/scripts/OBSHAL02.baf~
   EXTEND_TOP ~OBSDEM01.BCS~ ~SibelNPC/resources/scripts/OBSDEM01.baf~
+  EXTEND_TOP ~SENGUA03.BCS~ ~SibelNPC/resources/scripts/SENGUA03.baf~
   EXTEND_TOP ~SUMDJ01.BCS~ ~SibelNPC/resources/scripts/SUMDJ01.baf~
   EXTEND_TOP ~UDMASTER.BCS~ ~SibelNPC/resources/scripts/UDMASTER.baf~
   EXTEND_TOP ~S!dracol.bcs~ ~SibelNPC/resources/scripts/S!dracol.baf~
