@@ -945,6 +945,12 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/creatures/senlich.cre~ ~override/senlich.cre~
 
+  COPY ~SibelNPC/resources/creatures/dragblue.cre~ ~override/dragblue.cre~
+
+  COPY ~SibelNPC/resources/creatures/BAZDRA01.CRE~ ~override/BAZDRA01.CRE~
+
+  COPY ~SibelNPC/resources/creatures/BAZDRA02.CRE~ ~override/BAZDRA02.CRE~
+
   COPY ~SibelNPC/resources/creatures/S!devag.cre~ ~override/S!devag.cre~
     SAY NAME1 @56
     SAY NAME2 @56
