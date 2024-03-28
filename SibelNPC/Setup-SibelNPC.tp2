@@ -1532,6 +1532,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~SPCLI16.spl~ ~override/SPCLI16.spl~
     SAY UNIDENTIFIED_DESC @726
+
+  // patch all wish spells to ignore wild surges
+  COPY_EXISTING_REGEXP GLOB ~SPWISH[0-9]+\.spl~ ~override~
+    READ_BYTE 0x19  splflags
+    WRITE_BYTE 0x19 ("%splflags%" | 0b10000000)
 END
 
 /* effects */
