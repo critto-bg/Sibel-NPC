@@ -10,7 +10,7 @@
 7       GA_SPPR728     *          *         15        40         2            *            *
 8       GA_SPPR729     *          *         15        40         2            *            *
 9       GA_SPPR730     *          *         15        40         2            *            *
-10      GA_SPCLI22     *          *         1         99         1            *            *
+10      GA_SPCLI22     *          *         1         99         3            *            *
 11      GA_SPCLI23     *          *         1         99         1            GA_SPPR726   *
 12      GA_SPCLI24     *          *         1         99         1            GA_SPPR727   *
 13      GA_SPCLI25     *          *         1         99         1            *            *
