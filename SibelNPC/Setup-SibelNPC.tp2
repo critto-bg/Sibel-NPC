@@ -361,6 +361,14 @@ COPY ~SibelNPC/resources/items/S!samu02.itm~ ~override/S!samu02.itm~
   SAY NAME2 @647
   SAY DESC @648
 
+COPY ~SibelNPC/resources/items/S!sopal.itm~ ~override/S!sopal.itm~
+  SAY NAME2 @651
+  SAY DESC @652
+
+COPY ~SibelNPC/resources/items/S!saxe03.itm~ ~override/S!saxe03.itm~
+  SAY NAME2 @653
+  SAY DESC @654
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~
@@ -1780,6 +1788,7 @@ EXTEND_BOTTOM ~AR3017.BCS~ ~SibelNPC/resources/scripts/AR3017.baf~
 EXTEND_BOTTOM ~AR4000.BCS~ ~SibelNPC/resources/scripts/AR4000.baf~
 EXTEND_BOTTOM ~AR4500.BCS~ ~SibelNPC/resources/scripts/AR4500.baf~
 EXTEND_BOTTOM ~AR5003.BCS~ ~SibelNPC/resources/scripts/AR5003.baf~
+EXTEND_BOTTOM ~AR5204.BCS~ ~SibelNPC/resources/scripts/AR5204.baf~
 EXTEND_BOTTOM ~AR5501.BCS~ ~SibelNPC/resources/scripts/AR5501.baf~
 EXTEND_BOTTOM ~AR5503.BCS~ ~SibelNPC/resources/scripts/AR5503.baf~
 EXTEND_BOTTOM ~BALDUR.BCS~ ~SibelNPC/resources/scripts/BALDUR.baf~
@@ -2226,6 +2235,7 @@ COPY ~SibelNPC/resources/bam/S!srbdre.bam~ ~override/S!srbdre.bam~
 COPY ~SibelNPC/resources/bam/S!shead.bam~ ~override/S!shead.bam~
 COPY ~SibelNPC/resources/bam/S!srobe2.bam~ ~override/S!srobe2.bam~
 COPY ~SibelNPC/resources/bam/S!swild2.bam~ ~override/S!swild2.bam~
+COPY ~SibelNPC/resources/bam/S!sopal.bam~ ~override/S!sopal.bam~
 
 /* areas */
 

@@ -1196,6 +1196,39 @@ Equipped abilities:
 – Resistance to Magic Damage: +20%
 
 Weight: 6~
+@651 = ~Exquisite Water Opal~
+@652 = ~Exquisite Water Opal
+
+Water opal is a colorless, clear opal with a play of color. This particular gem is an exceedingly rare specimen.
+
+STATISTICS:
+
+Weight: 0~
+@653 = ~Lakesider's Dream +5~
+@654 = ~Lakesider's Dream +5
+
+Despite its simple structure and lack of any particular adornments, this axe looks very beautiful. The axe's blade reflects the slow and calm waves of the surface of an unknown lake. The original relic had been given to you by swanmays as a sign of their gratitude for your precious help to their community. Adorned with the exquisite water opal gem and imbued with the enchanted water taken from the magic pond in Lord Wetlander's residence, the axe has now reached its full potential.
+
+STATISTICS:
+
+Equipped abilities:
+- Adds 40 hit points to the wielder while equipped
+
+Special abilities:
+- Has 15% chance per hit to inflict 10D8 additional magic damage
+- Has 15% chance per hit to inflict 5D8 additional electrical damage
+
+THAC0: +5 bonus
+Damage: 2D8 +5
+Damage type: slashing
+Weight: 7
+Speed Factor: 4
+Proficiency Type: Axe
+Type: 1-handed
+Requirements: 19 Constitution and 12 Charisma
+
+Usable By:
+ Vagrant~
 
 @700 = ~Greater Restoration
 (Necromancy)

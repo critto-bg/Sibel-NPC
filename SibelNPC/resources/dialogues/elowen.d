@@ -237,6 +237,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Could you possibly fashion an even stronger garment for a wild mage?~
     GOTO NeeraWish
 
+  // lakesider's dream
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!axe03")~ THEN
+    REPLY ~What would it take to perfect this vagrant's axe?~
+    GOTO Lakesider
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -849,6 +854,23 @@ IF ~~ THEN BEGIN NeeraWish
         TakePartyItemNum("S!srobe1",1) DestroyItem("S!srobe1")
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         GiveItemCreate("S!srobe2",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Lakesider
+  SAY ~Rarely have I seen a weapon so perfect in its simplicity. Almost perfect, for I can do more. Bring me a rare Exquisite Water Opal gem and a chunk of Reinforced Amber. The job will cost you 40,000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!axe03") PartyHasItem("S!sopal") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!axe03",1) DestroyItem("S!axe03")
+        TakePartyItemNum("S!sopal",1) DestroyItem("S!sopal")
+        TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
+        GiveItemCreate("S!saxe03",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

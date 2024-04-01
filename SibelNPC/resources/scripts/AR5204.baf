@@ -1,0 +1,7 @@
+IF
+  Global("Iaitem2","AR5204",0)  // Yaga-Shura's Keep
+THEN
+  RESPONSE #100
+    SetGlobal("Iaitem2","AR5204",1)  // Yaga-Shura's Keep
+    ActionOverride("Container 2",CreateItem("S!sopal",0,0,0))
+END
