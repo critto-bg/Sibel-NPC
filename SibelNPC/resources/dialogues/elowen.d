@@ -223,9 +223,9 @@ IF ~~ THEN BEGIN ItemList
     GOTO Undoer
 
   // wild mage's dream
-  IF ~PartyHasItem("ohnrobe1")~ THEN
+  IF ~PartyHasItem("S!robe04")~ THEN
     REPLY ~Would this wild mage's robe be able to hold more enchantments?~
-    GOTO Goodman
+    GOTO WildMage
 
   // amulet of styx
   IF ~!CheckStat(Player1,6,SCRIPTINGSTATE1) PartyHasItem("S!amul04")~ THEN
@@ -794,16 +794,16 @@ IF ~~ THEN BEGIN Undoer
     EXIT
 END
 
-IF ~~ THEN BEGIN Goodman
-  SAY ~I believe I might strengthen the robe in a unique fashion. Bring me a scroll of Foreknowledge, a wizard's scroll of Protection From Fire, a potion of Defense, a chunk of Reinforced Amber, a Permanency scroll and a scroll of Memory Boosting. The price is 60,000 gold pieces. Shall I proceed?~
+IF ~~ THEN BEGIN WildMage
+  SAY ~Gah! I've never seen a more garish choice of colors in my life! But it'll have to do. Bring me a scroll of Foreknowledge, a wizard's scroll of Protection From Fire, a potion of Defense, a chunk of Reinforced Amber, a Permanency scroll and a scroll of Memory Boosting. The price is 60,000 gold pieces. Shall I proceed?~
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
-  IF ~PartyHasItem("ohnrobe1") PartyHasItem("S!scrl06") PartyHasItem("SCRL6H") PartyHasItem("potn24") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(59999)~
+  IF ~PartyHasItem("S!robe04") PartyHasItem("S!scrl06") PartyHasItem("SCRL6H") PartyHasItem("potn24") PartyHasItem("S!sramb") PartyHasItem("S!misc01") PartyHasItem("S!misc02") PartyGoldGT(59999)~
   THEN
     REPLY ~Yes please, go ahead.~
     DO ~TakePartyGold(60000) DestroyGold(60000)
-        TakePartyItemNum("ohnrobe1",1) DestroyItem("ohnrobe1")
+        TakePartyItemNum("S!robe04",1) DestroyItem("S!robe04")
         TakePartyItemNum("S!scrl06",1) DestroyItem("S!scrl06")
         TakePartyItemNum("SCRL6H",1) DestroyItem("SCRL6H")
         TakePartyItemNum("potn24",1) DestroyItem("potn24")

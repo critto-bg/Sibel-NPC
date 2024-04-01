@@ -2225,6 +2225,7 @@ COPY ~SibelNPC/resources/bam/S!srbb2n.bam~ ~override/S!srbb2n.bam~
 COPY ~SibelNPC/resources/bam/S!srbdre.bam~ ~override/S!srbdre.bam~
 COPY ~SibelNPC/resources/bam/S!shead.bam~ ~override/S!shead.bam~
 COPY ~SibelNPC/resources/bam/S!srobe2.bam~ ~override/S!srobe2.bam~
+COPY ~SibelNPC/resources/bam/S!swild2.bam~ ~override/S!swild2.bam~
 
 /* areas */
 
