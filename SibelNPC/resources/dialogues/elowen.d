@@ -192,7 +192,7 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Do you have interest in these remains of a Greater Dracolich?~
     GOTO Draco
 
-  // missionnaire
+  // missionnaire +5
   IF ~PartyHasItem("SHLD31")~ THEN
     REPLY ~Can you make Darksteel Shield better?~
     GOTO Darksteel
@@ -246,6 +246,11 @@ IF ~~ THEN BEGIN ItemList
   IF ~PartyHasItem("S!leat05")~ THEN
     REPLY ~How can we make this vagrant's armor even stronger?~
     GOTO RedCoral
+
+  // missionnaire +6
+  IF ~PartyHasItem("S!sshld1")~ THEN
+    REPLY ~Can you improve Shield of the Missionnaire even further?~
+    GOTO Mission
 
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
@@ -895,6 +900,24 @@ IF ~~ THEN BEGIN RedCoral
         TakePartyItemNum("potn35",1) DestroyItem("potn35")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!slea04",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Mission
+  SAY ~I believe there's another holy shield that I can use to make this one stronger. Bring me Shield of the Order, a potion of Barbarian Essence and a Permanency scroll. The job will cost you 40,000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!sshld1") PartyHasItem("SHLD32") PartyHasItem("potn33") PartyHasItem("S!misc02") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!sshld1",1) DestroyItem("S!sshld1")
+        TakePartyItemNum("SHLD32",1) DestroyItem("SHLD32")
+        TakePartyItemNum("potn33",1) DestroyItem("potn33")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!sshld2",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

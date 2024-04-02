@@ -1246,6 +1246,23 @@ Weight: 10
 Requirements: 19 Constitution and 12 Charisma
 Usable By:
  Vagrant~
+@657 = ~Shield of The Missionnaire +6~
+@658 = ~Shield of The Missionnaire +6
+
+According to Lady Elowen, a story of a shield once belonged to a human cleric inspired her to create this piece. The clergyman was sent to the northern barbarian tribes as a messenger. Rumors say that his last words before death were: "I wish I was half as tough as they are".
+
+An extra coating has been added to make the shield a bit more resilient.
+
+STATISTICS:
+
+Equipped Abilities:
+- Armor Class Bonus: +7
+- Resistance to Elemental Damage: +10%
+- Resistance to Magic Damage: +10%
+- Resistance to Physical Damage: +20%
+
+Usably By:
+ Human Cleric~
 
 @700 = ~Greater Restoration
 (Necromancy)
