@@ -242,6 +242,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~What would it take to perfect this vagrant's axe?~
     GOTO Lakesider
 
+  // red coral armor
+  IF ~PartyHasItem("S!leat05")~ THEN
+    REPLY ~How can we make this vagrant's armor even stronger?~
+    GOTO RedCoral
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -871,6 +876,25 @@ IF ~~ THEN BEGIN Lakesider
         TakePartyItemNum("S!sopal",1) DestroyItem("S!sopal")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
         GiveItemCreate("S!saxe03",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN RedCoral
+  SAY ~A wondrous piece of clothing. We can strengthen it with a few magic trinkets. Bring me Crimson Ioun Stone, a potion of Barbarian Essence, a potion of Magic Shielding and a Permanency scroll. The price will be 60,000 gold pieces. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!leat05") PartyHasItem("S!helm06") PartyHasItem("potn33") PartyHasItem("potn35") PartyHasItem("S!misc02") PartyGoldGT(59999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(60000) DestroyGold(60000)
+        TakePartyItemNum("S!leat05",1) DestroyItem("S!leat05")
+        TakePartyItemNum("S!helm06",1) DestroyItem("S!helm06")
+        TakePartyItemNum("potn33",1) DestroyItem("potn33")
+        TakePartyItemNum("potn35",1) DestroyItem("potn35")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!slea04",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

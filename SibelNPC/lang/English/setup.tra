@@ -1229,6 +1229,23 @@ Requirements: 19 Constitution and 12 Charisma
 
 Usable By:
  Vagrant~
+@655 = ~Red Coral Armor +8~
+@656 = ~Red Coral Armor +8
+
+Using the mysterious and magical power of the Red Coral Gem, Green Leaves Armor has been reforged into a mighty protective item. With addition of the powers of Crimson Ioun Stone and a few mighty potions the armor grew even stronger.
+
+STATISTICS:
+
+Equipped abilities:
+- 20% resistance to physical damage
+- 60% resistance to magic damage
+
+STATISTICS:
+Armor Class: -1
+Weight: 10
+Requirements: 19 Constitution and 12 Charisma
+Usable By:
+ Vagrant~
 
 @700 = ~Greater Restoration
 (Necromancy)
