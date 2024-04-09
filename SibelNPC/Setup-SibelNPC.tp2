@@ -1303,6 +1303,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~rngsha04.cre~ ~override/rngsha04.cre~
     ADD_CRE_ITEM ~SCRL7Q~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
+
+  COPY_EXISTING ~SHADRA01.cre~ ~override/SHADRA01.cre~
+    ADD_CRE_ITEM ~SCRL9D~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
 END
 
 // EE only
