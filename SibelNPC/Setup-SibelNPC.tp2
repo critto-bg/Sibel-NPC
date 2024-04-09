@@ -1300,6 +1300,9 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY_EXISTING ~SENGUA03.cre~ ~override/SENGUA03.cre~
     WRITE_BYTE 0x5d     50 // resist magic
+
+  COPY_EXISTING ~rngsha04.cre~ ~override/rngsha04.cre~
+    ADD_CRE_ITEM ~SCRL7Q~ #0 #0 #0 ~UNSTEALABLE~ ~INV11~
 END
 
 // EE only
