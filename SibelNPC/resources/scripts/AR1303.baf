@@ -1,0 +1,7 @@
+IF
+  Global("Iaitem2","AR1303",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iaitem2","AR1303",1)
+    ActionOverride("Container 8",DestroyItem("scrl6s"))
+END
