@@ -252,6 +252,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Can you improve Shield of the Missionnaire even further?~
     GOTO Mission
 
+  // boots of focused combat
+  IF ~PartyHasItem("S!boot05")~ THEN
+    REPLY ~Anything you could do about these Wizard Slayer's boots?~
+    GOTO Focused
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -918,6 +923,24 @@ IF ~~ THEN BEGIN Mission
         TakePartyItemNum("potn33",1) DestroyItem("potn33")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!sshld2",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN Focused
+  SAY ~Rumours are there's an ancient text replete with secrets of the Wizard Slayer warrior caste. Bring it to me, along with Boots of Grounding and a copy of Manual of Elaboration, and I see what can be done. The price for this is 50,000 gold. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("S!boot05") PartyHasItem("BOOT05") PartyHasItem("S!smisc7") PartyHasItem("S!misc06") PartyGoldGT(49999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(50000) DestroyGold(50000)
+        TakePartyItemNum("S!boot05",1) DestroyItem("S!boot05")
+        TakePartyItemNum("BOOT05",1) DestroyItem("BOOT05")
+        TakePartyItemNum("S!smisc7",1) DestroyItem("S!smisc7")
+        TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
+        GiveItemCreate("S!sboo04",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

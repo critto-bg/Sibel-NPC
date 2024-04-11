@@ -1263,6 +1263,29 @@ Equipped Abilities:
 
 Usably By:
  Human Cleric~
+@659 = ~The Art of Focused Swordsmanship~
+@660 = ~The Art of Focused Swordsmanship
+
+This ancient treatise contains in-depth instruction on how to approach melee sparring with patience and focus, favoring one's concentration and accuracy over speed. The Wizard Slayers have been known to rely on such skills, for they ever abstained from utilising any such magic that would grant them haste effects. The language used in this old book is complex and incomprehensible but you suspect that it may be of some use in future.~
+@661 = ~Boots of Focused Combat~
+@662 = ~Boots of Focused Combat
+
+These boots were once used by members of the regiment of wizard slayers during their wars with Cowled Wizards. The only surviving pair was kept and hidden by the Wizards deep within their asylum to make sure that nobody would ever find it.
+
+The artificer Lady Elowen bestowed additional enchantments to the footwear, guided by techniques laid out in the antique manual The Art of Focused Swordsmanship.
+
+STATISTICS:
+
+Equipped abilities:
+– Magic Resistance: +20%
+– Resistance to Magic Damage: +20%
+– Resistance to Fire: +20%
+– Resistance to Electricity: +60%
+– Max HP: +20
+– Regeneration: 1HP per second
+– bonus to THAC0 and AC: +5
+– Damage: +10 bonus with any weapon equipped
+– Immunity to Greater Malison~
 
 @700 = ~Greater Restoration
 (Necromancy)

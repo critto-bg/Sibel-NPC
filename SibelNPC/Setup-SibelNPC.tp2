@@ -375,6 +375,14 @@ COPY ~SibelNPC/resources/items/S!sshld2.itm~ ~override/S!sshld2.itm~
   SAY NAME2 @657
   SAY DESC @658
 
+COPY ~SibelNPC/resources/items/S!smisc7.itm~ ~override/S!smisc7.itm~
+  SAY NAME2 @659
+  SAY DESC @660
+
+COPY ~SibelNPC/resources/items/S!sboo04.itm~ ~override/S!sboo04.itm~
+  SAY NAME2 @661
+  SAY DESC @662
+
 COPY ~SibelNPC/resources/items/S!srat1.itm~ ~override/S!srat1.itm~
 
 COPY ~SibelNPC/resources/items/S!sleat.itm~ ~override/S!sleat.itm~

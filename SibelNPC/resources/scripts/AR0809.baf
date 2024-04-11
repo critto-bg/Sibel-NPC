@@ -82,4 +82,5 @@ THEN
   RESPONSE #100
     SetGlobal("IaSibelItem","AR0809",1)
     ActionOverride("Chest 1",CreateItem("S!smisc",0,0,0))
+    ActionOverride("Chest 1",CreateItem("S!smisc7",0,0,0))
 END
