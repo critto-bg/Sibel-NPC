@@ -1686,6 +1686,7 @@ COMPILE ~SibelNPC/resources/dialogues/virt3.d~
 COMPILE ~SibelNPC/resources/dialogues/lawr1.d~
 COMPILE ~SibelNPC/resources/dialogues/lawr2.d~
 COMPILE ~SibelNPC/resources/dialogues/leat5.d~
+COMPILE ~SibelNPC/resources/dialogues/sarvolo.d~
 
 // classic ToB only
 ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
