@@ -2201,6 +2201,12 @@ END
     REPLACE_TEXTUALLY ~XPGT(Player1,1299999)~ ~XPGT(Player1,1299999) False()~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~UMBHUL01.bcs~ ~override/UMBHUL01.bcs~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~!HasItemEquiped("ring99",LastSeenBy(Myself))~ ~!HasItemEquiped("ring99",LastSeenBy(Myself)) !HasItemEquiped("S!swnrng",LastSeenBy(Myself))~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
