@@ -411,6 +411,8 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
 
   COPY ~SibelNPC/resources/items/surehp1.itm~ ~override/surehp1.itm~
 
+  COPY ~SibelNPC/resources/items/S!draco2.itm~ ~override/S!draco2.itm~
+
   COPY ~SibelNPC/resources/items/S!sw11.itm~ ~override/S!sw11.itm~
     SAY NAME2 @604
     SAY DESC @605
