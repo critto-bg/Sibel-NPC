@@ -2,4 +2,4 @@ general:
 - readme
 - traify all dialogues
 - support for multiple languages
-- ship audio files and area tiles compressed, convert during installation
+- make the EE installation part a completely separate component
