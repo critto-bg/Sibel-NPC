@@ -1890,9 +1890,11 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~S!efree2.bcs~ ~SibelNPC/resources/scripts/S!efree2.baf~
   EXTEND_TOP ~S!firrak.bcs~ ~SibelNPC/resources/scripts/S!firrak.baf~
   EXTEND_TOP ~S!FORCE2.bcs~ ~SibelNPC/resources/scripts/S!FORCE2.baf~
+  EXTEND_TOP ~S!kaol1.bcs~ ~SibelNPC/resources/scripts/S!kaol1.baf~
 
   EXTEND_BOTTOM ~AR0204.BCS~ ~SibelNPC/resources/scripts/AR0204.baf~
   EXTEND_BOTTOM ~AR0300.BCS~ ~SibelNPC/resources/scripts/AR0300.baf~
+  EXTEND_BOTTOM ~AR0700.BCS~ ~SibelNPC/resources/scripts/AR0700.baf~
   EXTEND_BOTTOM ~AR0806.BCS~ ~SibelNPC/resources/scripts/AR0806.baf~
   EXTEND_BOTTOM ~AR1303.BCS~ ~SibelNPC/resources/scripts/AR1303.baf~
   EXTEND_BOTTOM ~AR1514.BCS~ ~SibelNPC/resources/scripts/AR1514_tob.baf~

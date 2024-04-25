@@ -1,0 +1,8 @@
+IF
+  !Global("Iavecnaplace","GLOBAL",3)
+  !Global("Iavecnaplace","GLOBAL",5)
+  !CheckStat(Player1,6,SCRIPTINGSTATE1)
+THEN
+  RESPONSE #100
+    SetGlobal("Iavecnaplace","GLOBAL",3)
+END
