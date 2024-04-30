@@ -3,7 +3,7 @@ BEGIN ~S!SibelP~
 /* leaves due to unhappiness */
 
 IF ~HappinessLT(Myself,-290)~ THEN BEGIN Unhappy
-  SAY ~Never before have I met a <MANWOMAN> as corrupted by evil as you are, <CHARNAME>. I shall not remain in your company any longer.~
+  SAY @3750 /* Never before have I met a <MANWOMAN> as corrupted by evil as you are, <CHARNAME>. I shall not remain in your company any longer. */
 
   IF ~~ THEN
     DO ~TakeItemListParty("S!sitems")
@@ -34,9 +34,9 @@ IF ~Global("IaSibelJoined","LOCALS",1)
     !AreaCheck("ARIA35")
     !AreaCheck("ARIA36")~
 THEN BEGIN KickOut
-  SAY ~Do you want me to leave the group, <CHARNAME>?~
-  IF ~~ THEN REPLY ~No, Sibel, you should remain with us.~ DO ~JoinParty()~ EXIT
-  IF ~~ THEN REPLY ~Yes, we should go our separate ways for now.~ DO ~SetGlobal("IaSibelJoined","LOCALS",0)~ GOTO WhereToGo
+  SAY @3751 /* Do you want me to leave the group, <CHARNAME>? */
+  IF ~~ THEN REPLY @3752 /* No, Sibel, you should remain with us. */ DO ~JoinParty()~ EXIT
+  IF ~~ THEN REPLY @3753 /* Yes, we should go our separate ways for now. */ DO ~SetGlobal("IaSibelJoined","LOCALS",0)~ GOTO WhereToGo
 END
 
 IF ~Global("IaSibelJoined","LOCALS",1)
@@ -51,32 +51,32 @@ IF ~Global("IaSibelJoined","LOCALS",1)
       AreaCheck("ARIA35")
       AreaCheck("ARIA36")~
 THEN BEGIN KickOutArcanisVillage
-  SAY ~Are you sure, <CHARNAME>? If you abandon me now, we will lose each other in time and space.~
+  SAY @3754 /* Are you sure, <CHARNAME>? If you abandon me now, we will lose each other in time and space. */
 
   IF ~~ THEN
-    REPLY ~No, Sibel, we should continue our travels together.~
+    REPLY @3755 /* No, Sibel, we should continue our travels together. */
     DO ~JoinParty()~
     EXIT
 
-  ++ ~Yes, we should go our separate ways.~ + LeaveArcanisVillage
+  ++ @3756 /* Yes, we should go our separate ways. */ + LeaveArcanisVillage
 
 END
 
 IF ~Global("IaSibelJoined","LOCALS",0)~ THEN BEGIN ReJoin
-  SAY ~It is good to see you, <CHARNAME>! Do you want to me to travel with you again?~
+  SAY @3757 /* It is good to see you, <CHARNAME>! Do you want to me to travel with you again? */
 
   IF ~~ THEN
-    REPLY ~Yes, Sibel, let us join forces together.~
+    REPLY @3758 /* Yes, Sibel, let us join forces together. */
     DO ~SetGlobal("IaSibelJoined","LOCALS",1) JoinParty()~
     GOTO SayWelcome
 
-  IF ~~ THEN REPLY ~No, we should go our separate ways for now.~ GOTO SayGoodbye
+  IF ~~ THEN REPLY @3759 /* No, we should go our separate ways for now. */ GOTO SayGoodbye
 END
 
 /* kicked out inside the village */
 
 IF ~~ THEN LeaveArcanisVillage
-  SAY ~So be it. I wish you luck in your quest, <CHARNAME>.~
+  SAY @3760 /* So be it. I wish you luck in your quest, <CHARNAME>. */
 
   IF ~~ THEN
   DO ~SetGlobal("IaSibelJoined","LOCALS",0)
@@ -89,7 +89,7 @@ END
 /* kicked out outside the village */
 
 IF ~~ THEN BEGIN WhereToGo
-  SAY "Very well. Do you want me to wait for you here?"
+  SAY @3761 /* Very well. Do you want me to wait for you here? */
 
   IF ~!AreaCheck("AR0301")  // Mae'Var's Hide Out
       !AreaCheck("AR0302")  // Mae'Var's Inn 1st Floor -- Entrance
@@ -123,48 +123,48 @@ IF ~~ THEN BEGIN WhereToGo
       !AreaCheck("AR6200")  // Throne of Bhaal
 
       !AmIInWatchersKeepPleaseIgnoreTheLackOfApostophe()~
-    THEN REPLY ~Yes, we'll come back for you later.~ GOTO SibelStaysPut
+    THEN REPLY @3762 /* Yes, we'll come back for you later. */ GOTO SibelStaysPut
 
   IF ~GlobalLT("Chapter","GLOBAL",8) !AreaCheck("AR0702")~ THEN
-    REPLY ~No, you should go back to Adventurer's Mart. I will look for you there if I need your help again.~
+    REPLY @3763 /* No, you should go back to Adventurer's Mart. I will look for you there if I need your help again. */
     GOTO SibelGoesBack
 
   IF ~GlobalGT("Chapter","GLOBAL",7) AreaCheck("AR4500")~ THEN
-    REPLY ~Yes, we'll come back for you later.~
+    REPLY @3762 /* Yes, we'll come back for you later. */
     DO ~MoveToPointNoInterrupt([1510.1370]) Face(0)~
     GOTO SibelStaysPut
 
   IF ~GlobalGT("Chapter","GLOBAL",7) !AreaCheck("AR4500") !AreaCheck("AR4000") !AreaCheck("AR6200")~ THEN
-    REPLY ~I'll send you back to the pocket plane... wait there.~
+    REPLY @3764 /* I'll send you back to the pocket plane... wait there. */
     DO ~CreateVisualEffectObject("SPDIMNDR",Myself) Wait(2) MoveBetweenAreas("AR4500",[1510.1370],0)~
     GOTO SibelGoesToPocketPlane
 
   IF ~~ THEN
-    REPLY ~I've changed my mind. Sibel, you should remain with us.~
+    REPLY @3765 /* I've changed my mind. Sibel, you should remain with us. */
     DO ~SetGlobal("IaSibelJoined","LOCALS",1) JoinParty()~ EXIT
 END
 
 IF ~~ THEN BEGIN SibelStaysPut
-  SAY "As you wish, <CHARNAME>, I will stay here for awhile. Goodbye."
+  SAY @3766 /* As you wish, <CHARNAME>, I will stay here for awhile. Goodbye. */
   IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN SibelGoesBack
-  SAY "As you wish, <CHARNAME>. Goodbye."
+  SAY @3767 /* As you wish, <CHARNAME>. Goodbye. */
   IF ~~ THEN DO ~EscapeAreaMove("AR0702",755,335,3)~ EXIT
 END
 
 IF ~~ THEN BEGIN SibelGoesToPocketPlane
-  SAY "As you wish, <CHARNAME>."
+  SAY @3768 /* As you wish, <CHARNAME>. */
   IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN SayWelcome
-  SAY ~I am glad you have changed your mind, <CHARNAME>. Let us be off.~
+  SAY @3769 /* I am glad you have changed your mind, <CHARNAME>. Let us be off. */
   IF ~~ THEN EXIT
 END
 
 IF ~~ THEN BEGIN SayGoodbye
-  SAY ~Very well, <CHARNAME>. If you happen to change your mind, I'll be staying here for awhile.~
+  SAY @3770 /* Very well, <CHARNAME>. If you happen to change your mind, I'll be staying here for awhile. */
   IF ~~ THEN EXIT
 END

@@ -1,23 +1,23 @@
 BEGIN ~S!SVIRT3~
 
 IF ~Global("IaSLawrencePlot","GLOBAL",2)~ THEN BEGIN Greeting
-  SAY ~<CHARNAME>, Sibel, well met! The time of the final confrontation with Lawrence Amberville is upon us.~
-  = ~I have divined the location of the villain's hideout. Even now I can feel his dreadful presence. We must strike soon lest we lose our advantage.~
+  SAY @4000 /* <CHARNAME>, Sibel, well met! The time of the final confrontation with Lawrence Amberville is upon us. */
+  = @4001 /* I have divined the location of the villain's hideout. Even now I can feel his dreadful presence. We must strike soon lest we lose our advantage. */
 
-  ++ ~So we shall. Will we be met with strong opposition?~ + Opposition
+  ++ @4002 /* So we shall. Will we be met with strong opposition? */ + Opposition
 END
 
 IF ~~ THEN BEGIN Opposition
-  SAY ~I may not be certain, but I expect a formidable force. Lawrence never leaves sight of his closest family, all of whom has since turned into grave liches.~
-  = ~Where a lich is present, so are its powerful undead guardians. And amber golems, the Amberville's favourite creation.~
-  = ~Even if we catch Lawrence alone, he is our fiercest enemy. The madman has become a greater dracolich. Do not underestimate his powers.~
+  SAY @4003 /* I may not be certain, but I expect a formidable force. Lawrence never leaves sight of his closest family, all of whom has since turned into grave liches. */
+  = @4004 /* Where a lich is present, so are its powerful undead guardians. And amber golems, the Amberville's favourite creation. */
+  = @4005 /* Even if we catch Lawrence alone, he is our fiercest enemy. The madman has become a greater dracolich. Do not underestimate his powers. */
 
-  ++ ~It sounds extremely dangerous. Are we to leave immediately?~ + Preparations
+  ++ @4006 /* It sounds extremely dangerous. Are we to leave immediately? */ + Preparations
 END
 
 IF ~~ THEN BEGIN Preparations
-  SAY ~We have time, but not much. Rest well, prepare your spells. Do not waste them before battle, the wards will nulify any magic upon entrance.~
-  = ~Fear not, though, for I have a counterplan of my own. I will meet you again in eight hours.~
+  SAY @4007 /* We have time, but not much. Rest well, prepare your spells. Do not waste them before battle, the wards will nulify any magic upon entrance. */
+  = @4008 /* Fear not, though, for I have a counterplan of my own. I will meet you again in eight hours. */
 
   IF ~~ THEN
     DO ~SetGlobal("IaSLawrencePlot","GLOBAL",3)
@@ -28,13 +28,13 @@ IF ~~ THEN BEGIN Preparations
 END
 
 IF ~Global("IaSLawrencePlot","GLOBAL",4)~ THEN BEGIN BackAgain
-  SAY ~Greetings, my friends. Are you sufficiently prepared?~
+  SAY @4009 /* Greetings, my friends. Are you sufficiently prepared? */
 
-  ++ ~Yes, we are ready, Virtus.~ + Depart
+  ++ @4010 /* Yes, we are ready, Virtus. */ + Depart
 END
 
 IF ~~ THEN BEGIN Depart
-  SAY ~Splendid. Let us depart.~
+  SAY @4011 /* Splendid. Let us depart. */
 
   IF ~~ THEN
     DO ~SetGlobal("IaSLawrencePlot","GLOBAL",5)
@@ -45,15 +45,15 @@ IF ~~ THEN BEGIN Depart
 END
 
 IF ~Global("IaSLawrencePlot","GLOBAL",6)~ THEN BEGIN Victory
-  SAY ~You battled well, my friends! That was a well-deserved victory.~
+  SAY @4012 /* You battled well, my friends! That was a well-deserved victory. */
 
-  ++ ~It was an honor to fight at your side, Virtus!~ + Conclusion
+  ++ @4013 /* It was an honor to fight at your side, Virtus! */ + Conclusion
 END
 
 IF ~~ THEN BEGIN Conclusion
-  SAY ~I thank you, the honor is mine. Dear Sibel, our quest concludes here. Resume your travels with <CHARNAME>.~
-  = ~There will be more challenges that you two will face, and I will watch your progress with great interest.~
-  = ~Allow me to bestow a final gift upon you, a courtesy of my divine blood. I bid you farewell and good luck.~
+  SAY @4014 /* I thank you, the honor is mine. Dear Sibel, our quest concludes here. Resume your travels with <CHARNAME>. */
+  = @4015 /* There will be more challenges that you two will face, and I will watch your progress with great interest. */
+  = @4016 /* Allow me to bestow a final gift upon you, a courtesy of my divine blood. I bid you farewell and good luck. */
 
   IF ~~ THEN
     DO ~ActionOverride(Player1,ForceSpellRES("S!sfla01",Myself))

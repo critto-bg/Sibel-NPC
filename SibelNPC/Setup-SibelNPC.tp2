@@ -1,6 +1,7 @@
 BACKUP ~SibelNPC/backup~
 AUTHOR ~el.critto@gmail.com~
 
+AUTO_TRA ~%s~
 LANGUAGE "English"
   ~SibelNPC/lang/English/~
   ~SibelNPC/lang/English/setup.tra~
