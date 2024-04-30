@@ -2219,6 +2219,20 @@ END
     REPLACE_TEXTUALLY ~GlobalLT("Iammirrorjob","GLOBAL",6)~ ~GlobalLT("Iammirrorjob","GLOBAL",6) !AreaCheck("ARIA25")~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~ARIA27.BCS~ ~override/ARIA27.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SetGlobalTimer("Iasummons","GLOBAL",18)~ ~SetGlobalTimer("Iasummons","ARIA27",18)~
+    REPLACE_TEXTUALLY ~GlobalLT("Iamomminion","ARia27",3)~ ~GlobalLT("Iamomminion","ARia27",1)~
+    REPLACE_TEXTUALLY ~GlobalTimerExpired("Iasummons","ARIA27")~ ~!GlobalTimerNotExpired("Iasummons","ARIA27")~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!mom.BCS~ ~override/S!mom.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~SetGlobal("Iaduplicate","LOCALS",2)~ ~SetGlobal("Iaduplicate","LOCALS",3)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
