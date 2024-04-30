@@ -2213,6 +2213,12 @@ END
     REPLACE_TEXTUALLY ~!HasItemEquiped("DEVA",Lastseenby(Myself))~ ~!HasItemEquiped("DEVA",Lastseenby(Myself)) !HasItemEquiped("S!DEVA",Lastseenby(Myself))~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~S!swansu.BCS~ ~override/S!swansu.BCS~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~GlobalLT("Iammirrorjob","GLOBAL",6)~ ~GlobalLT("Iammirrorjob","GLOBAL",6) !AreaCheck("ARIA25")~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
