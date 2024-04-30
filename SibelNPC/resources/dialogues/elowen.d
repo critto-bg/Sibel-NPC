@@ -238,7 +238,7 @@ IF ~~ THEN BEGIN ItemList
     GOTO NeeraWish
 
   // lakesider's dream
-  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!axe03")~ THEN
+  IF ~GlobalGT("Chapter","GLOBAL",7) OR(2) PartyHasItem("S!axe02") PartyHasItem("S!axe03")~ THEN
     REPLY ~What would it take to perfect this vagrant's axe?~
     GOTO Lakesider
 
@@ -878,10 +878,11 @@ IF ~~ THEN BEGIN Lakesider
 
   ++ ~Maybe later. Could you work on something else?~ + ItemList
 
-  IF ~GlobalGT("Chapter","GLOBAL",7) PartyHasItem("S!axe03") PartyHasItem("S!sopal") PartyHasItem("S!sramb") PartyGoldGT(39999)~
+  IF ~GlobalGT("Chapter","GLOBAL",7) OR(2) PartyHasItem("S!axe02") PartyHasItem("S!axe03") PartyHasItem("S!sopal") PartyHasItem("S!sramb") PartyGoldGT(39999)~
   THEN
     REPLY ~Yes please, go ahead.~
     DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("S!axe02",1) DestroyItem("S!axe02")
         TakePartyItemNum("S!axe03",1) DestroyItem("S!axe03")
         TakePartyItemNum("S!sopal",1) DestroyItem("S!sopal")
         TakePartyItemNum("S!sramb",1) DestroyItem("S!sramb")
