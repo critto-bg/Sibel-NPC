@@ -257,6 +257,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY ~Anything you could do about these Wizard Slayer's boots?~
     GOTO Focused
 
+  // turn of events
+  IF ~PartyHasItem("amul14")~ THEN
+    REPLY ~Can you craft a protective amulet for a wild mage?~
+    GOTO TurnOfEvents
+
   ++ ~Goodbye, lady Elowen.~ + Leave
 END
 
@@ -942,6 +947,24 @@ IF ~~ THEN BEGIN Focused
         TakePartyItemNum("S!smisc7",1) DestroyItem("S!smisc7")
         TakePartyItemNum("S!misc06",1) DestroyItem("S!misc06")
         GiveItemCreate("S!sboo04",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN TurnOfEvents
+  SAY ~Aye, I have just the recipe in mind. Bring me scrolls of Foreknowledge and Luck, and a Permanency scroll. I will charge 40,000 for the job. Shall I proceed?~
+
+  ++ ~Maybe later. Could you work on something else?~ + ItemList
+
+  IF ~PartyHasItem("AMUL14") PartyHasItem("S!scrl06") PartyHasItem("SCRL93") PartyHasItem("S!misc02") PartyGoldGT(39999)~
+  THEN
+    REPLY ~Yes please, go ahead.~
+    DO ~TakePartyGold(40000) DestroyGold(40000)
+        TakePartyItemNum("AMUL14",1) DestroyItem("AMUL14")
+        TakePartyItemNum("S!scrl06",1) DestroyItem("S!scrl06")
+        TakePartyItemNum("SCRL93",1) DestroyItem("SCRL93")
+        TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
+        GiveItemCreate("S!samu03",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

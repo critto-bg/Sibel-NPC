@@ -3,6 +3,3 @@ general:
 - traify all dialogues
 - support for multiple languages
 - make the EE installation part a completely separate component
-
-misc:
-- new recipe
