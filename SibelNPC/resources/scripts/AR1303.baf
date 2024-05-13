@@ -4,4 +4,8 @@ THEN
   RESPONSE #100
     SetGlobal("Iaitem2","AR1303",1)
     ActionOverride("Container 8",DestroyItem("scrl6s"))
+    ActionOverride("Container 12",CreateItem("potn21",2,0,0))
+    ActionOverride("Container 12",CreateItem("potn35",2,0,0))
+    ActionOverride("Container 12",CreateItem("potn06",2,0,0))
+    ActionOverride("Container 12",CreateItem("potn11",1,0,0))
 END
