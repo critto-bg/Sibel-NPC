@@ -1,0 +1,7 @@
+IF
+  Global("Iaitem2","AR0405",0)
+THEN
+  RESPONSE #100
+    SetGlobal("Iaitem2","AR0405",1)
+    ActionOverride("Drawer 1",CreateItem("S!smisc",0,0,0))
+END
