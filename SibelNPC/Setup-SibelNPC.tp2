@@ -1451,6 +1451,19 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/spells/spin676.spl~ ~override/spin676.spl~
     SAY UNIDENTIFIED_DESC @727
 
+    READ_LONG 0x64 headers_offset
+    READ_SHORT 0x68 headers_count
+    READ_LONG 0x6a effects_offset
+
+    FOR (index = 0; index < headers_count; index = index + 1) BEGIN
+      READ_SHORT ("%headers_offset%" + 0x1e + (0x28 * "%index%")) effects_count
+      READ_SHORT ("%headers_offset%" + 0x20 + (0x28 * "%index%")) effects_table_offset
+
+      FOR (index2 = 0; index2 < effects_count; index2 = index2 + 1) BEGIN
+        WRITE_BYTE ("%effects_offset%" + 0x0d + (0x30 * ("%effects_table_offset%" + "%index2%"))) 2 // dispel / resist
+      END
+    END
+
   COPY ~SibelNPC/resources/spells/spin826.spl~ ~override/spin826.spl~
     SAY NAME1 @728
     SAY UNIDENTIFIED_DESC @729
@@ -1461,6 +1474,19 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   COPY ~SibelNPC/resources/spells/spini98.spl~ ~override/spini98.spl~
     SAY NAME1 @731
     SAY UNIDENTIFIED_DESC @732
+
+    READ_LONG 0x64 headers_offset
+    READ_SHORT 0x68 headers_count
+    READ_LONG 0x6a effects_offset
+
+    FOR (index = 0; index < headers_count; index = index + 1) BEGIN
+      READ_SHORT ("%headers_offset%" + 0x1e + (0x28 * "%index%")) effects_count
+      READ_SHORT ("%headers_offset%" + 0x20 + (0x28 * "%index%")) effects_table_offset
+
+      FOR (index2 = 0; index2 < effects_count; index2 = index2 + 1) BEGIN
+        WRITE_BYTE ("%effects_offset%" + 0x0d + (0x30 * ("%effects_table_offset%" + "%index2%"))) 2 // dispel / resist
+      END
+    END
 
   COPY ~SibelNPC/resources/spells/SPCLI28.spl~ ~override/SPCLI28.spl~
 
