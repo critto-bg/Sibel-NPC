@@ -21,12 +21,12 @@ END
 
 IF ~~ THEN BEGIN B1ThankYou
   SAY @3508 /* Thank you very much, <CHARNAME>! */
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",3)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",3) AddXPObject("S!Sibel",51000)~ EXIT
 END
 
 IF ~~ THEN BEGIN B1Glad
   SAY @3509 /* I am glad to see that we two think so much alike. */
-  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",3)~ EXIT
+  IF ~~ THEN DO ~SetGlobal("IaSibelTalks","GLOBAL",3) AddXPObject("S!Sibel",51000)~ EXIT
 END
 
 /* second banter */
