@@ -2265,6 +2265,12 @@ END
     REPLACE_TEXTUALLY ~SetGlobal("Iaduplicate","LOCALS",2)~ ~SetGlobal("Iaduplicate","LOCALS",3)~
     COMPILE_BAF_TO_BCS
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~GOLEM.BCS~ ~override~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~AddexperienceParty(23500)~ ~AddXPObject(Player1,35000) AddXPObject(Player2,35000) AddXPObject(Player3,35000) AddXPObject(Player4,35000) AddXPObject(Player5,35000) AddXPObject(Player6,35000)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
