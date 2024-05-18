@@ -678,16 +678,15 @@ END
 
 IF ~~ THEN BEGIN Shrivel2
   SAY @2388 /* You carry the remains of a dracolich? You tease me not? In that case, I can improve your spear. */
-  = @2389 /* Bring me the artefact called Sekolah's Tooth to complete the recipe. The job will cost sixty thousand gold. Are you willing to proceed? */
+  = @2389 /* The job will cost sixty thousand gold. Are you willing to proceed? */
 
   ++ @2358 /* Maybe later. Could you work on something else? */ + ItemList
 
-  IF ~PartyHasItem("SPER10") PartyHasItem("KEY26") PartyHasItem("S!smisc6") PartyGoldGT(59999)~
+  IF ~PartyHasItem("SPER10") PartyHasItem("S!smisc6") PartyGoldGT(59999)~
   THEN
     REPLY @2359 /* Yes please, go ahead. */
     DO ~TakePartyGold(60000) DestroyGold(60000)
         TakePartyItemNum("SPER10",1) DestroyItem("SPER10")
-        TakePartyItemNum("KEY26",1) DestroyItem("KEY26")
         TakePartyItemNum("S!smisc6",1) DestroyItem("S!smisc6")
         GiveItemCreate("S!sspe01",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
