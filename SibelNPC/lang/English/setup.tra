@@ -1428,7 +1428,7 @@ The Champion of Arvoreen channels positive energy to heal the touched creature. 
 @731 = ~Blessed Watchfulness~
 @732 = ~Blessed Watchfulness
 
-By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 1 turn.~
+By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 15 rounds.~
 
 @1000 = ~Queen for a day, is it?~ [S!FEMA1B]
 @1001 = ~Whatever we have to do, it will keep 'til morning. Let's rest.~ [S!FEMA1C]
@@ -1598,4 +1598,4 @@ LAY ON HANDS: The Champion of Arvoreen channels positive energy to heal the touc
 - at 21th level, the power of the spell grows to a value of 75 hit points;
 - at 25th level, the spell completely heals the touched creature and all afflictions that ail him.
 
-BLESSED WATCHFULNESS: By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 1 turn.~
+BLESSED WATCHFULNESS: By casting this spell, the caster confers exceptional powers of observation and alertness to one creature for the duration of the spell. While Blessed Watchfulness is in effect, the designated sentinel remains alert, awake, and vigilant. Those under the effect of this spell resist any spells or effects that could lower their guards or force them to abandon their watches, including charm, beguiling, fear, emotion, and similar mind-affecting spells. The ability also grants protection from backstab. The effects are undispellable and last for 15 rounds.~
