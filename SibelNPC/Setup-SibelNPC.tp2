@@ -2309,6 +2309,12 @@ END
   COPY_EXISTING ~AR0516.BCS~ ~override/AR0516.bcs~
     REPLACE_BCS_BLOCK ~.../inlined/old-ar0516.baf~ ~.../inlined/new-ar0516.baf~
     BUT_ONLY_IF_IT_CHANGES
+
+  COPY_EXISTING ~PPBOOK.BCS~ ~override~
+    DECOMPILE_BCS_TO_BAF
+    REPLACE_TEXTUALLY ~GiveItemCreate("potn33",LastTrigger,0,0,0)~ ~GiveItemCreate("potn33",LastTrigger,0,0,0) AddXPObject(Player1,8000) AddXPObject(Player2,8000) AddXPObject(Player3,8000) AddXPObject(Player4,8000) AddXPObject(Player5,8000) AddXPObject(Player6,8000)~
+    COMPILE_BAF_TO_BCS
+    BUT_ONLY_IF_IT_CHANGES
 END
 
 // EE only
