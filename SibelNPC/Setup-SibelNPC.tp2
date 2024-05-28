@@ -1927,6 +1927,7 @@ ACTION_IF (!FILE_EXISTS ~engine.lua~) THEN BEGIN
   EXTEND_TOP ~SENGUA03.BCS~ ~SibelNPC/resources/scripts/SENGUA03.baf~
   EXTEND_TOP ~SUMDJ01.BCS~ ~SibelNPC/resources/scripts/SUMDJ01.baf~
   EXTEND_TOP ~UDMASTER.BCS~ ~SibelNPC/resources/scripts/UDMASTER.baf~
+  EXTEND_TOP ~S!bolich.bcs~ ~SibelNPC/resources/scripts/S!bolich.baf~
   EXTEND_TOP ~S!dracol.bcs~ ~SibelNPC/resources/scripts/S!dracol.baf~
   EXTEND_TOP ~S!efree2.bcs~ ~SibelNPC/resources/scripts/S!efree2.baf~
   EXTEND_TOP ~S!firrak.bcs~ ~SibelNPC/resources/scripts/S!firrak.baf~
