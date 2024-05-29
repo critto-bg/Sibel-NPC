@@ -262,6 +262,11 @@ IF ~~ THEN BEGIN ItemList
     REPLY @2356 /* Can you craft a protective amulet for a wild mage? */
     GOTO TurnOfEvents
 
+  // symbol of wisdom
+  IF ~PartyHasItem("RING22")~ THEN
+    REPLY @2407  /* What can you do with this ring of holiness? */
+    GOTO SymbolWisdom
+
   ++ @2310 /* Goodbye, lady Elowen. */ + Leave
 END
 
@@ -964,6 +969,34 @@ IF ~~ THEN BEGIN TurnOfEvents
         TakePartyItemNum("SCRL93",1) DestroyItem("SCRL93")
         TakePartyItemNum("S!misc02",1) DestroyItem("S!misc02")
         GiveItemCreate("S!samu03",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+END
+
+IF ~~ THEN BEGIN SymbolWisdom
+  SAY @2408 /* I may craft a ring fit for the wisest of the holy folk, for a small commission of 30,000. Bring me the holy symbol of Lathander or Helm and a Ring of Protection +2. Shall I proceed? */
+
+  ++ @2358 /* Maybe later. Could you work on something else? */ + ItemList
+
+  IF ~PartyHasItem("BELT12") PartyHasItem("RING22") PartyHasItem("RING07") PartyGoldGT(29999)~
+  THEN
+    REPLY @2409 /* Yes please, go ahead. Use Holy Symbol of Lathander. */
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("BELT12",1) DestroyItem("BELT12")
+        TakePartyItemNum("RING22",1) DestroyItem("RING22")
+        TakePartyItemNum("RING07",1) DestroyItem("RING07")
+        GiveItemCreate("S!srin02",Player1,1,1,1)
+        CreateVisualEffectObject("spcrtwpn","S!selow")~
+    EXIT
+
+  IF ~PartyHasItem("BELT13") PartyHasItem("RING22") PartyHasItem("RING07") PartyGoldGT(29999)~
+  THEN
+    REPLY @2410 /* Yes please, go ahead. Use Holy Symbol of Helm. */
+    DO ~TakePartyGold(30000) DestroyGold(30000)
+        TakePartyItemNum("BELT13",1) DestroyItem("BELT13")
+        TakePartyItemNum("RING22",1) DestroyItem("RING22")
+        TakePartyItemNum("RING07",1) DestroyItem("RING07")
+        GiveItemCreate("S!srin02",Player1,1,1,1)
         CreateVisualEffectObject("spcrtwpn","S!selow")~
     EXIT
 END

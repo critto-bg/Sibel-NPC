@@ -1297,6 +1297,24 @@ Equipped Abilities:
 - Bonus to all Saving Throws: +1
 - bonus to the Wild-Surge Rolls: 5
 - Casting Speed bonus: +1~
+@665 = ~Symbol of Wisdom~
+@666 = ~Symbol of Wisdom
+
+Only the wisest of clerics may wear this ring.
+
+STATISTICS:
+
+Equipped abilities:
+- Can memorize one extra divine spell of each level from 4th to 7th
+- Magic Resistance: +10%
+- Strength: +1
+- Armor Class Bonus: +2
+- Bonus to all Saving Throws: +2
+
+Usable By:
+  Good or Neutral Clerics
+
+Requires 19 Wisdom~
 
 @700 = ~Greater Restoration
 (Necromancy)
