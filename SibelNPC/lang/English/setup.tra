@@ -900,7 +900,7 @@ Equipped Abilities:
 - Saving Throws bonus: +2
 - Resistance to Electricity: +15%
 
-Special: Protects Against Critical Hits~
+Special: Protects against critical hits~
 @622 = ~Powdered Body of Greater Dracolich~
 @623 = ~Powdered Body of Greater Dracolich
 
@@ -1094,7 +1094,7 @@ Combat Abilities:
 - 30% chance per hit to fragmentize the target (as per the 4th level spell)
 
 Equipped Ability:
-- Resistance to Crushing Damage: 30%
+- Resistance to Crushing Damage: +30%
 - Immunity to Electrical Discharge
 
 THAC0: +10
@@ -1142,12 +1142,12 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: 0
-– bonus to all Saving Throws: +1
+– Bonus to all Saving Throws: +1
 – THAC0 bonus: +1
 – Casting Speed bonus: +1
-– bonus to the Wild-Surge Rolls: 10
-– doubles the amount of first level spells
-– wearer can memorize one additional 9th level spell
+– Bonus to the Wild-Surge Rolls: 10
+– Doubles the amount of first level spells
+– Wearer can memorize one additional 9th level spell
 – Resistance to Fire: +75%
 – Resistance to Electricity: +75%
 
@@ -1181,13 +1181,13 @@ STATISTICS:
 
 Equipped abilities:
 – Armor Class: 0
-– bonus to all Saving Throws: +1
+– Bonus to all Saving Throws: +1
 – THAC0 bonus: +1
 – Casting Speed bonus: +1
 – Movement Speed bonus: +1
-– bonus to the Wild-Surge Rolls: 5
-– doubles the amount of first level spells
-– wearer can memorize two additional spells per level (except the 1st level)
+– Bonus to the Wild-Surge Rolls: 5
+– Doubles the amount of first level spells
+– Wearer can memorize two additional spells per level (except the 1st level)
 – Resistance to Fire: +75%
 – Resistance to Electricity: +75%
 – Resistance to Acid: +30%
@@ -1293,9 +1293,9 @@ Wild mages have always been concerned with the unpredictable turns of events whe
 STATISTICS:
 
 Equipped Abilities:
-- Armor Class Bonus: +1
+- Armor Class bonus: +1
 - Bonus to all Saving Throws: +1
-- bonus to the Wild-Surge Rolls: 5
+- Bonus to the Wild-Surge Rolls: 5
 - Casting Speed bonus: +1~
 @665 = ~Symbol of Wisdom~
 @666 = ~Symbol of Wisdom

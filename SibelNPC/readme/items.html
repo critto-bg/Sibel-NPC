@@ -1,0 +1,153 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>Sibel NPC 1.0: a mod for Improved Anvil</title>
+<link rel="stylesheet" type="text/css" href="style/css/style.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/css/view.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/type/marketdeco.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/type/merriweather.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/css/queries.css" media="all" />
+<link rel="stylesheet" type="text/css" href="style/css/items.css" media="all" />
+<!--[if IE 8]>
+<link rel="stylesheet" type="text/css" href="style/css/ie8.css" media="all" />
+<![endif]-->
+<!--[if IE 9]>
+<link rel="stylesheet" type="text/css" href="style/css/ie9.css" media="all" />
+<![endif]-->
+<script type="text/javascript" src="style/js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="style/js/ddsmoothmenu.js"></script>
+<script type="text/javascript" src="style/js/html5.js"></script>
+<script type="text/javascript" src="style/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="style/js/selectnav.js"></script>
+<script type="text/javascript" src="style/js/handlebars.js"></script>
+<script type="text/javascript" src="style/js/items.js"></script>
+</head>
+
+<body class="singular page">
+<div id="page" class="hfeed">
+<div id="wrapper">
+<header id="branding" role="banner">
+  <h1 id="site-title">
+  	<a href="index.html" rel="home">Sibel NPC 1.0: a mod for Improved Anvil</a>
+  </h1>
+  <nav id="access" class="access" role="navigation">
+    <div id="menu" class="menu">
+    	<ul id="tiny">
+            <li><a href="#">Content</a>
+				<ul>
+                    <li><a href="items.html">Items</a></li>
+		        </ul>
+			</li>
+            <li><a href="http://forums.blackwyrmlair.net/index.php?showforum=99" target="_blank">Forum</a></li>
+		</ul>
+	</div>
+	<div class="triangle-l"></div>
+	<div class="triangle-r"></div>
+  </nav>
+  <!-- #access -->
+</header>
+<!-- #branding -->
+
+<div id="main">
+    <div id="primary">
+      <div id="content" role="main">
+
+      <!-- begin article -->
+      <article class="page hentry">
+        <div class="entry-content">
+            <h4>Items</h4>
+
+            <p>Here, you will find information about all new items and their required components. <b>Be careful!</b> Some of it may be considered a spoiler.</p>
+
+            <p><span class="lite1">Note 1:</span> some of the upgrade ingredients you will see below are brand new items added by this mod to the game. These new components are rare and hard-to-attain. Think well before deciding to use any of them, because there is no guarantee that you will find them soon again during the game.</p>
+
+            <input type="checkbox" name="simplified" checked>
+
+            <h4 id="hide_all" class="float-right"><a href="javascript:;">Hide All</a></h4>
+
+            <h4 class="float-right">&nbsp;/&nbsp;</h4>
+
+            <h4 id="show_all" class="float-right"><a href="javascript:;">Show All</a></h4>
+
+            <h4 id="gear" class="float-left">Gear</h4>
+
+            <h4 id="weapons">Weapons</h4>
+
+            <h4 id="misc">Miscellaneous</h4>
+
+<script id="template" type="text/x-handlebars-template">
+<div class="toggle">
+    <h4 class="title">{{category_name}}</h4>
+    <div class="togglebox">
+        <div id="items">
+            {{#each items}}
+            <div class="item">
+                <div class="title">
+                    <strong>{{item_name}}</strong>
+                </div>
+
+                <div class="components">
+                    <ul>
+                        <li><strong>Main ingredients</strong>:</li>
+                        {{#each components}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+
+                    {{#if simplified}}
+                    <ul>
+                        <li><strong>Gems and trinkets</strong>:</li>
+                        {{#each simplified}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/if}}
+
+                </div>
+
+                {{#if attributes}}
+                <div class="attributes">
+                    {{#each attributes}}
+                    <ul>
+                        <li><strong>{{section_name}}</strong>:</li>
+                        {{#each section_items}}
+                        <li>{{this}}</li>
+                        {{/each}}
+                    </ul>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+</script>
+
+    		<div class="clear"></div>
+     	</div>
+        <!-- .entry-content -->
+
+      </article>
+      <!-- end article -->
+
+
+
+      </div><!-- #content -->
+    </div><!-- #primary -->
+</div><!-- #main -->
+
+<footer id="colophon" role="contentinfo">
+	<div id="site-generator">
+		Sibel NPC 1.0, by Sikret & critto
+	</div>
+</footer><!-- #colophon -->
+
+	</div><!-- #wrapper -->
+</div><!-- #page -->
+
+<script type="text/javascript" src="style/js/scripts.js"></script>
+</body>
+</html>
